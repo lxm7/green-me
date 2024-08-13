@@ -1,37 +1,42 @@
-// /views/app/api/session/route.ts
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import jwt from "jsonwebtoken";
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const token = url.searchParams.get("token");
+  // @ts-ignore
+  const sessionProperties = request.nextUrl.searchParams.get("token");
+  const encodedToken = jwt.decode(sessionProperties);
+  const { idToken, provider } = (encodedToken as jwt.JwtPayload).properties;
 
-  // if (token) {
-  // In a real-world scenario, you would validate the token here
-  // and possibly fetch user information from your backend or database.
+  if (idToken) {
+    let user;
+    if (provider.includes("facebook")) {
+      user = await fetch(
+        `https://graph.facebook.com/me?fields=name,email&access_token=${idToken}`
+      );
+    }
 
-  // Simulating fetching user information based on the token
-  const user = {
-    id: "123",
-    name: "John Doe",
-    email: "john.doe@example.com",
-  };
+    if (provider.includes("google")) {
+      user = await fetch(
+        `https://oauth2.googleapis.com/tokeninfo?id_token=${idToken}`
+      );
+    }
 
-  // const userInfoResponse = await fetch(
-  //   "https://www.googleapis.com/oauth2/v3/userinfo",
-  //   {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   }
-  // );
-  // if (!userInfoResponse.ok) {
-  //   throw new Error(`HTTP error! status: ${userInfoResponse.status}`);
-  // }
+    // FB's - all seems ok here, check fb configs in their shit app
 
-  // Return the user information as a JSON response
-  return NextResponse.json(user, { status: 200 });
-  // }
+    const userInfo = await user!.json();
+
+    cookies().set("user_info", JSON.stringify(userInfo), {
+      httpOnly: false, // not accessible from server, but accessible from client-side JavaScript
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: 3600, // 1 hour
+    });
+
+    return NextResponse.redirect(`${url.origin}/`);
+  }
 
   // If no token is found, return an unauthorized response
-  // return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 }

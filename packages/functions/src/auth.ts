@@ -14,6 +14,8 @@ declare module "sst/node/auth" {
   export interface SessionTypes {
     user: {
       userID: string;
+      idToken: string | undefined;
+      provider: string;
     };
   }
 }
@@ -25,6 +27,8 @@ export const handler = AuthHandler({
       clientID: Config.GOOGLE_CLIENT_ID,
       onSuccess: async (tokenset) => {
         const claims = tokenset.claims();
+        const idToken = tokenset.id_token;
+        // legit idToken here but needs jwt.decoding on the FE side
         const ddb = new DynamoDBClient({});
         await ddb.send(
           new PutItemCommand({
@@ -40,11 +44,14 @@ export const handler = AuthHandler({
 
         return Session.parameter({
           redirect: process.env.IS_LOCAL
-            ? "http://localhost:3000"
-            : NextjsSite.site.url,
+            ? `http://localhost:3000/api/session`
+            : `${NextjsSite.site.url}/api/session`,
           type: "user",
+          // neater than query stringing it
           properties: {
             userID: claims.sub,
+            idToken,
+            provider: claims.iss,
           },
         });
       },
@@ -56,6 +63,7 @@ export const handler = AuthHandler({
       onSuccess: async (tokenset) => {
         const claims = tokenset.claims();
         const ddb = new DynamoDBClient({});
+        const idToken = tokenset.access_token;
 
         await ddb.send(
           new PutItemCommand({
@@ -70,14 +78,22 @@ export const handler = AuthHandler({
         );
         return Session.parameter({
           redirect: process.env.IS_LOCAL
-            ? "http://localhost:3000"
-            : NextjsSite.site.url,
+            ? `http://localhost:3000/api/session`
+            : `${NextjsSite.site.url}/api/session`,
           type: "user",
           properties: {
             userID: claims.sub,
+            idToken: idToken || undefined,
+            provider: claims.iss,
           },
         });
       },
     }),
   },
 });
+
+// const idToken = tokenset.id_token;
+//         return {
+//           statusCode: 200,
+//           body: JSON.stringify({ idToken, claims }),
+//         };
