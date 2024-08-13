@@ -6,7 +6,7 @@ import {
 } from "sst/node/auth";
 import { Config } from "sst/node/config";
 import { Table } from "sst/node/table";
-import { StaticSite } from "sst/node/site";
+import { NextjsSite } from "sst/node/site";
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { marshall } from "@aws-sdk/util-dynamodb";
 
@@ -41,7 +41,7 @@ export const handler = AuthHandler({
         return Session.parameter({
           redirect: process.env.IS_LOCAL
             ? "http://localhost:3000"
-            : StaticSite.site.url,
+            : NextjsSite.site.url,
           type: "user",
           properties: {
             userID: claims.sub,
@@ -71,7 +71,7 @@ export const handler = AuthHandler({
         return Session.parameter({
           redirect: process.env.IS_LOCAL
             ? "http://localhost:3000"
-            : StaticSite.site.url,
+            : NextjsSite.site.url,
           type: "user",
           properties: {
             userID: claims.sub,

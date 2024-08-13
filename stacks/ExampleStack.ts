@@ -2,7 +2,7 @@ import {
   StackContext,
   Api,
   Auth,
-  StaticSite,
+  NextjsSite,
   Table,
   Config,
 } from "sst/constructs";
@@ -29,10 +29,10 @@ export function ExampleStack({ stack }: StackContext) {
   });
 
   // Create a static site
-  const site = new StaticSite(stack, "site", {
+  const site = new NextjsSite(stack, "site", {
     path: "web",
     environment: {
-      VITE_APP_API_URL: api.url,
+      NEXT_PUBLIC_API_URL: api.url,
     },
   });
 
