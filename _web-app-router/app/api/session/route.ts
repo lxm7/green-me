@@ -23,8 +23,6 @@ export async function GET(request: Request) {
       );
     }
 
-    // FB's - all seems ok here, check fb configs in their shit app
-
     const userInfo = await user!.json();
 
     cookies().set("user_info", JSON.stringify(userInfo), {

@@ -12,11 +12,11 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "sst": "^2.43.4",
+    "@tsconfig/node18": "^18.2.4",
     "aws-cdk-lib": "2.142.1",
     "constructs": "10.3.0",
-    "typescript": "^5.5.4",
-    "@tsconfig/node18": "^18.2.4"
+    "sst": "^2.43.4",
+    "typescript": "^5.5.4"
   },
   "workspaces": [
     "packages/*",
@@ -24,6 +24,8 @@
   ],
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.624.0",
-    "@aws-sdk/util-dynamodb": "^3.624.0"
-  }
+    "@aws-sdk/util-dynamodb": "^3.624.0",
+    "cookies-next": "^4.2.1"
+  },
+  "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb"
 }

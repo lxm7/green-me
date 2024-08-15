@@ -31,6 +31,8 @@ export function ExampleStack({ stack }: StackContext) {
   // Create a static site
   const site = new NextjsSite(stack, "site", {
     path: "web",
+    // runtime: "nodejs20.x",
+    // buildCommand: "npm run build",
     environment: {
       NEXT_PUBLIC_API_URL: api.url,
     },
