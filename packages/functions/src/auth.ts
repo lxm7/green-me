@@ -91,9 +91,3 @@ export const handler = AuthHandler({
     }),
   },
 });
-
-// const idToken = tokenset.id_token;
-//         return {
-//           statusCode: 200,
-//           body: JSON.stringify({ idToken, claims }),
-//         };

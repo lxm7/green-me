@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@green-one-auth/core/*": ["../core/src/*"]
+      "@green-one-auth/core/*": ["../core/src/*"],
+      "@shared/*": ["../../shared/types/*"]
     }
   }
 }

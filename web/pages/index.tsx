@@ -6,7 +6,7 @@ import UserProfile from "@/component/UserProfile";
 
 const inter = Inter({ subsets: ["latin"] });
 
-type User = {
+type UserDetailsFromAuthProvider = {
   name: string;
   picture: string;
   email: string;
@@ -14,7 +14,9 @@ type User = {
 
 export default function Home() {
   const session = getCookie("user_info");
-  const [user, setUser] = useState<User | undefined>(undefined);
+  const [user, setUser] = useState<UserDetailsFromAuthProvider | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     setUser(session ? JSON.parse(session) : undefined);

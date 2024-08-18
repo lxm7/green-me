@@ -3,6 +3,10 @@
   "exclude": ["packages"],
   "compilerOptions": {
     "module": "esnext",
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "paths": {
+      "@shared/*": ["./shared/types/*"]
+    }
+  },
+  "include": ["packages/*/src", "shared/types"]
 }
