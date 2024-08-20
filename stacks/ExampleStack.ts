@@ -8,7 +8,7 @@ import {
 } from "sst/constructs";
 
 export function ExampleStack({ app, stack }: StackContext) {
-  // Create a database Table
+  // Simple details from 3rd party Auth providers
   const userDetailsFromAuthProvider = new Table(stack, "users", {
     fields: {
       userId: "string",
