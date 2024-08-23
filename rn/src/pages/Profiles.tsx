@@ -1,24 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {
-  StyleSheet,
   Text,
   View,
   ActivityIndicator,
   FlatList,
   ListRenderItem,
-  Button,
+  StyleSheet,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-let API_URL: string;
-
-if (__DEV__) {
-  API_URL = 'https://tmzid4yf4i.execute-api.us-east-1.amazonaws.com';
-} else {
-  API_URL = 'https://8id1ziyehc.execute-api.us-east-1.amazonaws.com';
-}
+import Config from 'react-native-config';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 type Profile = {
   id: string;
@@ -27,9 +18,15 @@ type Profile = {
   bio: string;
 };
 
+type RootStackParamList = {
+  Profiles: Profile[];
+};
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Profiles'>;
+
 export async function listProfiles() {
   try {
-    const res = await fetch(`${API_URL}/profiles`);
+    const res = await fetch(`${Config.API_URL}/profiles`);
     const profiles = await res.json();
     return profiles;
   } catch (error) {
@@ -38,35 +35,10 @@ export async function listProfiles() {
   }
 }
 
-function HomeScreen({navigation}) {
-  return (
-    <View style={styles.container}>
-      <LinearGradient
-        colors={['#F44336', '#E91E63', '#FF4081']}
-        style={styles.gradient}
-      />
-      <Text>Home</Text>
-      <Button
-        title="Go to list of profiles"
-        onPress={() =>
-          // navigation.navigate('Profiles', {name: 'Jane'}) // specific
-          navigation.navigate('Profiles', {name: 'Jane'})
-        }
-      />
-    </View>
-  );
-}
-
-function ProfilesScreen({navigation, route}) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ProfilesScreen: React.FC<Props> = ({navigation, route}) => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<
-    | {
-        user_id: string;
-        name?: string;
-        bio?: string;
-      }
-    | undefined
-  >();
+  const [data, setData] = useState<Profile | undefined>();
 
   useEffect(() => {
     setLoading(true);
@@ -109,24 +81,7 @@ function ProfilesScreen({navigation, route}) {
       />
     </View>
   );
-}
-
-const Stack = createNativeStackNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{title: 'Welcome'}}
-        />
-        <Stack.Screen name="Profiles" component={ProfilesScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -150,3 +105,5 @@ const styles = StyleSheet.create({
     height: '100%',
   },
 });
+
+export default ProfilesScreen;
