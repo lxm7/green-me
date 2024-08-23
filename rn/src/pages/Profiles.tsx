@@ -5,10 +5,10 @@ import {
   ActivityIndicator,
   FlatList,
   ListRenderItem,
-  StyleSheet,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Config from 'react-native-config';
+import tw from 'twrnc';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 type Profile = {
@@ -35,7 +35,6 @@ export async function listProfiles() {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ProfilesScreen: React.FC<Props> = ({navigation, route}) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Profile | undefined>();
@@ -45,7 +44,6 @@ const ProfilesScreen: React.FC<Props> = ({navigation, route}) => {
     const fetchUserProfile = async () => {
       try {
         const users = await listProfiles();
-        // const userProfile = users.find((user: any) => user.user_id === 'user1'); // Replace with logic to select the correct user
         setData(users);
       } catch (error) {
         console.error('Error fetching user profile:', error);
@@ -59,21 +57,22 @@ const ProfilesScreen: React.FC<Props> = ({navigation, route}) => {
   if (loading) {
     return <ActivityIndicator />;
   }
+
   const renderItem: ListRenderItem<Profile> = ({item}) => (
-    <View style={styles.content}>
-      <Text style={styles.text}>{item.user_id} |</Text>
-      <Text style={styles.text}>{item.name} |</Text>
-      <Text style={styles.text}>{item.bio}</Text>
+    <View style={tw`flex-row mb-2`}>
+      <Text style={tw`text-lg text-white italic pr-2`}>{item.user_id} |</Text>
+      <Text style={tw`text-lg text-white italic pr-2`}>{item.name} |</Text>
+      <Text style={tw`text-lg text-white italic`}>{item.bio}</Text>
     </View>
   );
 
   return (
-    <View style={styles.container}>
+    <View style={tw`flex-1 bg-white items-center justify-center`}>
       <LinearGradient
         colors={['#F44336', '#E91E63', '#FF4081']}
-        style={styles.gradient}
+        style={tw`absolute w-full h-full`}
       />
-      <Text>Profiles</Text>
+      <Text style={tw`text-2xl mb-4`}>Profiles</Text>
       <FlatList
         data={data as unknown as Profile[]}
         keyExtractor={item => item.user_id}
@@ -82,28 +81,5 @@ const ProfilesScreen: React.FC<Props> = ({navigation, route}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  content: {
-    flexDirection: 'row',
-  },
-  text: {
-    fontSize: 18,
-    paddingRight: 8,
-    color: 'white',
-    fontStyle: 'italic',
-  },
-  gradient: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-  },
-});
 
 export default ProfilesScreen;
