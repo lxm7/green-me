@@ -1,26 +1,36 @@
 # How to add Google authentication to a serverless API
 
-An example serverless app created with SST.
+An example serverless app created with SST. RN has its own deployment from the rest for obvious reasons
 
 ## Getting Started
 
-[**Read the tutorial**](https://sst.dev/examples/how-to-add-google-login-to-your-sst-apps.html)
-
-Install the example.
-
-```bash
-$ npx create-sst@latest --template=examples/api-sst-auth-google
-# Or with Yarn
-$ yarn create sst --template=examples/api-sst-auth-google
-# Or with PNPM
-$ pnpm create sst --template=examples/api-sst-auth-google
-```
+To run locally and see all services running, open 3 terminal tabs:
 
 ## Commands
 
-### `npm run dev`
+### /
 
-Starts the Live Lambda Development environment.
+```bash
+$ npm run dev
+```
+
+Starts the Live Lambda Development environment
+
+### /web
+
+```bash
+$ npm run dev
+```
+
+Starts the nextjs web app
+
+### /rn
+
+```bash
+$ npm run dev
+```
+
+Starts the react native app
 
 ### `npm run build`
 
@@ -28,7 +38,7 @@ Build your app and synthesize your stacks.
 
 ### `npm run deploy [stack]`
 
-Deploy all your stacks to AWS. Or optionally deploy, a specific stack.
+Deploy all your stacks (albiet RN) to AWS. Or optionally deploy, a specific stack.
 
 ### `npm run remove [stack]`
 
