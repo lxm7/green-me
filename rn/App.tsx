@@ -1,6 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, View, ActivityIndicator} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicator,
+  FlatList,
+  ListRenderItem,
+  Button,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 let API_URL: string;
 
@@ -9,6 +19,13 @@ if (__DEV__) {
 } else {
   API_URL = 'https://8id1ziyehc.execute-api.us-east-1.amazonaws.com';
 }
+
+type Profile = {
+  id: string;
+  user_id: string;
+  name: string;
+  bio: string;
+};
 
 export async function listProfiles() {
   try {
@@ -21,13 +38,32 @@ export async function listProfiles() {
   }
 }
 
-function UserProfile() {
+function HomeScreen({navigation}) {
+  return (
+    <View style={styles.container}>
+      <LinearGradient
+        colors={['#F44336', '#E91E63', '#FF4081']}
+        style={styles.gradient}
+      />
+      <Text>Home</Text>
+      <Button
+        title="Go to list of profiles"
+        onPress={() =>
+          // navigation.navigate('Profiles', {name: 'Jane'}) // specific
+          navigation.navigate('Profiles', {name: 'Jane'})
+        }
+      />
+    </View>
+  );
+}
+
+function ProfilesScreen({navigation, route}) {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<
     | {
         user_id: string;
         name?: string;
-        email?: string;
+        bio?: string;
       }
     | undefined
   >();
@@ -37,8 +73,8 @@ function UserProfile() {
     const fetchUserProfile = async () => {
       try {
         const users = await listProfiles();
-        const userProfile = users.find((user: any) => user.user_id === 'user1'); // Replace with logic to select the correct user
-        setData(userProfile);
+        // const userProfile = users.find((user: any) => user.user_id === 'user1'); // Replace with logic to select the correct user
+        setData(users);
       } catch (error) {
         console.error('Error fetching user profile:', error);
       } finally {
@@ -51,25 +87,44 @@ function UserProfile() {
   if (loading) {
     return <ActivityIndicator />;
   }
-  console.log({data});
-  return (
+  const renderItem: ListRenderItem<Profile> = ({item}) => (
     <View style={styles.content}>
-      <Text style={styles.text}>{data?.user_id.trim()} |</Text>
-      <Text style={styles.text}>{data?.name?.trim()} |</Text>
-      <Text style={styles.text}>{data?.email?.trim()}</Text>
+      <Text style={styles.text}>{item.user_id} |</Text>
+      <Text style={styles.text}>{item.name} |</Text>
+      <Text style={styles.text}>{item.bio}</Text>
     </View>
   );
-}
 
-export default function App() {
   return (
     <View style={styles.container}>
       <LinearGradient
         colors={['#F44336', '#E91E63', '#FF4081']}
         style={styles.gradient}
       />
-      <UserProfile />
+      <Text>Profiles</Text>
+      <FlatList
+        data={data as unknown as Profile[]}
+        keyExtractor={item => item.user_id}
+        renderItem={renderItem}
+      />
     </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{title: 'Welcome'}}
+        />
+        <Stack.Screen name="Profiles" component={ProfilesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

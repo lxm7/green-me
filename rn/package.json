@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "dev": "react-native start",
+    "dev": "react-native start --reset-cache",
     "test": "jest"
   },
   "dependencies": {
@@ -15,6 +15,8 @@
     "@aws-amplify/react-native": "^1.1.4",
     "@react-native-async-storage/async-storage": "^1.24.0",
     "@react-native-community/netinfo": "^11.3.2",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/native-stack": "^6.1.0",
     "amazon-cognito-identity-js": "^6.3.12",
     "aws-amplify": "^6.5.1",
     "aws-amplify-react-native": "^7.0.8",
@@ -24,6 +26,8 @@
     "react-native": "0.75.1",
     "react-native-get-random-values": "^1.11.0",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.0",
     "twrnc": "^4.5.0"
   },
   "devDependencies": {
