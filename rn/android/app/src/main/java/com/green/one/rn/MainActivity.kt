@@ -1,4 +1,4 @@
-package com.rn
+package com.green.one.rn
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
