@@ -25,6 +25,5 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.624.0",
     "@aws-sdk/util-dynamodb": "^3.624.0"
-  },
-  "packageManager": "yarn@3.6.4"
+  }
 }
