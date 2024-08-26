@@ -1,0 +1,9 @@
+{
+  "name": "expo-next",
+  "slug": "expo-next",
+  "plugins": ["expo-router"],
+  "scheme": "expo-next-scheme",
+  "web": {
+    "bundler": "metro"
+  }
+}
