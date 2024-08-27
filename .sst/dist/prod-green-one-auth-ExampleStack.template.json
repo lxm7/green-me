@@ -1,0 +1,5566 @@
+{
+ "Resources": {
+  "CustomResourceHandlerServiceRole41AEC181": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "CustomResourceHandlerE8FB56BA": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "73c557f937c8022221046caeede962c2be3e0a4d376cdee364ec378c4c93739d.zip"
+    },
+    "Handler": "index.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerServiceRole41AEC181",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "CustomResourceHandlerServiceRole41AEC181"
+   ]
+  },
+  "usersTableA9DCAD73": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "userId",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "userId",
+      "KeyType": "HASH"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "prod-green-one-auth-users",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "usersParametertableName340CFBF1": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Table/users/tableName",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "usersTableA9DCAD73"
+    }
+   }
+  },
+  "PROFILESTABLEParametervalue9EE1CC56": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Parameter/PROFILES_TABLE/value",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": "prod-green-one-auth-ProfilesTable"
+   }
+  },
+  "VENUESTABLEParametervalue4010F081": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Parameter/VENUES_TABLE/value",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": "prod-green-one-auth-VenuesTable"
+   }
+  },
+  "CHATSTABLEParametervalueAAD58E45": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Parameter/CHATS_TABLE/value",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": "prod-green-one-auth-ChatsTable"
+   }
+  },
+  "MESSAGESTABLEParametervalue21059089": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Parameter/MESSAGES_TABLE/value",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": "prod-green-one-auth-MessagesTable"
+   }
+  },
+  "ProfilesTableC07982B3": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "user_id",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "id",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "user_id",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "id",
+      "KeyType": "RANGE"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "prod-green-one-auth-ProfilesTable",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "ProfilesTableParametertableNameD6B77427": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Table/ProfilesTable/tableName",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "ProfilesTableC07982B3"
+    }
+   }
+  },
+  "VenuesTable5F1C410C": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "user_id",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "id",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "user_id",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "id",
+      "KeyType": "RANGE"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "prod-green-one-auth-VenuesTable",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "VenuesTableParametertableName32DDED00": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Table/VenuesTable/tableName",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "VenuesTable5F1C410C"
+    }
+   }
+  },
+  "ChatsTable647A21B9": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "venue_id",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "id",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "profile_id",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "GlobalSecondaryIndexes": [
+     {
+      "IndexName": "profileIndex",
+      "KeySchema": [
+       {
+        "AttributeName": "profile_id",
+        "KeyType": "HASH"
+       }
+      ],
+      "Projection": {
+       "ProjectionType": "ALL"
+      }
+     }
+    ],
+    "KeySchema": [
+     {
+      "AttributeName": "venue_id",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "id",
+      "KeyType": "RANGE"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "prod-green-one-auth-ChatsTable",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "ChatsTableParametertableName8F3E904B": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Table/ChatsTable/tableName",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "ChatsTable647A21B9"
+    }
+   }
+  },
+  "MessagesTableA255D91E": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "chat_id",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "sent_at",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "chat_id",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "sent_at",
+      "KeyType": "RANGE"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "prod-green-one-auth-MessagesTable",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "MessagesTableParametertableName924722A4": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Table/MessagesTable/tableName",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Ref": "MessagesTableA255D91E"
+    }
+   }
+  },
+  "apiApiC3C473D0": {
+   "Type": "AWS::ApiGatewayV2::Api",
+   "Properties": {
+    "CorsConfiguration": {
+     "AllowCredentials": false,
+     "AllowHeaders": [
+      "*"
+     ],
+     "AllowMethods": [
+      "*"
+     ],
+     "AllowOrigins": [
+      "*"
+     ]
+    },
+    "Name": "prod-green-one-auth-api",
+    "ProtocolType": "HTTP",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    }
+   }
+  },
+  "apiApiDefaultStageA626ED4D": {
+   "Type": "AWS::ApiGatewayV2::Stage",
+   "Properties": {
+    "AccessLogSettings": {
+     "DestinationArn": {
+      "Fn::GetAtt": [
+       "apiLogGroup924E5B7A",
+       "Arn"
+      ]
+     },
+     "Format": "{\"requestTime\":\"$context.requestTime\",\"requestId\":\"$context.requestId\",\"httpMethod\":\"$context.httpMethod\",\"path\":\"$context.path\",\"routeKey\":\"$context.routeKey\",\"status\":$context.status,\"responseLatency\":$context.responseLatency,\"integrationRequestId\":\"$context.integration.requestId\",\"integrationStatus\":\"$context.integration.status\",\"integrationLatency\":\"$context.integration.latency\",\"integrationServiceStatus\":\"$context.integration.integrationStatus\",\"ip\":\"$context.identity.sourceIp\",\"userAgent\":\"$context.identity.userAgent\"}"
+    },
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AutoDeploy": true,
+    "StageName": "$default",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    }
+   }
+  },
+  "apiLogGroup924E5B7A": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/vendedlogs/apis/prod-green-one-auth-api-",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/default"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain"
+  },
+  "apiLambdaGETsessionServiceRoleDBF0F3AC": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETsessionServiceRoleDefaultPolicy9B1D7832": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "apiLambdaGETsessionServiceRoleDefaultPolicy9B1D7832",
+    "Roles": [
+     {
+      "Ref": "apiLambdaGETsessionServiceRoleDBF0F3AC"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETsessionB4C9BFAB": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "372319a488ae4925e211c6e15684385b298b6a3939a2d7eefff10c11c6158ceb.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/session.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "apiLambdaGETsessionServiceRoleDBF0F3AC",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "apiLambdaGETsessionServiceRoleDefaultPolicy9B1D7832",
+    "apiLambdaGETsessionServiceRoleDBF0F3AC"
+   ]
+  },
+  "apiRouteGETsessionIntegrationGETsessionE05BB6EC": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "apiLambdaGETsessionB4C9BFAB",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "apiRouteGETsessionIntegrationGETsessionPermission9BD18BB8": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "apiLambdaGETsessionB4C9BFAB",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/session"
+      ]
+     ]
+    }
+   }
+  },
+  "apiRouteGETsessionAC0EB260": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "GET /session",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "apiRouteGETsessionIntegrationGETsessionE05BB6EC"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "apiLambdaGETprofilesServiceRoleDF68C4BD": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETprofilesServiceRoleDefaultPolicy0FE3DBB1": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "apiLambdaGETprofilesServiceRoleDefaultPolicy0FE3DBB1",
+    "Roles": [
+     {
+      "Ref": "apiLambdaGETprofilesServiceRoleDF68C4BD"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETprofiles79032A2B": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "f5f7fe1647b3ed2dc0197783ec03ed644e88c590f8bca33eea4c345cfd7cf853.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/profiles/list.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "apiLambdaGETprofilesServiceRoleDF68C4BD",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "apiLambdaGETprofilesServiceRoleDefaultPolicy0FE3DBB1",
+    "apiLambdaGETprofilesServiceRoleDF68C4BD"
+   ]
+  },
+  "apiRouteGETprofilesIntegrationGETprofiles75F066EA": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "apiLambdaGETprofiles79032A2B",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "apiRouteGETprofilesIntegrationGETprofilesPermissionD11951A5": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "apiLambdaGETprofiles79032A2B",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/profiles"
+      ]
+     ]
+    }
+   }
+  },
+  "apiRouteGETprofiles318850B6": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "GET /profiles",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "apiRouteGETprofilesIntegrationGETprofiles75F066EA"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "apiLambdaPOSTprofilesServiceRole24F69A92": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "apiLambdaPOSTprofilesServiceRoleDefaultPolicyE17559E2": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "apiLambdaPOSTprofilesServiceRoleDefaultPolicyE17559E2",
+    "Roles": [
+     {
+      "Ref": "apiLambdaPOSTprofilesServiceRole24F69A92"
+     }
+    ]
+   }
+  },
+  "apiLambdaPOSTprofilesD701A171": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "b66704efd8c6008044b5bd15d72a18a6957f171e1bae483312b7813a571c2ac3.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/profiles/create.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTprofilesServiceRole24F69A92",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "apiLambdaPOSTprofilesServiceRoleDefaultPolicyE17559E2",
+    "apiLambdaPOSTprofilesServiceRole24F69A92"
+   ]
+  },
+  "apiRoutePOSTprofilesIntegrationPOSTprofilesD31FEBC2": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTprofilesD701A171",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "apiRoutePOSTprofilesIntegrationPOSTprofilesPermission2606DC10": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTprofilesD701A171",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/profiles"
+      ]
+     ]
+    }
+   }
+  },
+  "apiRoutePOSTprofilesEEAF1E84": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "POST /profiles",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "apiRoutePOSTprofilesIntegrationPOSTprofilesD31FEBC2"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "apiLambdaGETvenuesServiceRoleA13FE657": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETvenuesServiceRoleDefaultPolicyA6C288CD": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "apiLambdaGETvenuesServiceRoleDefaultPolicyA6C288CD",
+    "Roles": [
+     {
+      "Ref": "apiLambdaGETvenuesServiceRoleA13FE657"
+     }
+    ]
+   }
+  },
+  "apiLambdaGETvenuesF6ADC793": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "40e903e95d475ac2224c61edc43619c112bfe7452dcd7f61b6d528db84ec791b.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/venues/list.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "apiLambdaGETvenuesServiceRoleA13FE657",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "apiLambdaGETvenuesServiceRoleDefaultPolicyA6C288CD",
+    "apiLambdaGETvenuesServiceRoleA13FE657"
+   ]
+  },
+  "apiRouteGETvenuesIntegrationGETvenues817259C4": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "apiLambdaGETvenuesF6ADC793",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "apiRouteGETvenuesIntegrationGETvenuesPermissionB27234AB": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "apiLambdaGETvenuesF6ADC793",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/venues"
+      ]
+     ]
+    }
+   }
+  },
+  "apiRouteGETvenues36FA39E7": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "GET /venues",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "apiRouteGETvenuesIntegrationGETvenues817259C4"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "apiLambdaPOSTvenuesServiceRoleAABC00F4": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "apiLambdaPOSTvenuesServiceRoleDefaultPolicyF66A23A0": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "apiLambdaPOSTvenuesServiceRoleDefaultPolicyF66A23A0",
+    "Roles": [
+     {
+      "Ref": "apiLambdaPOSTvenuesServiceRoleAABC00F4"
+     }
+    ]
+   }
+  },
+  "apiLambdaPOSTvenues4927561E": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "5f635a0f67fb0651b75637186bf272adcfcd49ceea80fdd240ab92b4b73d4a41.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/venues/create.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTvenuesServiceRoleAABC00F4",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "apiLambdaPOSTvenuesServiceRoleDefaultPolicyF66A23A0",
+    "apiLambdaPOSTvenuesServiceRoleAABC00F4"
+   ]
+  },
+  "apiRoutePOSTvenuesIntegrationPOSTvenues09049042": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTvenues4927561E",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "apiRoutePOSTvenuesIntegrationPOSTvenuesPermission19E0295B": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "apiLambdaPOSTvenues4927561E",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/venues"
+      ]
+     ]
+    }
+   }
+  },
+  "apiRoutePOSTvenuesBD831F5E": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "POST /venues",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "apiRoutePOSTvenuesIntegrationPOSTvenues09049042"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "apiParameterurl1D4D90E2": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Api/api/url",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Fn::GetAtt": [
+      "apiApiC3C473D0",
+      "ApiEndpoint"
+     ]
+    }
+   }
+  },
+  "siteS3Bucket2B2851F3": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     },
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteS3BucketPolicyBB4DF05F": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "siteS3Bucket2B2851F3"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:*",
+       "Condition": {
+        "Bool": {
+         "aws:SecureTransport": "false"
+        }
+       },
+       "Effect": "Deny",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "siteS3Bucket2B2851F3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "siteS3Bucket2B2851F3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:PutBucketPolicy",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:DeleteObject*"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
+         ]
+        }
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "siteS3Bucket2B2851F3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "siteS3Bucket2B2851F3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "CanonicalUser": {
+         "Fn::GetAtt": [
+          "siteDistributionOrigin3S3Origin7C72BBD7",
+          "S3CanonicalUserId"
+         ]
+        }
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "siteS3Bucket2B2851F3",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   }
+  },
+  "siteS3BucketAutoDeleteObjectsCustomResource3E10A2DE": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "siteS3Bucket2B2851F3"
+    }
+   },
+   "DependsOn": [
+    "siteS3BucketPolicyBB4DF05F"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteCloudFrontFunctionE91DD486": {
+   "Type": "AWS::CloudFront::Function",
+   "Properties": {
+    "AutoPublish": true,
+    "FunctionCode": "function handler(o){var e=o.request;e.headers[\"x-forwarded-host\"]=e.headers.host;function r(i){var t=e.headers[i];if(t){if(t.multiValue)return t.multiValue.map(function(u){return u.value}).join(\",\");if(t.value)return t.value}return\"\"}var a=\"\";e.uri.startsWith(\"/_next/image\")?a=r(\"accept\"):a=r(\"rsc\")+r(\"next-router-prefetch\")+r(\"next-router-state-tree\")+r(\"next-url\")+r(\"x-prerender-revalidate\"),e.cookies.__prerender_bypass&&(a+=e.cookies.__prerender_bypass?e.cookies.__prerender_bypass.value:\"\");var d=require(\"crypto\"),n=d.createHash(\"md5\").update(a).digest(\"hex\");return e.headers[\"x-open-next-cache-key\"]={value:n},e.headers[\"cloudfront-viewer-city\"]&&(e.headers[\"x-open-next-city\"]=e.headers[\"cloudfront-viewer-city\"]),e.headers[\"cloudfront-viewer-country\"]&&(e.headers[\"x-open-next-country\"]=e.headers[\"cloudfront-viewer-country\"]),e.headers[\"cloudfront-viewer-region\"]&&(e.headers[\"x-open-next-region\"]=e.headers[\"cloudfront-viewer-region\"]),e.headers[\"cloudfront-viewer-latitude\"]&&(e.headers[\"x-open-next-latitude\"]=e.headers[\"cloudfront-viewer-latitude\"]),e.headers[\"cloudfront-viewer-longitude\"]&&(e.headers[\"x-open-next-longitude\"]=e.headers[\"cloudfront-viewer-longitude\"]),e}\n",
+    "FunctionConfig": {
+     "Comment": "us-east-1prodgreenoneauthExamplecksiteCloudFrontFunctionA27A90B2",
+     "Runtime": "cloudfront-js-1.0"
+    },
+    "Name": "us-east-1prodgreenoneauthExamplecksiteCloudFrontFunctionA27A90B2"
+   }
+  },
+  "siteS3AssetUploaderPolicy41A1C581": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "CustomResourceHandlerE8FB56BA",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "s3:ListBucket",
+        "s3:PutObject",
+        "s3:DeleteObject"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "siteS3Bucket2B2851F3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "siteS3Bucket2B2851F3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "siteS3AssetUploaderPolicy41A1C581",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "siteS3AssetUploader2482D9D3": {
+   "Type": "Custom::S3Uploader",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "sources": [
+     {
+      "bucketName": "cdk-hnb659fds-assets-158871758094-us-east-1",
+      "objectKey": "746d9c8b1c99bba629b3879f66f13ef13750b032f98a2035eea9879db97f830f.zip"
+     }
+    ],
+    "destinationBucketName": {
+     "Ref": "siteS3Bucket2B2851F3"
+    },
+    "textEncoding": "utf-8",
+    "fileOptions": [
+     {
+      "files": "**",
+      "ignore": "_assets/_next/**",
+      "cacheControl": "public,max-age=0,s-maxage=86400,stale-while-revalidate=8640"
+     },
+     {
+      "files": "_assets/_next/**",
+      "cacheControl": "public,max-age=31536000,immutable"
+     }
+    ],
+    "replaceValues": [
+     {
+      "files": "**/*.html",
+      "search": "{{ NEXT_PUBLIC_API_URL }}",
+      "replace": {
+       "Fn::GetAtt": [
+        "apiApiC3C473D0",
+        "ApiEndpoint"
+       ]
+      }
+     },
+     {
+      "files": "**/*.js",
+      "search": "{{ NEXT_PUBLIC_API_URL }}",
+      "replace": {
+       "Fn::GetAtt": [
+        "apiApiC3C473D0",
+        "ApiEndpoint"
+       ]
+      }
+     },
+     {
+      "files": "**/*.json",
+      "search": "{{ NEXT_PUBLIC_API_URL }}",
+      "replace": {
+       "Fn::GetAtt": [
+        "apiApiC3C473D0",
+        "ApiEndpoint"
+       ]
+      }
+     }
+    ]
+   },
+   "DependsOn": [
+    "siteS3AssetUploaderPolicy41A1C581"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteImageFunctionServiceRoleAD5B95E2": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "siteImageFunctionServiceRoleDefaultPolicy39F33332": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "siteS3Bucket2B2851F3",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "siteImageFunctionServiceRoleDefaultPolicy39F33332",
+    "Roles": [
+     {
+      "Ref": "siteImageFunctionServiceRoleAD5B95E2"
+     }
+    ]
+   }
+  },
+  "siteImageFunctionD6B403E9": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "fad629187541f98075ad98b2300f56071c3c43b6606dd054a814c7cf48a0854e.zip"
+    },
+    "Description": "Next.js Image Optimization Function",
+    "Environment": {
+     "Variables": {
+      "BUCKET_NAME": {
+       "Ref": "siteS3Bucket2B2851F3"
+      },
+      "BUCKET_KEY_PREFIX": "_assets"
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 1536,
+    "Role": {
+     "Fn::GetAtt": [
+      "siteImageFunctionServiceRoleAD5B95E2",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 25
+   },
+   "DependsOn": [
+    "siteImageFunctionServiceRoleDefaultPolicy39F33332",
+    "siteImageFunctionServiceRoleAD5B95E2"
+   ]
+  },
+  "siteImageFunctionLogRetentionD1B5BECE": {
+   "Type": "Custom::LogRetention",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+      "Arn"
+     ]
+    },
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "siteImageFunctionD6B403E9"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 3
+   }
+  },
+  "siteImageFunctionFunctionUrl110B87E7": {
+   "Type": "AWS::Lambda::Url",
+   "Properties": {
+    "AuthType": "NONE",
+    "TargetFunctionArn": {
+     "Fn::GetAtt": [
+      "siteImageFunctionD6B403E9",
+      "Arn"
+     ]
+    }
+   }
+  },
+  "siteImageFunctioninvokefunctionurl443403A1": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunctionUrl",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "siteImageFunctionD6B403E9",
+      "Arn"
+     ]
+    },
+    "FunctionUrlAuthType": "NONE",
+    "Principal": "*"
+   }
+  },
+  "sitedefaultServerFunctionAssetReplacerPolicy42C68AD3": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "sitedefaultServerFunctionAssetReplacerPolicy42C68AD3",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "sitedefaultServerFunctionAssetReplacerF7EF1CCB": {
+   "Type": "Custom::AssetReplacer",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+    "key": "49642ad173f05540c177eb490894e5108db4a41288891943db869786e80f54cb.zip",
+    "replacements": [
+     {
+      "files": "**/*.@(*js|json|html)",
+      "search": "{{ NEXT_PUBLIC_API_URL }}",
+      "replace": {
+       "Fn::GetAtt": [
+        "apiApiC3C473D0",
+        "ApiEndpoint"
+       ]
+      }
+     },
+     {
+      "files": "**/*.@(*js|json|html)",
+      "search": "{{ CACHE_BUCKET_NAME }}",
+      "replace": {
+       "Ref": "siteS3Bucket2B2851F3"
+      }
+     },
+     {
+      "files": "**/*.@(*js|json|html)",
+      "search": "{{ CACHE_BUCKET_KEY_PREFIX }}",
+      "replace": "_cache"
+     },
+     {
+      "files": "**/*.@(*js|json|html)",
+      "search": "{{ CACHE_BUCKET_REGION }}",
+      "replace": "us-east-1"
+     }
+    ]
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerPolicy42C68AD3"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "sitedefaultServerFunctionServiceRole9E4D8EA4": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB"
+   ]
+  },
+  "sitedefaultServerFunctionServiceRoleDefaultPolicy593DFF5A": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:GetObject*",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:DeleteObject*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging",
+        "s3:Abort*"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "siteS3Bucket2B2851F3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "siteS3Bucket2B2851F3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "sqs:SendMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "siteRevalidationQueue355EB7DA",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:Query",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "siteRevalidationTable79579F77",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "siteRevalidationTable79579F77",
+             "Arn"
+            ]
+           },
+           "/index/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "sitedefaultServerFunctionServiceRoleDefaultPolicy593DFF5A",
+    "Roles": [
+     {
+      "Ref": "sitedefaultServerFunctionServiceRole9E4D8EA4"
+     }
+    ]
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB"
+   ]
+  },
+  "sitedefaultServerFunctionE19E70BC": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "49642ad173f05540c177eb490894e5108db4a41288891943db869786e80f54cb.zip"
+    },
+    "Description": "Next.js Server",
+    "Environment": {
+     "Variables": {
+      "NEXT_PUBLIC_API_URL": {
+       "Fn::GetAtt": [
+        "apiApiC3C473D0",
+        "ApiEndpoint"
+       ]
+      },
+      "CACHE_BUCKET_NAME": {
+       "Ref": "siteS3Bucket2B2851F3"
+      },
+      "CACHE_BUCKET_KEY_PREFIX": "_cache",
+      "CACHE_BUCKET_REGION": "us-east-1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "REVALIDATION_QUEUE_URL": {
+       "Ref": "siteRevalidationQueue355EB7DA"
+      },
+      "REVALIDATION_QUEUE_REGION": "us-east-1",
+      "CACHE_DYNAMO_TABLE": {
+       "Ref": "siteRevalidationTable79579F77"
+      }
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "sitedefaultServerFunctionServiceRole9E4D8EA4",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB",
+    "sitedefaultServerFunctionServiceRoleDefaultPolicy593DFF5A",
+    "sitedefaultServerFunctionServiceRole9E4D8EA4"
+   ]
+  },
+  "sitedefaultServerFunctionLogRetention9BC71CD3": {
+   "Type": "Custom::LogRetention",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+      "Arn"
+     ]
+    },
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "sitedefaultServerFunctionE19E70BC"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 3
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB"
+   ]
+  },
+  "sitedefaultServerFunctionFunctionUrl55D8CFE3": {
+   "Type": "AWS::Lambda::Url",
+   "Properties": {
+    "AuthType": "NONE",
+    "InvokeMode": "BUFFERED",
+    "TargetFunctionArn": {
+     "Fn::GetAtt": [
+      "sitedefaultServerFunctionE19E70BC",
+      "Arn"
+     ]
+    }
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB"
+   ]
+  },
+  "sitedefaultServerFunctioninvokefunctionurl2DFC1069": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunctionUrl",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "sitedefaultServerFunctionE19E70BC",
+      "Arn"
+     ]
+    },
+    "FunctionUrlAuthType": "NONE",
+    "Principal": "*"
+   },
+   "DependsOn": [
+    "sitedefaultServerFunctionAssetReplacerF7EF1CCB"
+   ]
+  },
+  "siteServerCacheDD54ACDF": {
+   "Type": "AWS::CloudFront::CachePolicy",
+   "Properties": {
+    "CachePolicyConfig": {
+     "Comment": "SST server response cache policy",
+     "DefaultTTL": 0,
+     "MaxTTL": 31536000,
+     "MinTTL": 0,
+     "Name": "prodgreenoneauthExampleStacksiteServerCacheB7559D69-us-east-1",
+     "ParametersInCacheKeyAndForwardedToOrigin": {
+      "CookiesConfig": {
+       "CookieBehavior": "none"
+      },
+      "EnableAcceptEncodingBrotli": true,
+      "EnableAcceptEncodingGzip": true,
+      "HeadersConfig": {
+       "HeaderBehavior": "whitelist",
+       "Headers": [
+        "x-open-next-cache-key"
+       ]
+      },
+      "QueryStringsConfig": {
+       "QueryStringBehavior": "all"
+      }
+     }
+    }
+   }
+  },
+  "siteDistributionOrigin3S3Origin7C72BBD7": {
+   "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+   "Properties": {
+    "CloudFrontOriginAccessIdentityConfig": {
+     "Comment": "Identity for prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095"
+    }
+   }
+  },
+  "siteDistribution706F5265": {
+   "Type": "AWS::CloudFront::Distribution",
+   "Properties": {
+    "DistributionConfig": {
+     "Aliases": [],
+     "CacheBehaviors": [
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS",
+        "PUT",
+        "PATCH",
+        "POST",
+        "DELETE"
+       ],
+       "CachePolicyId": {
+        "Ref": "siteServerCacheDD54ACDF"
+       },
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "LambdaFunctionAssociations": [],
+       "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+       "PathPattern": "_next/image*",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin280DBF04B",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS",
+        "PUT",
+        "PATCH",
+        "POST",
+        "DELETE"
+       ],
+       "CachePolicyId": {
+        "Ref": "siteServerCacheDD54ACDF"
+       },
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "LambdaFunctionAssociations": [],
+       "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+       "PathPattern": "_next/data/*",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "PathPattern": "BUILD_ID",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "PathPattern": "_next/*",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "PathPattern": "favicon.ico",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "PathPattern": "next.svg",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      },
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "CachedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+       ],
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "siteCloudFrontFunctionE91DD486",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "PathPattern": "vercel.svg",
+       "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      }
+     ],
+     "DefaultCacheBehavior": {
+      "AllowedMethods": [
+       "GET",
+       "HEAD",
+       "OPTIONS",
+       "PUT",
+       "PATCH",
+       "POST",
+       "DELETE"
+      ],
+      "CachePolicyId": {
+       "Ref": "siteServerCacheDD54ACDF"
+      },
+      "CachedMethods": [
+       "GET",
+       "HEAD",
+       "OPTIONS"
+      ],
+      "Compress": true,
+      "FunctionAssociations": [
+       {
+        "EventType": "viewer-request",
+        "FunctionARN": {
+         "Fn::GetAtt": [
+          "siteCloudFrontFunctionE91DD486",
+          "FunctionARN"
+         ]
+        }
+       }
+      ],
+      "LambdaFunctionAssociations": [],
+      "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+      "TargetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E",
+      "ViewerProtocolPolicy": "redirect-to-https"
+     },
+     "DefaultRootObject": "",
+     "Enabled": true,
+     "HttpVersion": "http2",
+     "IPV6Enabled": true,
+     "Origins": [
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "https-only",
+        "OriginReadTimeout": 10,
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::Select": [
+         0,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             1,
+             {
+              "Fn::Split": [
+               "//",
+               {
+                "Fn::GetAtt": [
+                 "sitedefaultServerFunctionFunctionUrl55D8CFE3",
+                 "FunctionUrl"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "Id": "prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E"
+      },
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "https-only",
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::Select": [
+         0,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             1,
+             {
+              "Fn::Split": [
+               "//",
+               {
+                "Fn::GetAtt": [
+                 "siteImageFunctionFunctionUrl110B87E7",
+                 "FunctionUrl"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "Id": "prodgreenoneauthExampleStacksiteDistributionOrigin280DBF04B"
+      },
+      {
+       "DomainName": {
+        "Fn::GetAtt": [
+         "siteS3Bucket2B2851F3",
+         "RegionalDomainName"
+        ]
+       },
+       "Id": "prodgreenoneauthExampleStacksiteDistributionOrigin3EB06C095",
+       "OriginPath": "/_assets",
+       "S3OriginConfig": {
+        "OriginAccessIdentity": {
+         "Fn::Join": [
+          "",
+          [
+           "origin-access-identity/cloudfront/",
+           {
+            "Ref": "siteDistributionOrigin3S3Origin7C72BBD7"
+           }
+          ]
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "siteServerFunctionInvalidatorPolicy004B2ED1": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "cloudfront:CreateInvalidation",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":cloudfront::158871758094:distribution/",
+          {
+           "Ref": "siteDistribution706F5265"
+          }
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "siteServerFunctionInvalidatorPolicy004B2ED1",
+    "Roles": [
+     {
+      "Ref": "sitedefaultServerFunctionServiceRole9E4D8EA4"
+     }
+    ]
+   }
+  },
+  "siteCloudFrontInvalidatorPolicyEE18C654": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "cloudfront:GetInvalidation",
+        "cloudfront:CreateInvalidation"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":cloudfront::158871758094:distribution/",
+          {
+           "Ref": "siteDistribution706F5265"
+          }
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "siteCloudFrontInvalidatorPolicyEE18C654",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "siteCloudFrontInvalidator18BEA866": {
+   "Type": "Custom::CloudFrontInvalidator",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "version": "ki_qnXYO0313NO_xLgei5",
+    "distributionId": {
+     "Ref": "siteDistribution706F5265"
+    },
+    "paths": [
+     "/*"
+    ],
+    "wait": false
+   },
+   "DependsOn": [
+    "siteCloudFrontInvalidatorPolicyEE18C654",
+    "siteS3AssetUploader2482D9D3"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteWarmerFunctionServiceRole7E78201A": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "siteWarmerFunction85C28E99": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "9bc0bcc3ed607a9f6eb6d7e91c6c10fa4315abe3bf61b2e30f4358093d54a8a6.zip"
+    },
+    "Description": "SSR warmer",
+    "Environment": {
+     "Variables": {
+      "WARM_PARAMS": "[]"
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 128,
+    "Role": {
+     "Fn::GetAtt": [
+      "siteWarmerFunctionServiceRole7E78201A",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "siteWarmerFunctionServiceRole7E78201A"
+   ]
+  },
+  "siteWarmerRule60B51557": {
+   "Type": "AWS::Events::Rule",
+   "Properties": {
+    "ScheduleExpression": "rate(5 minutes)",
+    "State": "ENABLED",
+    "Targets": [
+     {
+      "Arn": {
+       "Fn::GetAtt": [
+        "siteWarmerFunction85C28E99",
+        "Arn"
+       ]
+      },
+      "Id": "Target0",
+      "RetryPolicy": {
+       "MaximumRetryAttempts": 0
+      }
+     }
+    ]
+   }
+  },
+  "siteWarmerRuleAllowEventRuleprodgreenoneauthExampleStacksiteWarmerFunctionECED9291FAB2A347": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "siteWarmerFunction85C28E99",
+      "Arn"
+     ]
+    },
+    "Principal": "events.amazonaws.com",
+    "SourceArn": {
+     "Fn::GetAtt": [
+      "siteWarmerRule60B51557",
+      "Arn"
+     ]
+    }
+   }
+  },
+  "sitePrewarmerPolicy545A81AF": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "siteWarmerFunction85C28E99",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "sitePrewarmerPolicy545A81AF",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "sitePrewarmer5F2B71F9": {
+   "Type": "Custom::FunctionInvoker",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "version": "1723949274455",
+    "functionName": {
+     "Ref": "siteWarmerFunction85C28E99"
+    }
+   },
+   "DependsOn": [
+    "sitePrewarmerPolicy545A81AF"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteRevalidationQueue355EB7DA": {
+   "Type": "AWS::SQS::Queue",
+   "Properties": {
+    "FifoQueue": true,
+    "ReceiveMessageWaitTimeSeconds": 20,
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteRevalidationFunctionServiceRole02D71DA1": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "siteRevalidationFunctionServiceRoleDefaultPolicy57C55CA4": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "sqs:ReceiveMessage",
+        "sqs:ChangeMessageVisibility",
+        "sqs:GetQueueUrl",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "siteRevalidationQueue355EB7DA",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "siteRevalidationFunctionServiceRoleDefaultPolicy57C55CA4",
+    "Roles": [
+     {
+      "Ref": "siteRevalidationFunctionServiceRole02D71DA1"
+     }
+    ]
+   }
+  },
+  "siteRevalidationFunctionEB84F6D0": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "a6dd4f6c220648d7cf4ad9aec5ea06eab325447a2fd2fe58a0684b7ee8be024a.zip"
+    },
+    "Description": "Next.js revalidator",
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "siteRevalidationFunctionServiceRole02D71DA1",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 30
+   },
+   "DependsOn": [
+    "siteRevalidationFunctionServiceRoleDefaultPolicy57C55CA4",
+    "siteRevalidationFunctionServiceRole02D71DA1"
+   ]
+  },
+  "siteRevalidationFunctionSqsEventSourceprodgreenoneauthExampleStacksiteRevalidationQueue4E240945F843F080": {
+   "Type": "AWS::Lambda::EventSourceMapping",
+   "Properties": {
+    "BatchSize": 5,
+    "EventSourceArn": {
+     "Fn::GetAtt": [
+      "siteRevalidationQueue355EB7DA",
+      "Arn"
+     ]
+    },
+    "FunctionName": {
+     "Ref": "siteRevalidationFunctionEB84F6D0"
+    }
+   }
+  },
+  "siteRevalidationTable79579F77": {
+   "Type": "AWS::DynamoDB::GlobalTable",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "tag",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "path",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "revalidatedAt",
+      "AttributeType": "N"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "GlobalSecondaryIndexes": [
+     {
+      "IndexName": "revalidate",
+      "KeySchema": [
+       {
+        "AttributeName": "path",
+        "KeyType": "HASH"
+       },
+       {
+        "AttributeName": "revalidatedAt",
+        "KeyType": "RANGE"
+       }
+      ],
+      "Projection": {
+       "ProjectionType": "ALL"
+      }
+     }
+    ],
+    "KeySchema": [
+     {
+      "AttributeName": "tag",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "path",
+      "KeyType": "RANGE"
+     }
+    ],
+    "Replicas": [
+     {
+      "GlobalSecondaryIndexes": [
+       {
+        "IndexName": "revalidate"
+       }
+      ],
+      "PointInTimeRecoverySpecification": {
+       "PointInTimeRecoveryEnabled": true
+      },
+      "Region": "us-east-1"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "siteParameterurl3D1716BC": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/NextjsSite/site/url",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": {
+     "Fn::Join": [
+      "",
+      [
+       "https://",
+       {
+        "Fn::GetAtt": [
+         "siteDistribution706F5265",
+         "DomainName"
+        ]
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ]
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "2eb6a831b107939f63cfebf68e6316e1a40f79fc99cae0fee9b333bac8d29bc4.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Lambda function for auto-deleting objects in ",
+       {
+        "Ref": "siteS3Bucket2B2851F3"
+       },
+       " S3 bucket."
+      ]
+     ]
+    }
+   },
+   "DependsOn": [
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+   ]
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:PutRetentionPolicy",
+        "logs:DeleteRetentionPolicy"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+    "Roles": [
+     {
+      "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+     }
+    ]
+   }
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Handler": "index.handler",
+    "Runtime": "nodejs18.x",
+    "Timeout": 900,
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35.zip"
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+      "Arn"
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   },
+   "DependsOn": [
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+   ]
+  },
+  "authCloudFrontInvalidatorPolicyE1B28EEC": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ssm:GetParameter",
+        "ssm:PutParameter",
+        "ssm:DeleteParameter",
+        "ssm:DeleteParameters"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "authCloudFrontInvalidatorPolicyE1B28EEC",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "authStackMetadataE2173050": {
+   "Type": "Custom::AuthKeys",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "publicPath": "/sst/green-one-auth/prod/Auth/auth/publicKey",
+    "privatePath": "/sst/green-one-auth/prod/Auth/auth/privateKey"
+   },
+   "DependsOn": [
+    "authCloudFrontInvalidatorPolicyE1B28EEC"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "authprefix52325D5C": {
+   "Type": "AWS::SSM::Parameter",
+   "Properties": {
+    "Name": "/sst/green-one-auth/prod/Auth/auth/prefix",
+    "Tags": {
+     "sst:app": "green-one-auth",
+     "sst:stage": "prod"
+    },
+    "Type": "String",
+    "Value": "/auth"
+   }
+  },
+  "LambdaANYauthproxyServiceRoleB521D3D5": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "LambdaANYauthproxyServiceRoleDefaultPolicyC59B6FCC": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/NextjsSite/site/url"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_ID/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/FACEBOOK_APP_ID/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_SECRET/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/FACEBOOK_APP_SECRET/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/GOOGLE_CLIENT_ID/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/GOOGLE_CLIENT_ID/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "LambdaANYauthproxyServiceRoleDefaultPolicyC59B6FCC",
+    "Roles": [
+     {
+      "Ref": "LambdaANYauthproxyServiceRoleB521D3D5"
+     }
+    ]
+   }
+  },
+  "LambdaANYauthproxy8E797D91": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "44be4c472aa3d10586679f9f2f20cce274ec872b18d045175abc1756b87b3890.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_NextjsSite_url_site": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
+      "SST_Auth_prefix_auth": "/auth",
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__",
+      "SST_Auth_privateKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/auth.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "LambdaANYauthproxyServiceRoleB521D3D5",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "LambdaANYauthproxyServiceRoleDefaultPolicyC59B6FCC",
+    "LambdaANYauthproxyServiceRoleB521D3D5"
+   ]
+  },
+  "RouteANYauthproxyIntegrationANYauthproxy7D58D719": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "LambdaANYauthproxy8E797D91",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "RouteANYauthproxyIntegrationANYauthproxyPermissionD85159CF": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "LambdaANYauthproxy8E797D91",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/auth/{proxy+}"
+      ]
+     ]
+    }
+   }
+  },
+  "RouteANYauthproxy7651BEA4": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "ANY /auth/{proxy+}",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "RouteANYauthproxyIntegrationANYauthproxy7D58D719"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "LambdaGETauthServiceRoleFD1BFD8F": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ]
+   }
+  },
+  "LambdaGETauthServiceRoleDefaultPolicyCE020F66": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "usersTableA9DCAD73",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "usersTableA9DCAD73",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ProfilesTableC07982B3",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ProfilesTableC07982B3",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "VenuesTable5F1C410C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "VenuesTable5F1C410C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ChatsTable647A21B9",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "ChatsTable647A21B9",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "MessagesTableA255D91E",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "MessagesTableA255D91E",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/NextjsSite/site/url"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_ID/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/FACEBOOK_APP_ID/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_SECRET/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/FACEBOOK_APP_SECRET/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/GOOGLE_CLIENT_ID/value"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/.fallback/Secret/GOOGLE_CLIENT_ID/value"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "ssm:GetParameters",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:",
+          {
+           "Ref": "AWS::Partition"
+          },
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "LambdaGETauthServiceRoleDefaultPolicyCE020F66",
+    "Roles": [
+     {
+      "Ref": "LambdaGETauthServiceRoleFD1BFD8F"
+     }
+    ]
+   }
+  },
+  "LambdaGETauthEE6E69A6": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "x86_64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+     "S3Key": "605c88d36e371f6e6584cb58e1969a6b6ecb1b63d78cc6a1f3ac6f6598d70624.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_APP": "green-one-auth",
+      "SST_STAGE": "prod",
+      "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
+      "SST_Table_tableName_users": {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "SST_Table_tableName_ProfilesTable": {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "SST_Table_tableName_VenuesTable": {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "SST_Table_tableName_ChatsTable": {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "SST_Table_tableName_MessagesTable": {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "SST_NextjsSite_url_site": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
+      "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
+      "SST_Auth_prefix_auth": "/auth",
+      "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__",
+      "SST_Auth_privateKey_auth": "__FETCH_FROM_SSM__"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "packages/functions/src/auth.handler",
+    "MemorySize": 1024,
+    "Role": {
+     "Fn::GetAtt": [
+      "LambdaGETauthServiceRoleFD1BFD8F",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "green-one-auth"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "prod"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+    "LambdaGETauthServiceRoleDefaultPolicyCE020F66",
+    "LambdaGETauthServiceRoleFD1BFD8F"
+   ]
+  },
+  "RouteGETauthIntegrationGETauth3FF21877": {
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+      "LambdaGETauthEE6E69A6",
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   }
+  },
+  "RouteGETauthIntegrationGETauthPermission46CAC93C": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "LambdaGETauthEE6E69A6",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-east-1:158871758094:",
+       {
+        "Ref": "apiApiC3C473D0"
+       },
+       "/*/*/auth"
+      ]
+     ]
+    }
+   }
+  },
+  "RouteGETauth879E8211": {
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "apiApiC3C473D0"
+    },
+    "AuthorizationType": "NONE",
+    "RouteKey": "GET /auth",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+        "Ref": "RouteGETauthIntegrationGETauth3FF21877"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "SourcemapUploaderPolicy6476872E": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:",
+           {
+            "Ref": "AWS::Partition"
+           },
+           ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "SourcemapUploaderPolicy6476872E",
+    "Roles": [
+     {
+      "Ref": "CustomResourceHandlerServiceRole41AEC181"
+     }
+    ]
+   }
+  },
+  "SourcemapUploader": {
+   "Type": "Custom::SourcemapUploader",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomResourceHandlerE8FB56BA",
+      "Arn"
+     ]
+    },
+    "app": "green-one-auth",
+    "stage": "prod",
+    "tarBucket": "sstbootstrap-useast124d14e4b-nw20ydvsy21p",
+    "srcBucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+    "sourcemaps": [
+     [
+      {
+       "Fn::GetAtt": [
+        "LambdaANYauthproxy8E797D91",
+        "Arn"
+       ]
+      },
+      "65d9d349948847591792ee844d0e7a9100a3fea33871167829bbe53f0caa9f0e.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "LambdaGETauthEE6E69A6",
+        "Arn"
+       ]
+      },
+      "65d9d349948847591792ee844d0e7a9100a3fea33871167829bbe53f0caa9f0e.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETprofiles79032A2B",
+        "Arn"
+       ]
+      },
+      "9e62a6263aedca0a48b5d425d2d16ec599cd6bcfb31fe4f2d690248f71acc9dc.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETsessionB4C9BFAB",
+        "Arn"
+       ]
+      },
+      "a02ae6dc9e5ce73029bbe54afed9fb2ad75cb79ffb0e0e1c23f9a68f1a5842cb.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETvenuesF6ADC793",
+        "Arn"
+       ]
+      },
+      "0594ec134edf5fd3faa94589dd48fa6a4650662b71d579c430d06ef2103f49a0.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "apiLambdaPOSTprofilesD701A171",
+        "Arn"
+       ]
+      },
+      "5d713a47cfa6b5e94c53e106228bc615f38cbda01103711688bcc0506370f6f4.map"
+     ],
+     [
+      {
+       "Fn::GetAtt": [
+        "apiLambdaPOSTvenues4927561E",
+        "Arn"
+       ]
+      },
+      "16025019a275ad15d640ef2dfd85ae157a9fe022a6a47e5aac40f50f852562e4.map"
+     ]
+    ]
+   },
+   "DependsOn": [
+    "SourcemapUploaderPolicy6476872E"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  }
+ },
+ "Outputs": {
+  "ApiEndpoint": {
+   "Value": {
+    "Fn::GetAtt": [
+     "apiApiC3C473D0",
+     "ApiEndpoint"
+    ]
+   }
+  },
+  "SiteURL": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Fn::GetAtt": [
+        "siteDistribution706F5265",
+        "DomainName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "SSTMetadata": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "{\"app\":\"green-one-auth\",\"stage\":\"prod\",\"version\":\"2.43.4\",\"metadata\":[{\"id\":\"users\",\"addr\":\"c8a8901c3f7e2944119d9a2252410354f1be824414\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      {
+       "Ref": "usersTableA9DCAD73"
+      },
+      "\",\"consumers\":[]}},{\"id\":\"PROFILES_TABLE\",\"addr\":\"c8abb6176b6c8085feb5690cf6ea1bf009f43c6d4e\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Parameter\",\"data\":{\"name\":\"PROFILES_TABLE\"}},{\"id\":\"VENUES_TABLE\",\"addr\":\"c8a0ea0f8a883990d94056f27915d08a0fecf1c536\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Parameter\",\"data\":{\"name\":\"VENUES_TABLE\"}},{\"id\":\"CHATS_TABLE\",\"addr\":\"c885da9c2c7cf05636ff009a1fb0a6e2957d098e8c\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Parameter\",\"data\":{\"name\":\"CHATS_TABLE\"}},{\"id\":\"MESSAGES_TABLE\",\"addr\":\"c81a91411f6a520aec2c12661ef24283099232c900\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Parameter\",\"data\":{\"name\":\"MESSAGES_TABLE\"}},{\"id\":\"ProfilesTable\",\"addr\":\"c8e543763258063e56b77bc4b269baa154fa3d6b22\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      {
+       "Ref": "ProfilesTableC07982B3"
+      },
+      "\",\"consumers\":[]}},{\"id\":\"VenuesTable\",\"addr\":\"c831a22c7d623ab38d5a61920861b00a1087bbb747\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      {
+       "Ref": "VenuesTable5F1C410C"
+      },
+      "\",\"consumers\":[]}},{\"id\":\"ChatsTable\",\"addr\":\"c8a5f5baee3344b7c04b4b03699f42163456dd9e87\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      {
+       "Ref": "ChatsTable647A21B9"
+      },
+      "\",\"consumers\":[]}},{\"id\":\"MessagesTable\",\"addr\":\"c850b0343262c4c8501c48cf6126e907070c593abb\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      {
+       "Ref": "MessagesTableA255D91E"
+      },
+      "\",\"consumers\":[]}},{\"id\":\"api\",\"addr\":\"c8fdb3fb3f78c20661b2afd06ca3efbf1612414867\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Api\",\"data\":{\"graphql\":false,\"url\":\"https://",
+      {
+       "Ref": "apiApiC3C473D0"
+      },
+      ".execute-api.us-east-1.",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/\",\"httpApiId\":\"",
+      {
+       "Ref": "apiApiC3C473D0"
+      },
+      "\",\"routes\":[{\"type\":\"function\",\"route\":\"GET /session\",\"fn\":{\"node\":\"c803f8f12f9462c9187ab8e961bb8aacf2d557824a\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"GET /profiles\",\"fn\":{\"node\":\"c82d327a919954da6c63fc06499fda811ae2d7fd6b\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"POST /profiles\",\"fn\":{\"node\":\"c86ac4156404c926d6662d033ffee18f5d8cb3a920\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"GET /venues\",\"fn\":{\"node\":\"c8ad3ce6fa50a95c8188439c2075799c97b5921f58\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"POST /venues\",\"fn\":{\"node\":\"c889796cc638147a7436b1801a41afcc57e82e76ae\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"ANY /auth/{proxy+}\",\"fn\":{\"node\":\"c858b277c9d89c686e498cf32f35ba0272338cfe98\",\"stack\":\"prod-green-one-auth-ExampleStack\"}},{\"type\":\"function\",\"route\":\"GET /auth\",\"fn\":{\"node\":\"c83af0530eb8eaad94f83d191b7d4a532384266540\",\"stack\":\"prod-green-one-auth-ExampleStack\"}}]}},{\"id\":\"Lambda_GET_--session\",\"addr\":\"c803f8f12f9462c9187ab8e961bb8aacf2d557824a\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETsessionB4C9BFAB",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/session.handler\",\"localId\":\"c803f8f12f9462c9187ab8e961bb8aacf2d557824a\",\"secrets\":[]}},{\"id\":\"Lambda_GET_--profiles\",\"addr\":\"c82d327a919954da6c63fc06499fda811ae2d7fd6b\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETprofiles79032A2B",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/profiles/list.handler\",\"localId\":\"c82d327a919954da6c63fc06499fda811ae2d7fd6b\",\"secrets\":[]}},{\"id\":\"Lambda_POST_--profiles\",\"addr\":\"c86ac4156404c926d6662d033ffee18f5d8cb3a920\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "apiLambdaPOSTprofilesD701A171",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/profiles/create.handler\",\"localId\":\"c86ac4156404c926d6662d033ffee18f5d8cb3a920\",\"secrets\":[]}},{\"id\":\"Lambda_GET_--venues\",\"addr\":\"c8ad3ce6fa50a95c8188439c2075799c97b5921f58\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "apiLambdaGETvenuesF6ADC793",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/venues/list.handler\",\"localId\":\"c8ad3ce6fa50a95c8188439c2075799c97b5921f58\",\"secrets\":[]}},{\"id\":\"Lambda_POST_--venues\",\"addr\":\"c889796cc638147a7436b1801a41afcc57e82e76ae\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "apiLambdaPOSTvenues4927561E",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/venues/create.handler\",\"localId\":\"c889796cc638147a7436b1801a41afcc57e82e76ae\",\"secrets\":[]}},{\"id\":\"site\",\"addr\":\"c8cfdf5b05c632a3ef1c2b1cfd85a2ef111f8b55d2\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"NextjsSite\",\"data\":{\"mode\":\"deployed\",\"path\":\"web\",\"runtime\":\"nodejs18.x\",\"url\":\"https://",
+      {
+       "Fn::GetAtt": [
+        "siteDistribution706F5265",
+        "DomainName"
+       ]
+      },
+      "\",\"edge\":false,\"server\":\"",
+      {
+       "Fn::GetAtt": [
+        "sitedefaultServerFunctionE19E70BC",
+        "Arn"
+       ]
+      },
+      "\",\"secrets\":[]}},{\"id\":\"defaultServerFunction\",\"addr\":\"c840f81e62526276c80e6ef885417f3b3d35740ed7\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "sitedefaultServerFunctionE19E70BC",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"index.handler\",\"missingSourcemap\":true,\"localId\":\"c840f81e62526276c80e6ef885417f3b3d35740ed7\",\"secrets\":[]}},{\"id\":\"FACEBOOK_APP_ID\",\"addr\":\"c8ec0ac48870d298bdef9e46b32d637ff48271a93c\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_ID\"}},{\"id\":\"FACEBOOK_APP_SECRET\",\"addr\":\"c8e83a9bc8cbe4cd3ccf99ddf7ad5f2256c21b430f\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_SECRET\"}},{\"id\":\"GOOGLE_CLIENT_ID\",\"addr\":\"c84f835418e48e6a778f37e28115ba22c0fbe1d790\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"GOOGLE_CLIENT_ID\"}},{\"id\":\"auth\",\"addr\":\"c892c0eeb7ed537ac3b9a2a1ba9b92e2b4bdaebad9\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Auth\",\"data\":{}},{\"id\":\"Lambda_ANY_--auth--{proxy+}\",\"addr\":\"c858b277c9d89c686e498cf32f35ba0272338cfe98\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "LambdaANYauthproxy8E797D91",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/auth.handler\",\"localId\":\"c858b277c9d89c686e498cf32f35ba0272338cfe98\",\"secrets\":[\"FACEBOOK_APP_ID\",\"FACEBOOK_APP_SECRET\",\"GOOGLE_CLIENT_ID\"]}},{\"id\":\"Lambda_GET_--auth\",\"addr\":\"c83af0530eb8eaad94f83d191b7d4a532384266540\",\"stack\":\"prod-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      {
+       "Fn::GetAtt": [
+        "LambdaGETauthEE6E69A6",
+        "Arn"
+       ]
+      },
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/auth.handler\",\"localId\":\"c83af0530eb8eaad94f83d191b7d4a532384266540\",\"secrets\":[\"FACEBOOK_APP_ID\",\"FACEBOOK_APP_SECRET\",\"GOOGLE_CLIENT_ID\"]}}]}"
+     ]
+    ]
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

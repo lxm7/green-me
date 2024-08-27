@@ -20,7 +20,7 @@
   },
   "workspaces": [
     "packages/*",
-    "web"
+    "expo-next/*"
   ],
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.624.0",

@@ -1,9 +1,29 @@
 {
   "name": "expo-next",
   "slug": "expo-next",
-  "plugins": ["expo-router"],
+  "plugins": [
+    [
+      "expo-router",
+      {
+        "origin": "https://d3gkipskq5tpp9.cloudfront.net/"
+      }
+    ],
+    [
+      "@react-native-google-signin/google-signin",
+      {
+        "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
+      }
+    ]
+  ],
   "scheme": "expo-next-scheme",
   "web": {
-    "bundler": "metro"
+    "bundler": "metro",
+    "output": "server"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.expo-next"
+  },
+  "android": {
+    "package": "com.anonymous.exponext"
   }
 }

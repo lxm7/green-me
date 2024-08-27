@@ -44,8 +44,8 @@ export const handler = AuthHandler({
 
         return Session.parameter({
           redirect: process.env.IS_LOCAL
-            ? `http://localhost:3000/api/session`
-            : `${NextjsSite.site.url}/api/session`,
+            ? `http://localhost:8081/session`
+            : `${NextjsSite.site.url}/session`,
           type: "user",
           // neater than query stringing it
           properties: {
@@ -78,8 +78,8 @@ export const handler = AuthHandler({
         );
         return Session.parameter({
           redirect: process.env.IS_LOCAL
-            ? `http://localhost:3000/api/session`
-            : `${NextjsSite.site.url}/api/session`,
+            ? `http://localhost:8081/session`
+            : `${NextjsSite.site.url}/session`,
           type: "user",
           properties: {
             userID: claims.sub,

@@ -119,7 +119,7 @@ export function ExampleStack({ app, stack }: StackContext) {
 
   // Create a static site
   const site = new NextjsSite(stack, "site", {
-    path: "web",
+    path: "expo-next",
     // bind mainDb incase we should call direct to db from getServerSideProps or getStaticProps
     bind: [
       userDetailsFromAuthProvider,
