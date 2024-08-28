@@ -2695,7 +2695,7 @@
      ]
     },
     "bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-    "key": "e8971a597306d584da9740212a3cd4e2db7379bda3a05c97a864d88de60f9b71.zip",
+    "key": "b241eeda94c530c054da4b83a8d93c4a169676c0f2efbc8ce5bffc4da5f9e6cd.zip",
     "replacements": [
      {
       "files": "**/*.@(*js|json|html)",
@@ -2723,7 +2723,7 @@
     ],
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-     "S3Key": "e8971a597306d584da9740212a3cd4e2db7379bda3a05c97a864d88de60f9b71.zip"
+     "S3Key": "b241eeda94c530c054da4b83a8d93c4a169676c0f2efbc8ce5bffc4da5f9e6cd.zip"
     },
     "Description": "Server handler placeholder",
     "Environment": {
@@ -4036,7 +4036,7 @@
     "Fn::Join": [
      "",
      [
-      "{\"app\":\"green-one-auth\",\"stage\":\"greenmev2\",\"version\":\"2.43.4\",\"metadata\":[{\"id\":\"users\",\"addr\":\"c810d528762c79729d55ecf9315af7de16bb0af386\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      "{\"app\":\"green-one-auth\",\"stage\":\"greenmev2\",\"version\":\"2.43.7\",\"metadata\":[{\"id\":\"users\",\"addr\":\"c810d528762c79729d55ecf9315af7de16bb0af386\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
       {
        "Ref": "usersTableA9DCAD73"
       },

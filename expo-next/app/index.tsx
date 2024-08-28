@@ -60,14 +60,13 @@ export default function App() {
           onPress={() => {
             console.log(process.env);
             GoogleSignin.configure({
-              // iosClientId: process.env.GOOGLE_AUTH_IOS_APP_ID,
+              iosClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_IOS_APP_ID,
               // @ts-ignore TODO
               androidClientId:
-                "239409212309-d7po33v3ub42mkb4dnqjbv77jbpl614e.apps.googleusercontent.com", // process.env.GOOGLE_AUTH_ANDROID_APP_ID,
+                process.env.EXPO_PUBLIC_GOOGLE_AUTH_ANDROID_APP_ID,
               // to retrieve id_token as we do in the web auth
               offlineAccess: true,
-              webClientId:
-                "239409212309-uffu1ia6cfl1p6r92gnt7s92c7lseo90.apps.googleusercontent.com", // process.env.GOOGLE_AUTH_WEB_APP_ID,
+              webClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_WEB_APP_ID,
             });
             GoogleSignin.hasPlayServices()
               .then((hasPlayService) => {
