@@ -28,7 +28,6 @@ const VideoBackgroundWeb = () => {
 
 const VideoBackgroundNative = () => {
   const onFullscreenUpdate = async ({ fullscreenUpdate }: any) => {
-    console.log({ fullscreenUpdate });
     if (Platform.OS === "android") {
       if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_DID_PRESENT) {
         await ScreenOrientation.unlockAsync();

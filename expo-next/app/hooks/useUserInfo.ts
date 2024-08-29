@@ -9,7 +9,6 @@ export function useUserInfo() {
     async function fetchUserInfo() {
       const user = await getUserInfo();
       const data = await user?.json();
-      console.log({ user, data });
       setUserInfo(data);
       setLoading(false);
     }

@@ -18203,7 +18203,6 @@ var handler = /* @__PURE__ */ __name(async () => {
       // Config.PROFILES_TABLE,
     });
     const result = await client.send(command);
-    console.log("__________", { result });
     const items = result.Items?.map((item) => unmarshall(item)) || [];
     return {
       statusCode: 200,

@@ -26,7 +26,6 @@ export async function listProfiles() {
   try {
     const res = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/profiles`);
     const profiles = await res.json();
-    console.log({ profiles, res });
 
     return profiles;
   } catch (error) {

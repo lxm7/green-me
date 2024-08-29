@@ -85,7 +85,7 @@ const seedData = async () => {
   }
 
   // Add seeding for other tables similarly...
-  console.log("Seeding completed!");
+  console.info("Seeding completed!");
 };
 
 seedData().catch(console.error);

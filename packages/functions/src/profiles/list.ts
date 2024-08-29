@@ -13,7 +13,6 @@ export const handler: APIGatewayProxyHandler = async () => {
     });
 
     const result = await client.send(command);
-    console.log("__________", { result });
     // Unmarshall DynamoDB items to JavaScript objects
     const items = result.Items?.map((item) => unmarshall(item)) || [];
 
