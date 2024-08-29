@@ -7,6 +7,8 @@ const nextConfig = withExpo({
   transpilePackages: [
     "react-native",
     "expo",
+    "expo-av",
+    "expo-screen-orientation",
     // Add more React Native / Expo packages here...
   ],
   experimental: {

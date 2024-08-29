@@ -73,7 +73,10 @@ export default function App() {
                 if (hasPlayService) {
                   GoogleSignin.signIn()
                     .then((userInfo) => {
-                      console.log(JSON.stringify(userInfo));
+                      console.log(
+                        "______GOOGLE SUCCESS",
+                        JSON.stringify(userInfo)
+                      );
                     })
                     .catch((e) => {
                       console.log("ERROR IS: " + JSON.stringify(e));
