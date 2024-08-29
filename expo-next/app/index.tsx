@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
+import { Image } from "expo-image";
 
 import { useUserInfo } from "./hooks/useUserInfo";
 
@@ -42,6 +43,7 @@ export default function App() {
         Profile Alex
       </Link>
       <Link href="/profiles">profiles</Link>
+
       <View>
         {/* <Link
           href={`${process.env.EXPO_PUBLIC_API_URL}/auth/google/authorize`}
@@ -125,5 +127,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
+  },
+  image: {
+    flex: 1,
+    width: "100%",
+    backgroundColor: "#0553",
   },
 });

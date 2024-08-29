@@ -22,7 +22,7 @@ const VideoBackgroundWeb = () => {
       }}
     >
       <source
-        src={"https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4"}
+        src={"../../../../assets/videos/bg_1_people.mp4"}
         type="video/mp4"
       />
     </video>
@@ -48,9 +48,7 @@ const VideoBackgroundNative = () => {
   return (
     <View style={styles.container}>
       <Video
-        source={{
-          uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-        }}
+        source={require("../../../../assets/videos/bg_1_people.mp4")}
         rate={1.0}
         volume={1.0}
         isMuted={true}
@@ -58,7 +56,7 @@ const VideoBackgroundNative = () => {
         shouldPlay
         isLooping
         style={StyleSheet.absoluteFill}
-        onFullscreenUpdate={onFullscreenUpdate}
+        // onFullscreenUpdate={onFullscreenUpdate}
       />
     </View>
   );

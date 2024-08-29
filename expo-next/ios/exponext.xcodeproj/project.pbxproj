@@ -14,7 +14,8 @@
 		96905EF65AED1B983A6B3ABC /* libPods-exponext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-exponext.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		8B07C98DA0E8499DB1FEA48F /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C41C8733154DAA9302DEEB /* noop-file.swift */; };
+		9A9643F4BEB44522A66579A4 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE096ACAAD64484B2E0DDA0 /* noop-file.swift */; };
+		30C71B6C0204445CB57820B1 /* bg_1_people.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CBBBED02D8544C2979C4944 /* bg_1_people.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +32,9 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-exponext/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		98C41C8733154DAA9302DEEB /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "exponext/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		204C182E726043FDAF674750 /* exponext-Bridging-Header.h */ = {isa = PBXFileReference; name = "exponext-Bridging-Header.h"; path = "exponext/exponext-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1EE096ACAAD64484B2E0DDA0 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "exponext/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		91A6731F0C7F403E8D6196DA /* exponext-Bridging-Header.h */ = {isa = PBXFileReference; name = "exponext-Bridging-Header.h"; path = "exponext/exponext-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2CBBBED02D8544C2979C4944 /* bg_1_people.mp4 */ = {isa = PBXFileReference; name = "bg_1_people.mp4"; path = "../assets/videos/bg_1_people.mp4"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				98C41C8733154DAA9302DEEB /* noop-file.swift */,
-				204C182E726043FDAF674750 /* exponext-Bridging-Header.h */,
+				1EE096ACAAD64484B2E0DDA0 /* noop-file.swift */,
+				91A6731F0C7F403E8D6196DA /* exponext-Bridging-Header.h */,
 			);
 			name = exponext;
 			sourceTree = "<group>";
@@ -88,6 +90,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				FD681BC4B1AC42D1A1FE86DB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +138,15 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
+		};
+		FD681BC4B1AC42D1A1FE86DB /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				2CBBBED02D8544C2979C4944 /* bg_1_people.mp4 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -198,7 +210,8 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				263BD2A091E34C7FBEBCA2B0 /* exponext-Bridging-Header.h in Resources */,
+				2D3449FB91654AB5856F8066 /* exponext-Bridging-Header.h in Resources */,
+				30C71B6C0204445CB57820B1 /* bg_1_people.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +287,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				8B07C98DA0E8499DB1FEA48F /* noop-file.swift in Sources */,
+				9A9643F4BEB44522A66579A4 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

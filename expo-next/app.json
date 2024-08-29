@@ -14,8 +14,13 @@
         "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
       }
     ],
-    ["expo-av"],
-    "expo-asset"
+    "expo-av",
+    [
+      "expo-asset",
+      {
+        "assets": ["./assets/videos/bg_1_people.mp4"]
+      }
+    ]
   ],
   "splash": {
     "image": "./assets/splash.png",
