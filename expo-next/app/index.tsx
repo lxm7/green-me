@@ -1,30 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import { Image } from "expo-image";
-
-import { useUserInfo } from "./hooks/useUserInfo";
 
 export default function App() {
-  const [loaded, setLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   console.log({ document });
-  //   if (document) ;
-  //   const scriptTag = document.createElement("script");
-  //   scriptTag.src = "https://accounts.google.com/gsi/client";
-  //   scriptTag.async = true;
-  //   scriptTag.onload = () => {
-  //     setLoaded(true);
-  //   };
-  //   scriptTag.onerror = () => {
-  //     console.error("Failed to load Google One-tap script");
-  //   };
-
-  //   document.body.appendChild(scriptTag);
-  // }, []);
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home page</Text>
@@ -43,6 +21,7 @@ export default function App() {
         Profile Alex
       </Link>
       <Link href="/profiles">profiles</Link>
+      <Link href="/sign-in">Sign In</Link>
 
       <View>
         {/* <Link
@@ -57,63 +36,6 @@ export default function App() {
         >
           <Text>Sign in with Facebook</Text>
         </Link> */}
-        <Pressable
-          // disabled={!loaded}
-          onPress={() => {
-            console.log(process.env);
-            GoogleSignin.configure({
-              iosClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_IOS_APP_ID,
-              // @ts-ignore TODO
-              androidClientId:
-                process.env.EXPO_PUBLIC_GOOGLE_AUTH_ANDROID_APP_ID,
-              // to retrieve id_token as we do in the web auth
-              offlineAccess: true,
-              webClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_WEB_APP_ID,
-            });
-            GoogleSignin.hasPlayServices()
-              .then((hasPlayService) => {
-                if (hasPlayService) {
-                  GoogleSignin.signIn()
-                    .then((userInfo) => {
-                      console.log(
-                        "______GOOGLE SUCCESS",
-                        JSON.stringify(userInfo)
-                      );
-                    })
-                    .catch((e) => {
-                      console.log("ERROR IS: " + JSON.stringify(e));
-                    });
-                }
-              })
-              .catch((e) => {
-                console.log("ERROR IS: " + JSON.stringify(e));
-              });
-          }}
-        >
-          <Text>Sign in with Google</Text>
-        </Pressable>
-        {/* <Pressable
-        title={'Login with Facebook'}
-        onPress={() => {
-          LoginManager.logInWithPermissions(['public_profile']).then(
-            function (result) {
-              console.log({result});
-              if (result.isCancelled) {
-                console.log('Login Cancelled ' + JSON.stringify(result));
-              } else {
-                console.log(
-                  'Login success with  permisssions: ' +
-                    result.grantedPermissions!.toString(),
-                );
-                console.log('Login Success ' + result.toString());
-              }
-            },
-            function (error) {
-              console.log('Login failed with error: ' + error);
-            },
-          );
-        }}
-      /> */}
       </View>
     </View>
   );

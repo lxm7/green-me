@@ -1,13 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import VideoBackground from "@/app/(routes)/sign-in/components/VideoBackground";
+import VideoBackground from "app/(routes)/sign-in/components/VideoBackground";
+import GoogleSignIn from "./components/GoogleSignIn";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <VideoBackground />
-      <Text style={styles.text1}>Background here where is it</Text>
-      <Text style={styles.text2}>Background here where is it</Text>
+      <GoogleSignIn />
     </View>
   );
 }
