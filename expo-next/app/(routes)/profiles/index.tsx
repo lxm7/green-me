@@ -8,6 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { useSession } from "../../hooks/useSession";
 
 type Profile = {
   id: string;
@@ -37,7 +38,8 @@ export async function listProfiles() {
 const ProfilesScreen: React.FC<Props> = ({ navigation, route }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Profile | undefined>();
-
+  const { session } = useSession();
+  console.log({ session });
   useEffect(() => {
     setLoading(true);
     const fetchUserProfile = async () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import VideoBackground from "app/(routes)/sign-in/components/VideoBackground";
+import VideoBackground from "app/sign-in/components/VideoBackground";
 import GoogleSignIn from "./components/GoogleSignIn";
 
 export default function App() {

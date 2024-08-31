@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Platform, Pressable, View, Text } from "react-native";
+import { Platform, Pressable, View, Text, StyleSheet } from "react-native";
 import {
   GoogleSignin,
   statusCodes,
 } from "@react-native-google-signin/google-signin";
 import { jwtDecode } from "jwt-decode";
 import { router } from "expo-router";
+// import Icon from 'react-native-vector-icons/FontAwesome'; // Import FontAwesome icons
+
+import { useSession } from "../../hooks/useSession";
 
 type Response = {
   clientId: string;
@@ -17,14 +20,15 @@ type Response = {
 type User = {
   name: string;
   email: string;
-  surname: string | undefined;
-  photo: string | undefined;
+  surname?: string;
+  photo?: string;
 };
 
 const GoogleSignIn = () => {
   const buttonDivRef = useRef<HTMLDivElement | null>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | undefined>(undefined);
+  const { signIn } = useSession();
 
   useEffect(() => {
     if (Platform.OS === "web") {
@@ -46,8 +50,7 @@ const GoogleSignIn = () => {
           // @ts-ignore
           window.google.accounts.id.renderButton(buttonDivRef.current, {
             theme: "outline",
-            size: "large",
-          }); // Customize the button appearance
+          });
         }
       };
       return () => {
@@ -67,14 +70,16 @@ const GoogleSignIn = () => {
   const handleWebCredentialResponse = async (response: Response) => {
     if (!response || !response?.credential) return null;
     const decoded: User = jwtDecode(response.credential);
-
     setUser({
       name: decoded.name,
       surname: undefined,
       photo: decoded.photo,
       email: decoded.email,
     });
-
+    // TODO: create our own session from manual login.
+    // TODO: create a way to unify either google/fb or manual login into our own SSO for SST
+    // for now just set google's idToken
+    signIn(response.credential);
     router.replace("/profiles");
   };
 
@@ -89,25 +94,26 @@ const GoogleSignIn = () => {
         webClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_WEB_APP_ID,
       });
       await GoogleSignin.hasPlayServices();
-      const { user } = await GoogleSignin.signIn();
+      const { user: googleUser, idToken } = await GoogleSignin.signIn();
 
       setUser({
-        name: user.name,
-        surname: user.familyName,
-        photo: user.photo,
-        email: user.email,
+        name: googleUser.name as string,
+        email: googleUser.email,
+        surname: googleUser.familyName || undefined,
+        photo: googleUser.photo || undefined,
       });
 
+      signIn(idToken);
       router.replace("/profiles");
     } catch (error: any) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-        // user cancelled the sign-in flow
+        console.error("user cancelled the sign-in flow");
       } else if (error.code === statusCodes.IN_PROGRESS) {
-        // operation (e.g. sign-in) is in progress already
+        console.error("operation (e.g. sign-in) is in progress already");
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-        // play services not available or outdated
+        console.error("play services not available or outdated");
       } else {
-        // some other error happened
+        console.error({ error });
       }
     }
   };
@@ -118,13 +124,18 @@ const GoogleSignIn = () => {
         {user ? (
           <View>
             <Text>{user.name}</Text>
-            {user.familyName && <Text>{user.familyName}</Text>}
+            {user.surname && <Text>{user.surname}</Text>}
             {user.photo && <Text>{user.photo}</Text>}
             <Text>{user.email}</Text>
           </View>
         ) : (
-          <div role="button" ref={buttonDivRef}>
-            <Text>Sign in with Google (Web)</Text>
+          <div
+            role="button"
+            ref={buttonDivRef}
+            // TODO: web and native padding unify
+            style={{ ...styles.button }} //  padding: "12px"
+          >
+            <span style={styles.buttonText}>Sign in with Google</span>
           </div>
         )}
       </View>
@@ -135,13 +146,14 @@ const GoogleSignIn = () => {
         {user ? (
           <View>
             <Text>{user.name}</Text>
-            {user.familyName && <Text>{user.familyName}</Text>}
+            {user.surname && <Text>{user.surname}</Text>}
             {user.photo && <Text>{user.photo}</Text>}
             <Text>{user.email}</Text>
           </View>
         ) : (
-          <Pressable onPress={handleMobileSignIn}>
-            <Text>Sign in with Google (Native)</Text>
+          <Pressable style={styles.button} onPress={handleMobileSignIn}>
+            {/* <Icon name="google" size={20} color="#FFF" style={styles.icon} /> */}
+            <Text style={styles.buttonText}>Sign in with Google</Text>
           </Pressable>
         )}
 
@@ -171,5 +183,30 @@ const GoogleSignIn = () => {
     );
   }
 };
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "#4285F4", // Google blue
+    borderRadius: 8, // Rounded corners
+    paddingVertical: 12, // Vertical padding
+    paddingHorizontal: 24, // Horizontal padding
+    flexDirection: "row", // Row layout for icon and text
+    alignItems: "center", // Center items vertically
+    justifyContent: "center", // Center text horizontally
+    shadowColor: "#000", // Shadow color
+    shadowOffset: { width: 0, height: 2 }, // Shadow offset
+    shadowOpacity: 0.2, // Shadow opacity
+    shadowRadius: 2, // Shadow radius
+    elevation: 2, // Elevation for Android shadow
+  },
+  buttonText: {
+    color: "#FFFFFF", // White text color
+    fontSize: 16, // Font size
+    fontWeight: "600", // Semi-bold text
+  },
+  icon: {
+    marginRight: 8, // Adds space between the icon and the text
+  },
+});
 
 export default GoogleSignIn;
