@@ -1,29 +1,16 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import VideoBackground from "app/sign-in/components/VideoBackground";
+import { View } from "react-native";
+import VideoBackground from "./components/VideoBackground";
 import GoogleSignIn from "./components/GoogleSignIn";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View
+      className={
+        "absolute right-0 left-0 bottom-0 top-0 justify-center items-center"
+      }
+    >
       <VideoBackground />
       <GoogleSignIn />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text1: {
-    color: "white",
-    zIndex: 1,
-  },
-  text2: {
-    color: "red",
-    zIndex: 1,
-  },
-});

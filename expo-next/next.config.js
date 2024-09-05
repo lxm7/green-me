@@ -8,7 +8,8 @@ const nextConfig = withExpo({
     "react-native",
     "expo",
     "expo-av",
-    "expo-screen-orientation",
+    "nativewind",
+    "react-native-css-interop",
     // Add more React Native / Expo packages here...
   ],
   experimental: {

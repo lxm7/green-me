@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Platform, Pressable, View, Text, StyleSheet } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Platform, Pressable, View, Text } from "react-native";
 import {
   GoogleSignin,
   statusCodes,
@@ -132,10 +132,11 @@ const GoogleSignIn = () => {
           <div
             role="button"
             ref={buttonDivRef}
-            // TODO: web and native padding unify
-            style={{ ...styles.button }} //  padding: "12px"
+            className="bg-[#4285F4] rounded-lg py-3 px-6 flex-row items-center justify-center shadow-md shadow-black"
           >
-            <span style={styles.buttonText}>Sign in with Google</span>
+            <span className="text-white text-base font-semibold">
+              Sign in with Google
+            </span>
           </div>
         )}
       </View>
@@ -151,9 +152,14 @@ const GoogleSignIn = () => {
             <Text>{user.email}</Text>
           </View>
         ) : (
-          <Pressable style={styles.button} onPress={handleMobileSignIn}>
+          <Pressable
+            className="bg-[#4285F4] rounded-lg py-3 px-6 flex-row items-center justify-center shadow-md shadow-black"
+            onPress={handleMobileSignIn}
+          >
             {/* <Icon name="google" size={20} color="#FFF" style={styles.icon} /> */}
-            <Text style={styles.buttonText}>Sign in with Google</Text>
+            <Text className="text-white text-base font-semibold">
+              Sign in with Google
+            </Text>
           </Pressable>
         )}
 
@@ -183,30 +189,5 @@ const GoogleSignIn = () => {
     );
   }
 };
-
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: "#4285F4", // Google blue
-    borderRadius: 8, // Rounded corners
-    paddingVertical: 12, // Vertical padding
-    paddingHorizontal: 24, // Horizontal padding
-    flexDirection: "row", // Row layout for icon and text
-    alignItems: "center", // Center items vertically
-    justifyContent: "center", // Center text horizontally
-    shadowColor: "#000", // Shadow color
-    shadowOffset: { width: 0, height: 2 }, // Shadow offset
-    shadowOpacity: 0.2, // Shadow opacity
-    shadowRadius: 2, // Shadow radius
-    elevation: 2, // Elevation for Android shadow
-  },
-  buttonText: {
-    color: "#FFFFFF", // White text color
-    fontSize: 16, // Font size
-    fontWeight: "600", // Semi-bold text
-  },
-  icon: {
-    marginRight: 8, // Adds space between the icon and the text
-  },
-});
 
 export default GoogleSignIn;

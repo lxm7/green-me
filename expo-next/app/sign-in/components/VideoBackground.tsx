@@ -1,7 +1,5 @@
-import React from "react";
-import { StyleSheet, View, Platform } from "react-native";
-import { Video, ResizeMode, VideoFullscreenUpdate } from "expo-av";
-import * as ScreenOrientation from "expo-screen-orientation";
+import { View, Platform } from "react-native";
+import { Video, ResizeMode } from "expo-av";
 
 const VideoBackgroundWeb = () => {
   return (
@@ -10,6 +8,9 @@ const VideoBackgroundWeb = () => {
       loop
       muted
       playsInline
+      // className={
+      //   "absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 -z-10 object-cover"
+      // }
       style={{
         position: "absolute",
         top: "50%",
@@ -27,22 +28,12 @@ const VideoBackgroundWeb = () => {
 };
 
 const VideoBackgroundNative = () => {
-  const onFullscreenUpdate = async ({ fullscreenUpdate }: any) => {
-    if (Platform.OS === "android") {
-      if (fullscreenUpdate === VideoFullscreenUpdate.PLAYER_DID_PRESENT) {
-        await ScreenOrientation.unlockAsync();
-      } else if (
-        fullscreenUpdate === VideoFullscreenUpdate.PLAYER_WILL_DISMISS
-      ) {
-        // lock the screen in Portrait orientation
-        await ScreenOrientation.lockAsync(
-          ScreenOrientation.OrientationLock.PORTRAIT
-        );
-      }
-    }
-  };
   return (
-    <View style={styles.container}>
+    <View
+      className={
+        "absolute right-0 left-0 bottom-0 top-0 justify-center items-center"
+      }
+    >
       <Video
         source={require("assets/videos/bg_1_people.mp4")}
         rate={1.0}
@@ -51,20 +42,12 @@ const VideoBackgroundNative = () => {
         resizeMode={ResizeMode.COVER}
         shouldPlay
         isLooping
-        style={StyleSheet.absoluteFill}
-        onFullscreenUpdate={onFullscreenUpdate}
+        className={"absolute right-0 left-0 bottom-0 top-0"}
+        posterSource={require("assets/poster.png")}
       />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
 
 const VideoBackground = () => {
   if (Platform.OS === "web") {
