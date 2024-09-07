@@ -1,7 +1,3 @@
-# How to add Google authentication to a serverless API
-
-An example serverless app created with SST. RN has its own deployment from the rest for obvious reasons
-
 ## Getting Started
 
 To run locally and see all services running, open 3 terminal tabs:
