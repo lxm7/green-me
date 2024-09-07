@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { Text, View, ActivityIndicator, StyleSheet } from "react-native";
+import { Text, View, ActivityIndicator } from "react-native";
 
 const ProfilesList = lazy(() => import("./List"));
 
@@ -14,10 +14,12 @@ export async function listProfiles() {
   }
 }
 
-const ProfilesScreen: React.FC<any> = ({ navigation, route }) => {
+type Props = {};
+
+const ProfilesScreen: React.FC<Props> = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Profiles</Text>
+    <View className="flex-1 bg-white items-center">
+      <Text className="text-2xl mb-4">Profiles</Text>
       <Suspense
         fallback={
           <View>
@@ -30,17 +32,5 @@ const ProfilesScreen: React.FC<any> = ({ navigation, route }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 24, // text-2xl
-    marginBottom: 16, // mb-4
-  },
-});
 
 export default ProfilesScreen;

@@ -2,7 +2,7 @@
 // It means you can safely store sensitive data in the route handlers without exposing it to the client.
 
 // API handler function for Expo/Next.js
-export async function GET(request: any, response: Response) {
+export async function GET(request: Request, response: Response) {
   const [path, queryString] = request.url.split("?token=");
 
   if (!queryString) {
