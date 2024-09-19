@@ -4,37 +4,27 @@ To run locally and see all services running, open 3 terminal tabs:
 
 ## Commands
 
-### /
-
 ```bash
 $ npm run dev
 ```
 
-Starts the Live Lambda Development environment
+Starts SST with Live Lambda Development environment
 
-### /web
-
-```bash
-$ npm run dev
-```
-
-Starts the nextjs web app
-
-### /rn
+### /expo-next
 
 ```bash
-$ npm run dev
+$ npx expo start -c
 ```
 
-Starts the react native app
+This starts the expo menu that can then run the web build as well as the react native builds, see expo menu in terminal for running
 
 ### `npm run build`
 
 Build your app and synthesize your stacks.
 
-### `npm run deploy [stack]`
+###  SST `npm run deploy [stack]`
 
-Deploy all your stacks (albiet RN) to AWS. Or optionally deploy, a specific stack.
+Deploy all your stacks to AWS.
 
 ### `npm run remove [stack]`
 
