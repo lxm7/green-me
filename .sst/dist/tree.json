@@ -4053,7 +4053,7 @@
                             ],
                             "code": {
                               "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                              "s3Key": "b241eeda94c530c054da4b83a8d93c4a169676c0f2efbc8ce5bffc4da5f9e6cd.zip"
+                              "s3Key": "dc17a15f9706ac3d9810de0815e0c43800b21720d544cae52290aa148b433cd0.zip"
                             },
                             "description": "Server handler placeholder",
                             "environment": {
