@@ -2458,359 +2458,10 @@
     }
    }
   },
-  "siteServerFunctionRole1F8F4FAC": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "AWS": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::158871758094:root"
-          ]
-         ]
-        }
-       }
-      },
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "MaxSessionDuration": 43200,
-    "Tags": [
-     {
-      "Key": "sst:app",
-      "Value": "green-one-auth"
-     },
-     {
-      "Key": "sst:stage",
-      "Value": "greenmev2"
-     }
-    ]
-   }
-  },
-  "siteServerFunctionRoleDefaultPolicy213DB8A5": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": "dynamodb:*",
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "usersTableA9DCAD73",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "usersTableA9DCAD73",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": "dynamodb:*",
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "ProfilesTableC07982B3",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "ProfilesTableC07982B3",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": "dynamodb:*",
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "VenuesTable5F1C410C",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "VenuesTable5F1C410C",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": "dynamodb:*",
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "ChatsTable647A21B9",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "ChatsTable647A21B9",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": "dynamodb:*",
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "MessagesTableA255D91E",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "MessagesTableA255D91E",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "siteServerFunctionRoleDefaultPolicy213DB8A5",
-    "Roles": [
-     {
-      "Ref": "siteServerFunctionRole1F8F4FAC"
-     }
-    ]
-   }
-  },
-  "siteServerFunctionAssetReplacerPolicy304BF125": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "s3:GetObject",
-        "s3:PutObject"
-       ],
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          "arn:",
-          {
-           "Ref": "AWS::Partition"
-          },
-          ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
-         ]
-        ]
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "siteServerFunctionAssetReplacerPolicy304BF125",
-    "Roles": [
-     {
-      "Ref": "CustomResourceHandlerServiceRole41AEC181"
-     }
-    ]
-   }
-  },
-  "siteServerFunctionAssetReplacer9A11D516": {
-   "Type": "Custom::AssetReplacer",
-   "Properties": {
-    "ServiceToken": {
-     "Fn::GetAtt": [
-      "CustomResourceHandlerE8FB56BA",
-      "Arn"
-     ]
-    },
-    "bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-    "key": "dc17a15f9706ac3d9810de0815e0c43800b21720d544cae52290aa148b433cd0.zip",
-    "replacements": [
-     {
-      "files": "**/*.@(*js|json|html)",
-      "search": "{{ NEXT_PUBLIC_API_URL }}",
-      "replace": {
-       "Fn::GetAtt": [
-        "apiApiC3C473D0",
-        "ApiEndpoint"
-       ]
-      }
-     }
-    ]
-   },
-   "DependsOn": [
-    "siteServerFunctionAssetReplacerPolicy304BF125"
-   ],
-   "UpdateReplacePolicy": "Delete",
-   "DeletionPolicy": "Delete"
-  },
-  "siteServerFunction6DFA6F1B": {
-   "Type": "AWS::Lambda::Function",
-   "Properties": {
-    "Architectures": [
-     "arm64"
-    ],
-    "Code": {
-     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-     "S3Key": "dc17a15f9706ac3d9810de0815e0c43800b21720d544cae52290aa148b433cd0.zip"
-    },
-    "Description": "Server handler placeholder",
-    "Environment": {
-     "Variables": {
-      "NEXT_PUBLIC_API_URL": {
-       "Fn::GetAtt": [
-        "apiApiC3C473D0",
-        "ApiEndpoint"
-       ]
-      },
-      "SST_APP": "green-one-auth",
-      "SST_STAGE": "greenmev2",
-      "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
-      "SST_Table_tableName_users": {
-       "Ref": "usersTableA9DCAD73"
-      },
-      "SST_Table_tableName_ProfilesTable": {
-       "Ref": "ProfilesTableC07982B3"
-      },
-      "SST_Table_tableName_VenuesTable": {
-       "Ref": "VenuesTable5F1C410C"
-      },
-      "SST_Table_tableName_ChatsTable": {
-       "Ref": "ChatsTable647A21B9"
-      },
-      "SST_Table_tableName_MessagesTable": {
-       "Ref": "MessagesTableA255D91E"
-      }
-     }
-    },
-    "Handler": "index.handler",
-    "MemorySize": 1024,
-    "Role": {
-     "Fn::GetAtt": [
-      "siteServerFunctionRole1F8F4FAC",
-      "Arn"
-     ]
-    },
-    "Runtime": "nodejs18.x",
-    "Tags": [
-     {
-      "Key": "sst:app",
-      "Value": "green-one-auth"
-     },
-     {
-      "Key": "sst:stage",
-      "Value": "greenmev2"
-     }
-    ],
-    "Timeout": 10
-   },
-   "DependsOn": [
-    "siteServerFunctionAssetReplacer9A11D516",
-    "siteServerFunctionRoleDefaultPolicy213DB8A5",
-    "siteServerFunctionRole1F8F4FAC"
-   ]
-  },
-  "siteServerFunctionLogRetention7123678D": {
-   "Type": "Custom::LogRetention",
-   "Properties": {
-    "ServiceToken": {
-     "Fn::GetAtt": [
-      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
-      "Arn"
-     ]
-    },
-    "LogGroupName": {
-     "Fn::Join": [
-      "",
-      [
-       "/aws/lambda/",
-       {
-        "Ref": "siteServerFunction6DFA6F1B"
-       }
-      ]
-     ]
-    },
-    "RetentionInDays": 3
-   },
-   "DependsOn": [
-    "siteServerFunctionAssetReplacer9A11D516"
-   ]
-  },
   "siteParameterurl3D1716BC": {
    "Type": "AWS::SSM::Parameter",
    "Properties": {
-    "Name": "/sst/green-one-auth/greenmev2/NextjsSite/site/url",
+    "Name": "/sst/green-one-auth/greenmev2/StaticSite/site/url",
     "Tags": {
      "sst:app": "green-one-auth",
      "sst:stage": "greenmev2"
@@ -2818,103 +2469,6 @@
     "Type": "String",
     "Value": "localhost"
    }
-  },
-  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "ManagedPolicyArns": [
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-       ]
-      ]
-     }
-    ],
-    "Tags": [
-     {
-      "Key": "sst:app",
-      "Value": "green-one-auth"
-     },
-     {
-      "Key": "sst:stage",
-      "Value": "greenmev2"
-     }
-    ]
-   }
-  },
-  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "logs:PutRetentionPolicy",
-        "logs:DeleteRetentionPolicy"
-       ],
-       "Effect": "Allow",
-       "Resource": "*"
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
-    "Roles": [
-     {
-      "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
-     }
-    ]
-   }
-  },
-  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
-   "Type": "AWS::Lambda::Function",
-   "Properties": {
-    "Handler": "index.handler",
-    "Runtime": "nodejs18.x",
-    "Timeout": 900,
-    "Code": {
-     "S3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-     "S3Key": "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35.zip"
-    },
-    "Role": {
-     "Fn::GetAtt": [
-      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
-      "Arn"
-     ]
-    },
-    "Tags": [
-     {
-      "Key": "sst:app",
-      "Value": "green-one-auth"
-     },
-     {
-      "Key": "sst:stage",
-      "Value": "greenmev2"
-     }
-    ]
-   },
-   "DependsOn": [
-    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
-    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
-   ]
   },
   "authCloudFrontInvalidatorPolicyE1B28EEC": {
    "Type": "AWS::IAM::Policy",
@@ -3178,7 +2732,7 @@
           {
            "Ref": "AWS::Partition"
           },
-          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/NextjsSite/site/url"
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/StaticSite/site/url"
          ]
         ]
        }
@@ -3384,7 +2938,7 @@
       "SST_Table_tableName_MessagesTable": {
        "Ref": "MessagesTableA255D91E"
       },
-      "SST_NextjsSite_url_site": "localhost",
+      "SST_StaticSite_url_site": "localhost",
       "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
       "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
       "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
@@ -3697,7 +3251,7 @@
           {
            "Ref": "AWS::Partition"
           },
-          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/NextjsSite/site/url"
+          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/StaticSite/site/url"
          ]
         ]
        }
@@ -3903,7 +3457,7 @@
       "SST_Table_tableName_MessagesTable": {
        "Ref": "MessagesTableA255D91E"
       },
-      "SST_NextjsSite_url_site": "localhost",
+      "SST_StaticSite_url_site": "localhost",
       "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
       "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
       "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
@@ -4103,21 +3657,14 @@
         "Arn"
        ]
       },
-      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/venues/create.handler\",\"localId\":\"c8b1f0ad207c38730895f11766ad77ca16e090d883\",\"secrets\":[]}},{\"id\":\"site\",\"addr\":\"c8714608d3d7d6b769ce6dae6a27298c41e23e0e63\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"NextjsSite\",\"data\":{\"mode\":\"placeholder\",\"path\":\"expo-next\",\"runtime\":\"nodejs18.x\",\"server\":\"",
+      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"packages/functions/src/venues/create.handler\",\"localId\":\"c8b1f0ad207c38730895f11766ad77ca16e090d883\",\"secrets\":[]}},{\"id\":\"site\",\"addr\":\"c8714608d3d7d6b769ce6dae6a27298c41e23e0e63\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"StaticSite\",\"data\":{\"path\":\"expo-next\",\"environment\":{\"NEXT_PUBLIC_API_URL\":\"",
       {
        "Fn::GetAtt": [
-        "siteServerFunction6DFA6F1B",
-        "Arn"
+        "apiApiC3C473D0",
+        "ApiEndpoint"
        ]
       },
-      "\",\"secrets\":[]}},{\"id\":\"ServerFunction\",\"addr\":\"c8b4d723af107fe311ff2083da9edeee3ea8e66037\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
-      {
-       "Fn::GetAtt": [
-        "siteServerFunction6DFA6F1B",
-        "Arn"
-       ]
-      },
-      "\",\"runtime\":\"nodejs18.x\",\"handler\":\"index.handler\",\"localId\":\"c8b4d723af107fe311ff2083da9edeee3ea8e66037\",\"secrets\":[]}},{\"id\":\"FACEBOOK_APP_ID\",\"addr\":\"c8a6e3c1174e2c42ca47d75e613cddf9de630897ed\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_ID\"}},{\"id\":\"FACEBOOK_APP_SECRET\",\"addr\":\"c8e7ac84bda330ca429462c0934ae1ca962dcb8782\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_SECRET\"}},{\"id\":\"GOOGLE_CLIENT_ID\",\"addr\":\"c8ba8b0ced08254a5d108ab75a8ff7a92de8c777ec\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"GOOGLE_CLIENT_ID\"}},{\"id\":\"auth\",\"addr\":\"c867451699fc01364dcc7ab5f2889ea4fcbb18316c\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Auth\",\"data\":{}},{\"id\":\"Lambda_ANY_--auth--{proxy+}\",\"addr\":\"c83d28cd2895b04ad3c4aa5eececdefaaa576ec8f9\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
+      "\"}}},{\"id\":\"FACEBOOK_APP_ID\",\"addr\":\"c8a6e3c1174e2c42ca47d75e613cddf9de630897ed\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_ID\"}},{\"id\":\"FACEBOOK_APP_SECRET\",\"addr\":\"c8e7ac84bda330ca429462c0934ae1ca962dcb8782\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"FACEBOOK_APP_SECRET\"}},{\"id\":\"GOOGLE_CLIENT_ID\",\"addr\":\"c8ba8b0ced08254a5d108ab75a8ff7a92de8c777ec\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Secret\",\"data\":{\"name\":\"GOOGLE_CLIENT_ID\"}},{\"id\":\"auth\",\"addr\":\"c867451699fc01364dcc7ab5f2889ea4fcbb18316c\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Auth\",\"data\":{}},{\"id\":\"Lambda_ANY_--auth--{proxy+}\",\"addr\":\"c83d28cd2895b04ad3c4aa5eececdefaaa576ec8f9\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Function\",\"data\":{\"arn\":\"",
       {
        "Fn::GetAtt": [
         "LambdaANYauthproxy8E797D91",

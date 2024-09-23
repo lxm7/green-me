@@ -2,7 +2,7 @@ import {
   StackContext,
   Api,
   Auth,
-  NextjsSite,
+  StaticSite,
   Table,
   Config,
 } from "sst/constructs";
@@ -94,6 +94,8 @@ export function ExampleStack({ app, stack }: StackContext) {
   const api = new Api(stack, "api", {
     defaults: {
       function: {
+        runtime: "nodejs18.x",
+
         // bind - injects the environment variables directly into the Lambda function
         // at runtime and ensures the function has the necessary permissions
         bind: [
@@ -118,16 +120,18 @@ export function ExampleStack({ app, stack }: StackContext) {
   });
 
   // Create a static site
-  const site = new NextjsSite(stack, "site", {
+  const site = new StaticSite(stack, "site", {
     path: "expo-next",
+    buildCommand: "npm run build",
+    buildOutput: "dist",
     // bind mainDb incase we should call direct to db from getServerSideProps or getStaticProps
-    bind: [
-      userDetailsFromAuthProvider,
-      profilesTable,
-      venuesTable,
-      chatsTable,
-      messagesTable,
-    ],
+    // bind: [
+    //   userDetailsFromAuthProvider,
+    //   profilesTable,
+    //   venuesTable,
+    //   chatsTable,
+    //   messagesTable,
+    // ],
     // environment - doesnt require permissions, more static value
     environment: {
       NEXT_PUBLIC_API_URL: api.url,
@@ -147,6 +151,7 @@ export function ExampleStack({ app, stack }: StackContext) {
       ],
     },
   });
+
   auth.attach(stack, {
     api,
     prefix: "/auth",

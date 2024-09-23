@@ -22,7 +22,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::158871758094:role/cdk-hnb659fds-deploy-role-158871758094-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::158871758094:role/cdk-hnb659fds-cfn-exec-role-158871758094-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-158871758094-us-east-1/2c4ee98a7ae7cbc7b8a9a2e8dc2202245ea311474acda8ccd8b3945c1f48d6b0.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-158871758094-us-east-1/509abc9dcefca1a6b42071d676338fbfcd32caf0e7bc23a3244d21650c5221fa.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -423,64 +423,10 @@
             "data": "apiParameterurl1D4D90E2"
           }
         ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunctionRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunctionRole1F8F4FAC"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunctionRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunctionRoleDefaultPolicy213DB8A5"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunction/AssetReplacerPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunctionAssetReplacerPolicy304BF125"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunction/AssetReplacer/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunctionAssetReplacer9A11D516"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunction/ServerFunction/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunction6DFA6F1B"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/site/ServerFunction/ServerFunction/LogRetention/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "siteServerFunctionLogRetention7123678D"
-          }
-        ],
         "/greenmev2-green-one-auth-ExampleStack/site/Parameter_url/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "siteParameterurl3D1716BC"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
-          }
-        ],
-        "/greenmev2-green-one-auth-ExampleStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
           }
         ],
         "/greenmev2-green-one-auth-ExampleStack/auth/CloudFrontInvalidatorPolicy/Resource": [

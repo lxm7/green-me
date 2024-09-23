@@ -1,25 +1,9 @@
-# [Next.js Example](https://www.nextjs.org/)
+# Expo Router and Tailwind CSS
 
-<p>
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+Use [Expo Router](https://docs.expo.dev/router/introduction/) with [Nativewind](https://www.nativewind.dev/v4/overview/) styling.
 
-This demo shows you how to setup your Next.js website to use packages from the Expo SDK like Camera, Gestures, Permissions, etc... Refer to the [Next adapter docs](https://github.com/expo/expo-cli/tree/main/packages/next-adapter) to learn how to add more React Native packages to your Next.js project.
+## 🚀 How to use
 
-### 🏁 New Commands
-
-When targeting web, you'll need to use the Next.js CLI instead of Expo CLI:
-
-- **Starting web**
-
-  - 🚫 `yarn expo`
-  - ✅ `yarn next`
-
-- **Building web**
-  - 🚫 `yarn expo export:web`
-  - ✅ `yarn next build`
-
-### 👀 More Info
-
-- [Next Adapter repo](https://github.com/expo/expo-cli/tree/main/packages/next-adapter)
+```sh
+npx create-expo-app -e with-router-tailwind
+```

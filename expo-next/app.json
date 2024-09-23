@@ -1,42 +1,24 @@
 {
-  "name": "expo-next",
-  "slug": "expo-next",
-  "icon": "./assets/icon.png",
-  "plugins": [
-    [
-      "expo-router",
-      {
-        "origin": "https://d3gkipskq5tpp9.cloudfront.net/"
-      }
+  "expo": {
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://n"
+        }
+      ]
     ],
-    [
-      "@react-native-google-signin/google-signin",
-      {
-        "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
-      }
-    ],
-    "expo-av",
-    [
-      "expo-asset",
-      {
-        "assets": ["./assets/videos/bg_1_people.mp4"]
-      }
-    ]
-  ],
-  "splash": {
-    "image": "./assets/splash.png",
-    "resizeMode": "cover",
-    "backgroundColor": "#81AE89"
-  },
-  "scheme": "expo-next-scheme",
-  "web": {
-    "bundler": "metro",
-    "output": "server"
-  },
-  "ios": {
-    "bundleIdentifier": "com.anonymous.expo-next"
-  },
-  "android": {
-    "package": "com.anonymous.exponext"
+    "name": "typescript-app",
+    "slug": "typescript-app",
+    "android": {
+      "package": "com.anonymous.typescriptapp"
+    }
   }
 }

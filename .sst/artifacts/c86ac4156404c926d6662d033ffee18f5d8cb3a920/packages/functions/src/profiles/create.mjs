@@ -37,10 +37,10 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// node_modules/@smithy/protocol-http/dist-es/extensions/httpExtensionConfiguration.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/extensions/httpExtensionConfiguration.js
 var getHttpHandlerExtensionConfiguration, resolveHttpHandlerRuntimeConfig;
 var init_httpExtensionConfiguration = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/extensions/httpExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/extensions/httpExtensionConfiguration.js"() {
     getHttpHandlerExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
       let httpHandler = runtimeConfig.httpHandler;
       return {
@@ -66,23 +66,23 @@ var init_httpExtensionConfiguration = __esm({
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/extensions/index.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/extensions/index.js
 var init_extensions = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/extensions/index.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/extensions/index.js"() {
     init_httpExtensionConfiguration();
   }
 });
 
-// node_modules/@smithy/types/dist-es/abort.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/abort.js
 var init_abort = __esm({
-  "node_modules/@smithy/types/dist-es/abort.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/abort.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/auth.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/auth.js
 var HttpAuthLocation;
 var init_auth = __esm({
-  "node_modules/@smithy/types/dist-es/auth/auth.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/auth.js"() {
     (function(HttpAuthLocation2) {
       HttpAuthLocation2["HEADER"] = "header";
       HttpAuthLocation2["QUERY"] = "query";
@@ -90,10 +90,10 @@ var init_auth = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/HttpApiKeyAuth.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpApiKeyAuth.js
 var HttpApiKeyAuthLocation;
 var init_HttpApiKeyAuth = __esm({
-  "node_modules/@smithy/types/dist-es/auth/HttpApiKeyAuth.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpApiKeyAuth.js"() {
     (function(HttpApiKeyAuthLocation2) {
       HttpApiKeyAuthLocation2["HEADER"] = "header";
       HttpApiKeyAuthLocation2["QUERY"] = "query";
@@ -101,33 +101,33 @@ var init_HttpApiKeyAuth = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/HttpAuthScheme.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpAuthScheme.js
 var init_HttpAuthScheme = __esm({
-  "node_modules/@smithy/types/dist-es/auth/HttpAuthScheme.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpAuthScheme.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/HttpAuthSchemeProvider.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpAuthSchemeProvider.js
 var init_HttpAuthSchemeProvider = __esm({
-  "node_modules/@smithy/types/dist-es/auth/HttpAuthSchemeProvider.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpAuthSchemeProvider.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/HttpSigner.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpSigner.js
 var init_HttpSigner = __esm({
-  "node_modules/@smithy/types/dist-es/auth/HttpSigner.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/HttpSigner.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/IdentityProviderConfig.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/IdentityProviderConfig.js
 var init_IdentityProviderConfig = __esm({
-  "node_modules/@smithy/types/dist-es/auth/IdentityProviderConfig.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/IdentityProviderConfig.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/auth/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/index.js
 var init_auth2 = __esm({
-  "node_modules/@smithy/types/dist-es/auth/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/auth/index.js"() {
     init_auth();
     init_HttpApiKeyAuth();
     init_HttpAuthScheme();
@@ -137,73 +137,73 @@ var init_auth2 = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/blob/blob-payload-input-types.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/blob/blob-payload-input-types.js
 var init_blob_payload_input_types = __esm({
-  "node_modules/@smithy/types/dist-es/blob/blob-payload-input-types.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/blob/blob-payload-input-types.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/checksum.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/checksum.js
 var init_checksum = __esm({
-  "node_modules/@smithy/types/dist-es/checksum.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/checksum.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/client.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/client.js
 var init_client = __esm({
-  "node_modules/@smithy/types/dist-es/client.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/client.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/command.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/command.js
 var init_command = __esm({
-  "node_modules/@smithy/types/dist-es/command.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/command.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/connection/config.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/config.js
 var init_config = __esm({
-  "node_modules/@smithy/types/dist-es/connection/config.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/config.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/connection/manager.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/manager.js
 var init_manager = __esm({
-  "node_modules/@smithy/types/dist-es/connection/manager.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/manager.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/connection/pool.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/pool.js
 var init_pool = __esm({
-  "node_modules/@smithy/types/dist-es/connection/pool.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/pool.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/connection/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/index.js
 var init_connection = __esm({
-  "node_modules/@smithy/types/dist-es/connection/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/connection/index.js"() {
     init_config();
     init_manager();
     init_pool();
   }
 });
 
-// node_modules/@smithy/types/dist-es/crypto.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/crypto.js
 var init_crypto = __esm({
-  "node_modules/@smithy/types/dist-es/crypto.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/crypto.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/encode.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/encode.js
 var init_encode = __esm({
-  "node_modules/@smithy/types/dist-es/encode.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/encode.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoint.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoint.js
 var EndpointURLScheme;
 var init_endpoint = __esm({
-  "node_modules/@smithy/types/dist-es/endpoint.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoint.js"() {
     (function(EndpointURLScheme2) {
       EndpointURLScheme2["HTTP"] = "http";
       EndpointURLScheme2["HTTPS"] = "https";
@@ -211,39 +211,39 @@ var init_endpoint = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/EndpointRuleObject.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/EndpointRuleObject.js
 var init_EndpointRuleObject = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/EndpointRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/EndpointRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/ErrorRuleObject.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/ErrorRuleObject.js
 var init_ErrorRuleObject = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/ErrorRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/ErrorRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/RuleSetObject.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/RuleSetObject.js
 var init_RuleSetObject = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/RuleSetObject.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/RuleSetObject.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/shared.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/shared.js
 var init_shared = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/shared.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/shared.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/TreeRuleObject.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/TreeRuleObject.js
 var init_TreeRuleObject = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/TreeRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/TreeRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/endpoints/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/index.js
 var init_endpoints = __esm({
-  "node_modules/@smithy/types/dist-es/endpoints/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/endpoints/index.js"() {
     init_EndpointRuleObject();
     init_ErrorRuleObject();
     init_RuleSetObject();
@@ -252,16 +252,16 @@ var init_endpoints = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/eventStream.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/eventStream.js
 var init_eventStream = __esm({
-  "node_modules/@smithy/types/dist-es/eventStream.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/eventStream.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/extensions/checksum.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/checksum.js
 var AlgorithmId;
 var init_checksum2 = __esm({
-  "node_modules/@smithy/types/dist-es/extensions/checksum.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/checksum.js"() {
     (function(AlgorithmId2) {
       AlgorithmId2["MD5"] = "md5";
       AlgorithmId2["CRC32"] = "crc32";
@@ -272,32 +272,32 @@ var init_checksum2 = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/extensions/defaultClientConfiguration.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/defaultClientConfiguration.js
 var init_defaultClientConfiguration = __esm({
-  "node_modules/@smithy/types/dist-es/extensions/defaultClientConfiguration.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/defaultClientConfiguration.js"() {
     init_checksum2();
   }
 });
 
-// node_modules/@smithy/types/dist-es/extensions/defaultExtensionConfiguration.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/defaultExtensionConfiguration.js
 var init_defaultExtensionConfiguration = __esm({
-  "node_modules/@smithy/types/dist-es/extensions/defaultExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/defaultExtensionConfiguration.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/extensions/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/index.js
 var init_extensions2 = __esm({
-  "node_modules/@smithy/types/dist-es/extensions/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/extensions/index.js"() {
     init_defaultClientConfiguration();
     init_defaultExtensionConfiguration();
     init_checksum2();
   }
 });
 
-// node_modules/@smithy/types/dist-es/http.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/http.js
 var FieldPosition;
 var init_http = __esm({
-  "node_modules/@smithy/types/dist-es/http.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/http.js"() {
     (function(FieldPosition2) {
       FieldPosition2[FieldPosition2["HEADER"] = 0] = "HEADER";
       FieldPosition2[FieldPosition2["TRAILER"] = 1] = "TRAILER";
@@ -305,39 +305,39 @@ var init_http = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/http/httpHandlerInitialization.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/http/httpHandlerInitialization.js
 var init_httpHandlerInitialization = __esm({
-  "node_modules/@smithy/types/dist-es/http/httpHandlerInitialization.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/http/httpHandlerInitialization.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/identity/apiKeyIdentity.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/apiKeyIdentity.js
 var init_apiKeyIdentity = __esm({
-  "node_modules/@smithy/types/dist-es/identity/apiKeyIdentity.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/apiKeyIdentity.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/identity/awsCredentialIdentity.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/awsCredentialIdentity.js
 var init_awsCredentialIdentity = __esm({
-  "node_modules/@smithy/types/dist-es/identity/awsCredentialIdentity.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/awsCredentialIdentity.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/identity/identity.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/identity.js
 var init_identity = __esm({
-  "node_modules/@smithy/types/dist-es/identity/identity.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/identity.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/identity/tokenIdentity.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/tokenIdentity.js
 var init_tokenIdentity = __esm({
-  "node_modules/@smithy/types/dist-es/identity/tokenIdentity.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/tokenIdentity.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/identity/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/index.js
 var init_identity2 = __esm({
-  "node_modules/@smithy/types/dist-es/identity/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/identity/index.js"() {
     init_apiKeyIdentity();
     init_awsCredentialIdentity();
     init_identity();
@@ -345,30 +345,30 @@ var init_identity2 = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/logger.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/logger.js
 var init_logger = __esm({
-  "node_modules/@smithy/types/dist-es/logger.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/logger.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/middleware.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/middleware.js
 var SMITHY_CONTEXT_KEY;
 var init_middleware = __esm({
-  "node_modules/@smithy/types/dist-es/middleware.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/middleware.js"() {
     SMITHY_CONTEXT_KEY = "__smithy_context";
   }
 });
 
-// node_modules/@smithy/types/dist-es/pagination.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/pagination.js
 var init_pagination = __esm({
-  "node_modules/@smithy/types/dist-es/pagination.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/pagination.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/profile.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/profile.js
 var IniSectionType;
 var init_profile = __esm({
-  "node_modules/@smithy/types/dist-es/profile.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/profile.js"() {
     (function(IniSectionType2) {
       IniSectionType2["PROFILE"] = "profile";
       IniSectionType2["SSO_SESSION"] = "sso-session";
@@ -377,64 +377,64 @@ var init_profile = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/response.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/response.js
 var init_response = __esm({
-  "node_modules/@smithy/types/dist-es/response.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/response.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/retry.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/retry.js
 var init_retry = __esm({
-  "node_modules/@smithy/types/dist-es/retry.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/retry.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/serde.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/serde.js
 var init_serde = __esm({
-  "node_modules/@smithy/types/dist-es/serde.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/serde.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/shapes.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/shapes.js
 var init_shapes = __esm({
-  "node_modules/@smithy/types/dist-es/shapes.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/shapes.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/signature.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/signature.js
 var init_signature = __esm({
-  "node_modules/@smithy/types/dist-es/signature.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/signature.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/stream.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/stream.js
 var init_stream = __esm({
-  "node_modules/@smithy/types/dist-es/stream.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/stream.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-common-types.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-common-types.js
 var init_streaming_blob_common_types = __esm({
-  "node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-common-types.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-common-types.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-input-types.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-input-types.js
 var init_streaming_blob_payload_input_types = __esm({
-  "node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-input-types.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-input-types.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-output-types.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-output-types.js
 var init_streaming_blob_payload_output_types = __esm({
-  "node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-output-types.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/streaming-payload/streaming-blob-payload-output-types.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/transfer.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transfer.js
 var RequestHandlerProtocol;
 var init_transfer = __esm({
-  "node_modules/@smithy/types/dist-es/transfer.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transfer.js"() {
     (function(RequestHandlerProtocol2) {
       RequestHandlerProtocol2["HTTP_0_9"] = "http/0.9";
       RequestHandlerProtocol2["HTTP_1_0"] = "http/1.0";
@@ -443,45 +443,45 @@ var init_transfer = __esm({
   }
 });
 
-// node_modules/@smithy/types/dist-es/transform/client-payload-blob-type-narrow.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/client-payload-blob-type-narrow.js
 var init_client_payload_blob_type_narrow = __esm({
-  "node_modules/@smithy/types/dist-es/transform/client-payload-blob-type-narrow.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/client-payload-blob-type-narrow.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/transform/no-undefined.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/no-undefined.js
 var init_no_undefined = __esm({
-  "node_modules/@smithy/types/dist-es/transform/no-undefined.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/no-undefined.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/transform/type-transform.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/type-transform.js
 var init_type_transform = __esm({
-  "node_modules/@smithy/types/dist-es/transform/type-transform.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/transform/type-transform.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/uri.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/uri.js
 var init_uri = __esm({
-  "node_modules/@smithy/types/dist-es/uri.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/uri.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/util.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/util.js
 var init_util = __esm({
-  "node_modules/@smithy/types/dist-es/util.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/util.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/waiter.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/waiter.js
 var init_waiter = __esm({
-  "node_modules/@smithy/types/dist-es/waiter.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/waiter.js"() {
   }
 });
 
-// node_modules/@smithy/types/dist-es/index.js
+// node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/index.js
 var init_dist_es = __esm({
-  "node_modules/@smithy/types/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+types@3.4.2/node_modules/@smithy/types/dist-es/index.js"() {
     init_abort();
     init_auth2();
     init_blob_payload_input_types();
@@ -521,26 +521,26 @@ var init_dist_es = __esm({
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/Field.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/Field.js
 var init_Field = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/Field.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/Field.js"() {
     init_dist_es();
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/Fields.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/Fields.js
 var init_Fields = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/Fields.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/Fields.js"() {
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/httpHandler.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpHandler.js
 var init_httpHandler = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/httpHandler.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpHandler.js"() {
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/httpRequest.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpRequest.js
 function cloneQuery(query) {
   return Object.keys(query).reduce((carry, paramName) => {
     const param = query[paramName];
@@ -552,7 +552,7 @@ function cloneQuery(query) {
 }
 var HttpRequest;
 var init_httpRequest = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/httpRequest.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpRequest.js"() {
     HttpRequest = class _HttpRequest {
       static {
         __name(this, "HttpRequest");
@@ -595,10 +595,10 @@ var init_httpRequest = __esm({
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/httpResponse.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpResponse.js
 var HttpResponse;
 var init_httpResponse = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/httpResponse.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/httpResponse.js"() {
     HttpResponse = class {
       static {
         __name(this, "HttpResponse");
@@ -619,21 +619,21 @@ var init_httpResponse = __esm({
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/isValidHostname.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/isValidHostname.js
 var init_isValidHostname = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/isValidHostname.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/isValidHostname.js"() {
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/types.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/types.js
 var init_types = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/types.js"() {
   }
 });
 
-// node_modules/@smithy/protocol-http/dist-es/index.js
+// node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/index.js
 var init_dist_es2 = __esm({
-  "node_modules/@smithy/protocol-http/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+protocol-http@4.1.3/node_modules/@smithy/protocol-http/dist-es/index.js"() {
     init_extensions();
     init_Field();
     init_Fields();
@@ -645,9 +645,9 @@ var init_dist_es2 = __esm({
   }
 });
 
-// node_modules/obliterator/iterator.js
+// node_modules/.pnpm/obliterator@1.6.1/node_modules/obliterator/iterator.js
 var require_iterator = __commonJS({
-  "node_modules/obliterator/iterator.js"(exports, module) {
+  "node_modules/.pnpm/obliterator@1.6.1/node_modules/obliterator/iterator.js"(exports, module) {
     function Iterator(next) {
       Object.defineProperty(this, "_next", {
         writable: false,
@@ -691,9 +691,9 @@ var require_iterator = __commonJS({
   }
 });
 
-// node_modules/obliterator/foreach.js
+// node_modules/.pnpm/obliterator@1.6.1/node_modules/obliterator/foreach.js
 var require_foreach = __commonJS({
-  "node_modules/obliterator/foreach.js"(exports, module) {
+  "node_modules/.pnpm/obliterator@1.6.1/node_modules/obliterator/foreach.js"(exports, module) {
     var ARRAY_BUFFER_SUPPORT = typeof ArrayBuffer !== "undefined";
     var SYMBOL_SUPPORT = typeof Symbol !== "undefined";
     function forEach(iterable, callback) {
@@ -775,9 +775,9 @@ var require_foreach = __commonJS({
   }
 });
 
-// node_modules/mnemonist/utils/typed-arrays.js
+// node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/utils/typed-arrays.js
 var require_typed_arrays = __commonJS({
-  "node_modules/mnemonist/utils/typed-arrays.js"(exports) {
+  "node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/utils/typed-arrays.js"(exports) {
     var MAX_8BIT_INTEGER = Math.pow(2, 8) - 1;
     var MAX_16BIT_INTEGER = Math.pow(2, 16) - 1;
     var MAX_32BIT_INTEGER = Math.pow(2, 32) - 1;
@@ -869,9 +869,9 @@ var require_typed_arrays = __commonJS({
   }
 });
 
-// node_modules/mnemonist/utils/iterables.js
+// node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/utils/iterables.js
 var require_iterables = __commonJS({
-  "node_modules/mnemonist/utils/iterables.js"(exports) {
+  "node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/utils/iterables.js"(exports) {
     var forEach = require_foreach();
     var typed = require_typed_arrays();
     function isArrayLike(target) {
@@ -916,9 +916,9 @@ var require_iterables = __commonJS({
   }
 });
 
-// node_modules/mnemonist/lru-cache.js
+// node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/lru-cache.js
 var require_lru_cache = __commonJS({
-  "node_modules/mnemonist/lru-cache.js"(exports, module) {
+  "node_modules/.pnpm/mnemonist@0.38.3/node_modules/mnemonist/lru-cache.js"(exports, module) {
     var Iterator = require_iterator();
     var forEach = require_foreach();
     var typed = require_typed_arrays();
@@ -1116,23 +1116,23 @@ var require_lru_cache = __commonJS({
         Keys = null;
         Values = null;
       }
-      var cache = new LRUCache2(Keys, Values, capacity);
+      var cache5 = new LRUCache2(Keys, Values, capacity);
       forEach(iterable, function(value, key) {
-        cache.set(key, value);
+        cache5.set(key, value);
       });
-      return cache;
+      return cache5;
     };
     module.exports = LRUCache2;
   }
 });
 
-// node_modules/@aws-sdk/middleware-host-header/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+middleware-host-header@3.654.0/node_modules/@aws-sdk/middleware-host-header/dist-es/index.js
 function resolveHostHeaderConfig(input) {
   return input;
 }
 var hostHeaderMiddleware, hostHeaderMiddlewareOptions, getHostHeaderPlugin;
 var init_dist_es3 = __esm({
-  "node_modules/@aws-sdk/middleware-host-header/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-host-header@3.654.0/node_modules/@aws-sdk/middleware-host-header/dist-es/index.js"() {
     init_dist_es2();
     __name(resolveHostHeaderConfig, "resolveHostHeaderConfig");
     hostHeaderMiddleware = /* @__PURE__ */ __name((options) => (next) => async (args) => {
@@ -1166,10 +1166,10 @@ var init_dist_es3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-logger/dist-es/loggerMiddleware.js
+// node_modules/.pnpm/@aws-sdk+middleware-logger@3.654.0/node_modules/@aws-sdk/middleware-logger/dist-es/loggerMiddleware.js
 var loggerMiddleware, loggerMiddlewareOptions, getLoggerPlugin;
 var init_loggerMiddleware = __esm({
-  "node_modules/@aws-sdk/middleware-logger/dist-es/loggerMiddleware.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-logger@3.654.0/node_modules/@aws-sdk/middleware-logger/dist-es/loggerMiddleware.js"() {
     loggerMiddleware = /* @__PURE__ */ __name(() => (next, context) => async (args) => {
       try {
         const response = await next(args);
@@ -1214,17 +1214,17 @@ var init_loggerMiddleware = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-logger/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+middleware-logger@3.654.0/node_modules/@aws-sdk/middleware-logger/dist-es/index.js
 var init_dist_es4 = __esm({
-  "node_modules/@aws-sdk/middleware-logger/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-logger@3.654.0/node_modules/@aws-sdk/middleware-logger/dist-es/index.js"() {
     init_loggerMiddleware();
   }
 });
 
-// node_modules/@aws-sdk/middleware-recursion-detection/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+middleware-recursion-detection@3.654.0/node_modules/@aws-sdk/middleware-recursion-detection/dist-es/index.js
 var TRACE_ID_HEADER_NAME, ENV_LAMBDA_FUNCTION_NAME, ENV_TRACE_ID, recursionDetectionMiddleware, addRecursionDetectionMiddlewareOptions, getRecursionDetectionPlugin;
 var init_dist_es5 = __esm({
-  "node_modules/@aws-sdk/middleware-recursion-detection/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-recursion-detection@3.654.0/node_modules/@aws-sdk/middleware-recursion-detection/dist-es/index.js"() {
     init_dist_es2();
     TRACE_ID_HEADER_NAME = "X-Amzn-Trace-Id";
     ENV_LAMBDA_FUNCTION_NAME = "AWS_LAMBDA_FUNCTION_NAME";
@@ -1260,7 +1260,7 @@ var init_dist_es5 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-user-agent/dist-es/configurations.js
+// node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/configurations.js
 function resolveUserAgentConfig(input) {
   return {
     ...input,
@@ -1268,24 +1268,83 @@ function resolveUserAgentConfig(input) {
   };
 }
 var init_configurations = __esm({
-  "node_modules/@aws-sdk/middleware-user-agent/dist-es/configurations.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/configurations.js"() {
     __name(resolveUserAgentConfig, "resolveUserAgentConfig");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/isIpAddress.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/cache/EndpointCache.js
+var EndpointCache2;
+var init_EndpointCache = __esm({
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/cache/EndpointCache.js"() {
+    EndpointCache2 = class {
+      static {
+        __name(this, "EndpointCache");
+      }
+      constructor({ size, params }) {
+        this.data = /* @__PURE__ */ new Map();
+        this.parameters = [];
+        this.capacity = size ?? 50;
+        if (params) {
+          this.parameters = params;
+        }
+      }
+      get(endpointParams, resolver) {
+        const key = this.hash(endpointParams);
+        if (key === false) {
+          return resolver();
+        }
+        if (!this.data.has(key)) {
+          if (this.data.size > this.capacity + 10) {
+            const keys = this.data.keys();
+            let i5 = 0;
+            while (true) {
+              const { value, done } = keys.next();
+              this.data.delete(value);
+              if (done || ++i5 > 10) {
+                break;
+              }
+            }
+          }
+          this.data.set(key, resolver());
+        }
+        return this.data.get(key);
+      }
+      size() {
+        return this.data.size;
+      }
+      hash(endpointParams) {
+        let buffer = "";
+        const { parameters } = this;
+        if (parameters.length === 0) {
+          return false;
+        }
+        for (const param of parameters) {
+          const val2 = String(endpointParams[param] ?? "");
+          if (val2.includes("|;")) {
+            return false;
+          }
+          buffer += val2 + "|;";
+        }
+        return buffer;
+      }
+    };
+  }
+});
+
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isIpAddress.js
 var IP_V4_REGEX, isIpAddress;
 var init_isIpAddress = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/isIpAddress.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isIpAddress.js"() {
     IP_V4_REGEX = new RegExp(`^(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}$`);
     isIpAddress = /* @__PURE__ */ __name((value) => IP_V4_REGEX.test(value) || value.startsWith("[") && value.endsWith("]"), "isIpAddress");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/isValidHostLabel.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isValidHostLabel.js
 var VALID_HOST_LABEL_REGEX, isValidHostLabel;
 var init_isValidHostLabel = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/isValidHostLabel.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isValidHostLabel.js"() {
     VALID_HOST_LABEL_REGEX = new RegExp(`^(?!.*-$)(?!-)[a-zA-Z0-9-]{1,63}$`);
     isValidHostLabel = /* @__PURE__ */ __name((value, allowSubDomains = false) => {
       if (!allowSubDomains) {
@@ -1302,23 +1361,23 @@ var init_isValidHostLabel = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/customEndpointFunctions.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/customEndpointFunctions.js
 var customEndpointFunctions;
 var init_customEndpointFunctions = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/customEndpointFunctions.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/customEndpointFunctions.js"() {
     customEndpointFunctions = {};
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/debug/debugId.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/debugId.js
 var debugId;
 var init_debugId = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/debug/debugId.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/debugId.js"() {
     debugId = "endpoints";
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/debug/toDebugString.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/toDebugString.js
 function toDebugString(input) {
   if (typeof input !== "object" || input == null) {
     return input;
@@ -1332,23 +1391,23 @@ function toDebugString(input) {
   return JSON.stringify(input, null, 2);
 }
 var init_toDebugString = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/debug/toDebugString.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/toDebugString.js"() {
     __name(toDebugString, "toDebugString");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/debug/index.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/index.js
 var init_debug = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/debug/index.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/debug/index.js"() {
     init_debugId();
     init_toDebugString();
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/EndpointError.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointError.js
 var EndpointError;
 var init_EndpointError = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/EndpointError.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointError.js"() {
     EndpointError = class extends Error {
       static {
         __name(this, "EndpointError");
@@ -1361,45 +1420,45 @@ var init_EndpointError = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/EndpointFunctions.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointFunctions.js
 var init_EndpointFunctions = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/EndpointFunctions.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointFunctions.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/EndpointRuleObject.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointRuleObject.js
 var init_EndpointRuleObject2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/EndpointRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/EndpointRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/ErrorRuleObject.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/ErrorRuleObject.js
 var init_ErrorRuleObject2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/ErrorRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/ErrorRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/RuleSetObject.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/RuleSetObject.js
 var init_RuleSetObject2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/RuleSetObject.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/RuleSetObject.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/TreeRuleObject.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/TreeRuleObject.js
 var init_TreeRuleObject2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/TreeRuleObject.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/TreeRuleObject.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/shared.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/shared.js
 var init_shared2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/shared.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/shared.js"() {
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/types/index.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/index.js
 var init_types2 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/types/index.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/types/index.js"() {
     init_EndpointError();
     init_EndpointFunctions();
     init_EndpointRuleObject2();
@@ -1410,18 +1469,18 @@ var init_types2 = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/booleanEquals.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/booleanEquals.js
 var booleanEquals;
 var init_booleanEquals = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/booleanEquals.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/booleanEquals.js"() {
     booleanEquals = /* @__PURE__ */ __name((value1, value2) => value1 === value2, "booleanEquals");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/getAttrPathList.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/getAttrPathList.js
 var getAttrPathList;
 var init_getAttrPathList = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/getAttrPathList.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/getAttrPathList.js"() {
     init_types2();
     getAttrPathList = /* @__PURE__ */ __name((path) => {
       const parts = path.split(".");
@@ -1449,10 +1508,10 @@ var init_getAttrPathList = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/getAttr.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/getAttr.js
 var getAttr;
 var init_getAttr = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/getAttr.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/getAttr.js"() {
     init_types2();
     init_getAttrPathList();
     getAttr = /* @__PURE__ */ __name((value, path) => getAttrPathList(path).reduce((acc, index) => {
@@ -1466,26 +1525,26 @@ var init_getAttr = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/isSet.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isSet.js
 var isSet;
 var init_isSet = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/isSet.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/isSet.js"() {
     isSet = /* @__PURE__ */ __name((value) => value != null, "isSet");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/not.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/not.js
 var not;
 var init_not = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/not.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/not.js"() {
     not = /* @__PURE__ */ __name((value) => !value, "not");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/parseURL.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/parseURL.js
 var DEFAULT_PORTS, parseURL;
 var init_parseURL = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/parseURL.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/parseURL.js"() {
     init_dist_es();
     init_isIpAddress();
     DEFAULT_PORTS = {
@@ -1536,18 +1595,18 @@ var init_parseURL = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/stringEquals.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/stringEquals.js
 var stringEquals;
 var init_stringEquals = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/stringEquals.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/stringEquals.js"() {
     stringEquals = /* @__PURE__ */ __name((value1, value2) => value1 === value2, "stringEquals");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/substring.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/substring.js
 var substring;
 var init_substring = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/substring.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/substring.js"() {
     substring = /* @__PURE__ */ __name((input, start, stop, reverse) => {
       if (start >= stop || input.length < stop) {
         return null;
@@ -1560,17 +1619,17 @@ var init_substring = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/uriEncode.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/uriEncode.js
 var uriEncode;
 var init_uriEncode = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/uriEncode.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/uriEncode.js"() {
     uriEncode = /* @__PURE__ */ __name((value) => encodeURIComponent(value).replace(/[!*'()]/g, (c5) => `%${c5.charCodeAt(0).toString(16).toUpperCase()}`), "uriEncode");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/lib/index.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/index.js
 var init_lib = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/lib/index.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/lib/index.js"() {
     init_booleanEquals();
     init_getAttr();
     init_isSet();
@@ -1583,10 +1642,10 @@ var init_lib = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/endpointFunctions.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/endpointFunctions.js
 var endpointFunctions;
 var init_endpointFunctions = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/endpointFunctions.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/endpointFunctions.js"() {
     init_lib();
     endpointFunctions = {
       booleanEquals,
@@ -1602,10 +1661,10 @@ var init_endpointFunctions = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTemplate.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTemplate.js
 var evaluateTemplate;
 var init_evaluateTemplate = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTemplate.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTemplate.js"() {
     init_lib();
     evaluateTemplate = /* @__PURE__ */ __name((template, options) => {
       const evaluatedTemplateArr = [];
@@ -1644,10 +1703,10 @@ var init_evaluateTemplate = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/getReferenceValue.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getReferenceValue.js
 var getReferenceValue;
 var init_getReferenceValue = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/getReferenceValue.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getReferenceValue.js"() {
     getReferenceValue = /* @__PURE__ */ __name(({ ref }, options) => {
       const referenceRecord = {
         ...options.endpointParams,
@@ -1658,10 +1717,10 @@ var init_getReferenceValue = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateExpression.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateExpression.js
 var evaluateExpression;
 var init_evaluateExpression = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateExpression.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateExpression.js"() {
     init_types2();
     init_callFunction();
     init_evaluateTemplate();
@@ -1679,10 +1738,10 @@ var init_evaluateExpression = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/callFunction.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/callFunction.js
 var callFunction;
 var init_callFunction = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/callFunction.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/callFunction.js"() {
     init_customEndpointFunctions();
     init_endpointFunctions();
     init_evaluateExpression();
@@ -1697,10 +1756,10 @@ var init_callFunction = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateCondition.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateCondition.js
 var evaluateCondition;
 var init_evaluateCondition = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateCondition.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateCondition.js"() {
     init_debug();
     init_types2();
     init_callFunction();
@@ -1718,10 +1777,10 @@ var init_evaluateCondition = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateConditions.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateConditions.js
 var evaluateConditions;
 var init_evaluateConditions = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateConditions.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateConditions.js"() {
     init_debug();
     init_evaluateCondition();
     evaluateConditions = /* @__PURE__ */ __name((conditions = [], options) => {
@@ -1747,10 +1806,10 @@ var init_evaluateConditions = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointHeaders.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointHeaders.js
 var getEndpointHeaders;
 var init_getEndpointHeaders = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointHeaders.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointHeaders.js"() {
     init_types2();
     init_evaluateExpression();
     getEndpointHeaders = /* @__PURE__ */ __name((headers, options) => Object.entries(headers).reduce((acc, [headerKey, headerVal]) => ({
@@ -1766,10 +1825,10 @@ var init_getEndpointHeaders = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperty.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperty.js
 var getEndpointProperty;
 var init_getEndpointProperty = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperty.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperty.js"() {
     init_types2();
     init_evaluateTemplate();
     init_getEndpointProperties();
@@ -1794,10 +1853,10 @@ var init_getEndpointProperty = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperties.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperties.js
 var getEndpointProperties;
 var init_getEndpointProperties = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperties.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointProperties.js"() {
     init_getEndpointProperty();
     getEndpointProperties = /* @__PURE__ */ __name((properties, options) => Object.entries(properties).reduce((acc, [propertyKey, propertyVal]) => ({
       ...acc,
@@ -1806,10 +1865,10 @@ var init_getEndpointProperties = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointUrl.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointUrl.js
 var getEndpointUrl;
 var init_getEndpointUrl = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointUrl.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/getEndpointUrl.js"() {
     init_types2();
     init_evaluateExpression();
     getEndpointUrl = /* @__PURE__ */ __name((endpointUrl, options) => {
@@ -1827,10 +1886,10 @@ var init_getEndpointUrl = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateEndpointRule.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateEndpointRule.js
 var evaluateEndpointRule;
 var init_evaluateEndpointRule = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateEndpointRule.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateEndpointRule.js"() {
     init_debug();
     init_evaluateConditions();
     init_getEndpointHeaders();
@@ -1861,10 +1920,10 @@ var init_evaluateEndpointRule = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateErrorRule.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateErrorRule.js
 var evaluateErrorRule;
 var init_evaluateErrorRule = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateErrorRule.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateErrorRule.js"() {
     init_types2();
     init_evaluateConditions();
     init_evaluateExpression();
@@ -1882,10 +1941,10 @@ var init_evaluateErrorRule = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTreeRule.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTreeRule.js
 var evaluateTreeRule;
 var init_evaluateTreeRule = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTreeRule.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateTreeRule.js"() {
     init_evaluateConditions();
     init_evaluateRules();
     evaluateTreeRule = /* @__PURE__ */ __name((treeRule, options) => {
@@ -1902,10 +1961,10 @@ var init_evaluateTreeRule = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/evaluateRules.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateRules.js
 var evaluateRules;
 var init_evaluateRules = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/evaluateRules.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/evaluateRules.js"() {
     init_types2();
     init_evaluateEndpointRule();
     init_evaluateErrorRule();
@@ -1933,18 +1992,18 @@ var init_evaluateRules = __esm({
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/utils/index.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/index.js
 var init_utils = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/utils/index.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/utils/index.js"() {
     init_customEndpointFunctions();
     init_evaluateRules();
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/resolveEndpoint.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/resolveEndpoint.js
 var resolveEndpoint;
 var init_resolveEndpoint = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/resolveEndpoint.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/resolveEndpoint.js"() {
     init_debug();
     init_types2();
     init_utils();
@@ -1965,24 +2024,16 @@ var init_resolveEndpoint = __esm({
         }
       }
       const endpoint = evaluateRules(rules, { endpointParams, logger: logger2, referenceRecord: {} });
-      if (options.endpointParams?.Endpoint) {
-        try {
-          const givenEndpoint = new URL(options.endpointParams.Endpoint);
-          const { protocol, port } = givenEndpoint;
-          endpoint.url.protocol = protocol;
-          endpoint.url.port = port;
-        } catch (e5) {
-        }
-      }
       options.logger?.debug?.(`${debugId} Resolved endpoint: ${toDebugString(endpoint)}`);
       return endpoint;
     }, "resolveEndpoint");
   }
 });
 
-// node_modules/@smithy/util-endpoints/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/index.js
 var init_dist_es6 = __esm({
-  "node_modules/@smithy/util-endpoints/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-endpoints@2.1.2/node_modules/@smithy/util-endpoints/dist-es/index.js"() {
+    init_EndpointCache();
     init_isIpAddress();
     init_isValidHostLabel();
     init_customEndpointFunctions();
@@ -1991,17 +2042,17 @@ var init_dist_es6 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/lib/isIpAddress.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/isIpAddress.js
 var init_isIpAddress2 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/lib/isIpAddress.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/isIpAddress.js"() {
     init_dist_es6();
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/isVirtualHostableS3Bucket.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/isVirtualHostableS3Bucket.js
 var isVirtualHostableS3Bucket;
 var init_isVirtualHostableS3Bucket = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/isVirtualHostableS3Bucket.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/isVirtualHostableS3Bucket.js"() {
     init_dist_es6();
     init_isIpAddress2();
     isVirtualHostableS3Bucket = /* @__PURE__ */ __name((value, allowSubDomains = false) => {
@@ -2030,32 +2081,35 @@ var init_isVirtualHostableS3Bucket = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/parseArn.js
-var parseArn;
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/parseArn.js
+var ARN_DELIMITER, RESOURCE_DELIMITER, parseArn;
 var init_parseArn = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/parseArn.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/parseArn.js"() {
+    ARN_DELIMITER = ":";
+    RESOURCE_DELIMITER = "/";
     parseArn = /* @__PURE__ */ __name((value) => {
-      const segments = value.split(":");
+      const segments = value.split(ARN_DELIMITER);
       if (segments.length < 6)
         return null;
-      const [arn, partition2, service, region, accountId, ...resourceId] = segments;
-      if (arn !== "arn" || partition2 === "" || service === "" || resourceId[0] === "")
+      const [arn, partition2, service, region, accountId, ...resourcePath] = segments;
+      if (arn !== "arn" || partition2 === "" || service === "" || resourcePath.join(ARN_DELIMITER) === "")
         return null;
+      const resourceId = resourcePath.map((resource) => resource.split(RESOURCE_DELIMITER)).flat();
       return {
         partition: partition2,
         service,
         region,
         accountId,
-        resourceId: resourceId[0].includes("/") ? resourceId[0].split("/") : resourceId
+        resourceId
       };
     }, "parseArn");
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partitions.json
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partitions.json
 var partitions_default;
 var init_partitions = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partitions.json"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partitions.json"() {
     partitions_default = {
       partitions: [{
         id: "aws",
@@ -2067,7 +2121,7 @@ var init_partitions = __esm({
           supportsDualStack: true,
           supportsFIPS: true
         },
-        regionRegex: "^(us|eu|ap|sa|ca|me|af|il)\\-\\w+\\-\\d+$",
+        regionRegex: "^(us|eu|ap|sa|ca|me|af|il|mx)\\-\\w+\\-\\d+$",
         regions: {
           "af-south-1": {
             description: "Africa (Cape Town)"
@@ -2101,6 +2155,9 @@ var init_partitions = __esm({
           },
           "ap-southeast-4": {
             description: "Asia Pacific (Melbourne)"
+          },
+          "ap-southeast-5": {
+            description: "Asia Pacific (Malaysia)"
           },
           "aws-global": {
             description: "AWS Standard global region"
@@ -2279,10 +2336,10 @@ var init_partitions = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partition.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partition.js
 var selectedPartitionsInfo, selectedUserAgentPrefix, partition, getUserAgentPrefix;
 var init_partition = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partition.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/lib/aws/partition.js"() {
     init_partitions();
     selectedPartitionsInfo = partitions_default;
     selectedUserAgentPrefix = "";
@@ -2319,10 +2376,10 @@ var init_partition = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/aws.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/aws.js
 var awsEndpointFunctions;
 var init_aws = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/aws.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/aws.js"() {
     init_dist_es6();
     init_isVirtualHostableS3Bucket();
     init_parseArn();
@@ -2336,53 +2393,53 @@ var init_aws = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/resolveEndpoint.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/resolveEndpoint.js
 var init_resolveEndpoint2 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/resolveEndpoint.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/resolveEndpoint.js"() {
     init_dist_es6();
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointError.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointError.js
 var init_EndpointError2 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointError.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointError.js"() {
     init_dist_es6();
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointRuleObject.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointRuleObject.js
 var init_EndpointRuleObject3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointRuleObject.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/EndpointRuleObject.js"() {
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/ErrorRuleObject.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/ErrorRuleObject.js
 var init_ErrorRuleObject3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/ErrorRuleObject.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/ErrorRuleObject.js"() {
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/RuleSetObject.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/RuleSetObject.js
 var init_RuleSetObject3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/RuleSetObject.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/RuleSetObject.js"() {
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/TreeRuleObject.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/TreeRuleObject.js
 var init_TreeRuleObject3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/TreeRuleObject.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/TreeRuleObject.js"() {
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/shared.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/shared.js
 var init_shared3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/shared.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/shared.js"() {
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/types/index.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/index.js
 var init_types3 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/types/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/types/index.js"() {
     init_EndpointError2();
     init_EndpointRuleObject3();
     init_ErrorRuleObject3();
@@ -2392,9 +2449,9 @@ var init_types3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-endpoints/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/index.js
 var init_dist_es7 = __esm({
-  "node_modules/@aws-sdk/util-endpoints/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-endpoints@3.654.0/node_modules/@aws-sdk/util-endpoints/dist-es/index.js"() {
     init_aws();
     init_partition();
     init_isIpAddress2();
@@ -2403,10 +2460,10 @@ var init_dist_es7 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-user-agent/dist-es/constants.js
+// node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/constants.js
 var USER_AGENT, X_AMZ_USER_AGENT, SPACE, UA_NAME_SEPARATOR, UA_NAME_ESCAPE_REGEX, UA_VALUE_ESCAPE_REGEX, UA_ESCAPE_CHAR;
 var init_constants = __esm({
-  "node_modules/@aws-sdk/middleware-user-agent/dist-es/constants.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/constants.js"() {
     USER_AGENT = "user-agent";
     X_AMZ_USER_AGENT = "x-amz-user-agent";
     SPACE = " ";
@@ -2417,10 +2474,10 @@ var init_constants = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-user-agent/dist-es/user-agent-middleware.js
+// node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/user-agent-middleware.js
 var userAgentMiddleware, escapeUserAgent, getUserAgentMiddlewareOptions, getUserAgentPlugin;
 var init_user_agent_middleware = __esm({
-  "node_modules/@aws-sdk/middleware-user-agent/dist-es/user-agent-middleware.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/user-agent-middleware.js"() {
     init_dist_es7();
     init_dist_es2();
     init_constants();
@@ -2486,18 +2543,18 @@ var init_user_agent_middleware = __esm({
   }
 });
 
-// node_modules/@aws-sdk/middleware-user-agent/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/index.js
 var init_dist_es8 = __esm({
-  "node_modules/@aws-sdk/middleware-user-agent/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+middleware-user-agent@3.654.0/node_modules/@aws-sdk/middleware-user-agent/dist-es/index.js"() {
     init_configurations();
     init_user_agent_middleware();
   }
 });
 
-// node_modules/@smithy/util-config-provider/dist-es/booleanSelector.js
+// node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/booleanSelector.js
 var booleanSelector;
 var init_booleanSelector = __esm({
-  "node_modules/@smithy/util-config-provider/dist-es/booleanSelector.js"() {
+  "node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/booleanSelector.js"() {
     booleanSelector = /* @__PURE__ */ __name((obj, key, type) => {
       if (!(key in obj))
         return void 0;
@@ -2510,16 +2567,16 @@ var init_booleanSelector = __esm({
   }
 });
 
-// node_modules/@smithy/util-config-provider/dist-es/numberSelector.js
+// node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/numberSelector.js
 var init_numberSelector = __esm({
-  "node_modules/@smithy/util-config-provider/dist-es/numberSelector.js"() {
+  "node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/numberSelector.js"() {
   }
 });
 
-// node_modules/@smithy/util-config-provider/dist-es/types.js
+// node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/types.js
 var SelectorType;
 var init_types4 = __esm({
-  "node_modules/@smithy/util-config-provider/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/types.js"() {
     (function(SelectorType2) {
       SelectorType2["ENV"] = "env";
       SelectorType2["CONFIG"] = "shared config entry";
@@ -2527,19 +2584,19 @@ var init_types4 = __esm({
   }
 });
 
-// node_modules/@smithy/util-config-provider/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/index.js
 var init_dist_es9 = __esm({
-  "node_modules/@smithy/util-config-provider/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-config-provider@3.0.0/node_modules/@smithy/util-config-provider/dist-es/index.js"() {
     init_booleanSelector();
     init_numberSelector();
     init_types4();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseDualstackEndpointConfigOptions.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseDualstackEndpointConfigOptions.js
 var ENV_USE_DUALSTACK_ENDPOINT, CONFIG_USE_DUALSTACK_ENDPOINT, NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS;
 var init_NodeUseDualstackEndpointConfigOptions = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseDualstackEndpointConfigOptions.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseDualstackEndpointConfigOptions.js"() {
     init_dist_es9();
     ENV_USE_DUALSTACK_ENDPOINT = "AWS_USE_DUALSTACK_ENDPOINT";
     CONFIG_USE_DUALSTACK_ENDPOINT = "use_dualstack_endpoint";
@@ -2551,10 +2608,10 @@ var init_NodeUseDualstackEndpointConfigOptions = __esm({
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseFipsEndpointConfigOptions.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseFipsEndpointConfigOptions.js
 var ENV_USE_FIPS_ENDPOINT, CONFIG_USE_FIPS_ENDPOINT, NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS;
 var init_NodeUseFipsEndpointConfigOptions = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseFipsEndpointConfigOptions.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/NodeUseFipsEndpointConfigOptions.js"() {
     init_dist_es9();
     ENV_USE_FIPS_ENDPOINT = "AWS_USE_FIPS_ENDPOINT";
     CONFIG_USE_FIPS_ENDPOINT = "use_fips_endpoint";
@@ -2566,19 +2623,19 @@ var init_NodeUseFipsEndpointConfigOptions = __esm({
   }
 });
 
-// node_modules/@smithy/util-middleware/dist-es/getSmithyContext.js
+// node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/getSmithyContext.js
 var getSmithyContext;
 var init_getSmithyContext = __esm({
-  "node_modules/@smithy/util-middleware/dist-es/getSmithyContext.js"() {
+  "node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/getSmithyContext.js"() {
     init_dist_es();
     getSmithyContext = /* @__PURE__ */ __name((context) => context[SMITHY_CONTEXT_KEY] || (context[SMITHY_CONTEXT_KEY] = {}), "getSmithyContext");
   }
 });
 
-// node_modules/@smithy/util-middleware/dist-es/normalizeProvider.js
+// node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/normalizeProvider.js
 var normalizeProvider;
 var init_normalizeProvider = __esm({
-  "node_modules/@smithy/util-middleware/dist-es/normalizeProvider.js"() {
+  "node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/normalizeProvider.js"() {
     normalizeProvider = /* @__PURE__ */ __name((input) => {
       if (typeof input === "function")
         return input;
@@ -2588,38 +2645,38 @@ var init_normalizeProvider = __esm({
   }
 });
 
-// node_modules/@smithy/util-middleware/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/index.js
 var init_dist_es10 = __esm({
-  "node_modules/@smithy/util-middleware/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-middleware@3.0.6/node_modules/@smithy/util-middleware/dist-es/index.js"() {
     init_getSmithyContext();
     init_normalizeProvider();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveCustomEndpointsConfig.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveCustomEndpointsConfig.js
 var init_resolveCustomEndpointsConfig = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveCustomEndpointsConfig.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveCustomEndpointsConfig.js"() {
     init_dist_es10();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/utils/getEndpointFromRegion.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/utils/getEndpointFromRegion.js
 var init_getEndpointFromRegion = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/utils/getEndpointFromRegion.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/utils/getEndpointFromRegion.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveEndpointsConfig.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveEndpointsConfig.js
 var init_resolveEndpointsConfig = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveEndpointsConfig.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/resolveEndpointsConfig.js"() {
     init_dist_es10();
     init_getEndpointFromRegion();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/endpointsConfig/index.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/index.js
 var init_endpointsConfig = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/endpointsConfig/index.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/endpointsConfig/index.js"() {
     init_NodeUseDualstackEndpointConfigOptions();
     init_NodeUseFipsEndpointConfigOptions();
     init_resolveCustomEndpointsConfig();
@@ -2627,10 +2684,10 @@ var init_endpointsConfig = __esm({
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionConfig/config.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/config.js
 var REGION_ENV_NAME, REGION_INI_NAME, NODE_REGION_CONFIG_OPTIONS, NODE_REGION_CONFIG_FILE_OPTIONS;
 var init_config2 = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionConfig/config.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/config.js"() {
     REGION_ENV_NAME = "AWS_REGION";
     REGION_INI_NAME = "region";
     NODE_REGION_CONFIG_OPTIONS = {
@@ -2646,27 +2703,27 @@ var init_config2 = __esm({
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionConfig/isFipsRegion.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/isFipsRegion.js
 var isFipsRegion;
 var init_isFipsRegion = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionConfig/isFipsRegion.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/isFipsRegion.js"() {
     isFipsRegion = /* @__PURE__ */ __name((region) => typeof region === "string" && (region.startsWith("fips-") || region.endsWith("-fips")), "isFipsRegion");
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionConfig/getRealRegion.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/getRealRegion.js
 var getRealRegion;
 var init_getRealRegion = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionConfig/getRealRegion.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/getRealRegion.js"() {
     init_isFipsRegion();
     getRealRegion = /* @__PURE__ */ __name((region) => isFipsRegion(region) ? ["fips-aws-global", "aws-fips"].includes(region) ? "us-east-1" : region.replace(/fips-(dkr-|prod-)?|-fips/, "") : region, "getRealRegion");
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionConfig/resolveRegionConfig.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/resolveRegionConfig.js
 var resolveRegionConfig;
 var init_resolveRegionConfig = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionConfig/resolveRegionConfig.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/resolveRegionConfig.js"() {
     init_getRealRegion();
     init_isFipsRegion();
     resolveRegionConfig = /* @__PURE__ */ __name((input) => {
@@ -2695,53 +2752,53 @@ var init_resolveRegionConfig = __esm({
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionConfig/index.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/index.js
 var init_regionConfig = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionConfig/index.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionConfig/index.js"() {
     init_config2();
     init_resolveRegionConfig();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/PartitionHash.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/PartitionHash.js
 var init_PartitionHash = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/PartitionHash.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/PartitionHash.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/RegionHash.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/RegionHash.js
 var init_RegionHash = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/RegionHash.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/RegionHash.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/getHostnameFromVariants.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getHostnameFromVariants.js
 var init_getHostnameFromVariants = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/getHostnameFromVariants.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getHostnameFromVariants.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedHostname.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedHostname.js
 var init_getResolvedHostname = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedHostname.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedHostname.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedPartition.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedPartition.js
 var init_getResolvedPartition = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedPartition.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedPartition.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedSigningRegion.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedSigningRegion.js
 var init_getResolvedSigningRegion = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedSigningRegion.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getResolvedSigningRegion.js"() {
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/getRegionInfo.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getRegionInfo.js
 var init_getRegionInfo = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/getRegionInfo.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/getRegionInfo.js"() {
     init_getHostnameFromVariants();
     init_getResolvedHostname();
     init_getResolvedPartition();
@@ -2749,25 +2806,25 @@ var init_getRegionInfo = __esm({
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/regionInfo/index.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/index.js
 var init_regionInfo = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/regionInfo/index.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/regionInfo/index.js"() {
     init_PartitionHash();
     init_RegionHash();
     init_getRegionInfo();
   }
 });
 
-// node_modules/@smithy/config-resolver/dist-es/index.js
+// node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/index.js
 var init_dist_es11 = __esm({
-  "node_modules/@smithy/config-resolver/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+config-resolver@3.0.8/node_modules/@smithy/config-resolver/dist-es/index.js"() {
     init_endpointsConfig();
     init_regionConfig();
     init_regionInfo();
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/httpAuthSchemeMiddleware.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/httpAuthSchemeMiddleware.js
 function convertHttpAuthSchemesToMap(httpAuthSchemes) {
   const map2 = /* @__PURE__ */ new Map();
   for (const scheme of httpAuthSchemes) {
@@ -2777,7 +2834,7 @@ function convertHttpAuthSchemesToMap(httpAuthSchemes) {
 }
 var httpAuthSchemeMiddleware;
 var init_httpAuthSchemeMiddleware = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/httpAuthSchemeMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/httpAuthSchemeMiddleware.js"() {
     init_dist_es();
     init_dist_es10();
     __name(convertHttpAuthSchemesToMap, "convertHttpAuthSchemesToMap");
@@ -2815,10 +2872,10 @@ var init_httpAuthSchemeMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/s3.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/s3.js
 var resolveParamsForS3, DOMAIN_PATTERN, IP_ADDRESS_PATTERN, DOTS_PATTERN, isDnsCompatibleBucketName, isArnBucketName;
 var init_s3 = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/s3.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/s3.js"() {
     resolveParamsForS3 = /* @__PURE__ */ __name(async (endpointParams) => {
       const bucket = endpointParams?.Bucket || "";
       if (typeof endpointParams.Bucket === "string") {
@@ -2853,17 +2910,17 @@ var init_s3 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/index.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/index.js
 var init_service_customizations = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/service-customizations/index.js"() {
     init_s3();
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/createConfigValueProvider.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/createConfigValueProvider.js
 var createConfigValueProvider;
 var init_createConfigValueProvider = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/createConfigValueProvider.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/createConfigValueProvider.js"() {
     createConfigValueProvider = /* @__PURE__ */ __name((configKey, canonicalEndpointParamKey, config) => {
       const configProvider = /* @__PURE__ */ __name(async () => {
         const configValue = config[configKey] ?? config[canonicalEndpointParamKey];
@@ -2906,10 +2963,10 @@ var init_createConfigValueProvider = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/ProviderError.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/ProviderError.js
 var ProviderError;
 var init_ProviderError = __esm({
-  "node_modules/@smithy/property-provider/dist-es/ProviderError.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/ProviderError.js"() {
     ProviderError = class _ProviderError extends Error {
       static {
         __name(this, "ProviderError");
@@ -2937,10 +2994,10 @@ var init_ProviderError = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/CredentialsProviderError.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/CredentialsProviderError.js
 var CredentialsProviderError;
 var init_CredentialsProviderError = __esm({
-  "node_modules/@smithy/property-provider/dist-es/CredentialsProviderError.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/CredentialsProviderError.js"() {
     init_ProviderError();
     CredentialsProviderError = class _CredentialsProviderError extends ProviderError {
       static {
@@ -2955,10 +3012,10 @@ var init_CredentialsProviderError = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/TokenProviderError.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/TokenProviderError.js
 var TokenProviderError;
 var init_TokenProviderError = __esm({
-  "node_modules/@smithy/property-provider/dist-es/TokenProviderError.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/TokenProviderError.js"() {
     init_ProviderError();
     TokenProviderError = class _TokenProviderError extends ProviderError {
       static {
@@ -2973,10 +3030,10 @@ var init_TokenProviderError = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/chain.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/chain.js
 var chain;
 var init_chain = __esm({
-  "node_modules/@smithy/property-provider/dist-es/chain.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/chain.js"() {
     init_ProviderError();
     chain = /* @__PURE__ */ __name((...providers) => async () => {
       if (providers.length === 0) {
@@ -2987,12 +3044,12 @@ var init_chain = __esm({
         try {
           const credentials = await provider();
           return credentials;
-        } catch (err) {
-          lastProviderError = err;
-          if (err?.tryNextLink) {
+        } catch (err2) {
+          lastProviderError = err2;
+          if (err2?.tryNextLink) {
             continue;
           }
-          throw err;
+          throw err2;
         }
       }
       throw lastProviderError;
@@ -3000,18 +3057,18 @@ var init_chain = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/fromStatic.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/fromStatic.js
 var fromStatic;
 var init_fromStatic = __esm({
-  "node_modules/@smithy/property-provider/dist-es/fromStatic.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/fromStatic.js"() {
     fromStatic = /* @__PURE__ */ __name((staticValue) => () => Promise.resolve(staticValue), "fromStatic");
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/memoize.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/memoize.js
 var memoize;
 var init_memoize = __esm({
-  "node_modules/@smithy/property-provider/dist-es/memoize.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/memoize.js"() {
     memoize = /* @__PURE__ */ __name((provider, isExpired, requiresRefresh) => {
       let resolved;
       let pending;
@@ -3059,9 +3116,9 @@ var init_memoize = __esm({
   }
 });
 
-// node_modules/@smithy/property-provider/dist-es/index.js
+// node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/index.js
 var init_dist_es12 = __esm({
-  "node_modules/@smithy/property-provider/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+property-provider@3.1.6/node_modules/@smithy/property-provider/dist-es/index.js"() {
     init_CredentialsProviderError();
     init_ProviderError();
     init_TokenProviderError();
@@ -3071,7 +3128,7 @@ var init_dist_es12 = __esm({
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/getSelectorName.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/getSelectorName.js
 function getSelectorName(functionString) {
   try {
     const constants = new Set(Array.from(functionString.match(/([A-Z_]){3,}/g) ?? []));
@@ -3084,15 +3141,15 @@ function getSelectorName(functionString) {
   }
 }
 var init_getSelectorName = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/getSelectorName.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/getSelectorName.js"() {
     __name(getSelectorName, "getSelectorName");
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/fromEnv.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromEnv.js
 var fromEnv;
 var init_fromEnv = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/fromEnv.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromEnv.js"() {
     init_dist_es12();
     init_getSelectorName();
     fromEnv = /* @__PURE__ */ __name((envVarSelector, logger2) => async () => {
@@ -3109,12 +3166,12 @@ var init_fromEnv = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getHomeDir.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getHomeDir.js
 import { homedir } from "os";
 import { sep } from "path";
 var homeDirCache, getHomeDirCacheKey, getHomeDir;
 var init_getHomeDir = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getHomeDir.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getHomeDir.js"() {
     homeDirCache = {};
     getHomeDirCacheKey = /* @__PURE__ */ __name(() => {
       if (process && process.geteuid) {
@@ -3138,22 +3195,22 @@ var init_getHomeDir = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getProfileName.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getProfileName.js
 var ENV_PROFILE, DEFAULT_PROFILE, getProfileName;
 var init_getProfileName = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getProfileName.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getProfileName.js"() {
     ENV_PROFILE = "AWS_PROFILE";
     DEFAULT_PROFILE = "default";
     getProfileName = /* @__PURE__ */ __name((init) => init.profile || process.env[ENV_PROFILE] || DEFAULT_PROFILE, "getProfileName");
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFilepath.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFilepath.js
 import { createHash } from "crypto";
 import { join } from "path";
 var getSSOTokenFilepath;
 var init_getSSOTokenFilepath = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFilepath.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFilepath.js"() {
     init_getHomeDir();
     getSSOTokenFilepath = /* @__PURE__ */ __name((id) => {
       const hasher = createHash("sha1");
@@ -3163,11 +3220,11 @@ var init_getSSOTokenFilepath = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFromFile.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFromFile.js
 import { promises as fsPromises } from "fs";
 var readFile, getSSOTokenFromFile;
 var init_getSSOTokenFromFile = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFromFile.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSSOTokenFromFile.js"() {
     init_getSSOTokenFilepath();
     ({ readFile } = fsPromises);
     getSSOTokenFromFile = /* @__PURE__ */ __name(async (id) => {
@@ -3178,10 +3235,10 @@ var init_getSSOTokenFromFile = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigData.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigData.js
 var getConfigData;
 var init_getConfigData = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigData.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigData.js"() {
     init_dist_es();
     init_loadSharedConfigFiles();
     getConfigData = /* @__PURE__ */ __name((data) => Object.entries(data).filter(([key]) => {
@@ -3201,32 +3258,32 @@ var init_getConfigData = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigFilepath.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigFilepath.js
 import { join as join2 } from "path";
 var ENV_CONFIG_PATH, getConfigFilepath;
 var init_getConfigFilepath = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigFilepath.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getConfigFilepath.js"() {
     init_getHomeDir();
     ENV_CONFIG_PATH = "AWS_CONFIG_FILE";
     getConfigFilepath = /* @__PURE__ */ __name(() => process.env[ENV_CONFIG_PATH] || join2(getHomeDir(), ".aws", "config"), "getConfigFilepath");
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getCredentialsFilepath.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getCredentialsFilepath.js
 import { join as join3 } from "path";
 var ENV_CREDENTIALS_PATH, getCredentialsFilepath;
 var init_getCredentialsFilepath = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getCredentialsFilepath.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getCredentialsFilepath.js"() {
     init_getHomeDir();
     ENV_CREDENTIALS_PATH = "AWS_SHARED_CREDENTIALS_FILE";
     getCredentialsFilepath = /* @__PURE__ */ __name(() => process.env[ENV_CREDENTIALS_PATH] || join3(getHomeDir(), ".aws", "credentials"), "getCredentialsFilepath");
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/parseIni.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/parseIni.js
 var prefixKeyRegex, profileNameBlockList, parseIni;
 var init_parseIni = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/parseIni.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/parseIni.js"() {
     init_dist_es();
     init_loadSharedConfigFiles();
     prefixKeyRegex = /^([\w-]+)\s(["'])?([\w-@\+\.%:/]+)\2$/;
@@ -3279,11 +3336,11 @@ var init_parseIni = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/slurpFile.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/slurpFile.js
 import { promises as fsPromises2 } from "fs";
 var readFile2, filePromisesHash, slurpFile;
 var init_slurpFile = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/slurpFile.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/slurpFile.js"() {
     ({ readFile: readFile2 } = fsPromises2);
     filePromisesHash = {};
     slurpFile = /* @__PURE__ */ __name((path, options) => {
@@ -3295,11 +3352,11 @@ var init_slurpFile = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/loadSharedConfigFiles.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/loadSharedConfigFiles.js
 import { join as join4 } from "path";
 var swallowError, CONFIG_PREFIX_SEPARATOR, loadSharedConfigFiles;
 var init_loadSharedConfigFiles = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/loadSharedConfigFiles.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/loadSharedConfigFiles.js"() {
     init_getConfigData();
     init_getConfigFilepath();
     init_getCredentialsFilepath();
@@ -3336,20 +3393,20 @@ var init_loadSharedConfigFiles = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/getSsoSessionData.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSsoSessionData.js
 var getSsoSessionData;
 var init_getSsoSessionData = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/getSsoSessionData.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/getSsoSessionData.js"() {
     init_dist_es();
     init_loadSharedConfigFiles();
     getSsoSessionData = /* @__PURE__ */ __name((data) => Object.entries(data).filter(([key]) => key.startsWith(IniSectionType.SSO_SESSION + CONFIG_PREFIX_SEPARATOR)).reduce((acc, [key, value]) => ({ ...acc, [key.substring(key.indexOf(CONFIG_PREFIX_SEPARATOR) + 1)]: value }), {}), "getSsoSessionData");
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/loadSsoSessionData.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/loadSsoSessionData.js
 var swallowError2, loadSsoSessionData;
 var init_loadSsoSessionData = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/loadSsoSessionData.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/loadSsoSessionData.js"() {
     init_getConfigFilepath();
     init_getSsoSessionData();
     init_parseIni();
@@ -3359,10 +3416,10 @@ var init_loadSsoSessionData = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/mergeConfigFiles.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/mergeConfigFiles.js
 var mergeConfigFiles;
 var init_mergeConfigFiles = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/mergeConfigFiles.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/mergeConfigFiles.js"() {
     mergeConfigFiles = /* @__PURE__ */ __name((...files) => {
       const merged = {};
       for (const file of files) {
@@ -3379,10 +3436,10 @@ var init_mergeConfigFiles = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/parseKnownFiles.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/parseKnownFiles.js
 var parseKnownFiles;
 var init_parseKnownFiles = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/parseKnownFiles.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/parseKnownFiles.js"() {
     init_loadSharedConfigFiles();
     init_mergeConfigFiles();
     parseKnownFiles = /* @__PURE__ */ __name(async (init) => {
@@ -3392,15 +3449,15 @@ var init_parseKnownFiles = __esm({
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/types.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/types.js
 var init_types5 = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/types.js"() {
   }
 });
 
-// node_modules/@smithy/shared-ini-file-loader/dist-es/index.js
+// node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/index.js
 var init_dist_es13 = __esm({
-  "node_modules/@smithy/shared-ini-file-loader/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+shared-ini-file-loader@3.1.7/node_modules/@smithy/shared-ini-file-loader/dist-es/index.js"() {
     init_getHomeDir();
     init_getProfileName();
     init_getSSOTokenFilepath();
@@ -3412,10 +3469,10 @@ var init_dist_es13 = __esm({
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/fromSharedConfigFiles.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromSharedConfigFiles.js
 var fromSharedConfigFiles;
 var init_fromSharedConfigFiles = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/fromSharedConfigFiles.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromSharedConfigFiles.js"() {
     init_dist_es12();
     init_dist_es13();
     init_getSelectorName();
@@ -3439,20 +3496,20 @@ var init_fromSharedConfigFiles = __esm({
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/fromStatic.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromStatic.js
 var isFunction, fromStatic2;
 var init_fromStatic2 = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/fromStatic.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/fromStatic.js"() {
     init_dist_es12();
     isFunction = /* @__PURE__ */ __name((func) => typeof func === "function", "isFunction");
     fromStatic2 = /* @__PURE__ */ __name((defaultValue) => isFunction(defaultValue) ? async () => await defaultValue() : fromStatic(defaultValue), "fromStatic");
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/configLoader.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/configLoader.js
 var loadConfig;
 var init_configLoader = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/configLoader.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/configLoader.js"() {
     init_dist_es12();
     init_fromEnv();
     init_fromSharedConfigFiles();
@@ -3461,17 +3518,17 @@ var init_configLoader = __esm({
   }
 });
 
-// node_modules/@smithy/node-config-provider/dist-es/index.js
+// node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/index.js
 var init_dist_es14 = __esm({
-  "node_modules/@smithy/node-config-provider/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+node-config-provider@3.1.7/node_modules/@smithy/node-config-provider/dist-es/index.js"() {
     init_configLoader();
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointUrlConfig.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointUrlConfig.js
 var ENV_ENDPOINT_URL, CONFIG_ENDPOINT_URL, getEndpointUrlConfig;
 var init_getEndpointUrlConfig = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointUrlConfig.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointUrlConfig.js"() {
     init_dist_es13();
     ENV_ENDPOINT_URL = "AWS_ENDPOINT_URL";
     CONFIG_ENDPOINT_URL = "endpoint_url";
@@ -3506,17 +3563,17 @@ var init_getEndpointUrlConfig = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromConfig.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromConfig.js
 var getEndpointFromConfig;
 var init_getEndpointFromConfig = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromConfig.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromConfig.js"() {
     init_dist_es14();
     init_getEndpointUrlConfig();
-    getEndpointFromConfig = /* @__PURE__ */ __name(async (serviceId) => loadConfig(getEndpointUrlConfig(serviceId))(), "getEndpointFromConfig");
+    getEndpointFromConfig = /* @__PURE__ */ __name(async (serviceId) => loadConfig(getEndpointUrlConfig(serviceId ?? ""))(), "getEndpointFromConfig");
   }
 });
 
-// node_modules/@smithy/querystring-parser/dist-es/index.js
+// node_modules/.pnpm/@smithy+querystring-parser@3.0.6/node_modules/@smithy/querystring-parser/dist-es/index.js
 function parseQueryString(querystring) {
   const query = {};
   querystring = querystring.replace(/^\?/, "");
@@ -3539,15 +3596,15 @@ function parseQueryString(querystring) {
   return query;
 }
 var init_dist_es15 = __esm({
-  "node_modules/@smithy/querystring-parser/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+querystring-parser@3.0.6/node_modules/@smithy/querystring-parser/dist-es/index.js"() {
     __name(parseQueryString, "parseQueryString");
   }
 });
 
-// node_modules/@smithy/url-parser/dist-es/index.js
+// node_modules/.pnpm/@smithy+url-parser@3.0.6/node_modules/@smithy/url-parser/dist-es/index.js
 var parseUrl;
 var init_dist_es16 = __esm({
-  "node_modules/@smithy/url-parser/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+url-parser@3.0.6/node_modules/@smithy/url-parser/dist-es/index.js"() {
     init_dist_es15();
     parseUrl = /* @__PURE__ */ __name((url) => {
       if (typeof url === "string") {
@@ -3569,10 +3626,10 @@ var init_dist_es16 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/toEndpointV1.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/toEndpointV1.js
 var toEndpointV1;
 var init_toEndpointV1 = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/toEndpointV1.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/toEndpointV1.js"() {
     init_dist_es16();
     toEndpointV1 = /* @__PURE__ */ __name((endpoint) => {
       if (typeof endpoint === "object") {
@@ -3586,17 +3643,22 @@ var init_toEndpointV1 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromInstructions.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromInstructions.js
 var getEndpointFromInstructions, resolveParams;
 var init_getEndpointFromInstructions = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromInstructions.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/getEndpointFromInstructions.js"() {
     init_service_customizations();
     init_createConfigValueProvider();
     init_getEndpointFromConfig();
     init_toEndpointV1();
     getEndpointFromInstructions = /* @__PURE__ */ __name(async (commandInput, instructionsSupplier, clientConfig, context) => {
       if (!clientConfig.endpoint) {
-        const endpointFromConfig = await getEndpointFromConfig(clientConfig.serviceId || "");
+        let endpointFromConfig;
+        if (clientConfig.serviceConfiguredEndpoint) {
+          endpointFromConfig = await clientConfig.serviceConfiguredEndpoint();
+        } else {
+          endpointFromConfig = await getEndpointFromConfig(clientConfig.serviceId);
+        }
         if (endpointFromConfig) {
           clientConfig.endpoint = () => Promise.resolve(toEndpointV1(endpointFromConfig));
         }
@@ -3638,18 +3700,18 @@ var init_getEndpointFromInstructions = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/adaptors/index.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/index.js
 var init_adaptors = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/adaptors/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/adaptors/index.js"() {
     init_getEndpointFromInstructions();
     init_toEndpointV1();
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/endpointMiddleware.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/endpointMiddleware.js
 var endpointMiddleware;
 var init_endpointMiddleware = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/endpointMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/endpointMiddleware.js"() {
     init_dist_es10();
     init_getEndpointFromInstructions();
     endpointMiddleware = /* @__PURE__ */ __name(({ config, instructions }) => {
@@ -3685,10 +3747,10 @@ var init_endpointMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-serde/dist-es/deserializerMiddleware.js
+// node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/deserializerMiddleware.js
 var deserializerMiddleware;
 var init_deserializerMiddleware = __esm({
-  "node_modules/@smithy/middleware-serde/dist-es/deserializerMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/deserializerMiddleware.js"() {
     deserializerMiddleware = /* @__PURE__ */ __name((options, deserializer) => (next) => async (args) => {
       const { response } = await next(args);
       try {
@@ -3716,10 +3778,10 @@ var init_deserializerMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-serde/dist-es/serializerMiddleware.js
+// node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/serializerMiddleware.js
 var serializerMiddleware;
 var init_serializerMiddleware = __esm({
-  "node_modules/@smithy/middleware-serde/dist-es/serializerMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/serializerMiddleware.js"() {
     serializerMiddleware = /* @__PURE__ */ __name((options, serializer) => (next, context) => async (args) => {
       const endpoint = context.endpointV2?.url && options.urlParser ? async () => options.urlParser(context.endpointV2.url) : options.endpoint;
       if (!endpoint) {
@@ -3734,7 +3796,7 @@ var init_serializerMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-serde/dist-es/serdePlugin.js
+// node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/serdePlugin.js
 function getSerdePlugin(config, serializer, deserializer) {
   return {
     applyToStack: (commandStack) => {
@@ -3745,7 +3807,7 @@ function getSerdePlugin(config, serializer, deserializer) {
 }
 var deserializerMiddlewareOption, serializerMiddlewareOption;
 var init_serdePlugin = __esm({
-  "node_modules/@smithy/middleware-serde/dist-es/serdePlugin.js"() {
+  "node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/serdePlugin.js"() {
     init_deserializerMiddleware();
     init_serializerMiddleware();
     deserializerMiddlewareOption = {
@@ -3764,19 +3826,19 @@ var init_serdePlugin = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-serde/dist-es/index.js
+// node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/index.js
 var init_dist_es17 = __esm({
-  "node_modules/@smithy/middleware-serde/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-serde@3.0.6/node_modules/@smithy/middleware-serde/dist-es/index.js"() {
     init_deserializerMiddleware();
     init_serdePlugin();
     init_serializerMiddleware();
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/getEndpointPlugin.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/getEndpointPlugin.js
 var endpointMiddlewareOptions, getEndpointPlugin;
 var init_getEndpointPlugin = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/getEndpointPlugin.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/getEndpointPlugin.js"() {
     init_dist_es17();
     init_endpointMiddleware();
     endpointMiddlewareOptions = {
@@ -3798,18 +3860,19 @@ var init_getEndpointPlugin = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/resolveEndpointConfig.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/resolveEndpointConfig.js
 var resolveEndpointConfig;
 var init_resolveEndpointConfig = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/resolveEndpointConfig.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/resolveEndpointConfig.js"() {
     init_dist_es10();
+    init_getEndpointFromConfig();
     init_toEndpointV1();
     resolveEndpointConfig = /* @__PURE__ */ __name((input) => {
       const tls = input.tls ?? true;
       const { endpoint } = input;
       const customEndpointProvider = endpoint != null ? async () => toEndpointV1(await normalizeProvider(endpoint)()) : void 0;
       const isCustomEndpoint = !!endpoint;
-      return {
+      const resolvedConfig = {
         ...input,
         endpoint: customEndpointProvider,
         tls,
@@ -3817,19 +3880,27 @@ var init_resolveEndpointConfig = __esm({
         useDualstackEndpoint: normalizeProvider(input.useDualstackEndpoint ?? false),
         useFipsEndpoint: normalizeProvider(input.useFipsEndpoint ?? false)
       };
+      let configuredEndpointPromise = void 0;
+      resolvedConfig.serviceConfiguredEndpoint = async () => {
+        if (input.serviceId && !configuredEndpointPromise) {
+          configuredEndpointPromise = getEndpointFromConfig(input.serviceId);
+        }
+        return configuredEndpointPromise;
+      };
+      return resolvedConfig;
     }, "resolveEndpointConfig");
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/types.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/types.js
 var init_types6 = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/types.js"() {
   }
 });
 
-// node_modules/@smithy/middleware-endpoint/dist-es/index.js
+// node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/index.js
 var init_dist_es18 = __esm({
-  "node_modules/@smithy/middleware-endpoint/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-endpoint@3.1.3/node_modules/@smithy/middleware-endpoint/dist-es/index.js"() {
     init_adaptors();
     init_endpointMiddleware();
     init_getEndpointPlugin();
@@ -3838,10 +3909,10 @@ var init_dist_es18 = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemeEndpointRuleSetPlugin.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemeEndpointRuleSetPlugin.js
 var httpAuthSchemeEndpointRuleSetMiddlewareOptions, getHttpAuthSchemeEndpointRuleSetPlugin;
 var init_getHttpAuthSchemeEndpointRuleSetPlugin = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemeEndpointRuleSetPlugin.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemeEndpointRuleSetPlugin.js"() {
     init_dist_es18();
     init_httpAuthSchemeMiddleware();
     httpAuthSchemeEndpointRuleSetMiddlewareOptions = {
@@ -3863,10 +3934,10 @@ var init_getHttpAuthSchemeEndpointRuleSetPlugin = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemePlugin.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemePlugin.js
 var httpAuthSchemeMiddlewareOptions;
 var init_getHttpAuthSchemePlugin = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemePlugin.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/getHttpAuthSchemePlugin.js"() {
     init_dist_es17();
     init_httpAuthSchemeMiddleware();
     httpAuthSchemeMiddlewareOptions = {
@@ -3880,19 +3951,19 @@ var init_getHttpAuthSchemePlugin = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/index.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/index.js
 var init_middleware_http_auth_scheme = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/index.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-auth-scheme/index.js"() {
     init_httpAuthSchemeMiddleware();
     init_getHttpAuthSchemeEndpointRuleSetPlugin();
     init_getHttpAuthSchemePlugin();
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-signing/httpSigningMiddleware.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/httpSigningMiddleware.js
 var defaultErrorHandler, defaultSuccessHandler, httpSigningMiddleware;
 var init_httpSigningMiddleware = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-signing/httpSigningMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/httpSigningMiddleware.js"() {
     init_dist_es2();
     init_dist_es();
     init_dist_es10();
@@ -3921,10 +3992,10 @@ var init_httpSigningMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/config.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/config.js
 var RETRY_MODES, DEFAULT_MAX_ATTEMPTS, DEFAULT_RETRY_MODE;
 var init_config3 = __esm({
-  "node_modules/@smithy/util-retry/dist-es/config.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/config.js"() {
     (function(RETRY_MODES2) {
       RETRY_MODES2["STANDARD"] = "standard";
       RETRY_MODES2["ADAPTIVE"] = "adaptive";
@@ -3934,10 +4005,10 @@ var init_config3 = __esm({
   }
 });
 
-// node_modules/@smithy/service-error-classification/dist-es/constants.js
+// node_modules/.pnpm/@smithy+service-error-classification@3.0.6/node_modules/@smithy/service-error-classification/dist-es/constants.js
 var THROTTLING_ERROR_CODES, TRANSIENT_ERROR_CODES, TRANSIENT_ERROR_STATUS_CODES, NODEJS_TIMEOUT_ERROR_CODES;
 var init_constants2 = __esm({
-  "node_modules/@smithy/service-error-classification/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+service-error-classification@3.0.6/node_modules/@smithy/service-error-classification/dist-es/constants.js"() {
     THROTTLING_ERROR_CODES = [
       "BandwidthLimitExceeded",
       "EC2ThrottledException",
@@ -3960,10 +4031,10 @@ var init_constants2 = __esm({
   }
 });
 
-// node_modules/@smithy/service-error-classification/dist-es/index.js
+// node_modules/.pnpm/@smithy+service-error-classification@3.0.6/node_modules/@smithy/service-error-classification/dist-es/index.js
 var isClockSkewCorrectedError, isThrottlingError, isTransientError, isServerError;
 var init_dist_es19 = __esm({
-  "node_modules/@smithy/service-error-classification/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+service-error-classification@3.0.6/node_modules/@smithy/service-error-classification/dist-es/index.js"() {
     init_constants2();
     isClockSkewCorrectedError = /* @__PURE__ */ __name((error) => error.$metadata?.clockSkewCorrected, "isClockSkewCorrectedError");
     isThrottlingError = /* @__PURE__ */ __name((error) => error.$metadata?.httpStatusCode === 429 || THROTTLING_ERROR_CODES.includes(error.name) || error.$retryable?.throttling == true, "isThrottlingError");
@@ -3981,10 +4052,10 @@ var init_dist_es19 = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/DefaultRateLimiter.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/DefaultRateLimiter.js
 var DefaultRateLimiter;
 var init_DefaultRateLimiter = __esm({
-  "node_modules/@smithy/util-retry/dist-es/DefaultRateLimiter.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/DefaultRateLimiter.js"() {
     init_dist_es19();
     DefaultRateLimiter = class {
       static {
@@ -4089,10 +4160,10 @@ var init_DefaultRateLimiter = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/constants.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/constants.js
 var DEFAULT_RETRY_DELAY_BASE, MAXIMUM_RETRY_DELAY, THROTTLING_RETRY_DELAY_BASE, INITIAL_RETRY_TOKENS, RETRY_COST, TIMEOUT_RETRY_COST, NO_RETRY_INCREMENT, INVOCATION_ID_HEADER, REQUEST_HEADER;
 var init_constants3 = __esm({
-  "node_modules/@smithy/util-retry/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/constants.js"() {
     DEFAULT_RETRY_DELAY_BASE = 100;
     MAXIMUM_RETRY_DELAY = 20 * 1e3;
     THROTTLING_RETRY_DELAY_BASE = 500;
@@ -4105,10 +4176,10 @@ var init_constants3 = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/defaultRetryBackoffStrategy.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/defaultRetryBackoffStrategy.js
 var getDefaultRetryBackoffStrategy;
 var init_defaultRetryBackoffStrategy = __esm({
-  "node_modules/@smithy/util-retry/dist-es/defaultRetryBackoffStrategy.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/defaultRetryBackoffStrategy.js"() {
     init_constants3();
     getDefaultRetryBackoffStrategy = /* @__PURE__ */ __name(() => {
       let delayBase = DEFAULT_RETRY_DELAY_BASE;
@@ -4126,10 +4197,10 @@ var init_defaultRetryBackoffStrategy = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/defaultRetryToken.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/defaultRetryToken.js
 var createDefaultRetryToken;
 var init_defaultRetryToken = __esm({
-  "node_modules/@smithy/util-retry/dist-es/defaultRetryToken.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/defaultRetryToken.js"() {
     init_constants3();
     createDefaultRetryToken = /* @__PURE__ */ __name(({ retryDelay, retryCount, retryCost }) => {
       const getRetryCount = /* @__PURE__ */ __name(() => retryCount, "getRetryCount");
@@ -4144,10 +4215,10 @@ var init_defaultRetryToken = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/StandardRetryStrategy.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/StandardRetryStrategy.js
 var StandardRetryStrategy;
 var init_StandardRetryStrategy = __esm({
-  "node_modules/@smithy/util-retry/dist-es/StandardRetryStrategy.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/StandardRetryStrategy.js"() {
     init_config3();
     init_constants3();
     init_defaultRetryBackoffStrategy();
@@ -4214,10 +4285,10 @@ var init_StandardRetryStrategy = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/AdaptiveRetryStrategy.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/AdaptiveRetryStrategy.js
 var AdaptiveRetryStrategy;
 var init_AdaptiveRetryStrategy = __esm({
-  "node_modules/@smithy/util-retry/dist-es/AdaptiveRetryStrategy.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/AdaptiveRetryStrategy.js"() {
     init_config3();
     init_DefaultRateLimiter();
     init_StandardRetryStrategy();
@@ -4248,23 +4319,23 @@ var init_AdaptiveRetryStrategy = __esm({
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/ConfiguredRetryStrategy.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/ConfiguredRetryStrategy.js
 var init_ConfiguredRetryStrategy = __esm({
-  "node_modules/@smithy/util-retry/dist-es/ConfiguredRetryStrategy.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/ConfiguredRetryStrategy.js"() {
     init_constants3();
     init_StandardRetryStrategy();
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/types.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/types.js
 var init_types7 = __esm({
-  "node_modules/@smithy/util-retry/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/types.js"() {
   }
 });
 
-// node_modules/@smithy/util-retry/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/index.js
 var init_dist_es20 = __esm({
-  "node_modules/@smithy/util-retry/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-retry@3.0.6/node_modules/@smithy/util-retry/dist-es/index.js"() {
     init_AdaptiveRetryStrategy();
     init_ConfiguredRetryStrategy();
     init_DefaultRateLimiter();
@@ -4275,7 +4346,7 @@ var init_dist_es20 = __esm({
   }
 });
 
-// node_modules/uuid/dist/esm-node/rng.js
+// node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/rng.js
 import crypto from "crypto";
 function rng() {
   if (poolPtr > rnds8Pool.length - 16) {
@@ -4286,20 +4357,20 @@ function rng() {
 }
 var rnds8Pool, poolPtr;
 var init_rng = __esm({
-  "node_modules/uuid/dist/esm-node/rng.js"() {
+  "node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/rng.js"() {
     rnds8Pool = new Uint8Array(256);
     poolPtr = rnds8Pool.length;
     __name(rng, "rng");
   }
 });
 
-// node_modules/uuid/dist/esm-node/stringify.js
+// node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/stringify.js
 function unsafeStringify(arr, offset = 0) {
   return byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + "-" + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + "-" + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + "-" + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + "-" + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]];
 }
 var byteToHex;
 var init_stringify = __esm({
-  "node_modules/uuid/dist/esm-node/stringify.js"() {
+  "node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/stringify.js"() {
     byteToHex = [];
     for (let i5 = 0; i5 < 256; ++i5) {
       byteToHex.push((i5 + 256).toString(16).slice(1));
@@ -4308,18 +4379,18 @@ var init_stringify = __esm({
   }
 });
 
-// node_modules/uuid/dist/esm-node/native.js
+// node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/native.js
 import crypto2 from "crypto";
 var native_default;
 var init_native = __esm({
-  "node_modules/uuid/dist/esm-node/native.js"() {
+  "node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/native.js"() {
     native_default = {
       randomUUID: crypto2.randomUUID
     };
   }
 });
 
-// node_modules/uuid/dist/esm-node/v4.js
+// node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/v4.js
 function v4(options, buf, offset) {
   if (native_default.randomUUID && !buf && !options) {
     return native_default.randomUUID();
@@ -4339,7 +4410,7 @@ function v4(options, buf, offset) {
 }
 var v4_default;
 var init_v4 = __esm({
-  "node_modules/uuid/dist/esm-node/v4.js"() {
+  "node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/v4.js"() {
     init_native();
     init_rng();
     init_stringify();
@@ -4348,38 +4419,38 @@ var init_v4 = __esm({
   }
 });
 
-// node_modules/uuid/dist/esm-node/index.js
+// node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/index.js
 var init_esm_node = __esm({
-  "node_modules/uuid/dist/esm-node/index.js"() {
+  "node_modules/.pnpm/uuid@9.0.1/node_modules/uuid/dist/esm-node/index.js"() {
     init_v4();
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/defaultRetryQuota.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/defaultRetryQuota.js
 var init_defaultRetryQuota = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/defaultRetryQuota.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/defaultRetryQuota.js"() {
     init_dist_es20();
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/delayDecider.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/delayDecider.js
 var init_delayDecider = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/delayDecider.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/delayDecider.js"() {
     init_dist_es20();
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/retryDecider.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/retryDecider.js
 var init_retryDecider = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/retryDecider.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/retryDecider.js"() {
     init_dist_es19();
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/util.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/util.js
 var asSdkError;
 var init_util2 = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/util.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/util.js"() {
     asSdkError = /* @__PURE__ */ __name((error) => {
       if (error instanceof Error)
         return error;
@@ -4392,9 +4463,9 @@ var init_util2 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/StandardRetryStrategy.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/StandardRetryStrategy.js
 var init_StandardRetryStrategy2 = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/StandardRetryStrategy.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/StandardRetryStrategy.js"() {
     init_dist_es2();
     init_dist_es19();
     init_dist_es20();
@@ -4405,18 +4476,18 @@ var init_StandardRetryStrategy2 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/AdaptiveRetryStrategy.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/AdaptiveRetryStrategy.js
 var init_AdaptiveRetryStrategy2 = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/AdaptiveRetryStrategy.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/AdaptiveRetryStrategy.js"() {
     init_dist_es20();
     init_StandardRetryStrategy2();
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/configurations.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/configurations.js
 var ENV_MAX_ATTEMPTS, CONFIG_MAX_ATTEMPTS, NODE_MAX_ATTEMPT_CONFIG_OPTIONS, resolveRetryConfig, ENV_RETRY_MODE, CONFIG_RETRY_MODE, NODE_RETRY_MODE_CONFIG_OPTIONS;
 var init_configurations2 = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/configurations.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/configurations.js"() {
     init_dist_es10();
     init_dist_es20();
     ENV_MAX_ATTEMPTS = "AWS_MAX_ATTEMPTS";
@@ -4472,18 +4543,18 @@ var init_configurations2 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/omitRetryHeadersMiddleware.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/omitRetryHeadersMiddleware.js
 var init_omitRetryHeadersMiddleware = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/omitRetryHeadersMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/omitRetryHeadersMiddleware.js"() {
     init_dist_es2();
     init_dist_es20();
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/NoOpLogger.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/NoOpLogger.js
 var NoOpLogger;
 var init_NoOpLogger = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/NoOpLogger.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/NoOpLogger.js"() {
     NoOpLogger = class {
       static {
         __name(this, "NoOpLogger");
@@ -4502,10 +4573,10 @@ var init_NoOpLogger = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-stack/dist-es/MiddlewareStack.js
+// node_modules/.pnpm/@smithy+middleware-stack@3.0.6/node_modules/@smithy/middleware-stack/dist-es/MiddlewareStack.js
 var getAllAliases, getMiddlewareNameWithAliases, constructStack, stepWeights, priorityWeights;
 var init_MiddlewareStack = __esm({
-  "node_modules/@smithy/middleware-stack/dist-es/MiddlewareStack.js"() {
+  "node_modules/.pnpm/@smithy+middleware-stack@3.0.6/node_modules/@smithy/middleware-stack/dist-es/MiddlewareStack.js"() {
     getAllAliases = /* @__PURE__ */ __name((name, aliases) => {
       const _aliases = [];
       if (name) {
@@ -4772,58 +4843,74 @@ var init_MiddlewareStack = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-stack/dist-es/index.js
+// node_modules/.pnpm/@smithy+middleware-stack@3.0.6/node_modules/@smithy/middleware-stack/dist-es/index.js
 var init_dist_es21 = __esm({
-  "node_modules/@smithy/middleware-stack/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-stack@3.0.6/node_modules/@smithy/middleware-stack/dist-es/index.js"() {
     init_MiddlewareStack();
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/client.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/client.js
 var Client;
 var init_client2 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/client.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/client.js"() {
     init_dist_es21();
     Client = class {
       static {
         __name(this, "Client");
       }
       constructor(config) {
-        this.middlewareStack = constructStack();
         this.config = config;
+        this.middlewareStack = constructStack();
       }
       send(command, optionsOrCb, cb) {
         const options = typeof optionsOrCb !== "function" ? optionsOrCb : void 0;
         const callback = typeof optionsOrCb === "function" ? optionsOrCb : cb;
-        const handler2 = command.resolveMiddleware(this.middlewareStack, this.config, options);
+        const useHandlerCache = options === void 0 && this.config.cacheMiddleware === true;
+        let handler2;
+        if (useHandlerCache) {
+          if (!this.handlers) {
+            this.handlers = /* @__PURE__ */ new WeakMap();
+          }
+          const handlers = this.handlers;
+          if (handlers.has(command.constructor)) {
+            handler2 = handlers.get(command.constructor);
+          } else {
+            handler2 = command.resolveMiddleware(this.middlewareStack, this.config, options);
+            handlers.set(command.constructor, handler2);
+          }
+        } else {
+          delete this.handlers;
+          handler2 = command.resolveMiddleware(this.middlewareStack, this.config, options);
+        }
         if (callback) {
-          handler2(command).then((result) => callback(null, result.output), (err) => callback(err)).catch(() => {
+          handler2(command).then((result) => callback(null, result.output), (err2) => callback(err2)).catch(() => {
           });
         } else {
           return handler2(command).then((result) => result.output);
         }
       }
       destroy() {
-        if (this.config.requestHandler.destroy)
-          this.config.requestHandler.destroy();
+        this.config?.requestHandler?.destroy?.();
+        delete this.handlers;
       }
     };
   }
 });
 
-// node_modules/@smithy/is-array-buffer/dist-es/index.js
+// node_modules/.pnpm/@smithy+is-array-buffer@3.0.0/node_modules/@smithy/is-array-buffer/dist-es/index.js
 var isArrayBuffer;
 var init_dist_es22 = __esm({
-  "node_modules/@smithy/is-array-buffer/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+is-array-buffer@3.0.0/node_modules/@smithy/is-array-buffer/dist-es/index.js"() {
     isArrayBuffer = /* @__PURE__ */ __name((arg) => typeof ArrayBuffer === "function" && arg instanceof ArrayBuffer || Object.prototype.toString.call(arg) === "[object ArrayBuffer]", "isArrayBuffer");
   }
 });
 
-// node_modules/@smithy/util-buffer-from/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-buffer-from@3.0.0/node_modules/@smithy/util-buffer-from/dist-es/index.js
 import { Buffer as Buffer2 } from "buffer";
 var fromArrayBuffer, fromString;
 var init_dist_es23 = __esm({
-  "node_modules/@smithy/util-buffer-from/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-buffer-from@3.0.0/node_modules/@smithy/util-buffer-from/dist-es/index.js"() {
     init_dist_es22();
     fromArrayBuffer = /* @__PURE__ */ __name((input, offset = 0, length = input.byteLength - offset) => {
       if (!isArrayBuffer(input)) {
@@ -4840,10 +4927,10 @@ var init_dist_es23 = __esm({
   }
 });
 
-// node_modules/@smithy/util-base64/dist-es/fromBase64.js
+// node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/fromBase64.js
 var BASE64_REGEX, fromBase64;
 var init_fromBase64 = __esm({
-  "node_modules/@smithy/util-base64/dist-es/fromBase64.js"() {
+  "node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/fromBase64.js"() {
     init_dist_es23();
     BASE64_REGEX = /^[A-Za-z0-9+/]*={0,2}$/;
     fromBase64 = /* @__PURE__ */ __name((input) => {
@@ -4859,10 +4946,10 @@ var init_fromBase64 = __esm({
   }
 });
 
-// node_modules/@smithy/util-utf8/dist-es/fromUtf8.js
+// node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/fromUtf8.js
 var fromUtf8;
 var init_fromUtf8 = __esm({
-  "node_modules/@smithy/util-utf8/dist-es/fromUtf8.js"() {
+  "node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/fromUtf8.js"() {
     init_dist_es23();
     fromUtf8 = /* @__PURE__ */ __name((input) => {
       const buf = fromString(input, "utf8");
@@ -4871,10 +4958,10 @@ var init_fromUtf8 = __esm({
   }
 });
 
-// node_modules/@smithy/util-utf8/dist-es/toUint8Array.js
+// node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/toUint8Array.js
 var toUint8Array;
 var init_toUint8Array = __esm({
-  "node_modules/@smithy/util-utf8/dist-es/toUint8Array.js"() {
+  "node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/toUint8Array.js"() {
     init_fromUtf8();
     toUint8Array = /* @__PURE__ */ __name((data) => {
       if (typeof data === "string") {
@@ -4888,10 +4975,10 @@ var init_toUint8Array = __esm({
   }
 });
 
-// node_modules/@smithy/util-utf8/dist-es/toUtf8.js
+// node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/toUtf8.js
 var toUtf8;
 var init_toUtf8 = __esm({
-  "node_modules/@smithy/util-utf8/dist-es/toUtf8.js"() {
+  "node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/toUtf8.js"() {
     init_dist_es23();
     toUtf8 = /* @__PURE__ */ __name((input) => {
       if (typeof input === "string") {
@@ -4905,19 +4992,19 @@ var init_toUtf8 = __esm({
   }
 });
 
-// node_modules/@smithy/util-utf8/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/index.js
 var init_dist_es24 = __esm({
-  "node_modules/@smithy/util-utf8/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-utf8@3.0.0/node_modules/@smithy/util-utf8/dist-es/index.js"() {
     init_fromUtf8();
     init_toUint8Array();
     init_toUtf8();
   }
 });
 
-// node_modules/@smithy/util-base64/dist-es/toBase64.js
+// node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/toBase64.js
 var toBase64;
 var init_toBase64 = __esm({
-  "node_modules/@smithy/util-base64/dist-es/toBase64.js"() {
+  "node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/toBase64.js"() {
     init_dist_es23();
     init_dist_es24();
     toBase64 = /* @__PURE__ */ __name((_input) => {
@@ -4935,15 +5022,15 @@ var init_toBase64 = __esm({
   }
 });
 
-// node_modules/@smithy/util-base64/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/index.js
 var init_dist_es25 = __esm({
-  "node_modules/@smithy/util-base64/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-base64@3.0.0/node_modules/@smithy/util-base64/dist-es/index.js"() {
     init_fromBase64();
     init_toBase64();
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/blob/transforms.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/blob/transforms.js
 function transformToString(payload, encoding = "utf-8") {
   if (encoding === "base64") {
     return toBase64(payload);
@@ -4957,7 +5044,7 @@ function transformFromString(str, encoding) {
   return Uint8ArrayBlobAdapter.mutate(fromUtf8(str));
 }
 var init_transforms = __esm({
-  "node_modules/@smithy/util-stream/dist-es/blob/transforms.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/blob/transforms.js"() {
     init_dist_es25();
     init_dist_es24();
     init_Uint8ArrayBlobAdapter();
@@ -4966,10 +5053,10 @@ var init_transforms = __esm({
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/blob/Uint8ArrayBlobAdapter.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/blob/Uint8ArrayBlobAdapter.js
 var Uint8ArrayBlobAdapter;
 var init_Uint8ArrayBlobAdapter = __esm({
-  "node_modules/@smithy/util-stream/dist-es/blob/Uint8ArrayBlobAdapter.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/blob/Uint8ArrayBlobAdapter.js"() {
     init_transforms();
     Uint8ArrayBlobAdapter = class _Uint8ArrayBlobAdapter extends Uint8Array {
       static {
@@ -4994,37 +5081,37 @@ var init_Uint8ArrayBlobAdapter = __esm({
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/getAwsChunkedEncodingStream.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/getAwsChunkedEncodingStream.js
 var init_getAwsChunkedEncodingStream = __esm({
-  "node_modules/@smithy/util-stream/dist-es/getAwsChunkedEncodingStream.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/getAwsChunkedEncodingStream.js"() {
   }
 });
 
-// node_modules/@smithy/util-uri-escape/dist-es/escape-uri.js
+// node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/escape-uri.js
 var escapeUri, hexEncode;
 var init_escape_uri = __esm({
-  "node_modules/@smithy/util-uri-escape/dist-es/escape-uri.js"() {
+  "node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/escape-uri.js"() {
     escapeUri = /* @__PURE__ */ __name((uri) => encodeURIComponent(uri).replace(/[!'()*]/g, hexEncode), "escapeUri");
     hexEncode = /* @__PURE__ */ __name((c5) => `%${c5.charCodeAt(0).toString(16).toUpperCase()}`, "hexEncode");
   }
 });
 
-// node_modules/@smithy/util-uri-escape/dist-es/escape-uri-path.js
+// node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/escape-uri-path.js
 var init_escape_uri_path = __esm({
-  "node_modules/@smithy/util-uri-escape/dist-es/escape-uri-path.js"() {
+  "node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/escape-uri-path.js"() {
     init_escape_uri();
   }
 });
 
-// node_modules/@smithy/util-uri-escape/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/index.js
 var init_dist_es26 = __esm({
-  "node_modules/@smithy/util-uri-escape/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-uri-escape@3.0.0/node_modules/@smithy/util-uri-escape/dist-es/index.js"() {
     init_escape_uri();
     init_escape_uri_path();
   }
 });
 
-// node_modules/@smithy/querystring-builder/dist-es/index.js
+// node_modules/.pnpm/@smithy+querystring-builder@3.0.6/node_modules/@smithy/querystring-builder/dist-es/index.js
 function buildQueryString(query) {
   const parts = [];
   for (let key of Object.keys(query).sort()) {
@@ -5045,24 +5132,24 @@ function buildQueryString(query) {
   return parts.join("&");
 }
 var init_dist_es27 = __esm({
-  "node_modules/@smithy/querystring-builder/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+querystring-builder@3.0.6/node_modules/@smithy/querystring-builder/dist-es/index.js"() {
     init_dist_es26();
     __name(buildQueryString, "buildQueryString");
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/constants.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/constants.js
 var NODEJS_TIMEOUT_ERROR_CODES2;
 var init_constants4 = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/constants.js"() {
     NODEJS_TIMEOUT_ERROR_CODES2 = ["ECONNRESET", "EPIPE", "ETIMEDOUT"];
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/get-transformed-headers.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/get-transformed-headers.js
 var getTransformedHeaders;
 var init_get_transformed_headers = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/get-transformed-headers.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/get-transformed-headers.js"() {
     getTransformedHeaders = /* @__PURE__ */ __name((headers) => {
       const transformedHeaders = {};
       for (const name of Object.keys(headers)) {
@@ -5074,62 +5161,95 @@ var init_get_transformed_headers = __esm({
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/set-connection-timeout.js
-var setConnectionTimeout;
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-connection-timeout.js
+var DEFER_EVENT_LISTENER_TIME, setConnectionTimeout;
 var init_set_connection_timeout = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/set-connection-timeout.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-connection-timeout.js"() {
+    DEFER_EVENT_LISTENER_TIME = 1e3;
     setConnectionTimeout = /* @__PURE__ */ __name((request2, reject, timeoutInMs = 0) => {
       if (!timeoutInMs) {
-        return;
+        return -1;
       }
-      const timeoutId = setTimeout(() => {
-        request2.destroy();
-        reject(Object.assign(new Error(`Socket timed out without establishing a connection within ${timeoutInMs} ms`), {
-          name: "TimeoutError"
-        }));
-      }, timeoutInMs);
-      request2.on("socket", (socket) => {
-        if (socket.connecting) {
-          socket.on("connect", () => {
+      const registerTimeout = /* @__PURE__ */ __name((offset) => {
+        const timeoutId = setTimeout(() => {
+          request2.destroy();
+          reject(Object.assign(new Error(`Socket timed out without establishing a connection within ${timeoutInMs} ms`), {
+            name: "TimeoutError"
+          }));
+        }, timeoutInMs - offset);
+        const doWithSocket = /* @__PURE__ */ __name((socket) => {
+          if (socket?.connecting) {
+            socket.on("connect", () => {
+              clearTimeout(timeoutId);
+            });
+          } else {
             clearTimeout(timeoutId);
-          });
+          }
+        }, "doWithSocket");
+        if (request2.socket) {
+          doWithSocket(request2.socket);
         } else {
-          clearTimeout(timeoutId);
+          request2.on("socket", doWithSocket);
         }
-      });
+      }, "registerTimeout");
+      if (timeoutInMs < 2e3) {
+        registerTimeout(0);
+        return 0;
+      }
+      return setTimeout(registerTimeout.bind(null, DEFER_EVENT_LISTENER_TIME), DEFER_EVENT_LISTENER_TIME);
     }, "setConnectionTimeout");
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/set-socket-keep-alive.js
-var setSocketKeepAlive;
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-socket-keep-alive.js
+var DEFER_EVENT_LISTENER_TIME2, setSocketKeepAlive;
 var init_set_socket_keep_alive = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/set-socket-keep-alive.js"() {
-    setSocketKeepAlive = /* @__PURE__ */ __name((request2, { keepAlive, keepAliveMsecs }) => {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-socket-keep-alive.js"() {
+    DEFER_EVENT_LISTENER_TIME2 = 3e3;
+    setSocketKeepAlive = /* @__PURE__ */ __name((request2, { keepAlive, keepAliveMsecs }, deferTimeMs = DEFER_EVENT_LISTENER_TIME2) => {
       if (keepAlive !== true) {
-        return;
+        return -1;
       }
-      request2.on("socket", (socket) => {
-        socket.setKeepAlive(keepAlive, keepAliveMsecs || 0);
-      });
+      const registerListener = /* @__PURE__ */ __name(() => {
+        if (request2.socket) {
+          request2.socket.setKeepAlive(keepAlive, keepAliveMsecs || 0);
+        } else {
+          request2.on("socket", (socket) => {
+            socket.setKeepAlive(keepAlive, keepAliveMsecs || 0);
+          });
+        }
+      }, "registerListener");
+      if (deferTimeMs === 0) {
+        registerListener();
+        return 0;
+      }
+      return setTimeout(registerListener, deferTimeMs);
     }, "setSocketKeepAlive");
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/set-socket-timeout.js
-var setSocketTimeout;
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-socket-timeout.js
+var DEFER_EVENT_LISTENER_TIME3, setSocketTimeout;
 var init_set_socket_timeout = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/set-socket-timeout.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/set-socket-timeout.js"() {
+    DEFER_EVENT_LISTENER_TIME3 = 3e3;
     setSocketTimeout = /* @__PURE__ */ __name((request2, reject, timeoutInMs = 0) => {
-      request2.setTimeout(timeoutInMs, () => {
-        request2.destroy();
-        reject(Object.assign(new Error(`Connection timed out after ${timeoutInMs} ms`), { name: "TimeoutError" }));
-      });
+      const registerTimeout = /* @__PURE__ */ __name((offset) => {
+        request2.setTimeout(timeoutInMs - offset, () => {
+          request2.destroy();
+          reject(Object.assign(new Error(`Connection timed out after ${timeoutInMs} ms`), { name: "TimeoutError" }));
+        });
+      }, "registerTimeout");
+      if (0 < timeoutInMs && timeoutInMs < 6e3) {
+        registerTimeout(0);
+        return 0;
+      }
+      return setTimeout(registerTimeout.bind(null, timeoutInMs === 0 ? 0 : DEFER_EVENT_LISTENER_TIME3), DEFER_EVENT_LISTENER_TIME3);
     }, "setSocketTimeout");
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/write-request-body.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/write-request-body.js
 import { Readable } from "stream";
 async function writeRequestBody(httpRequest2, request2, maxContinueTimeoutMs = MIN_WAIT_TIME) {
   const headers = request2.headers ?? {};
@@ -5180,19 +5300,19 @@ function writeBody(httpRequest2, body) {
 }
 var MIN_WAIT_TIME;
 var init_write_request_body = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/write-request-body.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/write-request-body.js"() {
     MIN_WAIT_TIME = 1e3;
     __name(writeRequestBody, "writeRequestBody");
     __name(writeBody, "writeBody");
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/node-http-handler.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http-handler.js
 import { Agent as hAgent, request as hRequest } from "http";
 import { Agent as hsAgent, request as hsRequest } from "https";
 var NodeHttpHandler;
 var init_node_http_handler = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/node-http-handler.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http-handler.js"() {
     init_dist_es2();
     init_dist_es27();
     init_constants4();
@@ -5277,17 +5397,17 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
         if (!this.config) {
           this.config = await this.configProvider;
         }
-        let socketCheckTimeoutId;
         return new Promise((_resolve, _reject) => {
           let writeRequestBodyPromise = void 0;
+          const timeouts = [];
           const resolve = /* @__PURE__ */ __name(async (arg) => {
             await writeRequestBodyPromise;
-            clearTimeout(socketCheckTimeoutId);
+            timeouts.forEach(clearTimeout);
             _resolve(arg);
           }, "resolve");
           const reject = /* @__PURE__ */ __name(async (arg) => {
             await writeRequestBodyPromise;
-            clearTimeout(socketCheckTimeoutId);
+            timeouts.forEach(clearTimeout);
             _reject(arg);
           }, "reject");
           if (!this.config) {
@@ -5301,9 +5421,9 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
           }
           const isSSL = request2.protocol === "https:";
           const agent = isSSL ? this.config.httpsAgent : this.config.httpAgent;
-          socketCheckTimeoutId = setTimeout(() => {
+          timeouts.push(setTimeout(() => {
             this.socketWarningTimestamp = _NodeHttpHandler.checkSocketUsage(agent, this.socketWarningTimestamp, this.config.logger);
-          }, this.config.socketAcquisitionWarningTimeout ?? (this.config.requestTimeout ?? 2e3) + (this.config.connectionTimeout ?? 1e3));
+          }, this.config.socketAcquisitionWarningTimeout ?? (this.config.requestTimeout ?? 2e3) + (this.config.connectionTimeout ?? 1e3)));
           const queryString = buildQueryString(request2.query || {});
           let auth = void 0;
           if (request2.username != null || request2.password != null) {
@@ -5318,9 +5438,15 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
           if (request2.fragment) {
             path += `#${request2.fragment}`;
           }
+          let hostname = request2.hostname ?? "";
+          if (hostname[0] === "[" && hostname.endsWith("]")) {
+            hostname = request2.hostname.slice(1, -1);
+          } else {
+            hostname = request2.hostname;
+          }
           const nodeHttpsOptions = {
             headers: request2.headers,
-            host: request2.hostname,
+            host: hostname,
             method: request2.method,
             path,
             port: request2.port,
@@ -5337,15 +5463,13 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
             });
             resolve({ response: httpResponse });
           });
-          req.on("error", (err) => {
-            if (NODEJS_TIMEOUT_ERROR_CODES2.includes(err.code)) {
-              reject(Object.assign(err, { name: "TimeoutError" }));
+          req.on("error", (err2) => {
+            if (NODEJS_TIMEOUT_ERROR_CODES2.includes(err2.code)) {
+              reject(Object.assign(err2, { name: "TimeoutError" }));
             } else {
-              reject(err);
+              reject(err2);
             }
           });
-          setConnectionTimeout(req, reject, this.config.connectionTimeout);
-          setSocketTimeout(req, reject, this.config.requestTimeout);
           if (abortSignal) {
             const onAbort = /* @__PURE__ */ __name(() => {
               req.destroy();
@@ -5361,15 +5485,17 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
               abortSignal.onabort = onAbort;
             }
           }
+          timeouts.push(setConnectionTimeout(req, reject, this.config.connectionTimeout));
+          timeouts.push(setSocketTimeout(req, reject, this.config.requestTimeout));
           const httpAgent = nodeHttpsOptions.agent;
           if (typeof httpAgent === "object" && "keepAlive" in httpAgent) {
-            setSocketKeepAlive(req, {
+            timeouts.push(setSocketKeepAlive(req, {
               keepAlive: httpAgent.keepAlive,
               keepAliveMsecs: httpAgent.keepAliveMsecs
-            });
+            }));
           }
           writeRequestBodyPromise = writeRequestBody(req, request2, this.config.requestTimeout).catch((e5) => {
-            clearTimeout(socketCheckTimeoutId);
+            timeouts.forEach(clearTimeout);
             return _reject(e5);
           });
         });
@@ -5390,10 +5516,10 @@ or increase socketAcquisitionWarningTimeout=(millis) in the NodeHttpHandler conf
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-pool.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-pool.js
 var NodeHttp2ConnectionPool;
 var init_node_http2_connection_pool = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-pool.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-pool.js"() {
     NodeHttp2ConnectionPool = class {
       static {
         __name(this, "NodeHttp2ConnectionPool");
@@ -5432,16 +5558,16 @@ var init_node_http2_connection_pool = __esm({
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-manager.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-manager.js
 var init_node_http2_connection_manager = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-manager.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-connection-manager.js"() {
     init_node_http2_connection_pool();
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/node-http2-handler.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-handler.js
 var init_node_http2_handler = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/node-http2-handler.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/node-http2-handler.js"() {
     init_dist_es2();
     init_dist_es27();
     init_get_transformed_headers();
@@ -5450,11 +5576,11 @@ var init_node_http2_handler = __esm({
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/stream-collector/collector.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/stream-collector/collector.js
 import { Writable } from "stream";
 var Collector;
 var init_collector = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/stream-collector/collector.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/stream-collector/collector.js"() {
     Collector = class extends Writable {
       static {
         __name(this, "Collector");
@@ -5471,7 +5597,7 @@ var init_collector = __esm({
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/stream-collector/index.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/stream-collector/index.js
 async function collectReadableStream(stream) {
   const chunks = [];
   const reader = stream.getReader();
@@ -5495,7 +5621,7 @@ async function collectReadableStream(stream) {
 }
 var streamCollector, isReadableStreamInstance;
 var init_stream_collector = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/stream-collector/index.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/stream-collector/index.js"() {
     init_collector();
     streamCollector = /* @__PURE__ */ __name((stream) => {
       if (isReadableStreamInstance(stream)) {
@@ -5504,9 +5630,9 @@ var init_stream_collector = __esm({
       return new Promise((resolve, reject) => {
         const collector = new Collector();
         stream.pipe(collector);
-        stream.on("error", (err) => {
+        stream.on("error", (err2) => {
           collector.end();
-          reject(err);
+          reject(err2);
         });
         collector.on("error", reject);
         collector.on("finish", function() {
@@ -5520,31 +5646,31 @@ var init_stream_collector = __esm({
   }
 });
 
-// node_modules/@smithy/node-http-handler/dist-es/index.js
+// node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/index.js
 var init_dist_es28 = __esm({
-  "node_modules/@smithy/node-http-handler/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+node-http-handler@3.2.3/node_modules/@smithy/node-http-handler/dist-es/index.js"() {
     init_node_http_handler();
     init_node_http2_handler();
     init_stream_collector();
   }
 });
 
-// node_modules/@smithy/fetch-http-handler/dist-es/request-timeout.js
+// node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/request-timeout.js
 var init_request_timeout = __esm({
-  "node_modules/@smithy/fetch-http-handler/dist-es/request-timeout.js"() {
+  "node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/request-timeout.js"() {
   }
 });
 
-// node_modules/@smithy/fetch-http-handler/dist-es/fetch-http-handler.js
+// node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/fetch-http-handler.js
 var init_fetch_http_handler = __esm({
-  "node_modules/@smithy/fetch-http-handler/dist-es/fetch-http-handler.js"() {
+  "node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/fetch-http-handler.js"() {
     init_dist_es2();
     init_dist_es27();
     init_request_timeout();
   }
 });
 
-// node_modules/@smithy/fetch-http-handler/dist-es/stream-collector.js
+// node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/stream-collector.js
 async function collectBlob(blob) {
   const base64 = await readToBase64(blob);
   const arrayBuffer = fromBase64(base64);
@@ -5590,7 +5716,7 @@ function readToBase64(blob) {
 }
 var streamCollector2;
 var init_stream_collector2 = __esm({
-  "node_modules/@smithy/fetch-http-handler/dist-es/stream-collector.js"() {
+  "node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/stream-collector.js"() {
     init_dist_es25();
     streamCollector2 = /* @__PURE__ */ __name((stream) => {
       if (typeof Blob === "function" && stream instanceof Blob) {
@@ -5604,15 +5730,15 @@ var init_stream_collector2 = __esm({
   }
 });
 
-// node_modules/@smithy/fetch-http-handler/dist-es/index.js
+// node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/index.js
 var init_dist_es29 = __esm({
-  "node_modules/@smithy/fetch-http-handler/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+fetch-http-handler@3.2.8/node_modules/@smithy/fetch-http-handler/dist-es/index.js"() {
     init_fetch_http_handler();
     init_stream_collector2();
   }
 });
 
-// node_modules/@smithy/util-hex-encoding/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-hex-encoding@3.0.0/node_modules/@smithy/util-hex-encoding/dist-es/index.js
 function fromHex(encoded) {
   if (encoded.length % 2 !== 0) {
     throw new Error("Hex encoded strings must have an even number length");
@@ -5637,7 +5763,7 @@ function toHex(bytes) {
 }
 var SHORT_TO_HEX, HEX_TO_SHORT;
 var init_dist_es30 = __esm({
-  "node_modules/@smithy/util-hex-encoding/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-hex-encoding@3.0.0/node_modules/@smithy/util-hex-encoding/dist-es/index.js"() {
     SHORT_TO_HEX = {};
     HEX_TO_SHORT = {};
     for (let i5 = 0; i5 < 256; i5++) {
@@ -5653,18 +5779,18 @@ var init_dist_es30 = __esm({
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/stream-type-check.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/stream-type-check.js
 var isReadableStream;
 var init_stream_type_check = __esm({
-  "node_modules/@smithy/util-stream/dist-es/stream-type-check.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/stream-type-check.js"() {
     isReadableStream = /* @__PURE__ */ __name((stream) => typeof ReadableStream === "function" && (stream?.constructor?.name === ReadableStream.name || stream instanceof ReadableStream), "isReadableStream");
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.browser.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.browser.js
 var ERR_MSG_STREAM_HAS_BEEN_TRANSFORMED, sdkStreamMixin, isBlobInstance;
 var init_sdk_stream_mixin_browser = __esm({
-  "node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.browser.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.browser.js"() {
     init_dist_es29();
     init_dist_es25();
     init_dist_es30();
@@ -5725,12 +5851,12 @@ var init_sdk_stream_mixin_browser = __esm({
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.js
 import { Readable as Readable2 } from "stream";
 import { TextDecoder as TextDecoder2 } from "util";
 var ERR_MSG_STREAM_HAS_BEEN_TRANSFORMED2, sdkStreamMixin2;
 var init_sdk_stream_mixin = __esm({
-  "node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/sdk-stream-mixin.js"() {
     init_dist_es28();
     init_dist_es23();
     init_sdk_stream_mixin_browser();
@@ -5781,37 +5907,37 @@ var init_sdk_stream_mixin = __esm({
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/splitStream.browser.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/splitStream.browser.js
 var init_splitStream_browser = __esm({
-  "node_modules/@smithy/util-stream/dist-es/splitStream.browser.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/splitStream.browser.js"() {
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/splitStream.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/splitStream.js
 var init_splitStream = __esm({
-  "node_modules/@smithy/util-stream/dist-es/splitStream.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/splitStream.js"() {
     init_splitStream_browser();
     init_stream_type_check();
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/headStream.browser.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/headStream.browser.js
 var init_headStream_browser = __esm({
-  "node_modules/@smithy/util-stream/dist-es/headStream.browser.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/headStream.browser.js"() {
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/headStream.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/headStream.js
 var init_headStream = __esm({
-  "node_modules/@smithy/util-stream/dist-es/headStream.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/headStream.js"() {
     init_headStream_browser();
     init_stream_type_check();
   }
 });
 
-// node_modules/@smithy/util-stream/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/index.js
 var init_dist_es31 = __esm({
-  "node_modules/@smithy/util-stream/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-stream@3.1.8/node_modules/@smithy/util-stream/dist-es/index.js"() {
     init_Uint8ArrayBlobAdapter();
     init_getAwsChunkedEncodingStream();
     init_sdk_stream_mixin();
@@ -5821,10 +5947,10 @@ var init_dist_es31 = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/collect-stream-body.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/collect-stream-body.js
 var collectBody;
 var init_collect_stream_body = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/collect-stream-body.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/collect-stream-body.js"() {
     init_dist_es31();
     collectBody = /* @__PURE__ */ __name(async (streamBody = new Uint8Array(), context) => {
       if (streamBody instanceof Uint8Array) {
@@ -5839,10 +5965,10 @@ var init_collect_stream_body = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/command.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/command.js
 var Command, ClassBuilder;
 var init_command2 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/command.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/command.js"() {
     init_dist_es21();
     init_dist_es();
     Command = class {
@@ -5971,18 +6097,18 @@ var init_command2 = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/constants.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/constants.js
 var SENSITIVE_STRING;
 var init_constants5 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/constants.js"() {
     SENSITIVE_STRING = "***SensitiveInformation***";
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/create-aggregated-client.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/create-aggregated-client.js
 var createAggregatedClient;
 var init_create_aggregated_client = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/create-aggregated-client.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/create-aggregated-client.js"() {
     createAggregatedClient = /* @__PURE__ */ __name((commands4, Client2) => {
       for (const command of Object.keys(commands4)) {
         const CommandCtor = commands4[command];
@@ -6005,10 +6131,10 @@ var init_create_aggregated_client = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/parse-utils.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/parse-utils.js
 var expectBoolean, expectNumber, MAX_FLOAT, expectFloat32, expectLong, expectInt32, expectShort, expectByte, expectSizedInt, castInt, expectNonNull, expectObject, expectString, expectUnion, strictParseFloat32, NUMBER_REGEX, parseNumber, limitedParseDouble, parseFloatString, strictParseInt32, strictParseShort, strictParseByte, stackTraceWarning, logger;
 var init_parse_utils = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/parse-utils.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/parse-utils.js"() {
     expectBoolean = /* @__PURE__ */ __name((value) => {
       if (value === null || value === void 0) {
         return void 0;
@@ -6203,10 +6329,10 @@ var init_parse_utils = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/date-utils.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/date-utils.js
 var MONTHS, RFC3339, parseRfc3339DateTime, RFC3339_WITH_OFFSET, parseRfc3339DateTimeWithOffset, IMF_FIXDATE, RFC_850_DATE, ASC_TIME, buildDate, FIFTY_YEARS_IN_MILLIS, DAYS_IN_MONTH, validateDayOfMonth, isLeapYear, parseDateValue, parseMilliseconds, parseOffsetToMilliseconds, stripLeadingZeroes;
 var init_date_utils = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/date-utils.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/date-utils.js"() {
     init_parse_utils();
     MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     RFC3339 = new RegExp(/^(\d{4})-(\d{2})-(\d{2})[tT](\d{2}):(\d{2}):(\d{2})(?:\.(\d+))?[zZ]$/);
@@ -6311,10 +6437,10 @@ var init_date_utils = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/exceptions.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/exceptions.js
 var ServiceException, decorateServiceException;
 var init_exceptions = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/exceptions.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/exceptions.js"() {
     ServiceException = class _ServiceException extends Error {
       static {
         __name(this, "ServiceException");
@@ -6341,10 +6467,10 @@ var init_exceptions = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/default-error-handler.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/default-error-handler.js
 var throwDefaultError, withBaseException, deserializeMetadata;
 var init_default_error_handler = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/default-error-handler.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/default-error-handler.js"() {
     init_exceptions();
     throwDefaultError = /* @__PURE__ */ __name(({ output, parsedBody, exceptionCtor, errorCode }) => {
       const $metadata = deserializeMetadata(output);
@@ -6370,10 +6496,10 @@ var init_default_error_handler = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/defaults-mode.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/defaults-mode.js
 var loadConfigsForDefaultMode;
 var init_defaults_mode = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/defaults-mode.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/defaults-mode.js"() {
     loadConfigsForDefaultMode = /* @__PURE__ */ __name((mode) => {
       switch (mode) {
         case "standard":
@@ -6403,10 +6529,10 @@ var init_defaults_mode = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/emitWarningIfUnsupportedVersion.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/emitWarningIfUnsupportedVersion.js
 var warningEmitted, emitWarningIfUnsupportedVersion;
 var init_emitWarningIfUnsupportedVersion = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/emitWarningIfUnsupportedVersion.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/emitWarningIfUnsupportedVersion.js"() {
     warningEmitted = false;
     emitWarningIfUnsupportedVersion = /* @__PURE__ */ __name((version) => {
       if (version && !warningEmitted && parseInt(version.substring(1, version.indexOf("."))) < 16) {
@@ -6416,10 +6542,10 @@ var init_emitWarningIfUnsupportedVersion = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/extensions/checksum.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/checksum.js
 var getChecksumConfiguration2, resolveChecksumRuntimeConfig2;
 var init_checksum3 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/extensions/checksum.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/checksum.js"() {
     init_dist_es();
     getChecksumConfiguration2 = /* @__PURE__ */ __name((runtimeConfig) => {
       const checksumAlgorithms = [];
@@ -6453,10 +6579,10 @@ var init_checksum3 = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/extensions/retry.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/retry.js
 var getRetryConfiguration, resolveRetryRuntimeConfig;
 var init_retry2 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/extensions/retry.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/retry.js"() {
     getRetryConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
       let _retryStrategy = runtimeConfig.retryStrategy;
       return {
@@ -6476,10 +6602,10 @@ var init_retry2 = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/extensions/defaultExtensionConfiguration.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/defaultExtensionConfiguration.js
 var getDefaultExtensionConfiguration, resolveDefaultRuntimeConfig;
 var init_defaultExtensionConfiguration2 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/extensions/defaultExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/defaultExtensionConfiguration.js"() {
     init_checksum3();
     init_retry2();
     getDefaultExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
@@ -6497,35 +6623,35 @@ var init_defaultExtensionConfiguration2 = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/extensions/index.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/index.js
 var init_extensions3 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/extensions/index.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extensions/index.js"() {
     init_defaultExtensionConfiguration2();
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/extended-encode-uri-component.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extended-encode-uri-component.js
 function extendedEncodeURIComponent(str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c5) {
     return "%" + c5.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 var init_extended_encode_uri_component = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/extended-encode-uri-component.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/extended-encode-uri-component.js"() {
     __name(extendedEncodeURIComponent, "extendedEncodeURIComponent");
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/get-array-if-single-item.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/get-array-if-single-item.js
 var init_get_array_if_single_item = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/get-array-if-single-item.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/get-array-if-single-item.js"() {
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/get-value-from-text-node.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/get-value-from-text-node.js
 var getValueFromTextNode;
 var init_get_value_from_text_node = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/get-value-from-text-node.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/get-value-from-text-node.js"() {
     getValueFromTextNode = /* @__PURE__ */ __name((obj) => {
       const textNodeName = "#text";
       for (const key in obj) {
@@ -6540,10 +6666,10 @@ var init_get_value_from_text_node = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/lazy-json.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/lazy-json.js
 var StringWrapper;
 var init_lazy_json = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/lazy-json.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/lazy-json.js"() {
     StringWrapper = /* @__PURE__ */ __name(function() {
       const Class = Object.getPrototypeOf(this).constructor;
       const Constructor = Function.bind.apply(String, [null, ...arguments]);
@@ -6563,7 +6689,7 @@ var init_lazy_json = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/object-mapping.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/object-mapping.js
 function map(arg0, arg1, arg2) {
   let target;
   let filter;
@@ -6592,7 +6718,7 @@ function map(arg0, arg1, arg2) {
 }
 var take, mapWithFilter, applyInstruction, nonNullish, pass;
 var init_object_mapping = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/object-mapping.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/object-mapping.js"() {
     __name(map, "map");
     take = /* @__PURE__ */ __name((source, instructions) => {
       const out = {};
@@ -6650,10 +6776,10 @@ var init_object_mapping = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/resolve-path.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/resolve-path.js
 var resolvedPath;
 var init_resolve_path = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/resolve-path.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/resolve-path.js"() {
     init_extended_encode_uri_component();
     resolvedPath = /* @__PURE__ */ __name((resolvedPath2, input, memberName, labelValueProvider, uriLabel, isGreedyLabel) => {
       if (input != null && input[memberName] !== void 0) {
@@ -6670,16 +6796,16 @@ var init_resolve_path = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/ser-utils.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/ser-utils.js
 var init_ser_utils = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/ser-utils.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/ser-utils.js"() {
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/serde-json.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/serde-json.js
 var _json;
 var init_serde_json = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/serde-json.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/serde-json.js"() {
     _json = /* @__PURE__ */ __name((obj) => {
       if (obj == null) {
         return {};
@@ -6702,15 +6828,15 @@ var init_serde_json = __esm({
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/split-every.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/split-every.js
 var init_split_every = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/split-every.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/split-every.js"() {
   }
 });
 
-// node_modules/@smithy/smithy-client/dist-es/index.js
+// node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/index.js
 var init_dist_es32 = __esm({
-  "node_modules/@smithy/smithy-client/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+smithy-client@3.3.4/node_modules/@smithy/smithy-client/dist-es/index.js"() {
     init_NoOpLogger();
     init_client2();
     init_collect_stream_body();
@@ -6736,19 +6862,19 @@ var init_dist_es32 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/isStreamingPayload/isStreamingPayload.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/isStreamingPayload/isStreamingPayload.js
 import { Readable as Readable3 } from "stream";
 var isStreamingPayload;
 var init_isStreamingPayload = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/isStreamingPayload/isStreamingPayload.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/isStreamingPayload/isStreamingPayload.js"() {
     isStreamingPayload = /* @__PURE__ */ __name((request2) => request2?.body instanceof Readable3 || typeof ReadableStream !== "undefined" && request2?.body instanceof ReadableStream, "isStreamingPayload");
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/retryMiddleware.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/retryMiddleware.js
 var retryMiddleware, isRetryStrategyV2, getRetryErrorInfo, getRetryErrorType, retryMiddlewareOptions, getRetryPlugin, getRetryAfterHint;
 var init_retryMiddleware = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/retryMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/retryMiddleware.js"() {
     init_dist_es2();
     init_dist_es19();
     init_dist_es32();
@@ -6859,9 +6985,9 @@ var init_retryMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-retry/dist-es/index.js
+// node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/index.js
 var init_dist_es33 = __esm({
-  "node_modules/@smithy/middleware-retry/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-retry@3.0.20/node_modules/@smithy/middleware-retry/dist-es/index.js"() {
     init_AdaptiveRetryStrategy2();
     init_StandardRetryStrategy2();
     init_configurations2();
@@ -6872,10 +6998,10 @@ var init_dist_es33 = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-signing/getHttpSigningMiddleware.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/getHttpSigningMiddleware.js
 var httpSigningMiddlewareOptions, getHttpSigningPlugin;
 var init_getHttpSigningMiddleware = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-signing/getHttpSigningMiddleware.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/getHttpSigningMiddleware.js"() {
     init_dist_es33();
     init_httpSigningMiddleware();
     httpSigningMiddlewareOptions = {
@@ -6895,18 +7021,18 @@ var init_getHttpSigningMiddleware = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/middleware-http-signing/index.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/index.js
 var init_middleware_http_signing = __esm({
-  "node_modules/@smithy/core/dist-es/middleware-http-signing/index.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/middleware-http-signing/index.js"() {
     init_httpSigningMiddleware();
     init_getHttpSigningMiddleware();
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/DefaultIdentityProviderConfig.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/DefaultIdentityProviderConfig.js
 var DefaultIdentityProviderConfig;
 var init_DefaultIdentityProviderConfig = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/DefaultIdentityProviderConfig.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/DefaultIdentityProviderConfig.js"() {
     DefaultIdentityProviderConfig = class {
       static {
         __name(this, "DefaultIdentityProviderConfig");
@@ -6926,25 +7052,25 @@ var init_DefaultIdentityProviderConfig = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpApiKeyAuth.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpApiKeyAuth.js
 var init_httpApiKeyAuth = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpApiKeyAuth.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpApiKeyAuth.js"() {
     init_dist_es2();
     init_dist_es();
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpBearerAuth.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpBearerAuth.js
 var init_httpBearerAuth = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpBearerAuth.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/httpBearerAuth.js"() {
     init_dist_es2();
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/noAuth.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/noAuth.js
 var NoAuthSigner;
 var init_noAuth = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/noAuth.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/noAuth.js"() {
     NoAuthSigner = class {
       static {
         __name(this, "NoAuthSigner");
@@ -6956,19 +7082,19 @@ var init_noAuth = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/index.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/index.js
 var init_httpAuthSchemes = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/index.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/httpAuthSchemes/index.js"() {
     init_httpApiKeyAuth();
     init_httpBearerAuth();
     init_noAuth();
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/memoizeIdentityProvider.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/memoizeIdentityProvider.js
 var createIsIdentityExpiredFunction, EXPIRATION_MS, isIdentityExpired, doesIdentityRequireRefresh, memoizeIdentityProvider;
 var init_memoizeIdentityProvider = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/memoizeIdentityProvider.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/memoizeIdentityProvider.js"() {
     createIsIdentityExpiredFunction = /* @__PURE__ */ __name((expirationMs) => (identity) => doesIdentityRequireRefresh(identity) && identity.expiration.getTime() - Date.now() < expirationMs, "createIsIdentityExpiredFunction");
     EXPIRATION_MS = 3e5;
     isIdentityExpired = createIsIdentityExpiredFunction(EXPIRATION_MS);
@@ -7024,26 +7150,26 @@ var init_memoizeIdentityProvider = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/util-identity-and-auth/index.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/index.js
 var init_util_identity_and_auth = __esm({
-  "node_modules/@smithy/core/dist-es/util-identity-and-auth/index.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/util-identity-and-auth/index.js"() {
     init_DefaultIdentityProviderConfig();
     init_httpAuthSchemes();
     init_memoizeIdentityProvider();
   }
 });
 
-// node_modules/@smithy/core/dist-es/getSmithyContext.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/getSmithyContext.js
 var init_getSmithyContext2 = __esm({
-  "node_modules/@smithy/core/dist-es/getSmithyContext.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/getSmithyContext.js"() {
     init_dist_es();
   }
 });
 
-// node_modules/@smithy/core/dist-es/normalizeProvider.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/normalizeProvider.js
 var normalizeProvider2;
 var init_normalizeProvider2 = __esm({
-  "node_modules/@smithy/core/dist-es/normalizeProvider.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/normalizeProvider.js"() {
     normalizeProvider2 = /* @__PURE__ */ __name((input) => {
       if (typeof input === "function")
         return input;
@@ -7053,13 +7179,13 @@ var init_normalizeProvider2 = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/protocols/requestBuilder.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/protocols/requestBuilder.js
 function requestBuilder(input, context) {
   return new RequestBuilder(input, context);
 }
 var RequestBuilder;
 var init_requestBuilder = __esm({
-  "node_modules/@smithy/core/dist-es/protocols/requestBuilder.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/protocols/requestBuilder.js"() {
     init_dist_es2();
     init_dist_es32();
     __name(requestBuilder, "requestBuilder");
@@ -7131,7 +7257,7 @@ var init_requestBuilder = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/pagination/createPaginator.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/pagination/createPaginator.js
 function createPaginator(ClientCtor, CommandCtor, inputTokenName, outputTokenName, pageSizeTokenName) {
   return /* @__PURE__ */ __name(async function* paginateOperation(config, input, ...additionalArguments) {
     let token = config.startingToken || void 0;
@@ -7157,7 +7283,7 @@ function createPaginator(ClientCtor, CommandCtor, inputTokenName, outputTokenNam
 }
 var makePagedClientRequest, get;
 var init_createPaginator = __esm({
-  "node_modules/@smithy/core/dist-es/pagination/createPaginator.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/pagination/createPaginator.js"() {
     makePagedClientRequest = /* @__PURE__ */ __name(async (CommandCtor, client, input, ...args) => {
       return await client.send(new CommandCtor(input), ...args);
     }, "makePagedClientRequest");
@@ -7176,9 +7302,9 @@ var init_createPaginator = __esm({
   }
 });
 
-// node_modules/@smithy/core/dist-es/index.js
+// node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/index.js
 var init_dist_es34 = __esm({
-  "node_modules/@smithy/core/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+core@2.4.5/node_modules/@smithy/core/dist-es/index.js"() {
     init_middleware_http_auth_scheme();
     init_middleware_http_signing();
     init_util_identity_and_auth();
@@ -7189,7 +7315,7 @@ var init_dist_es34 = __esm({
   }
 });
 
-// node_modules/@smithy/middleware-content-length/dist-es/index.js
+// node_modules/.pnpm/@smithy+middleware-content-length@3.0.8/node_modules/@smithy/middleware-content-length/dist-es/index.js
 function contentLengthMiddleware(bodyLengthChecker) {
   return (next) => async (args) => {
     const request2 = args.request;
@@ -7214,7 +7340,7 @@ function contentLengthMiddleware(bodyLengthChecker) {
 }
 var CONTENT_LENGTH_HEADER, contentLengthMiddlewareOptions, getContentLengthPlugin;
 var init_dist_es35 = __esm({
-  "node_modules/@smithy/middleware-content-length/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+middleware-content-length@3.0.8/node_modules/@smithy/middleware-content-length/dist-es/index.js"() {
     init_dist_es2();
     CONTENT_LENGTH_HEADER = "content-length";
     __name(contentLengthMiddleware, "contentLengthMiddleware");
@@ -7232,10 +7358,10 @@ var init_dist_es35 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/client/emitWarningIfUnsupportedVersion.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/client/emitWarningIfUnsupportedVersion.js
 var warningEmitted2, emitWarningIfUnsupportedVersion2;
 var init_emitWarningIfUnsupportedVersion2 = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/client/emitWarningIfUnsupportedVersion.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/client/emitWarningIfUnsupportedVersion.js"() {
     warningEmitted2 = false;
     emitWarningIfUnsupportedVersion2 = /* @__PURE__ */ __name((version) => {
       if (version && !warningEmitted2 && parseInt(version.substring(1, version.indexOf("."))) < 18) {
@@ -7252,43 +7378,43 @@ More information can be found at: https://a.co/74kJMmI`);
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/client/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/client/index.js
 var init_client3 = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/client/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/client/index.js"() {
     init_emitWarningIfUnsupportedVersion2();
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getDateHeader.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getDateHeader.js
 var getDateHeader;
 var init_getDateHeader = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getDateHeader.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getDateHeader.js"() {
     init_dist_es2();
     getDateHeader = /* @__PURE__ */ __name((response) => HttpResponse.isInstance(response) ? response.headers?.date ?? response.headers?.Date : void 0, "getDateHeader");
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getSkewCorrectedDate.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getSkewCorrectedDate.js
 var getSkewCorrectedDate;
 var init_getSkewCorrectedDate = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getSkewCorrectedDate.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getSkewCorrectedDate.js"() {
     getSkewCorrectedDate = /* @__PURE__ */ __name((systemClockOffset) => new Date(Date.now() + systemClockOffset), "getSkewCorrectedDate");
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/isClockSkewed.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/isClockSkewed.js
 var isClockSkewed;
 var init_isClockSkewed = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/isClockSkewed.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/isClockSkewed.js"() {
     init_getSkewCorrectedDate();
     isClockSkewed = /* @__PURE__ */ __name((clockTime, systemClockOffset) => Math.abs(getSkewCorrectedDate(systemClockOffset).getTime() - clockTime) >= 3e5, "isClockSkewed");
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getUpdatedSystemClockOffset.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getUpdatedSystemClockOffset.js
 var getUpdatedSystemClockOffset;
 var init_getUpdatedSystemClockOffset = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getUpdatedSystemClockOffset.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/getUpdatedSystemClockOffset.js"() {
     init_isClockSkewed();
     getUpdatedSystemClockOffset = /* @__PURE__ */ __name((clockTime, currentSystemClockOffset) => {
       const clockTimeInMs = Date.parse(clockTime);
@@ -7300,19 +7426,19 @@ var init_getUpdatedSystemClockOffset = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/index.js
 var init_utils2 = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/utils/index.js"() {
     init_getDateHeader();
     init_getSkewCorrectedDate();
     init_getUpdatedSystemClockOffset();
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/AwsSdkSigV4Signer.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/AwsSdkSigV4Signer.js
 var throwSigningPropertyError, validateSigningProperties, AwsSdkSigV4Signer;
 var init_AwsSdkSigV4Signer = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/AwsSdkSigV4Signer.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/AwsSdkSigV4Signer.js"() {
     init_dist_es2();
     init_utils2();
     throwSigningPropertyError = /* @__PURE__ */ __name((name, property) => {
@@ -7390,18 +7516,18 @@ var init_AwsSdkSigV4Signer = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4AConfig.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4AConfig.js
 var init_resolveAwsSdkSigV4AConfig = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4AConfig.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4AConfig.js"() {
     init_dist_es34();
     init_dist_es12();
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/constants.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/constants.js
 var ALGORITHM_QUERY_PARAM, CREDENTIAL_QUERY_PARAM, AMZ_DATE_QUERY_PARAM, SIGNED_HEADERS_QUERY_PARAM, EXPIRES_QUERY_PARAM, SIGNATURE_QUERY_PARAM, TOKEN_QUERY_PARAM, AUTH_HEADER, AMZ_DATE_HEADER, DATE_HEADER, GENERATED_HEADERS, SIGNATURE_HEADER, SHA256_HEADER, TOKEN_HEADER, ALWAYS_UNSIGNABLE_HEADERS, PROXY_HEADER_PATTERN, SEC_HEADER_PATTERN, ALGORITHM_IDENTIFIER, EVENT_ALGORITHM_IDENTIFIER, UNSIGNED_PAYLOAD, MAX_CACHE_SIZE, KEY_TYPE_IDENTIFIER, MAX_PRESIGNED_TTL;
 var init_constants6 = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/constants.js"() {
     ALGORITHM_QUERY_PARAM = "X-Amz-Algorithm";
     CREDENTIAL_QUERY_PARAM = "X-Amz-Credential";
     AMZ_DATE_QUERY_PARAM = "X-Amz-Date";
@@ -7444,10 +7570,10 @@ var init_constants6 = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/credentialDerivation.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/credentialDerivation.js
 var signingKeyCache, cacheQueue, createScope, getSigningKey, hmac;
 var init_credentialDerivation = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/credentialDerivation.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/credentialDerivation.js"() {
     init_dist_es30();
     init_dist_es24();
     init_constants6();
@@ -7478,10 +7604,10 @@ var init_credentialDerivation = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/getCanonicalHeaders.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getCanonicalHeaders.js
 var getCanonicalHeaders;
 var init_getCanonicalHeaders = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/getCanonicalHeaders.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getCanonicalHeaders.js"() {
     init_constants6();
     getCanonicalHeaders = /* @__PURE__ */ __name(({ headers }, unsignableHeaders, signableHeaders) => {
       const canonical = {};
@@ -7502,36 +7628,37 @@ var init_getCanonicalHeaders = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/getCanonicalQuery.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getCanonicalQuery.js
 var getCanonicalQuery;
 var init_getCanonicalQuery = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/getCanonicalQuery.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getCanonicalQuery.js"() {
     init_dist_es26();
     init_constants6();
     getCanonicalQuery = /* @__PURE__ */ __name(({ query = {} }) => {
       const keys = [];
       const serialized = {};
-      for (const key of Object.keys(query).sort()) {
+      for (const key of Object.keys(query)) {
         if (key.toLowerCase() === SIGNATURE_HEADER) {
           continue;
         }
-        keys.push(key);
+        const encodedKey = escapeUri(key);
+        keys.push(encodedKey);
         const value = query[key];
         if (typeof value === "string") {
-          serialized[key] = `${escapeUri(key)}=${escapeUri(value)}`;
+          serialized[encodedKey] = `${encodedKey}=${escapeUri(value)}`;
         } else if (Array.isArray(value)) {
-          serialized[key] = value.slice(0).reduce((encoded, value2) => encoded.concat([`${escapeUri(key)}=${escapeUri(value2)}`]), []).sort().join("&");
+          serialized[encodedKey] = value.slice(0).reduce((encoded, value2) => encoded.concat([`${encodedKey}=${escapeUri(value2)}`]), []).sort().join("&");
         }
       }
-      return keys.map((key) => serialized[key]).filter((serialized2) => serialized2).join("&");
+      return keys.sort().map((key) => serialized[key]).filter((serialized2) => serialized2).join("&");
     }, "getCanonicalQuery");
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/getPayloadHash.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getPayloadHash.js
 var getPayloadHash;
 var init_getPayloadHash = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/getPayloadHash.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/getPayloadHash.js"() {
     init_dist_es22();
     init_dist_es30();
     init_dist_es24();
@@ -7554,7 +7681,7 @@ var init_getPayloadHash = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/HeaderFormatter.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/HeaderFormatter.js
 function negate(bytes) {
   for (let i5 = 0; i5 < 8; i5++) {
     bytes[i5] ^= 255;
@@ -7567,7 +7694,7 @@ function negate(bytes) {
 }
 var HeaderFormatter, HEADER_VALUE_TYPE, UUID_PATTERN, Int64;
 var init_HeaderFormatter = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/HeaderFormatter.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/HeaderFormatter.js"() {
     init_dist_es30();
     init_dist_es24();
     HeaderFormatter = class {
@@ -7692,10 +7819,10 @@ var init_HeaderFormatter = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/headerUtil.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/headerUtil.js
 var hasHeader;
 var init_headerUtil = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/headerUtil.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/headerUtil.js"() {
     hasHeader = /* @__PURE__ */ __name((soughtHeader, headers) => {
       soughtHeader = soughtHeader.toLowerCase();
       for (const headerName of Object.keys(headers)) {
@@ -7708,10 +7835,10 @@ var init_headerUtil = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/moveHeadersToQuery.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/moveHeadersToQuery.js
 var moveHeadersToQuery;
 var init_moveHeadersToQuery = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/moveHeadersToQuery.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/moveHeadersToQuery.js"() {
     init_dist_es2();
     moveHeadersToQuery = /* @__PURE__ */ __name((request2, options = {}) => {
       const { headers, query = {} } = HttpRequest.clone(request2);
@@ -7731,10 +7858,10 @@ var init_moveHeadersToQuery = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/prepareRequest.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/prepareRequest.js
 var prepareRequest;
 var init_prepareRequest = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/prepareRequest.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/prepareRequest.js"() {
     init_dist_es2();
     init_constants6();
     prepareRequest = /* @__PURE__ */ __name((request2) => {
@@ -7749,10 +7876,10 @@ var init_prepareRequest = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/utilDate.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/utilDate.js
 var iso8601, toDate;
 var init_utilDate = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/utilDate.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/utilDate.js"() {
     iso8601 = /* @__PURE__ */ __name((time) => toDate(time).toISOString().replace(/\.\d{3}Z$/, "Z"), "iso8601");
     toDate = /* @__PURE__ */ __name((time) => {
       if (typeof time === "number") {
@@ -7769,10 +7896,10 @@ var init_utilDate = __esm({
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/SignatureV4.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/SignatureV4.js
 var SignatureV4, formatDate, getCanonicalHeaderList;
 var init_SignatureV4 = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/SignatureV4.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/SignatureV4.js"() {
     init_dist_es30();
     init_dist_es10();
     init_dist_es26();
@@ -7960,9 +8087,9 @@ ${toHex(hashedRequest)}`;
   }
 });
 
-// node_modules/@smithy/signature-v4/dist-es/index.js
+// node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/index.js
 var init_dist_es36 = __esm({
-  "node_modules/@smithy/signature-v4/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+signature-v4@4.1.4/node_modules/@smithy/signature-v4/dist-es/index.js"() {
     init_SignatureV4();
     init_getCanonicalHeaders();
     init_getCanonicalQuery();
@@ -7973,10 +8100,10 @@ var init_dist_es36 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4Config.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4Config.js
 var resolveAwsSdkSigV4Config;
 var init_resolveAwsSdkSigV4Config = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4Config.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4Config.js"() {
     init_dist_es34();
     init_dist_es36();
     resolveAwsSdkSigV4Config = /* @__PURE__ */ __name((config) => {
@@ -8056,32 +8183,32 @@ var init_resolveAwsSdkSigV4Config = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/index.js
 var init_aws_sdk = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/aws_sdk/index.js"() {
     init_AwsSdkSigV4Signer();
     init_resolveAwsSdkSigV4AConfig();
     init_resolveAwsSdkSigV4Config();
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/index.js
 var init_httpAuthSchemes2 = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/httpAuthSchemes/index.js"() {
     init_aws_sdk();
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/coercing-serializers.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/coercing-serializers.js
 var init_coercing_serializers = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/coercing-serializers.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/coercing-serializers.js"() {
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/awsExpectUnion.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/awsExpectUnion.js
 var awsExpectUnion;
 var init_awsExpectUnion = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/awsExpectUnion.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/awsExpectUnion.js"() {
     init_dist_es32();
     awsExpectUnion = /* @__PURE__ */ __name((value) => {
       if (value == null) {
@@ -8095,19 +8222,19 @@ var init_awsExpectUnion = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/common.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/common.js
 var collectBodyString;
 var init_common = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/common.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/common.js"() {
     init_dist_es32();
     collectBodyString = /* @__PURE__ */ __name((streamBody, context) => collectBody(streamBody, context).then((body) => context.utf8Encoder(body)), "collectBodyString");
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/parseJsonBody.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/parseJsonBody.js
 var parseJsonBody, parseJsonErrorBody, loadRestJsonErrorCode;
 var init_parseJsonBody = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/parseJsonBody.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/json/parseJsonBody.js"() {
     init_common();
     parseJsonBody = /* @__PURE__ */ __name((streamBody, context) => collectBodyString(streamBody, context).then((encoded) => {
       if (encoded.length) {
@@ -8161,9 +8288,9 @@ var init_parseJsonBody = __esm({
   }
 });
 
-// node_modules/fast-xml-parser/src/util.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/util.js
 var require_util = __commonJS({
-  "node_modules/fast-xml-parser/src/util.js"(exports) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/util.js"(exports) {
     "use strict";
     var nameStartChar = ":A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD";
     var nameChar = nameStartChar + "\\-.\\d\\u00B7\\u0300-\\u036F\\u203F-\\u2040";
@@ -8220,9 +8347,9 @@ var require_util = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/validator.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/validator.js
 var require_validator = __commonJS({
-  "node_modules/fast-xml-parser/src/validator.js"(exports) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/validator.js"(exports) {
     "use strict";
     var util = require_util();
     var defaultOptions = {
@@ -8546,9 +8673,9 @@ var require_validator = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/OptionsBuilder.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/OptionsBuilder.js
 var require_OptionsBuilder = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/OptionsBuilder.js"(exports) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/OptionsBuilder.js"(exports) {
     var defaultOptions = {
       preserveOrder: false,
       attributeNamePrefix: "@_",
@@ -8601,9 +8728,9 @@ var require_OptionsBuilder = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/xmlNode.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/xmlNode.js
 var require_xmlNode = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/xmlNode.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/xmlNode.js"(exports, module) {
     "use strict";
     var XmlNode = class {
       static {
@@ -8633,9 +8760,9 @@ var require_xmlNode = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/DocTypeReader.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/DocTypeReader.js
 var require_DocTypeReader = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/DocTypeReader.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/DocTypeReader.js"(exports, module) {
     var util = require_util();
     function readDocType(xmlData, i5) {
       const entities = {};
@@ -8750,9 +8877,9 @@ var require_DocTypeReader = __commonJS({
   }
 });
 
-// node_modules/strnum/strnum.js
+// node_modules/.pnpm/strnum@1.0.5/node_modules/strnum/strnum.js
 var require_strnum = __commonJS({
-  "node_modules/strnum/strnum.js"(exports, module) {
+  "node_modules/.pnpm/strnum@1.0.5/node_modules/strnum/strnum.js"(exports, module) {
     var hexRegex = /^[-+]?0x[a-fA-F0-9]+$/;
     var numRegex = /^([\-\+])?(0*)(\.[0-9]+([eE]\-?[0-9]+)?|[0-9]+(\.[0-9]+([eE]\-?[0-9]+)?)?)$/;
     if (!Number.parseInt && window.parseInt) {
@@ -8849,9 +8976,9 @@ var require_strnum = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/OrderedObjParser.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/OrderedObjParser.js
 var require_OrderedObjParser = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/OrderedObjParser.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/OrderedObjParser.js"(exports, module) {
     "use strict";
     var util = require_util();
     var xmlNode = require_xmlNode();
@@ -9366,9 +9493,9 @@ var require_OrderedObjParser = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/node2json.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/node2json.js
 var require_node2json = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/node2json.js"(exports) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/node2json.js"(exports) {
     "use strict";
     function prettify(node, options) {
       return compress(node, options);
@@ -9467,9 +9594,9 @@ var require_node2json = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlparser/XMLParser.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/XMLParser.js
 var require_XMLParser = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlparser/XMLParser.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlparser/XMLParser.js"(exports, module) {
     var { buildOptions } = require_OptionsBuilder();
     var OrderedObjParser = require_OrderedObjParser();
     var { prettify } = require_node2json();
@@ -9531,9 +9658,9 @@ var require_XMLParser = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlbuilder/orderedJs2Xml.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlbuilder/orderedJs2Xml.js
 var require_orderedJs2Xml = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlbuilder/orderedJs2Xml.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlbuilder/orderedJs2Xml.js"(exports, module) {
     var EOL = "\n";
     function toXml(jArray, options) {
       let indentation = "";
@@ -9671,9 +9798,9 @@ var require_orderedJs2Xml = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/xmlbuilder/json2xml.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlbuilder/json2xml.js
 var require_json2xml = __commonJS({
-  "node_modules/fast-xml-parser/src/xmlbuilder/json2xml.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/xmlbuilder/json2xml.js"(exports, module) {
     "use strict";
     var buildFromOrderedJs = require_orderedJs2Xml();
     var defaultOptions = {
@@ -9817,8 +9944,8 @@ var require_json2xml = __commonJS({
         } else {
           if (this.options.attributesGroupName && key === this.options.attributesGroupName) {
             const Ks = Object.keys(jObj[key]);
-            const L = Ks.length;
-            for (let j5 = 0; j5 < L; j5++) {
+            const L2 = Ks.length;
+            for (let j5 = 0; j5 < L2; j5++) {
               attrStr += this.buildAttrPairStr(Ks[j5], "" + jObj[key][Ks[j5]]);
             }
           } else {
@@ -9922,9 +10049,9 @@ var require_json2xml = __commonJS({
   }
 });
 
-// node_modules/fast-xml-parser/src/fxp.js
+// node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/fxp.js
 var require_fxp = __commonJS({
-  "node_modules/fast-xml-parser/src/fxp.js"(exports, module) {
+  "node_modules/.pnpm/fast-xml-parser@4.4.1/node_modules/fast-xml-parser/src/fxp.js"(exports, module) {
     "use strict";
     var validator = require_validator();
     var XMLParser2 = require_XMLParser();
@@ -9937,10 +10064,10 @@ var require_fxp = __commonJS({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/xml/parseXmlBody.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/xml/parseXmlBody.js
 var import_fast_xml_parser, parseXmlBody, parseXmlErrorBody;
 var init_parseXmlBody = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/xml/parseXmlBody.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/xml/parseXmlBody.js"() {
     init_dist_es32();
     import_fast_xml_parser = __toESM(require_fxp());
     init_common();
@@ -9989,9 +10116,9 @@ var init_parseXmlBody = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/submodules/protocols/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/index.js
 var init_protocols = __esm({
-  "node_modules/@aws-sdk/core/dist-es/submodules/protocols/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/protocols/index.js"() {
     init_coercing_serializers();
     init_awsExpectUnion();
     init_parseJsonBody();
@@ -9999,19 +10126,19 @@ var init_protocols = __esm({
   }
 });
 
-// node_modules/@aws-sdk/core/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/index.js
 var init_dist_es37 = __esm({
-  "node_modules/@aws-sdk/core/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/index.js"() {
     init_client3();
     init_httpAuthSchemes2();
     init_protocols();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-env/dist-es/fromEnv.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-env@3.654.0/node_modules/@aws-sdk/credential-provider-env/dist-es/fromEnv.js
 var ENV_KEY, ENV_SECRET, ENV_SESSION, ENV_EXPIRATION, ENV_CREDENTIAL_SCOPE, ENV_ACCOUNT_ID, fromEnv2;
 var init_fromEnv2 = __esm({
-  "node_modules/@aws-sdk/credential-provider-env/dist-es/fromEnv.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-env@3.654.0/node_modules/@aws-sdk/credential-provider-env/dist-es/fromEnv.js"() {
     init_dist_es12();
     ENV_KEY = "AWS_ACCESS_KEY_ID";
     ENV_SECRET = "AWS_SECRET_ACCESS_KEY";
@@ -10042,7 +10169,7 @@ var init_fromEnv2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-env/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-env@3.654.0/node_modules/@aws-sdk/credential-provider-env/dist-es/index.js
 var dist_es_exports = {};
 __export(dist_es_exports, {
   ENV_ACCOUNT_ID: () => ENV_ACCOUNT_ID,
@@ -10054,12 +10181,12 @@ __export(dist_es_exports, {
   fromEnv: () => fromEnv2
 });
 var init_dist_es38 = __esm({
-  "node_modules/@aws-sdk/credential-provider-env/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-env@3.654.0/node_modules/@aws-sdk/credential-provider-env/dist-es/index.js"() {
     init_fromEnv2();
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/httpRequest.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/httpRequest.js
 import { Buffer as Buffer3 } from "buffer";
 import { request } from "http";
 function httpRequest(options) {
@@ -10069,8 +10196,8 @@ function httpRequest(options) {
       ...options,
       hostname: options.hostname?.replace(/^\[(.+)\]$/, "$1")
     });
-    req.on("error", (err) => {
-      reject(Object.assign(new ProviderError("Unable to connect to instance metadata service"), err));
+    req.on("error", (err2) => {
+      reject(Object.assign(new ProviderError("Unable to connect to instance metadata service"), err2));
       req.destroy();
     });
     req.on("timeout", () => {
@@ -10096,16 +10223,16 @@ function httpRequest(options) {
   });
 }
 var init_httpRequest2 = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/httpRequest.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/httpRequest.js"() {
     init_dist_es12();
     __name(httpRequest, "httpRequest");
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/ImdsCredentials.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/ImdsCredentials.js
 var isImdsCredentials, fromImdsCredentials;
 var init_ImdsCredentials = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/ImdsCredentials.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/ImdsCredentials.js"() {
     isImdsCredentials = /* @__PURE__ */ __name((arg) => Boolean(arg) && typeof arg === "object" && typeof arg.AccessKeyId === "string" && typeof arg.SecretAccessKey === "string" && typeof arg.Token === "string" && typeof arg.Expiration === "string", "isImdsCredentials");
     fromImdsCredentials = /* @__PURE__ */ __name((creds) => ({
       accessKeyId: creds.AccessKeyId,
@@ -10117,20 +10244,20 @@ var init_ImdsCredentials = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/RemoteProviderInit.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/RemoteProviderInit.js
 var DEFAULT_TIMEOUT, DEFAULT_MAX_RETRIES, providerConfigFromInit;
 var init_RemoteProviderInit = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/RemoteProviderInit.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/RemoteProviderInit.js"() {
     DEFAULT_TIMEOUT = 1e3;
     DEFAULT_MAX_RETRIES = 0;
     providerConfigFromInit = /* @__PURE__ */ __name(({ maxRetries = DEFAULT_MAX_RETRIES, timeout = DEFAULT_TIMEOUT }) => ({ maxRetries, timeout }), "providerConfigFromInit");
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/retry.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/retry.js
 var retry;
 var init_retry3 = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/retry.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/remoteProvider/retry.js"() {
     retry = /* @__PURE__ */ __name((toRetry, maxRetries) => {
       let promise = toRetry();
       for (let i5 = 0; i5 < maxRetries; i5++) {
@@ -10141,11 +10268,11 @@ var init_retry3 = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/fromContainerMetadata.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/fromContainerMetadata.js
 import { parse } from "url";
 var ENV_CMDS_FULL_URI, ENV_CMDS_RELATIVE_URI, ENV_CMDS_AUTH_TOKEN, fromContainerMetadata, requestFromEcsImds, CMDS_IP, GREENGRASS_HOSTS, GREENGRASS_PROTOCOLS, getCmdsUri;
 var init_fromContainerMetadata = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/fromContainerMetadata.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/fromContainerMetadata.js"() {
     init_dist_es12();
     init_httpRequest2();
     init_ImdsCredentials();
@@ -10223,10 +10350,10 @@ var init_fromContainerMetadata = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/error/InstanceMetadataV1FallbackError.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/error/InstanceMetadataV1FallbackError.js
 var InstanceMetadataV1FallbackError;
 var init_InstanceMetadataV1FallbackError = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/error/InstanceMetadataV1FallbackError.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/error/InstanceMetadataV1FallbackError.js"() {
     init_dist_es12();
     InstanceMetadataV1FallbackError = class _InstanceMetadataV1FallbackError extends CredentialsProviderError {
       static {
@@ -10242,10 +10369,10 @@ var init_InstanceMetadataV1FallbackError = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/config/Endpoint.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/Endpoint.js
 var Endpoint;
 var init_Endpoint = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/config/Endpoint.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/Endpoint.js"() {
     (function(Endpoint2) {
       Endpoint2["IPv4"] = "http://169.254.169.254";
       Endpoint2["IPv6"] = "http://[fd00:ec2::254]";
@@ -10253,10 +10380,10 @@ var init_Endpoint = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointConfigOptions.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointConfigOptions.js
 var ENV_ENDPOINT_NAME, CONFIG_ENDPOINT_NAME, ENDPOINT_CONFIG_OPTIONS;
 var init_EndpointConfigOptions = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointConfigOptions.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointConfigOptions.js"() {
     ENV_ENDPOINT_NAME = "AWS_EC2_METADATA_SERVICE_ENDPOINT";
     CONFIG_ENDPOINT_NAME = "ec2_metadata_service_endpoint";
     ENDPOINT_CONFIG_OPTIONS = {
@@ -10267,10 +10394,10 @@ var init_EndpointConfigOptions = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointMode.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointMode.js
 var EndpointMode;
 var init_EndpointMode = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointMode.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointMode.js"() {
     (function(EndpointMode2) {
       EndpointMode2["IPv4"] = "IPv4";
       EndpointMode2["IPv6"] = "IPv6";
@@ -10278,10 +10405,10 @@ var init_EndpointMode = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointModeConfigOptions.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointModeConfigOptions.js
 var ENV_ENDPOINT_MODE_NAME, CONFIG_ENDPOINT_MODE_NAME, ENDPOINT_MODE_CONFIG_OPTIONS;
 var init_EndpointModeConfigOptions = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointModeConfigOptions.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/config/EndpointModeConfigOptions.js"() {
     init_EndpointMode();
     ENV_ENDPOINT_MODE_NAME = "AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE";
     CONFIG_ENDPOINT_MODE_NAME = "ec2_metadata_service_endpoint_mode";
@@ -10293,10 +10420,10 @@ var init_EndpointModeConfigOptions = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/utils/getInstanceMetadataEndpoint.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/getInstanceMetadataEndpoint.js
 var getInstanceMetadataEndpoint, getFromEndpointConfig, getFromEndpointModeConfig;
 var init_getInstanceMetadataEndpoint = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/utils/getInstanceMetadataEndpoint.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/getInstanceMetadataEndpoint.js"() {
     init_dist_es14();
     init_dist_es16();
     init_Endpoint();
@@ -10319,10 +10446,10 @@ var init_getInstanceMetadataEndpoint = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/utils/getExtendedInstanceMetadataCredentials.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/getExtendedInstanceMetadataCredentials.js
 var STATIC_STABILITY_REFRESH_INTERVAL_SECONDS, STATIC_STABILITY_REFRESH_INTERVAL_JITTER_WINDOW_SECONDS, STATIC_STABILITY_DOC_URL, getExtendedInstanceMetadataCredentials;
 var init_getExtendedInstanceMetadataCredentials = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/utils/getExtendedInstanceMetadataCredentials.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/getExtendedInstanceMetadataCredentials.js"() {
     STATIC_STABILITY_REFRESH_INTERVAL_SECONDS = 5 * 60;
     STATIC_STABILITY_REFRESH_INTERVAL_JITTER_WINDOW_SECONDS = 5 * 60;
     STATIC_STABILITY_DOC_URL = "https://docs.aws.amazon.com/sdkref/latest/guide/feature-static-credentials.html";
@@ -10341,10 +10468,10 @@ For more information, please visit: ` + STATIC_STABILITY_DOC_URL);
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/utils/staticStabilityProvider.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/staticStabilityProvider.js
 var staticStabilityProvider;
 var init_staticStabilityProvider = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/utils/staticStabilityProvider.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/utils/staticStabilityProvider.js"() {
     init_getExtendedInstanceMetadataCredentials();
     staticStabilityProvider = /* @__PURE__ */ __name((provider, options = {}) => {
       const logger2 = options?.logger || console;
@@ -10371,10 +10498,10 @@ var init_staticStabilityProvider = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/fromInstanceMetadata.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/fromInstanceMetadata.js
 var IMDS_PATH, IMDS_TOKEN_PATH, AWS_EC2_METADATA_V1_DISABLED, PROFILE_AWS_EC2_METADATA_V1_DISABLED, X_AWS_EC2_METADATA_TOKEN, fromInstanceMetadata, getInstanceMetadataProvider, getMetadataToken, getProfile, getCredentialsFromProfile;
 var init_fromInstanceMetadata = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/fromInstanceMetadata.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/fromInstanceMetadata.js"() {
     init_dist_es14();
     init_dist_es12();
     init_InstanceMetadataV1FallbackError();
@@ -10432,11 +10559,11 @@ var init_fromInstanceMetadata = __esm({
           let profile2;
           try {
             profile2 = await getProfile(options);
-          } catch (err) {
-            if (err.statusCode === 401) {
+          } catch (err2) {
+            if (err2.statusCode === 401) {
               disableFetchToken = false;
             }
-            throw err;
+            throw err2;
           }
           return profile2;
         }, maxRetries2)).trim();
@@ -10444,11 +10571,11 @@ var init_fromInstanceMetadata = __esm({
           let creds;
           try {
             creds = await getCredentialsFromProfile(imdsProfile, options, init);
-          } catch (err) {
-            if (err.statusCode === 401) {
+          } catch (err2) {
+            if (err2.statusCode === 401) {
               disableFetchToken = false;
             }
-            throw err;
+            throw err2;
           }
           return creds;
         }, maxRetries2);
@@ -10507,13 +10634,13 @@ var init_fromInstanceMetadata = __esm({
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/types.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/types.js
 var init_types8 = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/types.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/types.js"() {
   }
 });
 
-// node_modules/@smithy/credential-provider-imds/dist-es/index.js
+// node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/index.js
 var dist_es_exports2 = {};
 __export(dist_es_exports2, {
   DEFAULT_MAX_RETRIES: () => DEFAULT_MAX_RETRIES,
@@ -10529,7 +10656,7 @@ __export(dist_es_exports2, {
   providerConfigFromInit: () => providerConfigFromInit
 });
 var init_dist_es39 = __esm({
-  "node_modules/@smithy/credential-provider-imds/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+credential-provider-imds@3.2.3/node_modules/@smithy/credential-provider-imds/dist-es/index.js"() {
     init_fromContainerMetadata();
     init_fromInstanceMetadata();
     init_RemoteProviderInit();
@@ -10540,10 +10667,10 @@ var init_dist_es39 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/checkUrl.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/checkUrl.js
 var ECS_CONTAINER_HOST, EKS_CONTAINER_HOST_IPv4, EKS_CONTAINER_HOST_IPv6, checkUrl;
 var init_checkUrl = __esm({
-  "node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/checkUrl.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/checkUrl.js"() {
     init_dist_es12();
     ECS_CONTAINER_HOST = "169.254.170.2";
     EKS_CONTAINER_HOST_IPv4 = "169.254.170.23";
@@ -10580,7 +10707,7 @@ var init_checkUrl = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/requestHelpers.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/requestHelpers.js
 function createGetRequest(url) {
   return new HttpRequest({
     protocol: url.protocol,
@@ -10623,7 +10750,7 @@ async function getCredentials(response, logger2) {
   throw new CredentialsProviderError(`Server responded with status: ${response.statusCode}`, { logger: logger2 });
 }
 var init_requestHelpers = __esm({
-  "node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/requestHelpers.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/requestHelpers.js"() {
     init_dist_es12();
     init_dist_es2();
     init_dist_es32();
@@ -10633,10 +10760,10 @@ var init_requestHelpers = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/retry-wrapper.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/retry-wrapper.js
 var retryWrapper;
 var init_retry_wrapper = __esm({
-  "node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/retry-wrapper.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/retry-wrapper.js"() {
     retryWrapper = /* @__PURE__ */ __name((toRetry, maxRetries, delayMs) => {
       return async () => {
         for (let i5 = 0; i5 < maxRetries; ++i5) {
@@ -10652,11 +10779,11 @@ var init_retry_wrapper = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/fromHttp.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/fromHttp.js
 import fs from "fs/promises";
 var AWS_CONTAINER_CREDENTIALS_RELATIVE_URI, DEFAULT_LINK_LOCAL_HOST, AWS_CONTAINER_CREDENTIALS_FULL_URI, AWS_CONTAINER_AUTHORIZATION_TOKEN_FILE, AWS_CONTAINER_AUTHORIZATION_TOKEN, fromHttp;
 var init_fromHttp = __esm({
-  "node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/fromHttp.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/fromHttp/fromHttp.js"() {
     init_dist_es28();
     init_dist_es12();
     init_checkUrl();
@@ -10715,21 +10842,21 @@ Set AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-http/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/index.js
 var dist_es_exports3 = {};
 __export(dist_es_exports3, {
   fromHttp: () => fromHttp
 });
 var init_dist_es40 = __esm({
-  "node_modules/@aws-sdk/credential-provider-http/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-http@3.654.0/node_modules/@aws-sdk/credential-provider-http/dist-es/index.js"() {
     init_fromHttp();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-node/dist-es/remoteProvider.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/remoteProvider.js
 var ENV_IMDS_DISABLED, remoteProvider;
 var init_remoteProvider = __esm({
-  "node_modules/@aws-sdk/credential-provider-node/dist-es/remoteProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/remoteProvider.js"() {
     init_dist_es12();
     ENV_IMDS_DISABLED = "AWS_EC2_METADATA_DISABLED";
     remoteProvider = /* @__PURE__ */ __name(async (init) => {
@@ -10750,24 +10877,24 @@ var init_remoteProvider = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/isSsoProfile.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/isSsoProfile.js
 var isSsoProfile;
 var init_isSsoProfile = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/isSsoProfile.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/isSsoProfile.js"() {
     isSsoProfile = /* @__PURE__ */ __name((arg) => arg && (typeof arg.sso_start_url === "string" || typeof arg.sso_account_id === "string" || typeof arg.sso_session === "string" || typeof arg.sso_region === "string" || typeof arg.sso_role_name === "string"), "isSsoProfile");
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/constants.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/constants.js
 var EXPIRE_WINDOW_MS, REFRESH_MESSAGE;
 var init_constants7 = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/constants.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/constants.js"() {
     EXPIRE_WINDOW_MS = 5 * 60 * 1e3;
     REFRESH_MESSAGE = `To refresh this SSO session run 'aws sso login' with the corresponding profile.`;
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthSchemeProvider.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthSchemeProvider.js
 function createAwsAuthSigv4HttpAuthOption2(authParameters) {
   return {
     schemeId: "aws.auth#sigv4",
@@ -10790,7 +10917,7 @@ function createSmithyApiNoAuthHttpAuthOption(authParameters) {
 }
 var defaultSSOOIDCHttpAuthSchemeParametersProvider, defaultSSOOIDCHttpAuthSchemeProvider, resolveHttpAuthSchemeConfig2;
 var init_httpAuthSchemeProvider = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthSchemeProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthSchemeProvider.js"() {
     init_dist_es37();
     init_dist_es10();
     defaultSSOOIDCHttpAuthSchemeParametersProvider = /* @__PURE__ */ __name(async (config, context, input) => {
@@ -10833,10 +10960,10 @@ var init_httpAuthSchemeProvider = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/EndpointParameters.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/EndpointParameters.js
 var resolveClientEndpointParameters2, commonParams2;
 var init_EndpointParameters = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/EndpointParameters.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/EndpointParameters.js"() {
     resolveClientEndpointParameters2 = /* @__PURE__ */ __name((options) => {
       return {
         ...options,
@@ -10854,14 +10981,14 @@ var init_EndpointParameters = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/package.json
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/package.json
 var package_default2;
 var init_package = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/package.json"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/package.json"() {
     package_default2 = {
       name: "@aws-sdk/client-sso-oidc",
       description: "AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native",
-      version: "3.629.0",
+      version: "3.654.0",
       scripts: {
         build: "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
         "build:cjs": "node ../../scripts/compilation/inline client-sso-oidc",
@@ -10880,41 +11007,41 @@ var init_package = __esm({
       dependencies: {
         "@aws-crypto/sha256-browser": "5.2.0",
         "@aws-crypto/sha256-js": "5.2.0",
-        "@aws-sdk/core": "3.629.0",
-        "@aws-sdk/credential-provider-node": "3.629.0",
-        "@aws-sdk/middleware-host-header": "3.620.0",
-        "@aws-sdk/middleware-logger": "3.609.0",
-        "@aws-sdk/middleware-recursion-detection": "3.620.0",
-        "@aws-sdk/middleware-user-agent": "3.620.0",
-        "@aws-sdk/region-config-resolver": "3.614.0",
-        "@aws-sdk/types": "3.609.0",
-        "@aws-sdk/util-endpoints": "3.614.0",
-        "@aws-sdk/util-user-agent-browser": "3.609.0",
-        "@aws-sdk/util-user-agent-node": "3.614.0",
-        "@smithy/config-resolver": "^3.0.5",
-        "@smithy/core": "^2.3.2",
-        "@smithy/fetch-http-handler": "^3.2.4",
-        "@smithy/hash-node": "^3.0.3",
-        "@smithy/invalid-dependency": "^3.0.3",
-        "@smithy/middleware-content-length": "^3.0.5",
-        "@smithy/middleware-endpoint": "^3.1.0",
-        "@smithy/middleware-retry": "^3.0.14",
-        "@smithy/middleware-serde": "^3.0.3",
-        "@smithy/middleware-stack": "^3.0.3",
-        "@smithy/node-config-provider": "^3.1.4",
-        "@smithy/node-http-handler": "^3.1.4",
-        "@smithy/protocol-http": "^4.1.0",
-        "@smithy/smithy-client": "^3.1.12",
-        "@smithy/types": "^3.3.0",
-        "@smithy/url-parser": "^3.0.3",
+        "@aws-sdk/core": "3.654.0",
+        "@aws-sdk/credential-provider-node": "3.654.0",
+        "@aws-sdk/middleware-host-header": "3.654.0",
+        "@aws-sdk/middleware-logger": "3.654.0",
+        "@aws-sdk/middleware-recursion-detection": "3.654.0",
+        "@aws-sdk/middleware-user-agent": "3.654.0",
+        "@aws-sdk/region-config-resolver": "3.654.0",
+        "@aws-sdk/types": "3.654.0",
+        "@aws-sdk/util-endpoints": "3.654.0",
+        "@aws-sdk/util-user-agent-browser": "3.654.0",
+        "@aws-sdk/util-user-agent-node": "3.654.0",
+        "@smithy/config-resolver": "^3.0.8",
+        "@smithy/core": "^2.4.3",
+        "@smithy/fetch-http-handler": "^3.2.7",
+        "@smithy/hash-node": "^3.0.6",
+        "@smithy/invalid-dependency": "^3.0.6",
+        "@smithy/middleware-content-length": "^3.0.8",
+        "@smithy/middleware-endpoint": "^3.1.3",
+        "@smithy/middleware-retry": "^3.0.18",
+        "@smithy/middleware-serde": "^3.0.6",
+        "@smithy/middleware-stack": "^3.0.6",
+        "@smithy/node-config-provider": "^3.1.7",
+        "@smithy/node-http-handler": "^3.2.2",
+        "@smithy/protocol-http": "^4.1.3",
+        "@smithy/smithy-client": "^3.3.2",
+        "@smithy/types": "^3.4.2",
+        "@smithy/url-parser": "^3.0.6",
         "@smithy/util-base64": "^3.0.0",
         "@smithy/util-body-length-browser": "^3.0.0",
         "@smithy/util-body-length-node": "^3.0.0",
-        "@smithy/util-defaults-mode-browser": "^3.0.14",
-        "@smithy/util-defaults-mode-node": "^3.0.14",
-        "@smithy/util-endpoints": "^2.0.5",
-        "@smithy/util-middleware": "^3.0.3",
-        "@smithy/util-retry": "^3.0.3",
+        "@smithy/util-defaults-mode-browser": "^3.0.18",
+        "@smithy/util-defaults-mode-node": "^3.0.18",
+        "@smithy/util-endpoints": "^2.1.2",
+        "@smithy/util-middleware": "^3.0.6",
+        "@smithy/util-retry": "^3.0.6",
         "@smithy/util-utf8": "^3.0.0",
         tslib: "^2.6.2"
       },
@@ -10945,7 +11072,7 @@ var init_package = __esm({
       },
       license: "Apache-2.0",
       peerDependencies: {
-        "@aws-sdk/client-sts": "^3.629.0"
+        "@aws-sdk/client-sts": "^3.654.0"
       },
       browser: {
         "./dist-es/runtimeConfig": "./dist-es/runtimeConfig.browser"
@@ -10963,20 +11090,20 @@ var init_package = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-user-agent-node/dist-es/crt-availability.js
+// node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/crt-availability.js
 var crtAvailability;
 var init_crt_availability = __esm({
-  "node_modules/@aws-sdk/util-user-agent-node/dist-es/crt-availability.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/crt-availability.js"() {
     crtAvailability = {
       isCrtAvailable: false
     };
   }
 });
 
-// node_modules/@aws-sdk/util-user-agent-node/dist-es/is-crt-available.js
+// node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/is-crt-available.js
 var isCrtAvailable;
 var init_is_crt_available = __esm({
-  "node_modules/@aws-sdk/util-user-agent-node/dist-es/is-crt-available.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/is-crt-available.js"() {
     init_crt_availability();
     isCrtAvailable = /* @__PURE__ */ __name(() => {
       if (crtAvailability.isCrtAvailable) {
@@ -10987,12 +11114,12 @@ var init_is_crt_available = __esm({
   }
 });
 
-// node_modules/@aws-sdk/util-user-agent-node/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/index.js
 import { platform, release } from "os";
 import { env, versions } from "process";
 var UA_APP_ID_ENV_NAME, UA_APP_ID_INI_NAME, defaultUserAgent;
 var init_dist_es41 = __esm({
-  "node_modules/@aws-sdk/util-user-agent-node/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+util-user-agent-node@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/util-user-agent-node/dist-es/index.js"() {
     init_dist_es14();
     init_is_crt_available();
     init_crt_availability();
@@ -11033,7 +11160,7 @@ var init_dist_es41 = __esm({
   }
 });
 
-// node_modules/@smithy/hash-node/dist-es/index.js
+// node_modules/.pnpm/@smithy+hash-node@3.0.6/node_modules/@smithy/hash-node/dist-es/index.js
 import { Buffer as Buffer4 } from "buffer";
 import { createHash as createHash2, createHmac } from "crypto";
 function castSourceData(toCast, encoding) {
@@ -11050,7 +11177,7 @@ function castSourceData(toCast, encoding) {
 }
 var Hash;
 var init_dist_es42 = __esm({
-  "node_modules/@smithy/hash-node/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+hash-node@3.0.6/node_modules/@smithy/hash-node/dist-es/index.js"() {
     init_dist_es23();
     init_dist_es24();
     Hash = class {
@@ -11076,11 +11203,11 @@ var init_dist_es42 = __esm({
   }
 });
 
-// node_modules/@smithy/util-body-length-node/dist-es/calculateBodyLength.js
+// node_modules/.pnpm/@smithy+util-body-length-node@3.0.0/node_modules/@smithy/util-body-length-node/dist-es/calculateBodyLength.js
 import { fstatSync, lstatSync } from "fs";
 var calculateBodyLength;
 var init_calculateBodyLength = __esm({
-  "node_modules/@smithy/util-body-length-node/dist-es/calculateBodyLength.js"() {
+  "node_modules/.pnpm/@smithy+util-body-length-node@3.0.0/node_modules/@smithy/util-body-length-node/dist-es/calculateBodyLength.js"() {
     calculateBodyLength = /* @__PURE__ */ __name((body) => {
       if (!body) {
         return 0;
@@ -11103,17 +11230,17 @@ var init_calculateBodyLength = __esm({
   }
 });
 
-// node_modules/@smithy/util-body-length-node/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-body-length-node@3.0.0/node_modules/@smithy/util-body-length-node/dist-es/index.js
 var init_dist_es43 = __esm({
-  "node_modules/@smithy/util-body-length-node/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-body-length-node@3.0.0/node_modules/@smithy/util-body-length-node/dist-es/index.js"() {
     init_calculateBodyLength();
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/ruleset.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/ruleset.js
 var u, v, w, x, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, _data, ruleSet;
 var init_ruleset = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/ruleset.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/ruleset.js"() {
     u = "required";
     v = "fn";
     w = "argv";
@@ -11143,27 +11270,31 @@ var init_ruleset = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/endpointResolver.js
-var defaultEndpointResolver;
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/endpointResolver.js
+var cache, defaultEndpointResolver;
 var init_endpointResolver = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/endpointResolver.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/endpoint/endpointResolver.js"() {
     init_dist_es7();
     init_dist_es6();
     init_ruleset();
+    cache = new EndpointCache2({
+      size: 50,
+      params: ["Endpoint", "Region", "UseDualStack", "UseFIPS"]
+    });
     defaultEndpointResolver = /* @__PURE__ */ __name((endpointParams, context = {}) => {
-      return resolveEndpoint(ruleSet, {
+      return cache.get(endpointParams, () => resolveEndpoint(ruleSet, {
         endpointParams,
         logger: context.logger
-      });
+      }));
     }, "defaultEndpointResolver");
     customEndpointFunctions.aws = awsEndpointFunctions;
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.shared.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.shared.js
 var getRuntimeConfig;
 var init_runtimeConfig_shared = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.shared.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.shared.js"() {
     init_dist_es37();
     init_dist_es34();
     init_dist_es32();
@@ -11203,10 +11334,10 @@ var init_runtimeConfig_shared = __esm({
   }
 });
 
-// node_modules/@smithy/util-defaults-mode-node/dist-es/constants.js
+// node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/constants.js
 var AWS_EXECUTION_ENV, AWS_REGION_ENV, AWS_DEFAULT_REGION_ENV, ENV_IMDS_DISABLED2, DEFAULTS_MODE_OPTIONS, IMDS_REGION_PATH;
 var init_constants8 = __esm({
-  "node_modules/@smithy/util-defaults-mode-node/dist-es/constants.js"() {
+  "node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/constants.js"() {
     AWS_EXECUTION_ENV = "AWS_EXECUTION_ENV";
     AWS_REGION_ENV = "AWS_REGION";
     AWS_DEFAULT_REGION_ENV = "AWS_DEFAULT_REGION";
@@ -11216,10 +11347,10 @@ var init_constants8 = __esm({
   }
 });
 
-// node_modules/@smithy/util-defaults-mode-node/dist-es/defaultsModeConfig.js
+// node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/defaultsModeConfig.js
 var AWS_DEFAULTS_MODE_ENV, AWS_DEFAULTS_MODE_CONFIG, NODE_DEFAULTS_MODE_CONFIG_OPTIONS;
 var init_defaultsModeConfig = __esm({
-  "node_modules/@smithy/util-defaults-mode-node/dist-es/defaultsModeConfig.js"() {
+  "node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/defaultsModeConfig.js"() {
     AWS_DEFAULTS_MODE_ENV = "AWS_DEFAULTS_MODE";
     AWS_DEFAULTS_MODE_CONFIG = "defaults_mode";
     NODE_DEFAULTS_MODE_CONFIG_OPTIONS = {
@@ -11234,10 +11365,10 @@ var init_defaultsModeConfig = __esm({
   }
 });
 
-// node_modules/@smithy/util-defaults-mode-node/dist-es/resolveDefaultsModeConfig.js
+// node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/resolveDefaultsModeConfig.js
 var resolveDefaultsModeConfig, resolveNodeDefaultsModeAuto, inferPhysicalRegion;
 var init_resolveDefaultsModeConfig = __esm({
-  "node_modules/@smithy/util-defaults-mode-node/dist-es/resolveDefaultsModeConfig.js"() {
+  "node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/resolveDefaultsModeConfig.js"() {
     init_dist_es11();
     init_dist_es14();
     init_dist_es12();
@@ -11291,17 +11422,17 @@ var init_resolveDefaultsModeConfig = __esm({
   }
 });
 
-// node_modules/@smithy/util-defaults-mode-node/dist-es/index.js
+// node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/index.js
 var init_dist_es44 = __esm({
-  "node_modules/@smithy/util-defaults-mode-node/dist-es/index.js"() {
+  "node_modules/.pnpm/@smithy+util-defaults-mode-node@3.0.20/node_modules/@smithy/util-defaults-mode-node/dist-es/index.js"() {
     init_resolveDefaultsModeConfig();
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.js
 var getRuntimeConfig2;
 var init_runtimeConfig = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeConfig.js"() {
     init_package();
     init_dist_es37();
     init_dist_es54();
@@ -11347,10 +11478,10 @@ var init_runtimeConfig = __esm({
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/extensions/index.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/extensions/index.js
 var getAwsRegionExtensionConfiguration, resolveAwsRegionExtensionConfiguration;
 var init_extensions4 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/extensions/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/extensions/index.js"() {
     getAwsRegionExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
       let runtimeConfigRegion = /* @__PURE__ */ __name(async () => {
         if (runtimeConfig.region === void 0) {
@@ -11379,53 +11510,53 @@ var init_extensions4 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/config.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/config.js
 var init_config4 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/config.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/config.js"() {
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/isFipsRegion.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/isFipsRegion.js
 var init_isFipsRegion2 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/isFipsRegion.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/isFipsRegion.js"() {
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/getRealRegion.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/getRealRegion.js
 var init_getRealRegion2 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/getRealRegion.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/getRealRegion.js"() {
     init_isFipsRegion2();
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/resolveRegionConfig.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/resolveRegionConfig.js
 var init_resolveRegionConfig2 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/resolveRegionConfig.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/resolveRegionConfig.js"() {
     init_getRealRegion2();
     init_isFipsRegion2();
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/index.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/index.js
 var init_regionConfig2 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/regionConfig/index.js"() {
     init_config4();
     init_resolveRegionConfig2();
   }
 });
 
-// node_modules/@aws-sdk/region-config-resolver/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/index.js
 var init_dist_es45 = __esm({
-  "node_modules/@aws-sdk/region-config-resolver/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+region-config-resolver@3.654.0/node_modules/@aws-sdk/region-config-resolver/dist-es/index.js"() {
     init_extensions4();
     init_regionConfig2();
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthExtensionConfiguration.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthExtensionConfiguration.js
 var getHttpAuthExtensionConfiguration, resolveHttpAuthRuntimeConfig;
 var init_httpAuthExtensionConfiguration = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/auth/httpAuthExtensionConfiguration.js"() {
     getHttpAuthExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
       const _httpAuthSchemes = runtimeConfig.httpAuthSchemes;
       let _httpAuthSchemeProvider = runtimeConfig.httpAuthSchemeProvider;
@@ -11466,10 +11597,10 @@ var init_httpAuthExtensionConfiguration = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeExtensions.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeExtensions.js
 var asPartial, resolveRuntimeExtensions;
 var init_runtimeExtensions = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeExtensions.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/runtimeExtensions.js"() {
     init_dist_es45();
     init_dist_es2();
     init_dist_es32();
@@ -11494,10 +11625,10 @@ var init_runtimeExtensions = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDCClient.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDCClient.js
 var SSOOIDCClient;
 var init_SSOOIDCClient = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDCClient.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDCClient.js"() {
     init_dist_es3();
     init_dist_es4();
     init_dist_es5();
@@ -11549,10 +11680,10 @@ var init_SSOOIDCClient = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/models/SSOOIDCServiceException.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/SSOOIDCServiceException.js
 var SSOOIDCServiceException;
 var init_SSOOIDCServiceException = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/models/SSOOIDCServiceException.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/SSOOIDCServiceException.js"() {
     init_dist_es32();
     SSOOIDCServiceException = class _SSOOIDCServiceException extends ServiceException {
       static {
@@ -11566,10 +11697,10 @@ var init_SSOOIDCServiceException = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/models/models_0.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/models_0.js
 var AccessDeniedException, AuthorizationPendingException, ExpiredTokenException, InternalServerException, InvalidClientException, InvalidGrantException, InvalidRequestException, InvalidScopeException, SlowDownException, UnauthorizedClientException, UnsupportedGrantTypeException, InvalidRequestRegionException, InvalidClientMetadataException, InvalidRedirectUriException, CreateTokenRequestFilterSensitiveLog, CreateTokenResponseFilterSensitiveLog, CreateTokenWithIAMRequestFilterSensitiveLog, CreateTokenWithIAMResponseFilterSensitiveLog, RegisterClientResponseFilterSensitiveLog, StartDeviceAuthorizationRequestFilterSensitiveLog;
 var init_models_0 = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/models/models_0.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/models_0.js"() {
     init_dist_es32();
     init_SSOOIDCServiceException();
     AccessDeniedException = class _AccessDeniedException extends SSOOIDCServiceException {
@@ -11848,10 +11979,10 @@ var init_models_0 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/protocols/Aws_restJson1.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/protocols/Aws_restJson1.js
 var se_CreateTokenCommand, se_CreateTokenWithIAMCommand, se_RegisterClientCommand, se_StartDeviceAuthorizationCommand, de_CreateTokenCommand, de_CreateTokenWithIAMCommand, de_RegisterClientCommand, de_StartDeviceAuthorizationCommand, de_CommandError2, throwDefaultError3, de_AccessDeniedExceptionRes, de_AuthorizationPendingExceptionRes, de_ExpiredTokenExceptionRes, de_InternalServerExceptionRes, de_InvalidClientExceptionRes, de_InvalidClientMetadataExceptionRes, de_InvalidGrantExceptionRes, de_InvalidRedirectUriExceptionRes, de_InvalidRequestExceptionRes, de_InvalidRequestRegionExceptionRes, de_InvalidScopeExceptionRes, de_SlowDownExceptionRes, de_UnauthorizedClientExceptionRes, de_UnsupportedGrantTypeExceptionRes, deserializeMetadata3, _ai;
 var init_Aws_restJson1 = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/protocols/Aws_restJson1.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/protocols/Aws_restJson1.js"() {
     init_dist_es37();
     init_dist_es34();
     init_dist_es32();
@@ -12281,19 +12412,17 @@ var init_Aws_restJson1 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenCommand.js
 var CreateTokenCommand;
 var init_CreateTokenCommand = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters();
     init_models_0();
     init_Aws_restJson1();
-    CreateTokenCommand = class extends Command.classBuilder().ep({
-      ...commonParams2
-    }).m(function(Command2, cs, config, o5) {
+    CreateTokenCommand = class extends Command.classBuilder().ep(commonParams2).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -12306,19 +12435,17 @@ var init_CreateTokenCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenWithIAMCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenWithIAMCommand.js
 var CreateTokenWithIAMCommand;
 var init_CreateTokenWithIAMCommand = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenWithIAMCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/CreateTokenWithIAMCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters();
     init_models_0();
     init_Aws_restJson1();
-    CreateTokenWithIAMCommand = class extends Command.classBuilder().ep({
-      ...commonParams2
-    }).m(function(Command2, cs, config, o5) {
+    CreateTokenWithIAMCommand = class extends Command.classBuilder().ep(commonParams2).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -12331,19 +12458,17 @@ var init_CreateTokenWithIAMCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/RegisterClientCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/RegisterClientCommand.js
 var RegisterClientCommand;
 var init_RegisterClientCommand = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/RegisterClientCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/RegisterClientCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters();
     init_models_0();
     init_Aws_restJson1();
-    RegisterClientCommand = class extends Command.classBuilder().ep({
-      ...commonParams2
-    }).m(function(Command2, cs, config, o5) {
+    RegisterClientCommand = class extends Command.classBuilder().ep(commonParams2).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -12356,19 +12481,17 @@ var init_RegisterClientCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/StartDeviceAuthorizationCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/StartDeviceAuthorizationCommand.js
 var StartDeviceAuthorizationCommand;
 var init_StartDeviceAuthorizationCommand = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/StartDeviceAuthorizationCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/StartDeviceAuthorizationCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters();
     init_models_0();
     init_Aws_restJson1();
-    StartDeviceAuthorizationCommand = class extends Command.classBuilder().ep({
-      ...commonParams2
-    }).m(function(Command2, cs, config, o5) {
+    StartDeviceAuthorizationCommand = class extends Command.classBuilder().ep(commonParams2).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -12381,10 +12504,10 @@ var init_StartDeviceAuthorizationCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDC.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDC.js
 var commands, SSOOIDC;
 var init_SSOOIDC = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDC.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/SSOOIDC.js"() {
     init_dist_es32();
     init_CreateTokenCommand();
     init_CreateTokenWithIAMCommand();
@@ -12406,9 +12529,9 @@ var init_SSOOIDC = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/index.js
 var init_commands = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/commands/index.js"() {
     init_CreateTokenCommand();
     init_CreateTokenWithIAMCommand();
     init_RegisterClientCommand();
@@ -12416,14 +12539,14 @@ var init_commands = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/models/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/index.js
 var init_models = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/models/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/models/index.js"() {
     init_models_0();
   }
 });
 
-// node_modules/@aws-sdk/client-sso-oidc/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/index.js
 var dist_es_exports4 = {};
 __export(dist_es_exports4, {
   $Command: () => Command,
@@ -12457,7 +12580,7 @@ __export(dist_es_exports4, {
   __Client: () => Client
 });
 var init_dist_es46 = __esm({
-  "node_modules/@aws-sdk/client-sso-oidc/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0__aws-crt@1.22.0/node_modules/@aws-sdk/client-sso-oidc/dist-es/index.js"() {
     init_SSOOIDCClient();
     init_SSOOIDC();
     init_commands();
@@ -12466,10 +12589,10 @@ var init_dist_es46 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/getSsoOidcClient.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/getSsoOidcClient.js
 var ssoOidcClientsHash, getSsoOidcClient;
 var init_getSsoOidcClient = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/getSsoOidcClient.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/getSsoOidcClient.js"() {
     ssoOidcClientsHash = {};
     getSsoOidcClient = /* @__PURE__ */ __name(async (ssoRegion) => {
       const { SSOOIDCClient: SSOOIDCClient2 } = await Promise.resolve().then(() => (init_dist_es46(), dist_es_exports4));
@@ -12483,10 +12606,10 @@ var init_getSsoOidcClient = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/getNewSsoOidcToken.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/getNewSsoOidcToken.js
 var getNewSsoOidcToken;
 var init_getNewSsoOidcToken = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/getNewSsoOidcToken.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/getNewSsoOidcToken.js"() {
     init_getSsoOidcClient();
     getNewSsoOidcToken = /* @__PURE__ */ __name(async (ssoToken, ssoRegion) => {
       const { CreateTokenCommand: CreateTokenCommand2 } = await Promise.resolve().then(() => (init_dist_es46(), dist_es_exports4));
@@ -12501,10 +12624,10 @@ var init_getNewSsoOidcToken = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/validateTokenExpiry.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/validateTokenExpiry.js
 var validateTokenExpiry;
 var init_validateTokenExpiry = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/validateTokenExpiry.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/validateTokenExpiry.js"() {
     init_dist_es12();
     init_constants7();
     validateTokenExpiry = /* @__PURE__ */ __name((token) => {
@@ -12515,10 +12638,10 @@ var init_validateTokenExpiry = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/validateTokenKey.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/validateTokenKey.js
 var validateTokenKey;
 var init_validateTokenKey = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/validateTokenKey.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/validateTokenKey.js"() {
     init_dist_es12();
     init_constants7();
     validateTokenKey = /* @__PURE__ */ __name((key, value, forRefresh = false) => {
@@ -12529,11 +12652,11 @@ var init_validateTokenKey = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/writeSSOTokenToFile.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/writeSSOTokenToFile.js
 import { promises as fsPromises3 } from "fs";
 var writeFile, writeSSOTokenToFile;
 var init_writeSSOTokenToFile = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/writeSSOTokenToFile.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/writeSSOTokenToFile.js"() {
     init_dist_es13();
     ({ writeFile } = fsPromises3);
     writeSSOTokenToFile = /* @__PURE__ */ __name((id, ssoToken) => {
@@ -12544,10 +12667,10 @@ var init_writeSSOTokenToFile = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/fromSso.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/fromSso.js
 var lastRefreshAttemptTime, fromSso;
 var init_fromSso = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/fromSso.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/fromSso.js"() {
     init_dist_es12();
     init_dist_es13();
     init_constants7();
@@ -12626,30 +12749,30 @@ var init_fromSso = __esm({
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/fromStatic.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/fromStatic.js
 var init_fromStatic3 = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/fromStatic.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/fromStatic.js"() {
     init_dist_es12();
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/nodeProvider.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/nodeProvider.js
 var init_nodeProvider = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/nodeProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/nodeProvider.js"() {
     init_dist_es12();
   }
 });
 
-// node_modules/@aws-sdk/token-providers/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/index.js
 var init_dist_es47 = __esm({
-  "node_modules/@aws-sdk/token-providers/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+token-providers@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts@3.654.0_6qjm3yux2zhexkrivlgeqnuzsi/node_modules/@aws-sdk/token-providers/dist-es/index.js"() {
     init_fromSso();
     init_fromStatic3();
     init_nodeProvider();
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthSchemeProvider.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthSchemeProvider.js
 function createAwsAuthSigv4HttpAuthOption3(authParameters) {
   return {
     schemeId: "aws.auth#sigv4",
@@ -12672,7 +12795,7 @@ function createSmithyApiNoAuthHttpAuthOption2(authParameters) {
 }
 var defaultSSOHttpAuthSchemeParametersProvider, defaultSSOHttpAuthSchemeProvider, resolveHttpAuthSchemeConfig3;
 var init_httpAuthSchemeProvider2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthSchemeProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthSchemeProvider.js"() {
     init_dist_es37();
     init_dist_es10();
     defaultSSOHttpAuthSchemeParametersProvider = /* @__PURE__ */ __name(async (config, context, input) => {
@@ -12719,10 +12842,10 @@ var init_httpAuthSchemeProvider2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/endpoint/EndpointParameters.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/EndpointParameters.js
 var resolveClientEndpointParameters3, commonParams3;
 var init_EndpointParameters2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/endpoint/EndpointParameters.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/EndpointParameters.js"() {
     resolveClientEndpointParameters3 = /* @__PURE__ */ __name((options) => {
       return {
         ...options,
@@ -12740,14 +12863,14 @@ var init_EndpointParameters2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/package.json
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/package.json
 var package_default3;
 var init_package2 = __esm({
-  "node_modules/@aws-sdk/client-sso/package.json"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/package.json"() {
     package_default3 = {
       name: "@aws-sdk/client-sso",
       description: "AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native",
-      version: "3.629.0",
+      version: "3.654.0",
       scripts: {
         build: "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
         "build:cjs": "node ../../scripts/compilation/inline client-sso",
@@ -12766,40 +12889,40 @@ var init_package2 = __esm({
       dependencies: {
         "@aws-crypto/sha256-browser": "5.2.0",
         "@aws-crypto/sha256-js": "5.2.0",
-        "@aws-sdk/core": "3.629.0",
-        "@aws-sdk/middleware-host-header": "3.620.0",
-        "@aws-sdk/middleware-logger": "3.609.0",
-        "@aws-sdk/middleware-recursion-detection": "3.620.0",
-        "@aws-sdk/middleware-user-agent": "3.620.0",
-        "@aws-sdk/region-config-resolver": "3.614.0",
-        "@aws-sdk/types": "3.609.0",
-        "@aws-sdk/util-endpoints": "3.614.0",
-        "@aws-sdk/util-user-agent-browser": "3.609.0",
-        "@aws-sdk/util-user-agent-node": "3.614.0",
-        "@smithy/config-resolver": "^3.0.5",
-        "@smithy/core": "^2.3.2",
-        "@smithy/fetch-http-handler": "^3.2.4",
-        "@smithy/hash-node": "^3.0.3",
-        "@smithy/invalid-dependency": "^3.0.3",
-        "@smithy/middleware-content-length": "^3.0.5",
-        "@smithy/middleware-endpoint": "^3.1.0",
-        "@smithy/middleware-retry": "^3.0.14",
-        "@smithy/middleware-serde": "^3.0.3",
-        "@smithy/middleware-stack": "^3.0.3",
-        "@smithy/node-config-provider": "^3.1.4",
-        "@smithy/node-http-handler": "^3.1.4",
-        "@smithy/protocol-http": "^4.1.0",
-        "@smithy/smithy-client": "^3.1.12",
-        "@smithy/types": "^3.3.0",
-        "@smithy/url-parser": "^3.0.3",
+        "@aws-sdk/core": "3.654.0",
+        "@aws-sdk/middleware-host-header": "3.654.0",
+        "@aws-sdk/middleware-logger": "3.654.0",
+        "@aws-sdk/middleware-recursion-detection": "3.654.0",
+        "@aws-sdk/middleware-user-agent": "3.654.0",
+        "@aws-sdk/region-config-resolver": "3.654.0",
+        "@aws-sdk/types": "3.654.0",
+        "@aws-sdk/util-endpoints": "3.654.0",
+        "@aws-sdk/util-user-agent-browser": "3.654.0",
+        "@aws-sdk/util-user-agent-node": "3.654.0",
+        "@smithy/config-resolver": "^3.0.8",
+        "@smithy/core": "^2.4.3",
+        "@smithy/fetch-http-handler": "^3.2.7",
+        "@smithy/hash-node": "^3.0.6",
+        "@smithy/invalid-dependency": "^3.0.6",
+        "@smithy/middleware-content-length": "^3.0.8",
+        "@smithy/middleware-endpoint": "^3.1.3",
+        "@smithy/middleware-retry": "^3.0.18",
+        "@smithy/middleware-serde": "^3.0.6",
+        "@smithy/middleware-stack": "^3.0.6",
+        "@smithy/node-config-provider": "^3.1.7",
+        "@smithy/node-http-handler": "^3.2.2",
+        "@smithy/protocol-http": "^4.1.3",
+        "@smithy/smithy-client": "^3.3.2",
+        "@smithy/types": "^3.4.2",
+        "@smithy/url-parser": "^3.0.6",
         "@smithy/util-base64": "^3.0.0",
         "@smithy/util-body-length-browser": "^3.0.0",
         "@smithy/util-body-length-node": "^3.0.0",
-        "@smithy/util-defaults-mode-browser": "^3.0.14",
-        "@smithy/util-defaults-mode-node": "^3.0.14",
-        "@smithy/util-endpoints": "^2.0.5",
-        "@smithy/util-middleware": "^3.0.3",
-        "@smithy/util-retry": "^3.0.3",
+        "@smithy/util-defaults-mode-browser": "^3.0.18",
+        "@smithy/util-defaults-mode-node": "^3.0.18",
+        "@smithy/util-endpoints": "^2.1.2",
+        "@smithy/util-middleware": "^3.0.6",
+        "@smithy/util-retry": "^3.0.6",
         "@smithy/util-utf8": "^3.0.0",
         tslib: "^2.6.2"
       },
@@ -12845,10 +12968,10 @@ var init_package2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/endpoint/ruleset.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/ruleset.js
 var u2, v2, w2, x2, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, k2, l2, m2, n2, o2, p2, q2, r2, s2, t2, _data2, ruleSet2;
 var init_ruleset2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/endpoint/ruleset.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/ruleset.js"() {
     u2 = "required";
     v2 = "fn";
     w2 = "argv";
@@ -12878,27 +13001,31 @@ var init_ruleset2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/endpoint/endpointResolver.js
-var defaultEndpointResolver2;
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/endpointResolver.js
+var cache2, defaultEndpointResolver2;
 var init_endpointResolver2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/endpoint/endpointResolver.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/endpoint/endpointResolver.js"() {
     init_dist_es7();
     init_dist_es6();
     init_ruleset2();
+    cache2 = new EndpointCache2({
+      size: 50,
+      params: ["Endpoint", "Region", "UseDualStack", "UseFIPS"]
+    });
     defaultEndpointResolver2 = /* @__PURE__ */ __name((endpointParams, context = {}) => {
-      return resolveEndpoint(ruleSet2, {
+      return cache2.get(endpointParams, () => resolveEndpoint(ruleSet2, {
         endpointParams,
         logger: context.logger
-      });
+      }));
     }, "defaultEndpointResolver");
     customEndpointFunctions.aws = awsEndpointFunctions;
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.shared.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.shared.js
 var getRuntimeConfig3;
 var init_runtimeConfig_shared2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.shared.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.shared.js"() {
     init_dist_es37();
     init_dist_es34();
     init_dist_es32();
@@ -12938,10 +13065,10 @@ var init_runtimeConfig_shared2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.js
 var getRuntimeConfig4;
 var init_runtimeConfig2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeConfig.js"() {
     init_package2();
     init_dist_es37();
     init_dist_es41();
@@ -12985,10 +13112,10 @@ var init_runtimeConfig2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthExtensionConfiguration.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthExtensionConfiguration.js
 var getHttpAuthExtensionConfiguration2, resolveHttpAuthRuntimeConfig2;
 var init_httpAuthExtensionConfiguration2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/auth/httpAuthExtensionConfiguration.js"() {
     getHttpAuthExtensionConfiguration2 = /* @__PURE__ */ __name((runtimeConfig) => {
       const _httpAuthSchemes = runtimeConfig.httpAuthSchemes;
       let _httpAuthSchemeProvider = runtimeConfig.httpAuthSchemeProvider;
@@ -13029,10 +13156,10 @@ var init_httpAuthExtensionConfiguration2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/runtimeExtensions.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeExtensions.js
 var asPartial2, resolveRuntimeExtensions2;
 var init_runtimeExtensions2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/runtimeExtensions.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/runtimeExtensions.js"() {
     init_dist_es45();
     init_dist_es2();
     init_dist_es32();
@@ -13057,10 +13184,10 @@ var init_runtimeExtensions2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/SSOClient.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/SSOClient.js
 var SSOClient;
 var init_SSOClient = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/SSOClient.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/SSOClient.js"() {
     init_dist_es3();
     init_dist_es4();
     init_dist_es5();
@@ -13112,10 +13239,10 @@ var init_SSOClient = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/models/SSOServiceException.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/SSOServiceException.js
 var SSOServiceException;
 var init_SSOServiceException = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/models/SSOServiceException.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/SSOServiceException.js"() {
     init_dist_es32();
     SSOServiceException = class _SSOServiceException extends ServiceException {
       static {
@@ -13129,10 +13256,10 @@ var init_SSOServiceException = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/models/models_0.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/models_0.js
 var InvalidRequestException2, ResourceNotFoundException2, TooManyRequestsException, UnauthorizedException, GetRoleCredentialsRequestFilterSensitiveLog, RoleCredentialsFilterSensitiveLog, GetRoleCredentialsResponseFilterSensitiveLog, ListAccountRolesRequestFilterSensitiveLog, ListAccountsRequestFilterSensitiveLog, LogoutRequestFilterSensitiveLog;
 var init_models_02 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/models/models_0.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/models_0.js"() {
     init_dist_es32();
     init_SSOServiceException();
     InvalidRequestException2 = class _InvalidRequestException extends SSOServiceException {
@@ -13223,10 +13350,10 @@ var init_models_02 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js
 var se_GetRoleCredentialsCommand, se_ListAccountRolesCommand, se_ListAccountsCommand, se_LogoutCommand, de_GetRoleCredentialsCommand, de_ListAccountRolesCommand, de_ListAccountsCommand, de_LogoutCommand, de_CommandError3, throwDefaultError4, de_InvalidRequestExceptionRes2, de_ResourceNotFoundExceptionRes2, de_TooManyRequestsExceptionRes, de_UnauthorizedExceptionRes, deserializeMetadata4, isSerializableHeaderValue, _aI, _aT, _ai2, _mR, _mr, _nT, _nt, _rN, _rn, _xasbt;
 var init_Aws_restJson12 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js"() {
     init_dist_es37();
     init_dist_es34();
     init_dist_es32();
@@ -13440,19 +13567,17 @@ var init_Aws_restJson12 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/commands/GetRoleCredentialsCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/GetRoleCredentialsCommand.js
 var GetRoleCredentialsCommand;
 var init_GetRoleCredentialsCommand = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/commands/GetRoleCredentialsCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/GetRoleCredentialsCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters2();
     init_models_02();
     init_Aws_restJson12();
-    GetRoleCredentialsCommand = class extends Command.classBuilder().ep({
-      ...commonParams3
-    }).m(function(Command2, cs, config, o5) {
+    GetRoleCredentialsCommand = class extends Command.classBuilder().ep(commonParams3).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -13465,19 +13590,17 @@ var init_GetRoleCredentialsCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountRolesCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountRolesCommand.js
 var ListAccountRolesCommand;
 var init_ListAccountRolesCommand = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountRolesCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountRolesCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters2();
     init_models_02();
     init_Aws_restJson12();
-    ListAccountRolesCommand = class extends Command.classBuilder().ep({
-      ...commonParams3
-    }).m(function(Command2, cs, config, o5) {
+    ListAccountRolesCommand = class extends Command.classBuilder().ep(commonParams3).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -13490,19 +13613,17 @@ var init_ListAccountRolesCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountsCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountsCommand.js
 var ListAccountsCommand;
 var init_ListAccountsCommand = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountsCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/ListAccountsCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters2();
     init_models_02();
     init_Aws_restJson12();
-    ListAccountsCommand = class extends Command.classBuilder().ep({
-      ...commonParams3
-    }).m(function(Command2, cs, config, o5) {
+    ListAccountsCommand = class extends Command.classBuilder().ep(commonParams3).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -13515,19 +13636,17 @@ var init_ListAccountsCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/commands/LogoutCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/LogoutCommand.js
 var LogoutCommand;
 var init_LogoutCommand = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/commands/LogoutCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/LogoutCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters2();
     init_models_02();
     init_Aws_restJson12();
-    LogoutCommand = class extends Command.classBuilder().ep({
-      ...commonParams3
-    }).m(function(Command2, cs, config, o5) {
+    LogoutCommand = class extends Command.classBuilder().ep(commonParams3).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -13540,10 +13659,10 @@ var init_LogoutCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/SSO.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/SSO.js
 var commands2, SSO;
 var init_SSO = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/SSO.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/SSO.js"() {
     init_dist_es32();
     init_GetRoleCredentialsCommand();
     init_ListAccountRolesCommand();
@@ -13565,9 +13684,9 @@ var init_SSO = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/commands/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/index.js
 var init_commands2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/commands/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/commands/index.js"() {
     init_GetRoleCredentialsCommand();
     init_ListAccountRolesCommand();
     init_ListAccountsCommand();
@@ -13575,16 +13694,16 @@ var init_commands2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/pagination/Interfaces.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/Interfaces.js
 var init_Interfaces = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/pagination/Interfaces.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/Interfaces.js"() {
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountRolesPaginator.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountRolesPaginator.js
 var paginateListAccountRoles;
 var init_ListAccountRolesPaginator = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountRolesPaginator.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountRolesPaginator.js"() {
     init_dist_es34();
     init_ListAccountRolesCommand();
     init_SSOClient();
@@ -13592,10 +13711,10 @@ var init_ListAccountRolesPaginator = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountsPaginator.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountsPaginator.js
 var paginateListAccounts;
 var init_ListAccountsPaginator = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountsPaginator.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/ListAccountsPaginator.js"() {
     init_dist_es34();
     init_ListAccountsCommand();
     init_SSOClient();
@@ -13603,25 +13722,25 @@ var init_ListAccountsPaginator = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/pagination/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/index.js
 var init_pagination2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/pagination/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/pagination/index.js"() {
     init_Interfaces();
     init_ListAccountRolesPaginator();
     init_ListAccountsPaginator();
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/models/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/index.js
 var init_models2 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/models/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/models/index.js"() {
     init_models_02();
   }
 });
 
-// node_modules/@aws-sdk/client-sso/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/index.js
 var init_dist_es48 = __esm({
-  "node_modules/@aws-sdk/client-sso/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sso@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sso/dist-es/index.js"() {
     init_SSOClient();
     init_SSO();
     init_commands2();
@@ -13630,22 +13749,22 @@ var init_dist_es48 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/loadSso.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/loadSso.js
 var loadSso_exports = {};
 __export(loadSso_exports, {
   GetRoleCredentialsCommand: () => GetRoleCredentialsCommand,
   SSOClient: () => SSOClient
 });
 var init_loadSso = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/loadSso.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/loadSso.js"() {
     init_dist_es48();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/resolveSSOCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/resolveSSOCredentials.js
 var SHOULD_FAIL_CREDENTIAL_CHAIN, resolveSSOCredentials;
 var init_resolveSSOCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/resolveSSOCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/resolveSSOCredentials.js"() {
     init_dist_es47();
     init_dist_es12();
     init_dist_es13();
@@ -13719,10 +13838,10 @@ var init_resolveSSOCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/validateSsoProfile.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/validateSsoProfile.js
 var validateSsoProfile;
 var init_validateSsoProfile = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/validateSsoProfile.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/validateSsoProfile.js"() {
     init_dist_es12();
     validateSsoProfile = /* @__PURE__ */ __name((profile, logger2) => {
       const { sso_start_url, sso_account_id, sso_region, sso_role_name } = profile;
@@ -13735,10 +13854,10 @@ Reference: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.ht
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/fromSSO.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/fromSSO.js
 var fromSSO;
 var init_fromSSO = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/fromSSO.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/fromSSO.js"() {
     init_dist_es12();
     init_dist_es13();
     init_isSsoProfile();
@@ -13808,13 +13927,13 @@ var init_fromSSO = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/types.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/types.js
 var init_types9 = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/types.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/types.js"() {
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-sso/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/index.js
 var dist_es_exports5 = {};
 __export(dist_es_exports5, {
   fromSSO: () => fromSSO,
@@ -13822,7 +13941,7 @@ __export(dist_es_exports5, {
   validateSsoProfile: () => validateSsoProfile
 });
 var init_dist_es49 = __esm({
-  "node_modules/@aws-sdk/credential-provider-sso/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-sso@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_xsmbhpf33opw3gsnj4h4vaednq/node_modules/@aws-sdk/credential-provider-sso/dist-es/index.js"() {
     init_fromSSO();
     init_isSsoProfile();
     init_types9();
@@ -13830,10 +13949,10 @@ var init_dist_es49 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveCredentialSource.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveCredentialSource.js
 var resolveCredentialSource;
 var init_resolveCredentialSource = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveCredentialSource.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveCredentialSource.js"() {
     init_dist_es12();
     resolveCredentialSource = /* @__PURE__ */ __name((credentialSource, profileName, logger2) => {
       const sourceProvidersMap = {
@@ -13863,7 +13982,7 @@ var init_resolveCredentialSource = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthSchemeProvider.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthSchemeProvider.js
 function createAwsAuthSigv4HttpAuthOption4(authParameters) {
   return {
     schemeId: "aws.auth#sigv4",
@@ -13886,7 +14005,7 @@ function createSmithyApiNoAuthHttpAuthOption3(authParameters) {
 }
 var defaultSTSHttpAuthSchemeParametersProvider, defaultSTSHttpAuthSchemeProvider, resolveStsAuthConfig, resolveHttpAuthSchemeConfig4;
 var init_httpAuthSchemeProvider3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthSchemeProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthSchemeProvider.js"() {
     init_dist_es37();
     init_dist_es10();
     init_STSClient();
@@ -13931,10 +14050,10 @@ var init_httpAuthSchemeProvider3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/endpoint/EndpointParameters.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/EndpointParameters.js
 var resolveClientEndpointParameters4, commonParams4;
 var init_EndpointParameters3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/endpoint/EndpointParameters.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/EndpointParameters.js"() {
     resolveClientEndpointParameters4 = /* @__PURE__ */ __name((options) => {
       return {
         ...options,
@@ -13954,14 +14073,14 @@ var init_EndpointParameters3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/package.json
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/package.json
 var package_default4;
 var init_package3 = __esm({
-  "node_modules/@aws-sdk/client-sts/package.json"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/package.json"() {
     package_default4 = {
       name: "@aws-sdk/client-sts",
       description: "AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native",
-      version: "3.629.0",
+      version: "3.654.0",
       scripts: {
         build: "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
         "build:cjs": "node ../../scripts/compilation/inline client-sts",
@@ -13982,42 +14101,42 @@ var init_package3 = __esm({
       dependencies: {
         "@aws-crypto/sha256-browser": "5.2.0",
         "@aws-crypto/sha256-js": "5.2.0",
-        "@aws-sdk/client-sso-oidc": "3.629.0",
-        "@aws-sdk/core": "3.629.0",
-        "@aws-sdk/credential-provider-node": "3.629.0",
-        "@aws-sdk/middleware-host-header": "3.620.0",
-        "@aws-sdk/middleware-logger": "3.609.0",
-        "@aws-sdk/middleware-recursion-detection": "3.620.0",
-        "@aws-sdk/middleware-user-agent": "3.620.0",
-        "@aws-sdk/region-config-resolver": "3.614.0",
-        "@aws-sdk/types": "3.609.0",
-        "@aws-sdk/util-endpoints": "3.614.0",
-        "@aws-sdk/util-user-agent-browser": "3.609.0",
-        "@aws-sdk/util-user-agent-node": "3.614.0",
-        "@smithy/config-resolver": "^3.0.5",
-        "@smithy/core": "^2.3.2",
-        "@smithy/fetch-http-handler": "^3.2.4",
-        "@smithy/hash-node": "^3.0.3",
-        "@smithy/invalid-dependency": "^3.0.3",
-        "@smithy/middleware-content-length": "^3.0.5",
-        "@smithy/middleware-endpoint": "^3.1.0",
-        "@smithy/middleware-retry": "^3.0.14",
-        "@smithy/middleware-serde": "^3.0.3",
-        "@smithy/middleware-stack": "^3.0.3",
-        "@smithy/node-config-provider": "^3.1.4",
-        "@smithy/node-http-handler": "^3.1.4",
-        "@smithy/protocol-http": "^4.1.0",
-        "@smithy/smithy-client": "^3.1.12",
-        "@smithy/types": "^3.3.0",
-        "@smithy/url-parser": "^3.0.3",
+        "@aws-sdk/client-sso-oidc": "3.654.0",
+        "@aws-sdk/core": "3.654.0",
+        "@aws-sdk/credential-provider-node": "3.654.0",
+        "@aws-sdk/middleware-host-header": "3.654.0",
+        "@aws-sdk/middleware-logger": "3.654.0",
+        "@aws-sdk/middleware-recursion-detection": "3.654.0",
+        "@aws-sdk/middleware-user-agent": "3.654.0",
+        "@aws-sdk/region-config-resolver": "3.654.0",
+        "@aws-sdk/types": "3.654.0",
+        "@aws-sdk/util-endpoints": "3.654.0",
+        "@aws-sdk/util-user-agent-browser": "3.654.0",
+        "@aws-sdk/util-user-agent-node": "3.654.0",
+        "@smithy/config-resolver": "^3.0.8",
+        "@smithy/core": "^2.4.3",
+        "@smithy/fetch-http-handler": "^3.2.7",
+        "@smithy/hash-node": "^3.0.6",
+        "@smithy/invalid-dependency": "^3.0.6",
+        "@smithy/middleware-content-length": "^3.0.8",
+        "@smithy/middleware-endpoint": "^3.1.3",
+        "@smithy/middleware-retry": "^3.0.18",
+        "@smithy/middleware-serde": "^3.0.6",
+        "@smithy/middleware-stack": "^3.0.6",
+        "@smithy/node-config-provider": "^3.1.7",
+        "@smithy/node-http-handler": "^3.2.2",
+        "@smithy/protocol-http": "^4.1.3",
+        "@smithy/smithy-client": "^3.3.2",
+        "@smithy/types": "^3.4.2",
+        "@smithy/url-parser": "^3.0.6",
         "@smithy/util-base64": "^3.0.0",
         "@smithy/util-body-length-browser": "^3.0.0",
         "@smithy/util-body-length-node": "^3.0.0",
-        "@smithy/util-defaults-mode-browser": "^3.0.14",
-        "@smithy/util-defaults-mode-node": "^3.0.14",
-        "@smithy/util-endpoints": "^2.0.5",
-        "@smithy/util-middleware": "^3.0.3",
-        "@smithy/util-retry": "^3.0.3",
+        "@smithy/util-defaults-mode-browser": "^3.0.18",
+        "@smithy/util-defaults-mode-node": "^3.0.18",
+        "@smithy/util-endpoints": "^2.1.2",
+        "@smithy/util-middleware": "^3.0.6",
+        "@smithy/util-retry": "^3.0.6",
         "@smithy/util-utf8": "^3.0.0",
         tslib: "^2.6.2"
       },
@@ -14063,10 +14182,10 @@ var init_package3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/endpoint/ruleset.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/ruleset.js
 var F, G, H, I, J, a3, b3, c3, d3, e3, f3, g3, h3, i3, j3, k3, l3, m3, n3, o3, p3, q3, r3, s3, t3, u3, v3, w3, x3, y, z, A, B, C, D, E, _data3, ruleSet3;
 var init_ruleset3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/endpoint/ruleset.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/ruleset.js"() {
     F = "required";
     G = "type";
     H = "fn";
@@ -14108,27 +14227,31 @@ var init_ruleset3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/endpoint/endpointResolver.js
-var defaultEndpointResolver3;
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/endpointResolver.js
+var cache3, defaultEndpointResolver3;
 var init_endpointResolver3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/endpoint/endpointResolver.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/endpoint/endpointResolver.js"() {
     init_dist_es7();
     init_dist_es6();
     init_ruleset3();
+    cache3 = new EndpointCache2({
+      size: 50,
+      params: ["Endpoint", "Region", "UseDualStack", "UseFIPS", "UseGlobalEndpoint"]
+    });
     defaultEndpointResolver3 = /* @__PURE__ */ __name((endpointParams, context = {}) => {
-      return resolveEndpoint(ruleSet3, {
+      return cache3.get(endpointParams, () => resolveEndpoint(ruleSet3, {
         endpointParams,
         logger: context.logger
-      });
+      }));
     }, "defaultEndpointResolver");
     customEndpointFunctions.aws = awsEndpointFunctions;
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.shared.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.shared.js
 var getRuntimeConfig5;
 var init_runtimeConfig_shared3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.shared.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.shared.js"() {
     init_dist_es37();
     init_dist_es34();
     init_dist_es32();
@@ -14168,10 +14291,10 @@ var init_runtimeConfig_shared3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.js
 var getRuntimeConfig6;
 var init_runtimeConfig3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeConfig.js"() {
     init_package3();
     init_dist_es37();
     init_dist_es54();
@@ -14230,10 +14353,10 @@ var init_runtimeConfig3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthExtensionConfiguration.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthExtensionConfiguration.js
 var getHttpAuthExtensionConfiguration3, resolveHttpAuthRuntimeConfig3;
 var init_httpAuthExtensionConfiguration3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthExtensionConfiguration.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/auth/httpAuthExtensionConfiguration.js"() {
     getHttpAuthExtensionConfiguration3 = /* @__PURE__ */ __name((runtimeConfig) => {
       const _httpAuthSchemes = runtimeConfig.httpAuthSchemes;
       let _httpAuthSchemeProvider = runtimeConfig.httpAuthSchemeProvider;
@@ -14274,10 +14397,10 @@ var init_httpAuthExtensionConfiguration3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/runtimeExtensions.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeExtensions.js
 var asPartial3, resolveRuntimeExtensions3;
 var init_runtimeExtensions3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/runtimeExtensions.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/runtimeExtensions.js"() {
     init_dist_es45();
     init_dist_es2();
     init_dist_es32();
@@ -14302,10 +14425,10 @@ var init_runtimeExtensions3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/STSClient.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/STSClient.js
 var STSClient;
 var init_STSClient = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/STSClient.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/STSClient.js"() {
     init_dist_es3();
     init_dist_es4();
     init_dist_es5();
@@ -14357,10 +14480,10 @@ var init_STSClient = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/models/STSServiceException.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/STSServiceException.js
 var STSServiceException;
 var init_STSServiceException = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/models/STSServiceException.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/STSServiceException.js"() {
     init_dist_es32();
     STSServiceException = class _STSServiceException extends ServiceException {
       static {
@@ -14374,10 +14497,10 @@ var init_STSServiceException = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/models/models_0.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/models_0.js
 var ExpiredTokenException2, MalformedPolicyDocumentException, PackedPolicyTooLargeException, RegionDisabledException, IDPRejectedClaimException, InvalidIdentityTokenException, IDPCommunicationErrorException, InvalidAuthorizationMessageException, CredentialsFilterSensitiveLog, AssumeRoleResponseFilterSensitiveLog, AssumeRoleWithSAMLRequestFilterSensitiveLog, AssumeRoleWithSAMLResponseFilterSensitiveLog, AssumeRoleWithWebIdentityRequestFilterSensitiveLog, AssumeRoleWithWebIdentityResponseFilterSensitiveLog, GetFederationTokenResponseFilterSensitiveLog, GetSessionTokenResponseFilterSensitiveLog;
 var init_models_03 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/models/models_0.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/models_0.js"() {
     init_dist_es32();
     init_STSServiceException();
     ExpiredTokenException2 = class _ExpiredTokenException extends STSServiceException {
@@ -14535,10 +14658,10 @@ var init_models_03 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/protocols/Aws_query.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/protocols/Aws_query.js
 var se_AssumeRoleCommand, se_AssumeRoleWithSAMLCommand, se_AssumeRoleWithWebIdentityCommand, se_DecodeAuthorizationMessageCommand, se_GetAccessKeyInfoCommand, se_GetCallerIdentityCommand, se_GetFederationTokenCommand, se_GetSessionTokenCommand, de_AssumeRoleCommand, de_AssumeRoleWithSAMLCommand, de_AssumeRoleWithWebIdentityCommand, de_DecodeAuthorizationMessageCommand, de_GetAccessKeyInfoCommand, de_GetCallerIdentityCommand, de_GetFederationTokenCommand, de_GetSessionTokenCommand, de_CommandError4, de_ExpiredTokenExceptionRes2, de_IDPCommunicationErrorExceptionRes, de_IDPRejectedClaimExceptionRes, de_InvalidAuthorizationMessageExceptionRes, de_InvalidIdentityTokenExceptionRes, de_MalformedPolicyDocumentExceptionRes, de_PackedPolicyTooLargeExceptionRes, de_RegionDisabledExceptionRes, se_AssumeRoleRequest, se_AssumeRoleWithSAMLRequest, se_AssumeRoleWithWebIdentityRequest, se_DecodeAuthorizationMessageRequest, se_GetAccessKeyInfoRequest, se_GetCallerIdentityRequest, se_GetFederationTokenRequest, se_GetSessionTokenRequest, se_policyDescriptorListType, se_PolicyDescriptorType, se_ProvidedContext, se_ProvidedContextsListType, se_Tag, se_tagKeyListType, se_tagListType, de_AssumedRoleUser, de_AssumeRoleResponse, de_AssumeRoleWithSAMLResponse, de_AssumeRoleWithWebIdentityResponse, de_Credentials, de_DecodeAuthorizationMessageResponse, de_ExpiredTokenException, de_FederatedUser, de_GetAccessKeyInfoResponse, de_GetCallerIdentityResponse, de_GetFederationTokenResponse, de_GetSessionTokenResponse, de_IDPCommunicationErrorException, de_IDPRejectedClaimException, de_InvalidAuthorizationMessageException, de_InvalidIdentityTokenException, de_MalformedPolicyDocumentException, de_PackedPolicyTooLargeException, de_RegionDisabledException, deserializeMetadata5, throwDefaultError5, buildHttpRpcRequest2, SHARED_HEADERS, _, _A, _AKI, _AR, _ARI, _ARU, _ARWSAML, _ARWWI, _Ac, _Ar, _Au, _C, _CA, _DAM, _DM, _DS, _E, _EI, _EM, _FU, _FUI, _GAKI, _GCI, _GFT, _GST, _I, _K, _N, _NQ, _P, _PA, _PAr, _PAro, _PC, _PI, _PPS, _Pr, _RA, _RSN, _S, _SAK, _SAMLA, _SFWIT, _SI, _SN, _ST, _STe, _T, _TC, _TTK, _UI, _V, _Va, _WIT, _a, _m, buildFormUrlencodedString, loadQueryErrorCode;
 var init_Aws_query = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/protocols/Aws_query.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/protocols/Aws_query.js"() {
     init_dist_es37();
     init_dist_es2();
     init_dist_es32();
@@ -15424,19 +15547,17 @@ var init_Aws_query = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleCommand.js
 var AssumeRoleCommand;
 var init_AssumeRoleCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_models_03();
     init_Aws_query();
-    AssumeRoleCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    AssumeRoleCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15449,19 +15570,17 @@ var init_AssumeRoleCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithSAMLCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithSAMLCommand.js
 var AssumeRoleWithSAMLCommand;
 var init_AssumeRoleWithSAMLCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithSAMLCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithSAMLCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_models_03();
     init_Aws_query();
-    AssumeRoleWithSAMLCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    AssumeRoleWithSAMLCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15474,19 +15593,17 @@ var init_AssumeRoleWithSAMLCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithWebIdentityCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithWebIdentityCommand.js
 var AssumeRoleWithWebIdentityCommand;
 var init_AssumeRoleWithWebIdentityCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithWebIdentityCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/AssumeRoleWithWebIdentityCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_models_03();
     init_Aws_query();
-    AssumeRoleWithWebIdentityCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    AssumeRoleWithWebIdentityCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15499,18 +15616,16 @@ var init_AssumeRoleWithWebIdentityCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/DecodeAuthorizationMessageCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/DecodeAuthorizationMessageCommand.js
 var DecodeAuthorizationMessageCommand;
 var init_DecodeAuthorizationMessageCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/DecodeAuthorizationMessageCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/DecodeAuthorizationMessageCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_Aws_query();
-    DecodeAuthorizationMessageCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    DecodeAuthorizationMessageCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15523,18 +15638,16 @@ var init_DecodeAuthorizationMessageCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/GetAccessKeyInfoCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetAccessKeyInfoCommand.js
 var GetAccessKeyInfoCommand;
 var init_GetAccessKeyInfoCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/GetAccessKeyInfoCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetAccessKeyInfoCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_Aws_query();
-    GetAccessKeyInfoCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    GetAccessKeyInfoCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15547,18 +15660,16 @@ var init_GetAccessKeyInfoCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/GetCallerIdentityCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetCallerIdentityCommand.js
 var GetCallerIdentityCommand;
 var init_GetCallerIdentityCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/GetCallerIdentityCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetCallerIdentityCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_Aws_query();
-    GetCallerIdentityCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    GetCallerIdentityCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15571,19 +15682,17 @@ var init_GetCallerIdentityCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/GetFederationTokenCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetFederationTokenCommand.js
 var GetFederationTokenCommand;
 var init_GetFederationTokenCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/GetFederationTokenCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetFederationTokenCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_models_03();
     init_Aws_query();
-    GetFederationTokenCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    GetFederationTokenCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15596,19 +15705,17 @@ var init_GetFederationTokenCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/GetSessionTokenCommand.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetSessionTokenCommand.js
 var GetSessionTokenCommand;
 var init_GetSessionTokenCommand = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/GetSessionTokenCommand.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/GetSessionTokenCommand.js"() {
     init_dist_es18();
     init_dist_es17();
     init_dist_es32();
     init_EndpointParameters3();
     init_models_03();
     init_Aws_query();
-    GetSessionTokenCommand = class extends Command.classBuilder().ep({
-      ...commonParams4
-    }).m(function(Command2, cs, config, o5) {
+    GetSessionTokenCommand = class extends Command.classBuilder().ep(commonParams4).m(function(Command2, cs, config, o5) {
       return [
         getSerdePlugin(config, this.serialize, this.deserialize),
         getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -15621,10 +15728,10 @@ var init_GetSessionTokenCommand = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/STS.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/STS.js
 var commands3, STS;
 var init_STS = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/STS.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/STS.js"() {
     init_dist_es32();
     init_AssumeRoleCommand();
     init_AssumeRoleWithSAMLCommand();
@@ -15654,9 +15761,9 @@ var init_STS = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/commands/index.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/index.js
 var init_commands3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/commands/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/commands/index.js"() {
     init_AssumeRoleCommand();
     init_AssumeRoleWithSAMLCommand();
     init_AssumeRoleWithWebIdentityCommand();
@@ -15668,17 +15775,17 @@ var init_commands3 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/models/index.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/index.js
 var init_models3 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/models/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/models/index.js"() {
     init_models_03();
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/defaultStsRoleAssumers.js
-var ASSUME_ROLE_DEFAULT_REGION, getAccountIdFromAssumedRoleUser, resolveRegion, getDefaultRoleAssumer, getDefaultRoleAssumerWithWebIdentity;
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/defaultStsRoleAssumers.js
+var ASSUME_ROLE_DEFAULT_REGION, getAccountIdFromAssumedRoleUser, resolveRegion, getDefaultRoleAssumer, getDefaultRoleAssumerWithWebIdentity, isH2;
 var init_defaultStsRoleAssumers = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/defaultStsRoleAssumers.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/defaultStsRoleAssumers.js"() {
     init_AssumeRoleCommand();
     init_AssumeRoleWithWebIdentityCommand();
     ASSUME_ROLE_DEFAULT_REGION = "us-east-1";
@@ -15705,10 +15812,11 @@ var init_defaultStsRoleAssumers = __esm({
         if (!stsClient) {
           const { logger: logger2 = stsOptions?.parentClientConfig?.logger, region, requestHandler = stsOptions?.parentClientConfig?.requestHandler, credentialProviderLogger } = stsOptions;
           const resolvedRegion = await resolveRegion(region, stsOptions?.parentClientConfig?.region, credentialProviderLogger);
+          const isCompatibleRequestHandler = !isH2(requestHandler);
           stsClient = new stsClientCtor({
             credentialDefaultProvider: () => async () => closureSourceCreds,
             region: resolvedRegion,
-            requestHandler,
+            requestHandler: isCompatibleRequestHandler ? requestHandler : void 0,
             logger: logger2
           });
         }
@@ -15733,9 +15841,10 @@ var init_defaultStsRoleAssumers = __esm({
         if (!stsClient) {
           const { logger: logger2 = stsOptions?.parentClientConfig?.logger, region, requestHandler = stsOptions?.parentClientConfig?.requestHandler, credentialProviderLogger } = stsOptions;
           const resolvedRegion = await resolveRegion(region, stsOptions?.parentClientConfig?.region, credentialProviderLogger);
+          const isCompatibleRequestHandler = !isH2(requestHandler);
           stsClient = new stsClientCtor({
             region: resolvedRegion,
-            requestHandler,
+            requestHandler: isCompatibleRequestHandler ? requestHandler : void 0,
             logger: logger2
           });
         }
@@ -15754,13 +15863,16 @@ var init_defaultStsRoleAssumers = __esm({
         };
       };
     }, "getDefaultRoleAssumerWithWebIdentity");
+    isH2 = /* @__PURE__ */ __name((requestHandler) => {
+      return requestHandler?.metadata?.handlerProtocol === "h2";
+    }, "isH2");
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/defaultRoleAssumers.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/defaultRoleAssumers.js
 var getCustomizableStsClientCtor, getDefaultRoleAssumer2, getDefaultRoleAssumerWithWebIdentity2, decorateDefaultCredentialProvider;
 var init_defaultRoleAssumers = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/defaultRoleAssumers.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/defaultRoleAssumers.js"() {
     init_defaultStsRoleAssumers();
     init_STSClient();
     getCustomizableStsClientCtor = /* @__PURE__ */ __name((baseCtor, customizations) => {
@@ -15789,7 +15901,7 @@ var init_defaultRoleAssumers = __esm({
   }
 });
 
-// node_modules/@aws-sdk/client-sts/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/index.js
 var dist_es_exports6 = {};
 __export(dist_es_exports6, {
   $Command: () => Command,
@@ -15826,7 +15938,7 @@ __export(dist_es_exports6, {
   getDefaultRoleAssumerWithWebIdentity: () => getDefaultRoleAssumerWithWebIdentity2
 });
 var init_dist_es50 = __esm({
-  "node_modules/@aws-sdk/client-sts/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-sts/dist-es/index.js"() {
     init_STSClient();
     init_STS();
     init_commands3();
@@ -15836,10 +15948,10 @@ var init_dist_es50 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveAssumeRoleCredentials.js
-var isAssumeRoleProfile, isAssumeRoleWithSourceProfile, isCredentialSourceProfile, resolveAssumeRoleCredentials;
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveAssumeRoleCredentials.js
+var isAssumeRoleProfile, isAssumeRoleWithSourceProfile, isCredentialSourceProfile, resolveAssumeRoleCredentials, isCredentialSourceWithoutRoleArn;
 var init_resolveAssumeRoleCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveAssumeRoleCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveAssumeRoleCredentials.js"() {
     init_dist_es12();
     init_dist_es13();
     init_resolveCredentialSource();
@@ -15877,40 +15989,41 @@ var init_resolveAssumeRoleCredentials = __esm({
         throw new CredentialsProviderError(`Detected a cycle attempting to resolve credentials for profile ${getProfileName(options)}. Profiles visited: ` + Object.keys(visitedProfiles).join(", "), { logger: options.logger });
       }
       options.logger?.debug(`@aws-sdk/credential-provider-ini - finding credential resolver using ${source_profile ? `source_profile=[${source_profile}]` : `profile=[${profileName}]`}`);
-      const sourceCredsProvider = source_profile ? resolveProfileData(source_profile, {
-        ...profiles,
-        [source_profile]: {
-          ...profiles[source_profile],
-          role_arn: data.role_arn ?? profiles[source_profile].role_arn
-        }
-      }, options, {
+      const sourceCredsProvider = source_profile ? resolveProfileData(source_profile, profiles, options, {
         ...visitedProfiles,
         [source_profile]: true
-      }) : (await resolveCredentialSource(data.credential_source, profileName, options.logger)(options))();
-      const params = {
-        RoleArn: data.role_arn,
-        RoleSessionName: data.role_session_name || `aws-sdk-js-${Date.now()}`,
-        ExternalId: data.external_id,
-        DurationSeconds: parseInt(data.duration_seconds || "3600", 10)
-      };
-      const { mfa_serial } = data;
-      if (mfa_serial) {
-        if (!options.mfaCodeProvider) {
-          throw new CredentialsProviderError(`Profile ${profileName} requires multi-factor authentication, but no MFA code callback was provided.`, { logger: options.logger, tryNextLink: false });
+      }, isCredentialSourceWithoutRoleArn(profiles[source_profile] ?? {})) : (await resolveCredentialSource(data.credential_source, profileName, options.logger)(options))();
+      if (isCredentialSourceWithoutRoleArn(data)) {
+        return sourceCredsProvider;
+      } else {
+        const params = {
+          RoleArn: data.role_arn,
+          RoleSessionName: data.role_session_name || `aws-sdk-js-${Date.now()}`,
+          ExternalId: data.external_id,
+          DurationSeconds: parseInt(data.duration_seconds || "3600", 10)
+        };
+        const { mfa_serial } = data;
+        if (mfa_serial) {
+          if (!options.mfaCodeProvider) {
+            throw new CredentialsProviderError(`Profile ${profileName} requires multi-factor authentication, but no MFA code callback was provided.`, { logger: options.logger, tryNextLink: false });
+          }
+          params.SerialNumber = mfa_serial;
+          params.TokenCode = await options.mfaCodeProvider(mfa_serial);
         }
-        params.SerialNumber = mfa_serial;
-        params.TokenCode = await options.mfaCodeProvider(mfa_serial);
+        const sourceCreds = await sourceCredsProvider;
+        return options.roleAssumer(sourceCreds, params);
       }
-      const sourceCreds = await sourceCredsProvider;
-      return options.roleAssumer(sourceCreds, params);
     }, "resolveAssumeRoleCredentials");
+    isCredentialSourceWithoutRoleArn = /* @__PURE__ */ __name((section) => {
+      return !section.role_arn && !!section.credential_source;
+    }, "isCredentialSourceWithoutRoleArn");
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-process/dist-es/getValidatedProcessCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/getValidatedProcessCredentials.js
 var getValidatedProcessCredentials;
 var init_getValidatedProcessCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-process/dist-es/getValidatedProcessCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/getValidatedProcessCredentials.js"() {
     getValidatedProcessCredentials = /* @__PURE__ */ __name((profileName, data, profiles) => {
       if (data.Version !== 1) {
         throw Error(`Profile ${profileName} credential_process did not return Version 1.`);
@@ -15941,12 +16054,12 @@ var init_getValidatedProcessCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-process/dist-es/resolveProcessCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/resolveProcessCredentials.js
 import { exec } from "child_process";
 import { promisify } from "util";
 var resolveProcessCredentials;
 var init_resolveProcessCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-process/dist-es/resolveProcessCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/resolveProcessCredentials.js"() {
     init_dist_es12();
     init_getValidatedProcessCredentials();
     resolveProcessCredentials = /* @__PURE__ */ __name(async (profileName, profiles, logger2) => {
@@ -15979,10 +16092,10 @@ var init_resolveProcessCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-process/dist-es/fromProcess.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/fromProcess.js
 var fromProcess;
 var init_fromProcess = __esm({
-  "node_modules/@aws-sdk/credential-provider-process/dist-es/fromProcess.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/fromProcess.js"() {
     init_dist_es13();
     init_resolveProcessCredentials();
     fromProcess = /* @__PURE__ */ __name((init = {}) => async () => {
@@ -15993,21 +16106,21 @@ var init_fromProcess = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-process/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/index.js
 var dist_es_exports7 = {};
 __export(dist_es_exports7, {
   fromProcess: () => fromProcess
 });
 var init_dist_es51 = __esm({
-  "node_modules/@aws-sdk/credential-provider-process/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-process@3.654.0/node_modules/@aws-sdk/credential-provider-process/dist-es/index.js"() {
     init_fromProcess();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProcessCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProcessCredentials.js
 var isProcessProfile, resolveProcessCredentials2;
 var init_resolveProcessCredentials2 = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProcessCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProcessCredentials.js"() {
     isProcessProfile = /* @__PURE__ */ __name((arg) => Boolean(arg) && typeof arg === "object" && typeof arg.credential_process === "string", "isProcessProfile");
     resolveProcessCredentials2 = /* @__PURE__ */ __name(async (options, profile) => Promise.resolve().then(() => (init_dist_es51(), dist_es_exports7)).then(({ fromProcess: fromProcess2 }) => fromProcess2({
       ...options,
@@ -16016,10 +16129,10 @@ var init_resolveProcessCredentials2 = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveSsoCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveSsoCredentials.js
 var resolveSsoCredentials, isSsoProfile2;
 var init_resolveSsoCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveSsoCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveSsoCredentials.js"() {
     resolveSsoCredentials = /* @__PURE__ */ __name(async (profile, options = {}) => {
       const { fromSSO: fromSSO2 } = await Promise.resolve().then(() => (init_dist_es49(), dist_es_exports5));
       return fromSSO2({
@@ -16031,10 +16144,10 @@ var init_resolveSsoCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveStaticCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveStaticCredentials.js
 var isStaticCredsProfile, resolveStaticCredentials;
 var init_resolveStaticCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveStaticCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveStaticCredentials.js"() {
     isStaticCredsProfile = /* @__PURE__ */ __name((arg) => Boolean(arg) && typeof arg === "object" && typeof arg.aws_access_key_id === "string" && typeof arg.aws_secret_access_key === "string" && ["undefined", "string"].indexOf(typeof arg.aws_session_token) > -1 && ["undefined", "string"].indexOf(typeof arg.aws_account_id) > -1, "isStaticCredsProfile");
     resolveStaticCredentials = /* @__PURE__ */ __name((profile, options) => {
       options?.logger?.debug("@aws-sdk/credential-provider-ini - resolveStaticCredentials");
@@ -16049,10 +16162,10 @@ var init_resolveStaticCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromWebToken.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromWebToken.js
 var fromWebToken;
 var init_fromWebToken = __esm({
-  "node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromWebToken.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromWebToken.js"() {
     fromWebToken = /* @__PURE__ */ __name((init) => async () => {
       init.logger?.debug("@aws-sdk/credential-provider-web-identity - fromWebToken");
       const { roleArn, roleSessionName, webIdentityToken, providerId, policyArns, policy, durationSeconds } = init;
@@ -16078,11 +16191,11 @@ var init_fromWebToken = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromTokenFile.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromTokenFile.js
 import { readFileSync } from "fs";
 var ENV_TOKEN_FILE, ENV_ROLE_ARN, ENV_ROLE_SESSION_NAME, fromTokenFile;
 var init_fromTokenFile = __esm({
-  "node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromTokenFile.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/fromTokenFile.js"() {
     init_dist_es12();
     init_fromWebToken();
     ENV_TOKEN_FILE = "AWS_WEB_IDENTITY_TOKEN_FILE";
@@ -16108,23 +16221,23 @@ var init_fromTokenFile = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-web-identity/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/index.js
 var dist_es_exports8 = {};
 __export(dist_es_exports8, {
   fromTokenFile: () => fromTokenFile,
   fromWebToken: () => fromWebToken
 });
 var init_dist_es52 = __esm({
-  "node_modules/@aws-sdk/credential-provider-web-identity/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-web-identity@3.654.0_@aws-sdk+client-sts@3.654.0_aws-crt@1.22.0_/node_modules/@aws-sdk/credential-provider-web-identity/dist-es/index.js"() {
     init_fromTokenFile();
     init_fromWebToken();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveWebIdentityCredentials.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveWebIdentityCredentials.js
 var isWebIdentityProfile, resolveWebIdentityCredentials;
 var init_resolveWebIdentityCredentials = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveWebIdentityCredentials.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveWebIdentityCredentials.js"() {
     isWebIdentityProfile = /* @__PURE__ */ __name((arg) => Boolean(arg) && typeof arg === "object" && typeof arg.web_identity_token_file === "string" && typeof arg.role_arn === "string" && ["undefined", "string"].indexOf(typeof arg.role_session_name) > -1, "isWebIdentityProfile");
     resolveWebIdentityCredentials = /* @__PURE__ */ __name(async (profile, options) => Promise.resolve().then(() => (init_dist_es52(), dist_es_exports8)).then(({ fromTokenFile: fromTokenFile2 }) => fromTokenFile2({
       webIdentityTokenFile: profile.web_identity_token_file,
@@ -16137,22 +16250,22 @@ var init_resolveWebIdentityCredentials = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProfileData.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProfileData.js
 var resolveProfileData;
 var init_resolveProfileData = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProfileData.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/resolveProfileData.js"() {
     init_dist_es12();
     init_resolveAssumeRoleCredentials();
     init_resolveProcessCredentials2();
     init_resolveSsoCredentials();
     init_resolveStaticCredentials();
     init_resolveWebIdentityCredentials();
-    resolveProfileData = /* @__PURE__ */ __name(async (profileName, profiles, options, visitedProfiles = {}) => {
+    resolveProfileData = /* @__PURE__ */ __name(async (profileName, profiles, options, visitedProfiles = {}, isAssumeRoleRecursiveCall = false) => {
       const data = profiles[profileName];
       if (Object.keys(visitedProfiles).length > 0 && isStaticCredsProfile(data)) {
         return resolveStaticCredentials(data, options);
       }
-      if (isAssumeRoleProfile(data, { profile: profileName, logger: options.logger })) {
+      if (isAssumeRoleRecursiveCall || isAssumeRoleProfile(data, { profile: profileName, logger: options.logger })) {
         return resolveAssumeRoleCredentials(profileName, profiles, options, visitedProfiles);
       }
       if (isStaticCredsProfile(data)) {
@@ -16172,10 +16285,10 @@ var init_resolveProfileData = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/fromIni.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/fromIni.js
 var fromIni;
 var init_fromIni = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/fromIni.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/fromIni.js"() {
     init_dist_es13();
     init_resolveProfileData();
     fromIni = /* @__PURE__ */ __name((init = {}) => async () => {
@@ -16186,21 +16299,21 @@ var init_fromIni = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-ini/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/index.js
 var dist_es_exports9 = {};
 __export(dist_es_exports9, {
   fromIni: () => fromIni
 });
 var init_dist_es53 = __esm({
-  "node_modules/@aws-sdk/credential-provider-ini/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-ini@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-sts_54pqefyapivchiuuxqz3ytctny/node_modules/@aws-sdk/credential-provider-ini/dist-es/index.js"() {
     init_fromIni();
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-node/dist-es/defaultProvider.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/defaultProvider.js
 var multipleCredentialSourceWarningEmitted, defaultProvider, credentialsWillNeedRefresh, credentialsTreatedAsExpired;
 var init_defaultProvider = __esm({
-  "node_modules/@aws-sdk/credential-provider-node/dist-es/defaultProvider.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/defaultProvider.js"() {
     init_dist_es38();
     init_dist_es12();
     init_dist_es13();
@@ -16266,14 +16379,14 @@ var init_defaultProvider = __esm({
   }
 });
 
-// node_modules/@aws-sdk/credential-provider-node/dist-es/index.js
+// node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/index.js
 var init_dist_es54 = __esm({
-  "node_modules/@aws-sdk/credential-provider-node/dist-es/index.js"() {
+  "node_modules/.pnpm/@aws-sdk+credential-provider-node@3.654.0_@aws-sdk+client-sso-oidc@3.654.0_@aws-sdk+client-st_tpmlyfoo3phmpvf5gtavvxyl7i/node_modules/@aws-sdk/credential-provider-node/dist-es/index.js"() {
     init_defaultProvider();
   }
 });
 
-// node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/configurations.js
+// node_modules/.pnpm/@aws-sdk+middleware-endpoint-discovery@3.654.0/node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/configurations.js
 var ENV_ENDPOINT_DISCOVERY = ["AWS_ENABLE_ENDPOINT_DISCOVERY", "AWS_ENDPOINT_DISCOVERY_ENABLED"];
 var CONFIG_ENDPOINT_DISCOVERY = "endpoint_discovery_enabled";
 var isFalsy = /* @__PURE__ */ __name((value) => ["false", "0"].indexOf(value) >= 0, "isFalsy");
@@ -16302,10 +16415,10 @@ var NODE_ENDPOINT_DISCOVERY_CONFIG_OPTIONS = {
   default: void 0
 };
 
-// node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/endpointDiscoveryMiddleware.js
+// node_modules/.pnpm/@aws-sdk+middleware-endpoint-discovery@3.654.0/node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/endpointDiscoveryMiddleware.js
 init_dist_es2();
 
-// node_modules/@aws-sdk/endpoint-cache/dist-es/EndpointCache.js
+// node_modules/.pnpm/@aws-sdk+endpoint-cache@3.572.0/node_modules/@aws-sdk/endpoint-cache/dist-es/EndpointCache.js
 var import_lru_cache = __toESM(require_lru_cache());
 var EndpointCache = class {
   static {
@@ -16363,7 +16476,7 @@ var EndpointCache = class {
   }
 };
 
-// node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/resolveEndpointDiscoveryConfig.js
+// node_modules/.pnpm/@aws-sdk+middleware-endpoint-discovery@3.654.0/node_modules/@aws-sdk/middleware-endpoint-discovery/dist-es/resolveEndpointDiscoveryConfig.js
 var resolveEndpointDiscoveryConfig = /* @__PURE__ */ __name((input, { endpointDiscoveryCommandCtor }) => ({
   ...input,
   endpointDiscoveryCommandCtor,
@@ -16372,7 +16485,7 @@ var resolveEndpointDiscoveryConfig = /* @__PURE__ */ __name((input, { endpointDi
   isClientEndpointDiscoveryEnabled: input.endpointDiscoveryEnabled !== void 0
 }), "resolveEndpointDiscoveryConfig");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/DynamoDBClient.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/DynamoDBClient.js
 init_dist_es3();
 init_dist_es4();
 init_dist_es5();
@@ -16384,7 +16497,7 @@ init_dist_es18();
 init_dist_es33();
 init_dist_es32();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/auth/httpAuthSchemeProvider.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/auth/httpAuthSchemeProvider.js
 init_dist_es37();
 init_dist_es10();
 var defaultDynamoDBHttpAuthSchemeParametersProvider = /* @__PURE__ */ __name(async (config, context, input) => {
@@ -16427,12 +16540,12 @@ var resolveHttpAuthSchemeConfig = /* @__PURE__ */ __name((config) => {
   };
 }, "resolveHttpAuthSchemeConfig");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/commands/DescribeEndpointsCommand.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/commands/DescribeEndpointsCommand.js
 init_dist_es18();
 init_dist_es17();
 init_dist_es32();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/EndpointParameters.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/EndpointParameters.js
 var resolveClientEndpointParameters = /* @__PURE__ */ __name((options) => {
   return {
     ...options,
@@ -16443,17 +16556,19 @@ var resolveClientEndpointParameters = /* @__PURE__ */ __name((options) => {
 }, "resolveClientEndpointParameters");
 var commonParams = {
   UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
+  AccountId: { type: "builtInParams", name: "accountId" },
   Endpoint: { type: "builtInParams", name: "endpoint" },
   Region: { type: "builtInParams", name: "region" },
-  UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" }
+  UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
+  AccountIdEndpointMode: { type: "builtInParams", name: "accountIdEndpointMode" }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/protocols/Aws_json1_0.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/protocols/Aws_json1_0.js
 init_dist_es37();
 init_dist_es2();
 init_dist_es32();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/models/DynamoDBServiceException.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/models/DynamoDBServiceException.js
 init_dist_es32();
 var DynamoDBServiceException = class _DynamoDBServiceException extends ServiceException {
   static {
@@ -16465,7 +16580,7 @@ var DynamoDBServiceException = class _DynamoDBServiceException extends ServiceEx
   }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/models/models_0.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/models/models_0.js
 var BackupInUseException = class _BackupInUseException extends DynamoDBServiceException {
   static {
     __name(this, "BackupInUseException");
@@ -16994,7 +17109,7 @@ var TransactionCanceledException = class _TransactionCanceledException extends D
   }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/protocols/Aws_json1_0.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/protocols/Aws_json1_0.js
 var se_DescribeEndpointsCommand = /* @__PURE__ */ __name(async (input, context) => {
   const headers = sharedHeaders("DescribeEndpoints");
   let body;
@@ -17722,10 +17837,8 @@ function sharedHeaders(operation) {
 }
 __name(sharedHeaders, "sharedHeaders");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/commands/DescribeEndpointsCommand.js
-var DescribeEndpointsCommand = class extends Command.classBuilder().ep({
-  ...commonParams
-}).m(function(Command2, cs, config, o5) {
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/commands/DescribeEndpointsCommand.js
+var DescribeEndpointsCommand = class extends Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o5) {
   return [
     getSerdePlugin(config, this.serialize, this.deserialize),
     getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
@@ -17736,11 +17849,11 @@ var DescribeEndpointsCommand = class extends Command.classBuilder().ep({
   }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/package.json
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/package.json
 var package_default = {
   name: "@aws-sdk/client-dynamodb",
   description: "AWS SDK for JavaScript Dynamodb Client for Node.js, Browser and React Native",
-  version: "3.629.0",
+  version: "3.656.0",
   scripts: {
     build: "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
     "build:cjs": "node ../../scripts/compilation/inline client-dynamodb",
@@ -17759,46 +17872,46 @@ var package_default = {
   dependencies: {
     "@aws-crypto/sha256-browser": "5.2.0",
     "@aws-crypto/sha256-js": "5.2.0",
-    "@aws-sdk/client-sso-oidc": "3.629.0",
-    "@aws-sdk/client-sts": "3.629.0",
-    "@aws-sdk/core": "3.629.0",
-    "@aws-sdk/credential-provider-node": "3.629.0",
-    "@aws-sdk/middleware-endpoint-discovery": "3.620.0",
-    "@aws-sdk/middleware-host-header": "3.620.0",
-    "@aws-sdk/middleware-logger": "3.609.0",
-    "@aws-sdk/middleware-recursion-detection": "3.620.0",
-    "@aws-sdk/middleware-user-agent": "3.620.0",
-    "@aws-sdk/region-config-resolver": "3.614.0",
-    "@aws-sdk/types": "3.609.0",
-    "@aws-sdk/util-endpoints": "3.614.0",
-    "@aws-sdk/util-user-agent-browser": "3.609.0",
-    "@aws-sdk/util-user-agent-node": "3.614.0",
-    "@smithy/config-resolver": "^3.0.5",
-    "@smithy/core": "^2.3.2",
-    "@smithy/fetch-http-handler": "^3.2.4",
-    "@smithy/hash-node": "^3.0.3",
-    "@smithy/invalid-dependency": "^3.0.3",
-    "@smithy/middleware-content-length": "^3.0.5",
-    "@smithy/middleware-endpoint": "^3.1.0",
-    "@smithy/middleware-retry": "^3.0.14",
-    "@smithy/middleware-serde": "^3.0.3",
-    "@smithy/middleware-stack": "^3.0.3",
-    "@smithy/node-config-provider": "^3.1.4",
-    "@smithy/node-http-handler": "^3.1.4",
-    "@smithy/protocol-http": "^4.1.0",
-    "@smithy/smithy-client": "^3.1.12",
-    "@smithy/types": "^3.3.0",
-    "@smithy/url-parser": "^3.0.3",
+    "@aws-sdk/client-sso-oidc": "3.654.0",
+    "@aws-sdk/client-sts": "3.654.0",
+    "@aws-sdk/core": "3.654.0",
+    "@aws-sdk/credential-provider-node": "3.654.0",
+    "@aws-sdk/middleware-endpoint-discovery": "3.654.0",
+    "@aws-sdk/middleware-host-header": "3.654.0",
+    "@aws-sdk/middleware-logger": "3.654.0",
+    "@aws-sdk/middleware-recursion-detection": "3.654.0",
+    "@aws-sdk/middleware-user-agent": "3.654.0",
+    "@aws-sdk/region-config-resolver": "3.654.0",
+    "@aws-sdk/types": "3.654.0",
+    "@aws-sdk/util-endpoints": "3.654.0",
+    "@aws-sdk/util-user-agent-browser": "3.654.0",
+    "@aws-sdk/util-user-agent-node": "3.654.0",
+    "@smithy/config-resolver": "^3.0.8",
+    "@smithy/core": "^2.4.3",
+    "@smithy/fetch-http-handler": "^3.2.7",
+    "@smithy/hash-node": "^3.0.6",
+    "@smithy/invalid-dependency": "^3.0.6",
+    "@smithy/middleware-content-length": "^3.0.8",
+    "@smithy/middleware-endpoint": "^3.1.3",
+    "@smithy/middleware-retry": "^3.0.18",
+    "@smithy/middleware-serde": "^3.0.6",
+    "@smithy/middleware-stack": "^3.0.6",
+    "@smithy/node-config-provider": "^3.1.7",
+    "@smithy/node-http-handler": "^3.2.2",
+    "@smithy/protocol-http": "^4.1.3",
+    "@smithy/smithy-client": "^3.3.2",
+    "@smithy/types": "^3.4.2",
+    "@smithy/url-parser": "^3.0.6",
     "@smithy/util-base64": "^3.0.0",
     "@smithy/util-body-length-browser": "^3.0.0",
     "@smithy/util-body-length-node": "^3.0.0",
-    "@smithy/util-defaults-mode-browser": "^3.0.14",
-    "@smithy/util-defaults-mode-node": "^3.0.14",
-    "@smithy/util-endpoints": "^2.0.5",
-    "@smithy/util-middleware": "^3.0.3",
-    "@smithy/util-retry": "^3.0.3",
+    "@smithy/util-defaults-mode-browser": "^3.0.18",
+    "@smithy/util-defaults-mode-node": "^3.0.18",
+    "@smithy/util-endpoints": "^2.1.2",
+    "@smithy/util-middleware": "^3.0.6",
+    "@smithy/util-retry": "^3.0.6",
     "@smithy/util-utf8": "^3.0.0",
-    "@smithy/util-waiter": "^3.1.2",
+    "@smithy/util-waiter": "^3.1.5",
     tslib: "^2.6.2",
     uuid: "^9.0.1"
   },
@@ -17843,8 +17956,43 @@ var package_default = {
   }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.js
 init_dist_es37();
+
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/account-id-endpoint/AccountIdEndpointModeConstants.js
+var DEFAULT_ACCOUNT_ID_ENDPOINT_MODE = "preferred";
+var ACCOUNT_ID_ENDPOINT_MODE_VALUES = ["disabled", "preferred", "required"];
+function validateAccountIdEndpointMode(value) {
+  return ACCOUNT_ID_ENDPOINT_MODE_VALUES.includes(value);
+}
+__name(validateAccountIdEndpointMode, "validateAccountIdEndpointMode");
+
+// node_modules/.pnpm/@aws-sdk+core@3.654.0/node_modules/@aws-sdk/core/dist-es/submodules/account-id-endpoint/NodeAccountIdEndpointModeConfigOptions.js
+var err = "Invalid AccountIdEndpointMode value";
+var _throw = /* @__PURE__ */ __name((message) => {
+  throw new Error(message);
+}, "_throw");
+var ENV_ACCOUNT_ID_ENDPOINT_MODE = "AWS_ACCOUNT_ID_ENDPOINT_MODE";
+var CONFIG_ACCOUNT_ID_ENDPOINT_MODE = "account_id_endpoint_mode";
+var NODE_ACCOUNT_ID_ENDPOINT_MODE_CONFIG_OPTIONS = {
+  environmentVariableSelector: (env2) => {
+    const value = env2[ENV_ACCOUNT_ID_ENDPOINT_MODE];
+    if (value && !validateAccountIdEndpointMode(value)) {
+      _throw(err);
+    }
+    return value;
+  },
+  configFileSelector: (profile) => {
+    const value = profile[CONFIG_ACCOUNT_ID_ENDPOINT_MODE];
+    if (value && !validateAccountIdEndpointMode(value)) {
+      _throw(err);
+    }
+    return value;
+  },
+  default: DEFAULT_ACCOUNT_ID_ENDPOINT_MODE
+};
+
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.js
 init_dist_es54();
 init_dist_es41();
 init_dist_es11();
@@ -17855,57 +18003,76 @@ init_dist_es28();
 init_dist_es43();
 init_dist_es20();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.shared.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.shared.js
 init_dist_es37();
 init_dist_es32();
 init_dist_es16();
 init_dist_es25();
 init_dist_es24();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/endpointResolver.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/endpointResolver.js
 init_dist_es7();
 init_dist_es6();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/ruleset.js
-var w4 = "required";
-var x4 = "fn";
-var y2 = "argv";
-var z2 = "ref";
-var a4 = true;
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/ruleset.js
+var H2 = "required";
+var I2 = "type";
+var J2 = "fn";
+var K = "argv";
+var L = "ref";
+var M = "url";
+var N = "properties";
+var O = "headers";
+var a4 = false;
 var b4 = "isSet";
-var c4 = "booleanEquals";
-var d4 = "error";
-var e4 = "endpoint";
-var f4 = "tree";
-var g4 = "PartitionResult";
-var h4 = "getAttr";
-var i4 = "stringEquals";
-var j4 = { [w4]: false, "type": "String" };
-var k4 = { [w4]: true, "default": false, "type": "Boolean" };
-var l4 = { [z2]: "Endpoint" };
-var m4 = { [x4]: c4, [y2]: [{ [z2]: "UseFIPS" }, true] };
-var n4 = { [x4]: c4, [y2]: [{ [z2]: "UseDualStack" }, true] };
-var o4 = {};
-var p4 = { [z2]: "Region" };
-var q4 = { [x4]: h4, [y2]: [{ [z2]: g4 }, "supportsFIPS"] };
-var r4 = { [z2]: g4 };
-var s4 = { [x4]: c4, [y2]: [true, { [x4]: h4, [y2]: [r4, "supportsDualStack"] }] };
-var t4 = [m4];
-var u4 = [n4];
-var v5 = [p4];
-var _data4 = { version: "1.0", parameters: { Region: j4, UseDualStack: k4, UseFIPS: k4, Endpoint: j4 }, rules: [{ conditions: [{ [x4]: b4, [y2]: [l4] }], rules: [{ conditions: t4, error: "Invalid Configuration: FIPS and custom endpoint are not supported", type: d4 }, { conditions: u4, error: "Invalid Configuration: Dualstack and custom endpoint are not supported", type: d4 }, { endpoint: { url: l4, properties: o4, headers: o4 }, type: e4 }], type: f4 }, { conditions: [{ [x4]: b4, [y2]: v5 }], rules: [{ conditions: [{ [x4]: "aws.partition", [y2]: v5, assign: g4 }], rules: [{ conditions: [m4, n4], rules: [{ conditions: [{ [x4]: c4, [y2]: [a4, q4] }, s4], rules: [{ endpoint: { url: "https://dynamodb-fips.{Region}.{PartitionResult#dualStackDnsSuffix}", properties: o4, headers: o4 }, type: e4 }], type: f4 }, { error: "FIPS and DualStack are enabled, but this partition does not support one or both", type: d4 }], type: f4 }, { conditions: t4, rules: [{ conditions: [{ [x4]: c4, [y2]: [q4, a4] }], rules: [{ conditions: [{ [x4]: i4, [y2]: [{ [x4]: h4, [y2]: [r4, "name"] }, "aws-us-gov"] }], endpoint: { url: "https://dynamodb.{Region}.amazonaws.com", properties: o4, headers: o4 }, type: e4 }, { endpoint: { url: "https://dynamodb-fips.{Region}.{PartitionResult#dnsSuffix}", properties: o4, headers: o4 }, type: e4 }], type: f4 }, { error: "FIPS is enabled but this partition does not support FIPS", type: d4 }], type: f4 }, { conditions: u4, rules: [{ conditions: [s4], rules: [{ endpoint: { url: "https://dynamodb.{Region}.{PartitionResult#dualStackDnsSuffix}", properties: o4, headers: o4 }, type: e4 }], type: f4 }, { error: "DualStack is enabled but this partition does not support DualStack", type: d4 }], type: f4 }, { conditions: [{ [x4]: i4, [y2]: [p4, "local"] }], endpoint: { url: "http://localhost:8000", properties: { authSchemes: [{ name: "sigv4", signingName: "dynamodb", signingRegion: "us-east-1" }] }, headers: o4 }, type: e4 }, { endpoint: { url: "https://dynamodb.{Region}.{PartitionResult#dnsSuffix}", properties: o4, headers: o4 }, type: e4 }], type: f4 }], type: f4 }, { error: "Invalid Configuration: Missing Region", type: d4 }] };
+var c4 = "error";
+var d4 = "endpoint";
+var e4 = "tree";
+var f4 = "PartitionResult";
+var g4 = "stringEquals";
+var h4 = "not";
+var i4 = { [H2]: false, [I2]: "String" };
+var j4 = { [H2]: true, "default": false, [I2]: "Boolean" };
+var k4 = { [J2]: "booleanEquals", [K]: [{ [L]: "UseFIPS" }, true] };
+var l4 = { [J2]: "booleanEquals", [K]: [{ [L]: "UseDualStack" }, true] };
+var m4 = {};
+var n4 = { [L]: "Region" };
+var o4 = { [J2]: b4, [K]: [{ [L]: "AccountIdEndpointMode" }] };
+var p4 = { [L]: "AccountIdEndpointMode" };
+var q4 = { [J2]: b4, [K]: [{ [L]: "AccountId" }] };
+var r4 = { [L]: "AccountId" };
+var s4 = { [J2]: g4, [K]: [{ [J2]: "getAttr", [K]: [{ [L]: f4 }, "name"] }, "aws"] };
+var t4 = { [J2]: "getAttr", [K]: [{ [L]: f4 }, "name"] };
+var u4 = { [J2]: h4, [K]: [k4] };
+var v5 = { [J2]: h4, [K]: [l4] };
+var w4 = { [J2]: "booleanEquals", [K]: [{ [J2]: "getAttr", [K]: [{ [L]: f4 }, "supportsFIPS"] }, true] };
+var x4 = { [J2]: "booleanEquals", [K]: [{ [J2]: "getAttr", [K]: [{ [L]: f4 }, "supportsDualStack"] }, true] };
+var y2 = { [M]: "https://dynamodb-fips.{Region}.{PartitionResult#dualStackDnsSuffix}", [N]: {}, [O]: {} };
+var z2 = { "conditions": [o4, { [J2]: g4, [K]: [p4, "disabled"] }], [d4]: { [M]: "https://dynamodb.{Region}.{PartitionResult#dnsSuffix}", [N]: {}, [O]: {} }, [I2]: d4 };
+var A2 = { [d4]: { [M]: "https://dynamodb.{Region}.{PartitionResult#dnsSuffix}", [N]: {}, [O]: {} }, [I2]: d4 };
+var B2 = { [M]: "https://dynamodb-fips.{Region}.{PartitionResult#dnsSuffix}", [N]: {}, [O]: {} };
+var C2 = { [M]: "https://dynamodb.{Region}.{PartitionResult#dualStackDnsSuffix}", [N]: {}, [O]: {} };
+var D2 = [k4];
+var E2 = [l4];
+var F2 = [n4];
+var G2 = [o4, { [J2]: g4, [K]: [p4, "disabled"] }];
+var _data4 = { version: "1.0", parameters: { Region: i4, UseDualStack: j4, UseFIPS: j4, Endpoint: i4, AccountId: i4, AccountIdEndpointMode: i4 }, rules: [{ conditions: [{ [J2]: b4, [K]: [{ [L]: "Endpoint" }] }], rules: [{ conditions: D2, error: "Invalid Configuration: FIPS and custom endpoint are not supported", [I2]: c4 }, { conditions: E2, error: "Invalid Configuration: Dualstack and custom endpoint are not supported", [I2]: c4 }, { endpoint: { [M]: "{Endpoint}", [N]: m4, [O]: m4 }, [I2]: d4 }], [I2]: e4 }, { conditions: [{ [J2]: b4, [K]: F2 }], rules: [{ conditions: [{ [J2]: "aws.partition", [K]: F2, assign: f4 }], rules: [{ conditions: [{ [J2]: g4, [K]: [n4, "local"] }], rules: [{ conditions: D2, error: "Invalid Configuration: FIPS and local endpoint are not supported", [I2]: c4 }, { conditions: E2, error: "Invalid Configuration: Dualstack and local endpoint are not supported", [I2]: c4 }, { endpoint: { [M]: "http://localhost:8000", [N]: { authSchemes: [{ name: "sigv4", signingName: "dynamodb", signingRegion: "us-east-1" }] }, [O]: m4 }, [I2]: d4 }], [I2]: e4 }, { conditions: [o4, { [J2]: g4, [K]: [p4, "required"] }, { [J2]: h4, [K]: [q4] }], error: "AccountIdEndpointMode is required but no AccountID was provided or able to be loaded.", [I2]: c4 }, { conditions: [q4, s4, u4, v5, { [J2]: h4, [K]: [{ [J2]: "isValidHostLabel", [K]: [r4, a4] }] }], error: "Credentials-sourced account ID parameter is invalid", [I2]: c4 }, { conditions: [k4, l4], rules: [{ conditions: [w4, x4], rules: [{ conditions: G2, endpoint: y2, [I2]: d4 }, { endpoint: y2, [I2]: d4 }], [I2]: e4 }, { error: "FIPS and DualStack are enabled, but this partition does not support one or both", [I2]: c4 }], [I2]: e4 }, { conditions: D2, rules: [{ conditions: [w4], rules: [{ conditions: [{ [J2]: g4, [K]: [t4, "aws-us-gov"] }], rules: [z2, A2], [I2]: e4 }, { conditions: G2, endpoint: B2, [I2]: d4 }, { endpoint: B2, [I2]: d4 }], [I2]: e4 }, { error: "FIPS is enabled but this partition does not support FIPS", [I2]: c4 }], [I2]: e4 }, { conditions: E2, rules: [{ conditions: [x4], rules: [{ conditions: G2, endpoint: C2, [I2]: d4 }, { endpoint: C2, [I2]: d4 }], [I2]: e4 }, { error: "DualStack is enabled but this partition does not support DualStack", [I2]: c4 }], [I2]: e4 }, z2, { conditions: [q4, s4, u4, v5], endpoint: { [M]: "https://{AccountId}.ddb.{Region}.{PartitionResult#dnsSuffix}", [N]: m4, [O]: m4 }, [I2]: d4 }, A2], [I2]: e4 }], [I2]: e4 }, { error: "Invalid Configuration: Missing Region", [I2]: c4 }] };
 var ruleSet4 = _data4;
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/endpointResolver.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/endpoint/endpointResolver.js
+var cache4 = new EndpointCache2({
+  size: 50,
+  params: ["AccountId", "AccountIdEndpointMode", "Endpoint", "Region", "UseDualStack", "UseFIPS"]
+});
 var defaultEndpointResolver4 = /* @__PURE__ */ __name((endpointParams, context = {}) => {
-  return resolveEndpoint(ruleSet4, {
+  return cache4.get(endpointParams, () => resolveEndpoint(ruleSet4, {
     endpointParams,
     logger: context.logger
-  });
+  }));
 }, "defaultEndpointResolver");
 customEndpointFunctions.aws = awsEndpointFunctions;
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.shared.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.shared.js
 var getRuntimeConfig7 = /* @__PURE__ */ __name((config) => {
   return {
     apiVersion: "2012-08-10",
@@ -17930,7 +18097,7 @@ var getRuntimeConfig7 = /* @__PURE__ */ __name((config) => {
   };
 }, "getRuntimeConfig");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeConfig.js
 init_dist_es32();
 init_dist_es44();
 init_dist_es32();
@@ -17945,6 +18112,7 @@ var getRuntimeConfig8 = /* @__PURE__ */ __name((config) => {
     ...config,
     runtime: "node",
     defaultsMode,
+    accountIdEndpointMode: config?.accountIdEndpointMode ?? loadConfig(NODE_ACCOUNT_ID_ENDPOINT_MODE_CONFIG_OPTIONS),
     bodyLengthChecker: config?.bodyLengthChecker ?? calculateBodyLength,
     credentialDefaultProvider: config?.credentialDefaultProvider ?? defaultProvider,
     defaultUserAgentProvider: config?.defaultUserAgentProvider ?? defaultUserAgent({ serviceId: clientSharedValues.serviceId, clientVersion: package_default.version }),
@@ -17963,12 +18131,12 @@ var getRuntimeConfig8 = /* @__PURE__ */ __name((config) => {
   };
 }, "getRuntimeConfig");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeExtensions.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeExtensions.js
 init_dist_es45();
 init_dist_es2();
 init_dist_es32();
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/auth/httpAuthExtensionConfiguration.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/auth/httpAuthExtensionConfiguration.js
 var getHttpAuthExtensionConfiguration4 = /* @__PURE__ */ __name((runtimeConfig) => {
   const _httpAuthSchemes = runtimeConfig.httpAuthSchemes;
   let _httpAuthSchemeProvider = runtimeConfig.httpAuthSchemeProvider;
@@ -18007,7 +18175,7 @@ var resolveHttpAuthRuntimeConfig4 = /* @__PURE__ */ __name((config) => {
   };
 }, "resolveHttpAuthRuntimeConfig");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeExtensions.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/runtimeExtensions.js
 var asPartial4 = /* @__PURE__ */ __name((t5) => t5, "asPartial");
 var resolveRuntimeExtensions4 = /* @__PURE__ */ __name((runtimeConfig, extensions) => {
   const extensionConfiguration = {
@@ -18026,7 +18194,7 @@ var resolveRuntimeExtensions4 = /* @__PURE__ */ __name((runtimeConfig, extension
   };
 }, "resolveRuntimeExtensions");
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/DynamoDBClient.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/DynamoDBClient.js
 var DynamoDBClient = class extends Client {
   static {
     __name(this, "DynamoDBClient");
@@ -18065,13 +18233,11 @@ var DynamoDBClient = class extends Client {
   }
 };
 
-// node_modules/@aws-sdk/client-dynamodb/dist-es/commands/PutItemCommand.js
+// node_modules/.pnpm/@aws-sdk+client-dynamodb@3.656.0_aws-crt@1.22.0/node_modules/@aws-sdk/client-dynamodb/dist-es/commands/PutItemCommand.js
 init_dist_es18();
 init_dist_es17();
 init_dist_es32();
-var PutItemCommand = class extends Command.classBuilder().ep({
-  ...commonParams
-}).m(function(Command2, cs, config, o5) {
+var PutItemCommand = class extends Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o5) {
   return [
     getSerdePlugin(config, this.serialize, this.deserialize),
     getEndpointPlugin(config, Command2.getEndpointParameterInstructions())
