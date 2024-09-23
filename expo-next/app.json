@@ -7,18 +7,37 @@
       "output": "static",
       "bundler": "metro"
     },
+    "icon": "./src/assets/icon.png",
     "plugins": [
       [
         "expo-router",
         {
-          "origin": "https://n"
+          "origin": "https://d3gkipskq5tpp9.cloudfront.net/"
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
+        }
+      ],
+      "expo-av",
+      [
+        "expo-asset",
+        {
+          "assets": ["./src/assets/bg_1_people.mp4"]
         }
       ]
     ],
-    "name": "typescript-app",
-    "slug": "typescript-app",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#81AE89"
+    },
+    "name": "expo-next",
+    "slug": "expo-next",
     "android": {
-      "package": "com.anonymous.typescriptapp"
+      "package": "com.anonymous.exponext"
     }
   }
 }

@@ -28,7 +28,7 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>acme</string>
-          <string>com.anonymous.typescriptapp</string>
+          <string>com.anonymous.exponext</string>
         </array>
       </dict>
     </array>

@@ -109,9 +109,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.typescriptapp'
+    namespace 'com.anonymous.exponext'
     defaultConfig {
-        applicationId 'com.anonymous.typescriptapp'
+        applicationId 'com.anonymous.exponext'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

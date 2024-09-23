@@ -1,4 +1,4 @@
-package com.anonymous.typescriptapp
+package com.anonymous.exponext
 
 import android.os.Build
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.anonymous.typescriptapp
+package com.anonymous.exponext
 
 import android.app.Application
 import android.content.res.Configuration

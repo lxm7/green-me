@@ -64,9 +64,17 @@ function Header() {
         <View className="flex flex-row gap-4 sm:gap-6">
           <Link
             className="text-md font-medium hover:underline web:underline-offset-4"
-            href="/about"
+            href="/profiles"
           >
-            About
+            profiles
+          </Link>
+        </View>
+        <View className="flex flex-row gap-4 sm:gap-6">
+          <Link
+            className="text-md font-medium hover:underline web:underline-offset-4"
+            href="/sign-in"
+          >
+            Sign In
           </Link>
         </View>
       </View>
