@@ -4,21 +4,21 @@
     "id": "App",
     "path": "",
     "children": {
-      "greenmev2-green-one-auth-ExampleStack": {
-        "id": "greenmev2-green-one-auth-ExampleStack",
-        "path": "greenmev2-green-one-auth-ExampleStack",
+      "prod-green-one-auth-ExampleStack": {
+        "id": "prod-green-one-auth-ExampleStack",
+        "path": "prod-green-one-auth-ExampleStack",
         "children": {
           "CustomResourceHandler": {
             "id": "CustomResourceHandler",
-            "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler",
+            "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole",
+                "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole/ImportServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -26,7 +26,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -63,7 +63,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -81,11 +81,11 @@
               },
               "Code": {
                 "id": "Code",
-                "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/Code",
+                "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/Code/Stage",
+                    "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
                       "version": "2.142.1"
@@ -93,7 +93,7 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/Code/AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.142.1"
@@ -107,13 +107,13 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "greenmev2-green-one-auth-ExampleStack/CustomResourceHandler/Resource",
+                "path": "prod-green-one-auth-ExampleStack/CustomResourceHandler/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                      "s3Key": "ce5244ba1e7ed69923685b8e1585597ccbd53bf9de4a32e1f7483f07de071d49.zip"
+                      "s3Key": "73c557f937c8022221046caeede962c2be3e0a4d376cdee364ec378c4c93739d.zip"
                     },
                     "handler": "index.handler",
                     "memorySize": 1024,
@@ -131,7 +131,7 @@
                       },
                       {
                         "key": "sst:stage",
-                        "value": "greenmev2"
+                        "value": "prod"
                       }
                     ],
                     "timeout": 900
@@ -150,15 +150,15 @@
           },
           "users": {
             "id": "users",
-            "path": "greenmev2-green-one-auth-ExampleStack/users",
+            "path": "prod-green-one-auth-ExampleStack/users",
             "children": {
               "Table": {
                 "id": "Table",
-                "path": "greenmev2-green-one-auth-ExampleStack/users/Table",
+                "path": "prod-green-one-auth-ExampleStack/users/Table",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/users/Table/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/users/Table/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                       "aws:cdk:cloudformation:props": {
@@ -178,7 +178,7 @@
                         "pointInTimeRecoverySpecification": {
                           "pointInTimeRecoveryEnabled": true
                         },
-                        "tableName": "greenmev2-green-one-auth-users",
+                        "tableName": "prod-green-one-auth-users",
                         "tags": [
                           {
                             "key": "sst:app",
@@ -186,7 +186,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -198,7 +198,7 @@
                   },
                   "ScalingRole": {
                     "id": "ScalingRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/users/Table/ScalingRole",
+                    "path": "prod-green-one-auth-ExampleStack/users/Table/ScalingRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -212,18 +212,18 @@
               },
               "Parameter_tableName": {
                 "id": "Parameter_tableName",
-                "path": "greenmev2-green-one-auth-ExampleStack/users/Parameter_tableName",
+                "path": "prod-green-one-auth-ExampleStack/users/Parameter_tableName",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/users/Parameter_tableName/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/users/Parameter_tableName/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Table/users/tableName",
+                        "name": "/sst/green-one-auth/prod/Table/users/tableName",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -250,25 +250,25 @@
           },
           "PROFILES_TABLE": {
             "id": "PROFILES_TABLE",
-            "path": "greenmev2-green-one-auth-ExampleStack/PROFILES_TABLE",
+            "path": "prod-green-one-auth-ExampleStack/PROFILES_TABLE",
             "children": {
               "Parameter_value": {
                 "id": "Parameter_value",
-                "path": "greenmev2-green-one-auth-ExampleStack/PROFILES_TABLE/Parameter_value",
+                "path": "prod-green-one-auth-ExampleStack/PROFILES_TABLE/Parameter_value",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/PROFILES_TABLE/Parameter_value/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/PROFILES_TABLE/Parameter_value/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Parameter/PROFILES_TABLE/value",
+                        "name": "/sst/green-one-auth/prod/Parameter/PROFILES_TABLE/value",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
-                        "value": "greenmev2-green-one-auth-ProfilesTable"
+                        "value": "prod-green-one-auth-ProfilesTable"
                       }
                     },
                     "constructInfo": {
@@ -290,25 +290,25 @@
           },
           "VENUES_TABLE": {
             "id": "VENUES_TABLE",
-            "path": "greenmev2-green-one-auth-ExampleStack/VENUES_TABLE",
+            "path": "prod-green-one-auth-ExampleStack/VENUES_TABLE",
             "children": {
               "Parameter_value": {
                 "id": "Parameter_value",
-                "path": "greenmev2-green-one-auth-ExampleStack/VENUES_TABLE/Parameter_value",
+                "path": "prod-green-one-auth-ExampleStack/VENUES_TABLE/Parameter_value",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/VENUES_TABLE/Parameter_value/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/VENUES_TABLE/Parameter_value/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Parameter/VENUES_TABLE/value",
+                        "name": "/sst/green-one-auth/prod/Parameter/VENUES_TABLE/value",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
-                        "value": "greenmev2-green-one-auth-VenuesTable"
+                        "value": "prod-green-one-auth-VenuesTable"
                       }
                     },
                     "constructInfo": {
@@ -330,25 +330,25 @@
           },
           "CHATS_TABLE": {
             "id": "CHATS_TABLE",
-            "path": "greenmev2-green-one-auth-ExampleStack/CHATS_TABLE",
+            "path": "prod-green-one-auth-ExampleStack/CHATS_TABLE",
             "children": {
               "Parameter_value": {
                 "id": "Parameter_value",
-                "path": "greenmev2-green-one-auth-ExampleStack/CHATS_TABLE/Parameter_value",
+                "path": "prod-green-one-auth-ExampleStack/CHATS_TABLE/Parameter_value",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/CHATS_TABLE/Parameter_value/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/CHATS_TABLE/Parameter_value/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Parameter/CHATS_TABLE/value",
+                        "name": "/sst/green-one-auth/prod/Parameter/CHATS_TABLE/value",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
-                        "value": "greenmev2-green-one-auth-ChatsTable"
+                        "value": "prod-green-one-auth-ChatsTable"
                       }
                     },
                     "constructInfo": {
@@ -370,25 +370,25 @@
           },
           "MESSAGES_TABLE": {
             "id": "MESSAGES_TABLE",
-            "path": "greenmev2-green-one-auth-ExampleStack/MESSAGES_TABLE",
+            "path": "prod-green-one-auth-ExampleStack/MESSAGES_TABLE",
             "children": {
               "Parameter_value": {
                 "id": "Parameter_value",
-                "path": "greenmev2-green-one-auth-ExampleStack/MESSAGES_TABLE/Parameter_value",
+                "path": "prod-green-one-auth-ExampleStack/MESSAGES_TABLE/Parameter_value",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/MESSAGES_TABLE/Parameter_value/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/MESSAGES_TABLE/Parameter_value/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Parameter/MESSAGES_TABLE/value",
+                        "name": "/sst/green-one-auth/prod/Parameter/MESSAGES_TABLE/value",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
-                        "value": "greenmev2-green-one-auth-MessagesTable"
+                        "value": "prod-green-one-auth-MessagesTable"
                       }
                     },
                     "constructInfo": {
@@ -410,15 +410,15 @@
           },
           "ProfilesTable": {
             "id": "ProfilesTable",
-            "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable",
+            "path": "prod-green-one-auth-ExampleStack/ProfilesTable",
             "children": {
               "Table": {
                 "id": "Table",
-                "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable/Table",
+                "path": "prod-green-one-auth-ExampleStack/ProfilesTable/Table",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable/Table/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/ProfilesTable/Table/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                       "aws:cdk:cloudformation:props": {
@@ -446,7 +446,7 @@
                         "pointInTimeRecoverySpecification": {
                           "pointInTimeRecoveryEnabled": true
                         },
-                        "tableName": "greenmev2-green-one-auth-ProfilesTable",
+                        "tableName": "prod-green-one-auth-ProfilesTable",
                         "tags": [
                           {
                             "key": "sst:app",
@@ -454,7 +454,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -466,7 +466,7 @@
                   },
                   "ScalingRole": {
                     "id": "ScalingRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable/Table/ScalingRole",
+                    "path": "prod-green-one-auth-ExampleStack/ProfilesTable/Table/ScalingRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -480,18 +480,18 @@
               },
               "Parameter_tableName": {
                 "id": "Parameter_tableName",
-                "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable/Parameter_tableName",
+                "path": "prod-green-one-auth-ExampleStack/ProfilesTable/Parameter_tableName",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable/Parameter_tableName/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/ProfilesTable/Parameter_tableName/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Table/ProfilesTable/tableName",
+                        "name": "/sst/green-one-auth/prod/Table/ProfilesTable/tableName",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -518,15 +518,15 @@
           },
           "VenuesTable": {
             "id": "VenuesTable",
-            "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable",
+            "path": "prod-green-one-auth-ExampleStack/VenuesTable",
             "children": {
               "Table": {
                 "id": "Table",
-                "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable/Table",
+                "path": "prod-green-one-auth-ExampleStack/VenuesTable/Table",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable/Table/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/VenuesTable/Table/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                       "aws:cdk:cloudformation:props": {
@@ -554,7 +554,7 @@
                         "pointInTimeRecoverySpecification": {
                           "pointInTimeRecoveryEnabled": true
                         },
-                        "tableName": "greenmev2-green-one-auth-VenuesTable",
+                        "tableName": "prod-green-one-auth-VenuesTable",
                         "tags": [
                           {
                             "key": "sst:app",
@@ -562,7 +562,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -574,7 +574,7 @@
                   },
                   "ScalingRole": {
                     "id": "ScalingRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable/Table/ScalingRole",
+                    "path": "prod-green-one-auth-ExampleStack/VenuesTable/Table/ScalingRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -588,18 +588,18 @@
               },
               "Parameter_tableName": {
                 "id": "Parameter_tableName",
-                "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable/Parameter_tableName",
+                "path": "prod-green-one-auth-ExampleStack/VenuesTable/Parameter_tableName",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/VenuesTable/Parameter_tableName/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/VenuesTable/Parameter_tableName/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Table/VenuesTable/tableName",
+                        "name": "/sst/green-one-auth/prod/Table/VenuesTable/tableName",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -626,15 +626,15 @@
           },
           "ChatsTable": {
             "id": "ChatsTable",
-            "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable",
+            "path": "prod-green-one-auth-ExampleStack/ChatsTable",
             "children": {
               "Table": {
                 "id": "Table",
-                "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable/Table",
+                "path": "prod-green-one-auth-ExampleStack/ChatsTable/Table",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable/Table/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/ChatsTable/Table/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                       "aws:cdk:cloudformation:props": {
@@ -680,7 +680,7 @@
                         "pointInTimeRecoverySpecification": {
                           "pointInTimeRecoveryEnabled": true
                         },
-                        "tableName": "greenmev2-green-one-auth-ChatsTable",
+                        "tableName": "prod-green-one-auth-ChatsTable",
                         "tags": [
                           {
                             "key": "sst:app",
@@ -688,7 +688,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -700,7 +700,7 @@
                   },
                   "ScalingRole": {
                     "id": "ScalingRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable/Table/ScalingRole",
+                    "path": "prod-green-one-auth-ExampleStack/ChatsTable/Table/ScalingRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -714,18 +714,18 @@
               },
               "Parameter_tableName": {
                 "id": "Parameter_tableName",
-                "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable/Parameter_tableName",
+                "path": "prod-green-one-auth-ExampleStack/ChatsTable/Parameter_tableName",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/ChatsTable/Parameter_tableName/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/ChatsTable/Parameter_tableName/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Table/ChatsTable/tableName",
+                        "name": "/sst/green-one-auth/prod/Table/ChatsTable/tableName",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -752,15 +752,15 @@
           },
           "MessagesTable": {
             "id": "MessagesTable",
-            "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable",
+            "path": "prod-green-one-auth-ExampleStack/MessagesTable",
             "children": {
               "Table": {
                 "id": "Table",
-                "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable/Table",
+                "path": "prod-green-one-auth-ExampleStack/MessagesTable/Table",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable/Table/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/MessagesTable/Table/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                       "aws:cdk:cloudformation:props": {
@@ -788,7 +788,7 @@
                         "pointInTimeRecoverySpecification": {
                           "pointInTimeRecoveryEnabled": true
                         },
-                        "tableName": "greenmev2-green-one-auth-MessagesTable",
+                        "tableName": "prod-green-one-auth-MessagesTable",
                         "tags": [
                           {
                             "key": "sst:app",
@@ -796,7 +796,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -808,7 +808,7 @@
                   },
                   "ScalingRole": {
                     "id": "ScalingRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable/Table/ScalingRole",
+                    "path": "prod-green-one-auth-ExampleStack/MessagesTable/Table/ScalingRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -822,18 +822,18 @@
               },
               "Parameter_tableName": {
                 "id": "Parameter_tableName",
-                "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable/Parameter_tableName",
+                "path": "prod-green-one-auth-ExampleStack/MessagesTable/Parameter_tableName",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/MessagesTable/Parameter_tableName/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/MessagesTable/Parameter_tableName/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Table/MessagesTable/tableName",
+                        "name": "/sst/green-one-auth/prod/Table/MessagesTable/tableName",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -860,15 +860,15 @@
           },
           "api": {
             "id": "api",
-            "path": "greenmev2-green-one-auth-ExampleStack/api",
+            "path": "prod-green-one-auth-ExampleStack/api",
             "children": {
               "Api": {
                 "id": "Api",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Api",
+                "path": "prod-green-one-auth-ExampleStack/api/Api",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Api/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Api/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Api",
                       "aws:cdk:cloudformation:props": {
@@ -884,11 +884,11 @@
                             "*"
                           ]
                         },
-                        "name": "greenmev2-green-one-auth-api",
+                        "name": "prod-green-one-auth-api",
                         "protocolType": "HTTP",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         }
                       }
                     },
@@ -899,11 +899,11 @@
                   },
                   "DefaultStage": {
                     "id": "DefaultStage",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Api/DefaultStage",
+                    "path": "prod-green-one-auth-ExampleStack/api/Api/DefaultStage",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Api/DefaultStage/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Api/DefaultStage/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Stage",
                           "aws:cdk:cloudformation:props": {
@@ -923,7 +923,7 @@
                             "stageName": "$default",
                             "tags": {
                               "sst:app": "green-one-auth",
-                              "sst:stage": "greenmev2"
+                              "sst:stage": "prod"
                             }
                           }
                         },
@@ -946,11 +946,11 @@
               },
               "LogGroup": {
                 "id": "LogGroup",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/LogGroup",
+                "path": "prod-green-one-auth-ExampleStack/api/LogGroup",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/LogGroup/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/LogGroup/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
                       "aws:cdk:cloudformation:props": {
@@ -958,7 +958,7 @@
                           "Fn::Join": [
                             "",
                             [
-                              "/aws/vendedlogs/apis/greenmev2-green-one-auth-api-",
+                              "/aws/vendedlogs/apis/prod-green-one-auth-api-",
                               {
                                 "Ref": "apiApiC3C473D0"
                               },
@@ -973,7 +973,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -991,15 +991,15 @@
               },
               "Lambda_GET_--session": {
                 "id": "Lambda_GET_--session",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session",
+                "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session",
                 "children": {
                   "ServiceRole": {
                     "id": "ServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole",
                     "children": {
                       "ImportServiceRole": {
                         "id": "ImportServiceRole",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/ImportServiceRole",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.142.1"
@@ -1007,7 +1007,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -1044,7 +1044,7 @@
                               },
                               {
                                 "key": "sst:stage",
-                                "value": "greenmev2"
+                                "value": "prod"
                               }
                             ]
                           }
@@ -1056,11 +1056,11 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/DefaultPolicy",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/DefaultPolicy/Resource",
+                            "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/ServiceRole/DefaultPolicy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -1215,45 +1215,10 @@
                                             {
                                               "Ref": "AWS::Partition"
                                             },
-                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                           ]
                                         ]
                                       }
-                                    },
-                                    {
-                                      "Action": "iot:*",
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                            ]
-                                          ]
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ],
                                   "Version": "2012-10-17"
@@ -1283,35 +1248,9 @@
                       "version": "2.142.1"
                     }
                   },
-                  "Code": {
-                    "id": "Code",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.142.1"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.142.1"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.142.1"
-                    }
-                  },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -1320,16 +1259,14 @@
                         ],
                         "code": {
                           "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                          "s3Key": "c1807501ef000ff9c87b60f737c451c56ab9ff12280abd3029f9b4fb3db31b8e.zip"
                         },
-                        "description": "live",
                         "environment": {
                           "variables": {
-                            "SST_FUNCTION_ID": "c84b5f6f436133d15fc1e528197321a2283659bfef",
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_APP": "green-one-auth",
-                            "SST_STAGE": "greenmev2",
-                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_STAGE": "prod",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                             "SST_Table_tableName_users": {
                               "Ref": "usersTableA9DCAD73"
                             },
@@ -1345,14 +1282,13 @@
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
                             },
-                            "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
                           }
                         },
                         "ephemeralStorage": {
                           "size": 512
                         },
-                        "handler": "live-lambda.handler",
+                        "handler": "packages/functions/src/session.handler",
                         "memorySize": 1024,
                         "role": {
                           "Fn::GetAtt": [
@@ -1368,7 +1304,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ],
                         "timeout": 10,
@@ -1382,31 +1318,55 @@
                       "version": "2.142.1"
                     }
                   },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/EventInvokeConfig",
+                  "Lambda_GET_--session-Sourcemap": {
+                    "id": "Lambda_GET_--session-Sourcemap",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Lambda_GET_--session-Sourcemap",
                     "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--session/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "apiLambdaGETsessionB4C9BFAB"
-                            },
-                            "maximumRetryAttempts": 0,
-                            "qualifier": "$LATEST"
-                          }
-                        },
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Lambda_GET_--session-Sourcemap/Stage",
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Lambda_GET_--session-Sourcemap/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.142.1"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--session/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                       "version": "2.142.1"
                     }
                   }
@@ -1418,15 +1378,15 @@
               },
               "Route_GET_--session": {
                 "id": "Route_GET_--session",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--session",
+                "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--session",
                 "children": {
                   "Integration_GET_--session": {
                     "id": "Integration_GET_--session",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -1456,7 +1416,7 @@
                   },
                   "Integration_GET_--session-Permission": {
                     "id": "Integration_GET_--session-Permission",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session-Permission",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--session/Integration_GET_--session-Permission",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
@@ -1493,7 +1453,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--session/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--session/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
@@ -1528,15 +1488,15 @@
               },
               "Lambda_GET_--profiles": {
                 "id": "Lambda_GET_--profiles",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles",
+                "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles",
                 "children": {
                   "ServiceRole": {
                     "id": "ServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole",
                     "children": {
                       "ImportServiceRole": {
                         "id": "ImportServiceRole",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/ImportServiceRole",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.142.1"
@@ -1544,7 +1504,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -1581,7 +1541,7 @@
                               },
                               {
                                 "key": "sst:stage",
-                                "value": "greenmev2"
+                                "value": "prod"
                               }
                             ]
                           }
@@ -1593,11 +1553,11 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/DefaultPolicy",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/DefaultPolicy/Resource",
+                            "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/ServiceRole/DefaultPolicy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -1752,45 +1712,10 @@
                                             {
                                               "Ref": "AWS::Partition"
                                             },
-                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                           ]
                                         ]
                                       }
-                                    },
-                                    {
-                                      "Action": "iot:*",
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                            ]
-                                          ]
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ],
                                   "Version": "2012-10-17"
@@ -1820,35 +1745,9 @@
                       "version": "2.142.1"
                     }
                   },
-                  "Code": {
-                    "id": "Code",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.142.1"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.142.1"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.142.1"
-                    }
-                  },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -1857,16 +1756,14 @@
                         ],
                         "code": {
                           "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                          "s3Key": "e943ad4023cc0e20c7018a5c74b6318a4de7adeaea71db7e30096c178cb3dd40.zip"
                         },
-                        "description": "live",
                         "environment": {
                           "variables": {
-                            "SST_FUNCTION_ID": "c873c0b4c88452167a6576793ea3d99c06e2f2480e",
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_APP": "green-one-auth",
-                            "SST_STAGE": "greenmev2",
-                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_STAGE": "prod",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                             "SST_Table_tableName_users": {
                               "Ref": "usersTableA9DCAD73"
                             },
@@ -1882,14 +1779,13 @@
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
                             },
-                            "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
                           }
                         },
                         "ephemeralStorage": {
                           "size": 512
                         },
-                        "handler": "live-lambda.handler",
+                        "handler": "packages/functions/src/profiles/list.handler",
                         "memorySize": 1024,
                         "role": {
                           "Fn::GetAtt": [
@@ -1905,7 +1801,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ],
                         "timeout": 10,
@@ -1919,31 +1815,55 @@
                       "version": "2.142.1"
                     }
                   },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/EventInvokeConfig",
+                  "Lambda_GET_--profiles-Sourcemap": {
+                    "id": "Lambda_GET_--profiles-Sourcemap",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Lambda_GET_--profiles-Sourcemap",
                     "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "apiLambdaGETprofiles79032A2B"
-                            },
-                            "maximumRetryAttempts": 0,
-                            "qualifier": "$LATEST"
-                          }
-                        },
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Lambda_GET_--profiles-Sourcemap/Stage",
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Lambda_GET_--profiles-Sourcemap/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.142.1"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--profiles/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                       "version": "2.142.1"
                     }
                   }
@@ -1955,15 +1875,15 @@
               },
               "Route_GET_--profiles": {
                 "id": "Route_GET_--profiles",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--profiles",
+                "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--profiles",
                 "children": {
                   "Integration_GET_--profiles": {
                     "id": "Integration_GET_--profiles",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -1993,7 +1913,7 @@
                   },
                   "Integration_GET_--profiles-Permission": {
                     "id": "Integration_GET_--profiles-Permission",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles-Permission",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--profiles/Integration_GET_--profiles-Permission",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
@@ -2030,7 +1950,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--profiles/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--profiles/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
@@ -2065,15 +1985,15 @@
               },
               "Lambda_POST_--profiles": {
                 "id": "Lambda_POST_--profiles",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles",
+                "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles",
                 "children": {
                   "ServiceRole": {
                     "id": "ServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole",
                     "children": {
                       "ImportServiceRole": {
                         "id": "ImportServiceRole",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/ImportServiceRole",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.142.1"
@@ -2081,7 +2001,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -2118,7 +2038,7 @@
                               },
                               {
                                 "key": "sst:stage",
-                                "value": "greenmev2"
+                                "value": "prod"
                               }
                             ]
                           }
@@ -2130,11 +2050,11 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/DefaultPolicy",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/DefaultPolicy/Resource",
+                            "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/ServiceRole/DefaultPolicy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -2289,45 +2209,10 @@
                                             {
                                               "Ref": "AWS::Partition"
                                             },
-                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                           ]
                                         ]
                                       }
-                                    },
-                                    {
-                                      "Action": "iot:*",
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                            ]
-                                          ]
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ],
                                   "Version": "2012-10-17"
@@ -2357,35 +2242,9 @@
                       "version": "2.142.1"
                     }
                   },
-                  "Code": {
-                    "id": "Code",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.142.1"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.142.1"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.142.1"
-                    }
-                  },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -2394,16 +2253,14 @@
                         ],
                         "code": {
                           "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                          "s3Key": "52841d9f7fe72e4e8f3d0cefdd9f3511ec582f0c89b6d5bcba785e8c9eb2eb0a.zip"
                         },
-                        "description": "live",
                         "environment": {
                           "variables": {
-                            "SST_FUNCTION_ID": "c8de75d1d2941efd04a9d53e74b1a09af7d57bb6d3",
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_APP": "green-one-auth",
-                            "SST_STAGE": "greenmev2",
-                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_STAGE": "prod",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                             "SST_Table_tableName_users": {
                               "Ref": "usersTableA9DCAD73"
                             },
@@ -2419,14 +2276,13 @@
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
                             },
-                            "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
                           }
                         },
                         "ephemeralStorage": {
                           "size": 512
                         },
-                        "handler": "live-lambda.handler",
+                        "handler": "packages/functions/src/profiles/create.handler",
                         "memorySize": 1024,
                         "role": {
                           "Fn::GetAtt": [
@@ -2442,7 +2298,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ],
                         "timeout": 10,
@@ -2456,31 +2312,55 @@
                       "version": "2.142.1"
                     }
                   },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/EventInvokeConfig",
+                  "Lambda_POST_--profiles-Sourcemap": {
+                    "id": "Lambda_POST_--profiles-Sourcemap",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Lambda_POST_--profiles-Sourcemap",
                     "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "apiLambdaPOSTprofilesD701A171"
-                            },
-                            "maximumRetryAttempts": 0,
-                            "qualifier": "$LATEST"
-                          }
-                        },
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Lambda_POST_--profiles-Sourcemap/Stage",
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Lambda_POST_--profiles-Sourcemap/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.142.1"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--profiles/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                       "version": "2.142.1"
                     }
                   }
@@ -2492,15 +2372,15 @@
               },
               "Route_POST_--profiles": {
                 "id": "Route_POST_--profiles",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--profiles",
+                "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--profiles",
                 "children": {
                   "Integration_POST_--profiles": {
                     "id": "Integration_POST_--profiles",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -2530,7 +2410,7 @@
                   },
                   "Integration_POST_--profiles-Permission": {
                     "id": "Integration_POST_--profiles-Permission",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles-Permission",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--profiles/Integration_POST_--profiles-Permission",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
@@ -2567,7 +2447,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--profiles/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--profiles/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
@@ -2602,15 +2482,15 @@
               },
               "Lambda_GET_--venues": {
                 "id": "Lambda_GET_--venues",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues",
+                "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues",
                 "children": {
                   "ServiceRole": {
                     "id": "ServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole",
                     "children": {
                       "ImportServiceRole": {
                         "id": "ImportServiceRole",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/ImportServiceRole",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.142.1"
@@ -2618,7 +2498,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -2655,7 +2535,7 @@
                               },
                               {
                                 "key": "sst:stage",
-                                "value": "greenmev2"
+                                "value": "prod"
                               }
                             ]
                           }
@@ -2667,11 +2547,11 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/DefaultPolicy",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/DefaultPolicy/Resource",
+                            "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/ServiceRole/DefaultPolicy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -2826,45 +2706,10 @@
                                             {
                                               "Ref": "AWS::Partition"
                                             },
-                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                           ]
                                         ]
                                       }
-                                    },
-                                    {
-                                      "Action": "iot:*",
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                            ]
-                                          ]
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ],
                                   "Version": "2012-10-17"
@@ -2894,35 +2739,9 @@
                       "version": "2.142.1"
                     }
                   },
-                  "Code": {
-                    "id": "Code",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.142.1"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.142.1"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.142.1"
-                    }
-                  },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -2931,16 +2750,14 @@
                         ],
                         "code": {
                           "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                          "s3Key": "08e0d413a1fa6b7d48315d5aabeb01f46663e071eafc9ced8d77d3688cedb250.zip"
                         },
-                        "description": "live",
                         "environment": {
                           "variables": {
-                            "SST_FUNCTION_ID": "c8de0d3d6e75b9f7ceda58d9cf8730ba53b77aa079",
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_APP": "green-one-auth",
-                            "SST_STAGE": "greenmev2",
-                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_STAGE": "prod",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                             "SST_Table_tableName_users": {
                               "Ref": "usersTableA9DCAD73"
                             },
@@ -2956,14 +2773,13 @@
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
                             },
-                            "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
                           }
                         },
                         "ephemeralStorage": {
                           "size": 512
                         },
-                        "handler": "live-lambda.handler",
+                        "handler": "packages/functions/src/venues/list.handler",
                         "memorySize": 1024,
                         "role": {
                           "Fn::GetAtt": [
@@ -2979,7 +2795,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ],
                         "timeout": 10,
@@ -2993,31 +2809,55 @@
                       "version": "2.142.1"
                     }
                   },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/EventInvokeConfig",
+                  "Lambda_GET_--venues-Sourcemap": {
+                    "id": "Lambda_GET_--venues-Sourcemap",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Lambda_GET_--venues-Sourcemap",
                     "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_GET_--venues/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "apiLambdaGETvenuesF6ADC793"
-                            },
-                            "maximumRetryAttempts": 0,
-                            "qualifier": "$LATEST"
-                          }
-                        },
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Lambda_GET_--venues-Sourcemap/Stage",
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Lambda_GET_--venues-Sourcemap/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.142.1"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_GET_--venues/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                       "version": "2.142.1"
                     }
                   }
@@ -3029,15 +2869,15 @@
               },
               "Route_GET_--venues": {
                 "id": "Route_GET_--venues",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--venues",
+                "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--venues",
                 "children": {
                   "Integration_GET_--venues": {
                     "id": "Integration_GET_--venues",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -3067,7 +2907,7 @@
                   },
                   "Integration_GET_--venues-Permission": {
                     "id": "Integration_GET_--venues-Permission",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues-Permission",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--venues/Integration_GET_--venues-Permission",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
@@ -3104,7 +2944,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_GET_--venues/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_GET_--venues/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
@@ -3139,15 +2979,15 @@
               },
               "Lambda_POST_--venues": {
                 "id": "Lambda_POST_--venues",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues",
+                "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues",
                 "children": {
                   "ServiceRole": {
                     "id": "ServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole",
                     "children": {
                       "ImportServiceRole": {
                         "id": "ImportServiceRole",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/ImportServiceRole",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/ImportServiceRole",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.Resource",
                           "version": "2.142.1"
@@ -3155,7 +2995,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -3192,7 +3032,7 @@
                               },
                               {
                                 "key": "sst:stage",
-                                "value": "greenmev2"
+                                "value": "prod"
                               }
                             ]
                           }
@@ -3204,11 +3044,11 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/DefaultPolicy",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/DefaultPolicy/Resource",
+                            "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/ServiceRole/DefaultPolicy/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -3363,45 +3203,10 @@
                                             {
                                               "Ref": "AWS::Partition"
                                             },
-                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                           ]
                                         ]
                                       }
-                                    },
-                                    {
-                                      "Action": "iot:*",
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                            ]
-                                          ]
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              "arn:",
-                                              {
-                                                "Ref": "AWS::Partition"
-                                              },
-                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ],
                                   "Version": "2012-10-17"
@@ -3431,35 +3236,9 @@
                       "version": "2.142.1"
                     }
                   },
-                  "Code": {
-                    "id": "Code",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.142.1"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.142.1"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.142.1"
-                    }
-                  },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -3468,16 +3247,14 @@
                         ],
                         "code": {
                           "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                          "s3Key": "67825b303b4eecdb30e93c6e4c3a914ee7dc37369735e02a8d57c39d7c440a51.zip"
                         },
-                        "description": "live",
                         "environment": {
                           "variables": {
-                            "SST_FUNCTION_ID": "c8b1f0ad207c38730895f11766ad77ca16e090d883",
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_APP": "green-one-auth",
-                            "SST_STAGE": "greenmev2",
-                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_STAGE": "prod",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                             "SST_Table_tableName_users": {
                               "Ref": "usersTableA9DCAD73"
                             },
@@ -3493,14 +3270,13 @@
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
                             },
-                            "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
                           }
                         },
                         "ephemeralStorage": {
                           "size": 512
                         },
-                        "handler": "live-lambda.handler",
+                        "handler": "packages/functions/src/venues/create.handler",
                         "memorySize": 1024,
                         "role": {
                           "Fn::GetAtt": [
@@ -3516,7 +3292,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ],
                         "timeout": 10,
@@ -3530,31 +3306,55 @@
                       "version": "2.142.1"
                     }
                   },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/EventInvokeConfig",
+                  "Lambda_POST_--venues-Sourcemap": {
+                    "id": "Lambda_POST_--venues-Sourcemap",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Lambda_POST_--venues-Sourcemap",
                     "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--venues/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "apiLambdaPOSTvenues4927561E"
-                            },
-                            "maximumRetryAttempts": 0,
-                            "qualifier": "$LATEST"
-                          }
-                        },
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Lambda_POST_--venues-Sourcemap/Stage",
                         "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Lambda_POST_--venues-Sourcemap/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.142.1"
                         }
                       }
                     },
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.142.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "prod-green-one-auth-ExampleStack/api/Lambda_POST_--venues/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                       "version": "2.142.1"
                     }
                   }
@@ -3566,15 +3366,15 @@
               },
               "Route_POST_--venues": {
                 "id": "Route_POST_--venues",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--venues",
+                "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--venues",
                 "children": {
                   "Integration_POST_--venues": {
                     "id": "Integration_POST_--venues",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -3604,7 +3404,7 @@
                   },
                   "Integration_POST_--venues-Permission": {
                     "id": "Integration_POST_--venues-Permission",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues-Permission",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--venues/Integration_POST_--venues-Permission",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
@@ -3641,7 +3441,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--venues/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Route_POST_--venues/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
@@ -3676,18 +3476,18 @@
               },
               "Parameter_url": {
                 "id": "Parameter_url",
-                "path": "greenmev2-green-one-auth-ExampleStack/api/Parameter_url",
+                "path": "prod-green-one-auth-ExampleStack/api/Parameter_url",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/api/Parameter_url/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/api/Parameter_url/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Api/api/url",
+                        "name": "/sst/green-one-auth/prod/Api/api/url",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": {
@@ -3717,25 +3517,597 @@
           },
           "site": {
             "id": "site",
-            "path": "greenmev2-green-one-auth-ExampleStack/site",
+            "path": "prod-green-one-auth-ExampleStack/site",
             "children": {
-              "Parameter_url": {
-                "id": "Parameter_url",
-                "path": "greenmev2-green-one-auth-ExampleStack/site/Parameter_url",
+              "S3Bucket": {
+                "id": "S3Bucket",
+                "path": "prod-green-one-auth-ExampleStack/site/S3Bucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/site/Parameter_url/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/S3Bucket/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {
+                        "publicAccessBlockConfiguration": {
+                          "blockPublicAcls": true,
+                          "blockPublicPolicy": true,
+                          "ignorePublicAcls": true,
+                          "restrictPublicBuckets": true
+                        },
+                        "tags": [
+                          {
+                            "key": "aws-cdk:auto-delete-objects",
+                            "value": "true"
+                          },
+                          {
+                            "key": "sst:app",
+                            "value": "green-one-auth"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "prod"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "Policy": {
+                    "id": "Policy",
+                    "path": "prod-green-one-auth-ExampleStack/site/S3Bucket/Policy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "prod-green-one-auth-ExampleStack/site/S3Bucket/Policy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                          "aws:cdk:cloudformation:props": {
+                            "bucket": {
+                              "Ref": "siteS3Bucket2B2851F3"
+                            },
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:PutBucketPolicy",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "AWS": {
+                                      "Fn::GetAtt": [
+                                        "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                                        "Arn"
+                                      ]
+                                    }
+                                  },
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "siteS3Bucket2B2851F3",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "siteS3Bucket2B2851F3",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "CanonicalUser": {
+                                      "Fn::GetAtt": [
+                                        "siteDistributionOrigin1S3Origin34B0A58E",
+                                        "S3CanonicalUserId"
+                                      ]
+                                    }
+                                  },
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "siteS3Bucket2B2851F3",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.CfnBucketPolicy",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketPolicy",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AutoDeleteObjectsCustomResource": {
+                    "id": "AutoDeleteObjectsCustomResource",
+                    "path": "prod-green-one-auth-ExampleStack/site/S3Bucket/AutoDeleteObjectsCustomResource",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "prod-green-one-auth-ExampleStack/site/S3Bucket/AutoDeleteObjectsCustomResource/Default",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnResource",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CustomResource",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.Bucket",
+                  "version": "2.142.1"
+                }
+              },
+              "CloudFrontFunction": {
+                "id": "CloudFrontFunction",
+                "path": "prod-green-one-auth-ExampleStack/site/CloudFrontFunction",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/CloudFrontFunction/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::CloudFront::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "autoPublish": true,
+                        "functionCode": "\nfunction handler(event) {\n  var request = event.request;\n  var uri = request.uri;\n  \n  if (uri.startsWith(\"/.well-known/\")) {\n    return request;\n  }\n\n  if (uri.endsWith(\"/\")) {\n    request.uri += \"index.html\";\n  } else if (!uri.split(\"/\").pop().includes(\".\")) {\n    request.uri += \".html\";\n  }\n\n  return request;\n}\n          ",
+                        "functionConfig": {
+                          "comment": "us-east-1prodgreenoneauthExamplecksiteCloudFrontFunctionA27A90B2",
+                          "runtime": "cloudfront-js-1.0"
+                        },
+                        "name": "us-east-1prodgreenoneauthExamplecksiteCloudFrontFunctionA27A90B2"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_cloudfront.CfnFunction",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.Function",
+                  "version": "2.142.1"
+                }
+              },
+              "CDN": {
+                "id": "CDN",
+                "path": "prod-green-one-auth-ExampleStack/site/CDN",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.3.0"
+                }
+              },
+              "Distribution": {
+                "id": "Distribution",
+                "path": "prod-green-one-auth-ExampleStack/site/Distribution",
+                "children": {
+                  "Origin1": {
+                    "id": "Origin1",
+                    "path": "prod-green-one-auth-ExampleStack/site/Distribution/Origin1",
+                    "children": {
+                      "S3Origin": {
+                        "id": "S3Origin",
+                        "path": "prod-green-one-auth-ExampleStack/site/Distribution/Origin1/S3Origin",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "prod-green-one-auth-ExampleStack/site/Distribution/Origin1/S3Origin/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+                              "aws:cdk:cloudformation:props": {
+                                "cloudFrontOriginAccessIdentityConfig": {
+                                  "comment": "Identity for prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_cloudfront.CfnCloudFrontOriginAccessIdentity",
+                              "version": "2.142.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_cloudfront.OriginAccessIdentity",
+                          "version": "2.142.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "constructs.Construct",
+                      "version": "10.3.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/Distribution/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                      "aws:cdk:cloudformation:props": {
+                        "distributionConfig": {
+                          "enabled": true,
+                          "origins": [
+                            {
+                              "domainName": {
+                                "Fn::GetAtt": [
+                                  "siteS3Bucket2B2851F3",
+                                  "RegionalDomainName"
+                                ]
+                              },
+                              "id": "prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E",
+                              "s3OriginConfig": {
+                                "originAccessIdentity": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "origin-access-identity/cloudfront/",
+                                      {
+                                        "Ref": "siteDistributionOrigin1S3Origin34B0A58E"
+                                      }
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "defaultCacheBehavior": {
+                            "pathPattern": "*",
+                            "targetOriginId": "prodgreenoneauthExampleStacksiteDistributionOrigin17C279F0E",
+                            "cachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+                            "compress": true,
+                            "viewerProtocolPolicy": "redirect-to-https",
+                            "functionAssociations": [
+                              {
+                                "functionArn": {
+                                  "Fn::GetAtt": [
+                                    "siteCloudFrontFunctionE91DD486",
+                                    "FunctionARN"
+                                  ]
+                                },
+                                "eventType": "viewer-request"
+                              }
+                            ]
+                          },
+                          "aliases": [],
+                          "customErrorResponses": [
+                            {
+                              "errorCode": 403,
+                              "responseCode": 200,
+                              "responsePagePath": "/index.html"
+                            },
+                            {
+                              "errorCode": 404,
+                              "responseCode": 200,
+                              "responsePagePath": "/index.html"
+                            }
+                          ],
+                          "defaultRootObject": "index.html",
+                          "httpVersion": "http2",
+                          "ipv6Enabled": true
+                        },
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "green-one-auth"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "prod"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_cloudfront.CfnDistribution",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.Distribution",
+                  "version": "2.142.1"
+                }
+              },
+              "Asset0": {
+                "id": "Asset0",
+                "path": "prod-green-one-auth-ExampleStack/site/Asset0",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/site/Asset0/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/site/Asset0/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.142.1"
+                }
+              },
+              "AssetFilenames": {
+                "id": "AssetFilenames",
+                "path": "prod-green-one-auth-ExampleStack/site/AssetFilenames",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/site/AssetFilenames/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/site/AssetFilenames/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.142.1"
+                }
+              },
+              "S3UploaderPolicy": {
+                "id": "S3UploaderPolicy",
+                "path": "prod-green-one-auth-ExampleStack/site/S3UploaderPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/S3UploaderPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "lambda:InvokeFunction",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "CustomResourceHandlerE8FB56BA",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            {
+                              "Action": [
+                                "s3:ListBucket",
+                                "s3:PutObject",
+                                "s3:DeleteObject"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": [
+                                    "siteS3Bucket2B2851F3",
+                                    "Arn"
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "siteS3Bucket2B2851F3",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "siteS3UploaderPolicyE1EE6C9F",
+                        "roles": [
+                          {
+                            "Ref": "CustomResourceHandlerServiceRole41AEC181"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.142.1"
+                }
+              },
+              "S3Uploader": {
+                "id": "S3Uploader",
+                "path": "prod-green-one-auth-ExampleStack/site/S3Uploader",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "prod-green-one-auth-ExampleStack/site/S3Uploader/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.142.1"
+                }
+              },
+              "CloudFrontInvalidatorPolicy": {
+                "id": "CloudFrontInvalidatorPolicy",
+                "path": "prod-green-one-auth-ExampleStack/site/CloudFrontInvalidatorPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/CloudFrontInvalidatorPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "cloudfront:GetInvalidation",
+                                "cloudfront:CreateInvalidation"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":cloudfront::158871758094:distribution/",
+                                    {
+                                      "Ref": "siteDistribution706F5265"
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "siteCloudFrontInvalidatorPolicyEE18C654",
+                        "roles": [
+                          {
+                            "Ref": "CustomResourceHandlerServiceRole41AEC181"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.142.1"
+                }
+              },
+              "CloudFrontInvalidator": {
+                "id": "CloudFrontInvalidator",
+                "path": "prod-green-one-auth-ExampleStack/site/CloudFrontInvalidator",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "prod-green-one-auth-ExampleStack/site/CloudFrontInvalidator/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.142.1"
+                }
+              },
+              "Parameter_url": {
+                "id": "Parameter_url",
+                "path": "prod-green-one-auth-ExampleStack/site/Parameter_url",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "prod-green-one-auth-ExampleStack/site/Parameter_url/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/StaticSite/site/url",
+                        "name": "/sst/green-one-auth/prod/StaticSite/site/url",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
-                        "value": "localhost"
+                        "value": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "https://",
+                              {
+                                "Fn::GetAtt": [
+                                  "siteDistribution706F5265",
+                                  "DomainName"
+                                ]
+                              }
+                            ]
+                          ]
+                        }
                       }
                     },
                     "constructInfo": {
@@ -3755,9 +4127,43 @@
               "version": "10.3.0"
             }
           },
+          "Custom::S3AutoDeleteObjectsCustomResourceProvider": {
+            "id": "Custom::S3AutoDeleteObjectsCustomResourceProvider",
+            "path": "prod-green-one-auth-ExampleStack/Custom::S3AutoDeleteObjectsCustomResourceProvider",
+            "children": {
+              "Staging": {
+                "id": "Staging",
+                "path": "prod-green-one-auth-ExampleStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.AssetStaging",
+                  "version": "2.142.1"
+                }
+              },
+              "Role": {
+                "id": "Role",
+                "path": "prod-green-one-auth-ExampleStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.142.1"
+                }
+              },
+              "Handler": {
+                "id": "Handler",
+                "path": "prod-green-one-auth-ExampleStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.142.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CustomResourceProviderBase",
+              "version": "2.142.1"
+            }
+          },
           "FACEBOOK_APP_ID": {
             "id": "FACEBOOK_APP_ID",
-            "path": "greenmev2-green-one-auth-ExampleStack/FACEBOOK_APP_ID",
+            "path": "prod-green-one-auth-ExampleStack/FACEBOOK_APP_ID",
             "constructInfo": {
               "fqn": "constructs.Construct",
               "version": "10.3.0"
@@ -3765,7 +4171,7 @@
           },
           "FACEBOOK_APP_SECRET": {
             "id": "FACEBOOK_APP_SECRET",
-            "path": "greenmev2-green-one-auth-ExampleStack/FACEBOOK_APP_SECRET",
+            "path": "prod-green-one-auth-ExampleStack/FACEBOOK_APP_SECRET",
             "constructInfo": {
               "fqn": "constructs.Construct",
               "version": "10.3.0"
@@ -3773,7 +4179,7 @@
           },
           "GOOGLE_CLIENT_ID": {
             "id": "GOOGLE_CLIENT_ID",
-            "path": "greenmev2-green-one-auth-ExampleStack/GOOGLE_CLIENT_ID",
+            "path": "prod-green-one-auth-ExampleStack/GOOGLE_CLIENT_ID",
             "constructInfo": {
               "fqn": "constructs.Construct",
               "version": "10.3.0"
@@ -3781,15 +4187,15 @@
           },
           "auth": {
             "id": "auth",
-            "path": "greenmev2-green-one-auth-ExampleStack/auth",
+            "path": "prod-green-one-auth-ExampleStack/auth",
             "children": {
               "CloudFrontInvalidatorPolicy": {
                 "id": "CloudFrontInvalidatorPolicy",
-                "path": "greenmev2-green-one-auth-ExampleStack/auth/CloudFrontInvalidatorPolicy",
+                "path": "prod-green-one-auth-ExampleStack/auth/CloudFrontInvalidatorPolicy",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/auth/CloudFrontInvalidatorPolicy/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/auth/CloudFrontInvalidatorPolicy/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                       "aws:cdk:cloudformation:props": {
@@ -3840,11 +4246,11 @@
               },
               "StackMetadata": {
                 "id": "StackMetadata",
-                "path": "greenmev2-green-one-auth-ExampleStack/auth/StackMetadata",
+                "path": "prod-green-one-auth-ExampleStack/auth/StackMetadata",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "greenmev2-green-one-auth-ExampleStack/auth/StackMetadata/Default",
+                    "path": "prod-green-one-auth-ExampleStack/auth/StackMetadata/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.142.1"
@@ -3858,18 +4264,18 @@
               },
               "prefix": {
                 "id": "prefix",
-                "path": "greenmev2-green-one-auth-ExampleStack/auth/prefix",
+                "path": "prod-green-one-auth-ExampleStack/auth/prefix",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/auth/prefix/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/auth/prefix/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
                       "aws:cdk:cloudformation:props": {
-                        "name": "/sst/green-one-auth/greenmev2/Auth/auth/prefix",
+                        "name": "/sst/green-one-auth/prod/Auth/auth/prefix",
                         "tags": {
                           "sst:app": "green-one-auth",
-                          "sst:stage": "greenmev2"
+                          "sst:stage": "prod"
                         },
                         "type": "String",
                         "value": "/auth"
@@ -3894,15 +4300,15 @@
           },
           "Lambda_ANY_--auth--{proxy+}": {
             "id": "Lambda_ANY_--auth--{proxy+}",
-            "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}",
+            "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/ImportServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -3910,7 +4316,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -3947,7 +4353,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -3959,11 +4365,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/DefaultPolicy",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/DefaultPolicy/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/ServiceRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -4118,7 +4524,7 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/StaticSite/site/url"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/StaticSite/site/url"
                                       ]
                                     ]
                                   }
@@ -4135,7 +4541,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/FACEBOOK_APP_ID/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_ID/value"
                                         ]
                                       ]
                                     },
@@ -4165,7 +4571,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/FACEBOOK_APP_SECRET/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_SECRET/value"
                                         ]
                                       ]
                                     },
@@ -4195,7 +4601,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/GOOGLE_CLIENT_ID/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/GOOGLE_CLIENT_ID/value"
                                         ]
                                       ]
                                     },
@@ -4224,7 +4630,7 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/*"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/*"
                                       ]
                                     ]
                                   }
@@ -4240,45 +4646,10 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                       ]
                                     ]
                                   }
-                                },
-                                {
-                                  "Action": "iot:*",
-                                  "Effect": "Allow",
-                                  "Resource": "*"
-                                },
-                                {
-                                  "Action": "s3:*",
-                                  "Effect": "Allow",
-                                  "Resource": [
-                                    {
-                                      "Fn::Join": [
-                                        "",
-                                        [
-                                          "arn:",
-                                          {
-                                            "Ref": "AWS::Partition"
-                                          },
-                                          ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                        ]
-                                      ]
-                                    },
-                                    {
-                                      "Fn::Join": [
-                                        "",
-                                        [
-                                          "arn:",
-                                          {
-                                            "Ref": "AWS::Partition"
-                                          },
-                                          ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                        ]
-                                      ]
-                                    }
-                                  ]
                                 }
                               ],
                               "Version": "2012-10-17"
@@ -4308,35 +4679,9 @@
                   "version": "2.142.1"
                 }
               },
-              "Code": {
-                "id": "Code",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code",
-                "children": {
-                  "Stage": {
-                    "id": "Stage",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code/Stage",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.142.1"
-                    }
-                  },
-                  "AssetBucket": {
-                    "id": "AssetBucket",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code/AssetBucket",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.142.1"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.142.1"
-                }
-              },
               "Resource": {
                 "id": "Resource",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Resource",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -4345,16 +4690,14 @@
                     ],
                     "code": {
                       "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                      "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                      "s3Key": "b297ab0dadd99797668163b1ccb56d67bf5b3f96020562e03d6a08aee467a25e.zip"
                     },
-                    "description": "live",
                     "environment": {
                       "variables": {
-                        "SST_FUNCTION_ID": "c83d28cd2895b04ad3c4aa5eececdefaaa576ec8f9",
                         "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                         "SST_APP": "green-one-auth",
-                        "SST_STAGE": "greenmev2",
-                        "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                        "SST_STAGE": "prod",
+                        "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                         "SST_Table_tableName_users": {
                           "Ref": "usersTableA9DCAD73"
                         },
@@ -4370,11 +4713,10 @@
                         "SST_Table_tableName_MessagesTable": {
                           "Ref": "MessagesTableA255D91E"
                         },
-                        "SST_StaticSite_url_site": "localhost",
+                        "SST_StaticSite_url_site": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
-                        "SST_DEBUG_IS_API_ROUTE": "1",
                         "SST_Auth_prefix_auth": "/auth",
                         "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__",
                         "SST_Auth_privateKey_auth": "__FETCH_FROM_SSM__"
@@ -4383,7 +4725,7 @@
                     "ephemeralStorage": {
                       "size": 512
                     },
-                    "handler": "live-lambda.handler",
+                    "handler": "packages/functions/src/auth.handler",
                     "memorySize": 1024,
                     "role": {
                       "Fn::GetAtt": [
@@ -4399,7 +4741,7 @@
                       },
                       {
                         "key": "sst:stage",
-                        "value": "greenmev2"
+                        "value": "prod"
                       }
                     ],
                     "timeout": 10,
@@ -4413,31 +4755,55 @@
                   "version": "2.142.1"
                 }
               },
-              "EventInvokeConfig": {
-                "id": "EventInvokeConfig",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/EventInvokeConfig",
+              "Lambda_ANY_--auth--{proxy+}-Sourcemap": {
+                "id": "Lambda_ANY_--auth--{proxy+}-Sourcemap",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Lambda_ANY_--auth--{proxy+}-Sourcemap",
                 "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/EventInvokeConfig/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                      "aws:cdk:cloudformation:props": {
-                        "functionName": {
-                          "Ref": "LambdaANYauthproxy8E797D91"
-                        },
-                        "maximumRetryAttempts": 0,
-                        "qualifier": "$LATEST"
-                      }
-                    },
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Lambda_ANY_--auth--{proxy+}-Sourcemap/Stage",
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Lambda_ANY_--auth--{proxy+}-Sourcemap/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.142.1"
                     }
                   }
                 },
                 "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.142.1"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_ANY_--auth--{proxy+}/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                   "version": "2.142.1"
                 }
               }
@@ -4449,15 +4815,15 @@
           },
           "Route_ANY_--auth--{proxy+}": {
             "id": "Route_ANY_--auth--{proxy+}",
-            "path": "greenmev2-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}",
+            "path": "prod-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}",
             "children": {
               "Integration_ANY_--auth--{proxy+}": {
                 "id": "Integration_ANY_--auth--{proxy+}",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}",
+                "path": "prod-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                       "aws:cdk:cloudformation:props": {
@@ -4487,7 +4853,7 @@
               },
               "Integration_ANY_--auth--{proxy+}-Permission": {
                 "id": "Integration_ANY_--auth--{proxy+}-Permission",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}-Permission",
+                "path": "prod-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}-Permission",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                   "aws:cdk:cloudformation:props": {
@@ -4524,7 +4890,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Resource",
+                "path": "prod-green-one-auth-ExampleStack/Route_ANY_--auth--{proxy+}/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                   "aws:cdk:cloudformation:props": {
@@ -4559,15 +4925,15 @@
           },
           "Lambda_GET_--auth": {
             "id": "Lambda_GET_--auth",
-            "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth",
+            "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/ImportServiceRole",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.142.1"
@@ -4575,7 +4941,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -4612,7 +4978,7 @@
                           },
                           {
                             "key": "sst:stage",
-                            "value": "greenmev2"
+                            "value": "prod"
                           }
                         ]
                       }
@@ -4624,11 +4990,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/DefaultPolicy",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/DefaultPolicy/Resource",
+                        "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/ServiceRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -4783,7 +5149,7 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/StaticSite/site/url"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/StaticSite/site/url"
                                       ]
                                     ]
                                   }
@@ -4800,7 +5166,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/FACEBOOK_APP_ID/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_ID/value"
                                         ]
                                       ]
                                     },
@@ -4830,7 +5196,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/FACEBOOK_APP_SECRET/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/FACEBOOK_APP_SECRET/value"
                                         ]
                                       ]
                                     },
@@ -4860,7 +5226,7 @@
                                           {
                                             "Ref": "AWS::Partition"
                                           },
-                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Secret/GOOGLE_CLIENT_ID/value"
+                                          ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Secret/GOOGLE_CLIENT_ID/value"
                                         ]
                                       ]
                                     },
@@ -4889,7 +5255,7 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/*"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/*"
                                       ]
                                     ]
                                   }
@@ -4905,45 +5271,10 @@
                                         {
                                           "Ref": "AWS::Partition"
                                         },
-                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                        ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/prod/Auth/auth/publicKey"
                                       ]
                                     ]
                                   }
-                                },
-                                {
-                                  "Action": "iot:*",
-                                  "Effect": "Allow",
-                                  "Resource": "*"
-                                },
-                                {
-                                  "Action": "s3:*",
-                                  "Effect": "Allow",
-                                  "Resource": [
-                                    {
-                                      "Fn::Join": [
-                                        "",
-                                        [
-                                          "arn:",
-                                          {
-                                            "Ref": "AWS::Partition"
-                                          },
-                                          ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
-                                        ]
-                                      ]
-                                    },
-                                    {
-                                      "Fn::Join": [
-                                        "",
-                                        [
-                                          "arn:",
-                                          {
-                                            "Ref": "AWS::Partition"
-                                          },
-                                          ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
-                                        ]
-                                      ]
-                                    }
-                                  ]
                                 }
                               ],
                               "Version": "2012-10-17"
@@ -4973,35 +5304,9 @@
                   "version": "2.142.1"
                 }
               },
-              "Code": {
-                "id": "Code",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/Code",
-                "children": {
-                  "Stage": {
-                    "id": "Stage",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/Code/Stage",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.142.1"
-                    }
-                  },
-                  "AssetBucket": {
-                    "id": "AssetBucket",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/Code/AssetBucket",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.142.1"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.142.1"
-                }
-              },
               "Resource": {
                 "id": "Resource",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/Resource",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -5010,16 +5315,14 @@
                     ],
                     "code": {
                       "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
-                      "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                      "s3Key": "82755df8b0ef55589e8736d0af895c0ff5ca5ad169215346460165c977bdfccd.zip"
                     },
-                    "description": "live",
                     "environment": {
                       "variables": {
-                        "SST_FUNCTION_ID": "c83dca955d366846ea7e90624a32030694adb22c26",
                         "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                         "SST_APP": "green-one-auth",
-                        "SST_STAGE": "greenmev2",
-                        "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                        "SST_STAGE": "prod",
+                        "SST_SSM_PREFIX": "/sst/green-one-auth/prod/",
                         "SST_Table_tableName_users": {
                           "Ref": "usersTableA9DCAD73"
                         },
@@ -5035,11 +5338,10 @@
                         "SST_Table_tableName_MessagesTable": {
                           "Ref": "MessagesTableA255D91E"
                         },
-                        "SST_StaticSite_url_site": "localhost",
+                        "SST_StaticSite_url_site": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_FACEBOOK_APP_SECRET": "__FETCH_FROM_SSM__",
                         "SST_Secret_value_GOOGLE_CLIENT_ID": "__FETCH_FROM_SSM__",
-                        "SST_DEBUG_IS_API_ROUTE": "1",
                         "SST_Auth_prefix_auth": "/auth",
                         "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__",
                         "SST_Auth_privateKey_auth": "__FETCH_FROM_SSM__"
@@ -5048,7 +5350,7 @@
                     "ephemeralStorage": {
                       "size": 512
                     },
-                    "handler": "live-lambda.handler",
+                    "handler": "packages/functions/src/auth.handler",
                     "memorySize": 1024,
                     "role": {
                       "Fn::GetAtt": [
@@ -5064,7 +5366,7 @@
                       },
                       {
                         "key": "sst:stage",
-                        "value": "greenmev2"
+                        "value": "prod"
                       }
                     ],
                     "timeout": 10,
@@ -5078,31 +5380,55 @@
                   "version": "2.142.1"
                 }
               },
-              "EventInvokeConfig": {
-                "id": "EventInvokeConfig",
-                "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/EventInvokeConfig",
+              "Lambda_GET_--auth-Sourcemap": {
+                "id": "Lambda_GET_--auth-Sourcemap",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Lambda_GET_--auth-Sourcemap",
                 "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Lambda_GET_--auth/EventInvokeConfig/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                      "aws:cdk:cloudformation:props": {
-                        "functionName": {
-                          "Ref": "LambdaGETauthEE6E69A6"
-                        },
-                        "maximumRetryAttempts": 0,
-                        "qualifier": "$LATEST"
-                      }
-                    },
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Lambda_GET_--auth-Sourcemap/Stage",
                     "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Lambda_GET_--auth-Sourcemap/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.142.1"
                     }
                   }
                 },
                 "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.142.1"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.142.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "prod-green-one-auth-ExampleStack/Lambda_GET_--auth/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.142.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
                   "version": "2.142.1"
                 }
               }
@@ -5114,15 +5440,15 @@
           },
           "Route_GET_--auth": {
             "id": "Route_GET_--auth",
-            "path": "greenmev2-green-one-auth-ExampleStack/Route_GET_--auth",
+            "path": "prod-green-one-auth-ExampleStack/Route_GET_--auth",
             "children": {
               "Integration_GET_--auth": {
                 "id": "Integration_GET_--auth",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth",
+                "path": "prod-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "greenmev2-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth/Resource",
+                    "path": "prod-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                       "aws:cdk:cloudformation:props": {
@@ -5152,7 +5478,7 @@
               },
               "Integration_GET_--auth-Permission": {
                 "id": "Integration_GET_--auth-Permission",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth-Permission",
+                "path": "prod-green-one-auth-ExampleStack/Route_GET_--auth/Integration_GET_--auth-Permission",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                   "aws:cdk:cloudformation:props": {
@@ -5189,7 +5515,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "greenmev2-green-one-auth-ExampleStack/Route_GET_--auth/Resource",
+                "path": "prod-green-one-auth-ExampleStack/Route_GET_--auth/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                   "aws:cdk:cloudformation:props": {
@@ -5224,7 +5550,15 @@
           },
           "SSTStackOutputApiEndpoint": {
             "id": "SSTStackOutputApiEndpoint",
-            "path": "greenmev2-green-one-auth-ExampleStack/SSTStackOutputApiEndpoint",
+            "path": "prod-green-one-auth-ExampleStack/SSTStackOutputApiEndpoint",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.142.1"
+            }
+          },
+          "SSTStackOutputSiteURL": {
+            "id": "SSTStackOutputSiteURL",
+            "path": "prod-green-one-auth-ExampleStack/SSTStackOutputSiteURL",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.142.1"
@@ -5232,15 +5566,102 @@
           },
           "SSTStackOutputSSTMetadata": {
             "id": "SSTStackOutputSSTMetadata",
-            "path": "greenmev2-green-one-auth-ExampleStack/SSTStackOutputSSTMetadata",
+            "path": "prod-green-one-auth-ExampleStack/SSTStackOutputSSTMetadata",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.142.1"
             }
           },
+          "SourcemapUploaderPolicy": {
+            "id": "SourcemapUploaderPolicy",
+            "path": "prod-green-one-auth-ExampleStack/SourcemapUploaderPolicy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "prod-green-one-auth-ExampleStack/SourcemapUploaderPolicy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                  "aws:cdk:cloudformation:props": {
+                    "policyDocument": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "s3:GetObject",
+                            "s3:GetObjectTagging",
+                            "s3:PutObject",
+                            "s3:PutObjectTagging"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": [
+                            {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:",
+                                  {
+                                    "Ref": "AWS::Partition"
+                                  },
+                                  ":s3:::cdk-hnb659fds-assets-158871758094-us-east-1/*"
+                                ]
+                              ]
+                            },
+                            {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:",
+                                  {
+                                    "Ref": "AWS::Partition"
+                                  },
+                                  ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "policyName": "SourcemapUploaderPolicy6476872E",
+                    "roles": [
+                      {
+                        "Ref": "CustomResourceHandlerServiceRole41AEC181"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                  "version": "2.142.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Policy",
+              "version": "2.142.1"
+            }
+          },
+          "SourcemapUploader": {
+            "id": "SourcemapUploader",
+            "path": "prod-green-one-auth-ExampleStack/SourcemapUploader",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "prod-green-one-auth-ExampleStack/SourcemapUploader/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.142.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CustomResource",
+              "version": "2.142.1"
+            }
+          },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "greenmev2-green-one-auth-ExampleStack/BootstrapVersion",
+            "path": "prod-green-one-auth-ExampleStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.142.1"
@@ -5248,7 +5669,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "greenmev2-green-one-auth-ExampleStack/CheckBootstrapVersion",
+            "path": "prod-green-one-auth-ExampleStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.142.1"

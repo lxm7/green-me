@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'typescript-app'
+rootProject.name = 'expo-next'
 
 dependencyResolutionManagement {
   versionCatalogs {

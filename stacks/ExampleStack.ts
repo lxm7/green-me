@@ -122,7 +122,8 @@ export function ExampleStack({ app, stack }: StackContext) {
   // Create a static site
   const site = new StaticSite(stack, "site", {
     path: "expo-next",
-    buildCommand: "npm run build",
+    // dont build until expo sort there web shit out with generating hash for mp4 in the build
+    // buildCommand: "npm run build",
     buildOutput: "dist",
     // bind mainDb incase we should call direct to db from getServerSideProps or getStaticProps
     // bind: [
