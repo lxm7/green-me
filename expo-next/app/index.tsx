@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <View>
       <Link href="/sign-in">Go to Signin</Link>
+      <Link href="/search">Map</Link>
       <Text>Welcome to the Home Page</Text>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text
