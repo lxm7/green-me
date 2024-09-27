@@ -161,6 +161,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				FB2EF882AEA44D4D891B56FB /* Remove signature files (Xcode workaround) */,
 			);
 			buildRules = (
 			);
@@ -277,6 +278,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-exponext/Pods-exponext-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FB2EF882AEA44D4D891B56FB /* Remove signature files (Xcode workaround) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Remove signature files (Xcode workaround)";
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "
+    echo \"Remove signature files (Xcode workaround)\";
+    rm -rf \"$CONFIGURATION_BUILD_DIR/MapLibre.xcframework-ios.signature\";
+  ";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,6 +367,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				SWIFT_OBJC_BRIDGING_HEADER = exponext/exponext-Bridging-Header.h;
 				CODE_SIGN_ENTITLEMENTS = exponext/exponext.entitlements;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64";
 			};
 			name = Release;
 		};
