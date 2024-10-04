@@ -1,0 +1,173 @@
+{
+  "found": 4,
+  "hits": [
+    {
+      "id": "11",
+      "document": {
+        "name": "Leeds Tee Store",
+        "business": "Independent",
+        "score": null,
+        "accreditors": false,
+        "coordinates": [-1.548567, 53.800755],
+        "products": [
+          {
+            "name": "Graphic Tee",
+            "price": "£20.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.5,
+            "accredited": true,
+            "keywords": ["tshirt", "graphic"],
+            "coordinates": [-1.548567, 53.800755]
+          },
+          {
+            "name": "Plain White Tee",
+            "price": "£12.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.8,
+            "accredited": true,
+            "keywords": ["tshirt", "white"],
+            "coordinates": [-1.548567, 53.800755]
+          },
+          {
+            "name": "Vintage Band Tee",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.3,
+            "price": "£25.00",
+            "accredited": true,
+            "keywords": ["tshirt", "band"],
+            "coordinates": [-1.548567, 53.800755]
+          }
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "document": {
+        "name": "High Street Fashion",
+        "business": "Chain",
+        "score": 3.5,
+        "accreditors": false,
+        "coordinates": [-1.550916, 53.801277],
+        "products": [
+          {
+            "name": "Logo Tee",
+            "price": "£15.00",
+            "available": true,
+            "business": "Chain",
+            "greenScore": 3.2,
+            "accredited": true,
+            "keywords": ["tshirt", "logo"],
+            "coordinates": [-1.550916, 53.801277]
+          },
+          {
+            "name": "Basic Crew Neck",
+            "price": "£10.00",
+            "available": true,
+            "business": "Chain",
+            "greenScore": 3.7,
+            "accredited": true,
+            "keywords": ["tshirt", "crew neck"],
+            "coordinates": [-1.550916, 53.801277]
+          },
+          {
+            "name": "Striped Tee",
+            "available": true,
+            "business": "Chain",
+            "greenScore": 3.4,
+            "price": "£18.00",
+            "accredited": true,
+            "keywords": ["tshirt", "striped"],
+            "coordinates": [-1.550916, 53.801277]
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "document": {
+        "name": "Leeds Online Tees",
+        "business": "Online",
+        "score": 4.8,
+        "accreditors": true,
+        "coordinates": [-1.547851, 53.799775],
+        "products": [
+          {
+            "name": "Custom Print Tee",
+            "price": "£22.00",
+            "available": true,
+            "business": "Online",
+            "greenScore": 4.9,
+            "accredited": true,
+            "keywords": ["tshirt", "custom"],
+            "coordinates": [-1.547851, 53.799775]
+          },
+          {
+            "name": "Organic Cotton Tee",
+            "price": "£18.00",
+            "available": true,
+            "business": "Online",
+            "greenScore": 5.0,
+            "accredited": true,
+            "keywords": ["tshirt", "organic", "cotton"],
+            "coordinates": [-1.547851, 53.799775]
+          },
+          {
+            "name": "Sustainable tshirt Pack",
+            "price": "£45.00",
+            "available": true,
+            "business": "Online",
+            "greenScore": 4.95,
+            "accredited": true,
+            "keywords": ["tshirt", "sustainable", "pack"],
+            "coordinates": [-1.547851, 53.799775]
+          }
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "document": {
+        "name": "Urban Tees Leeds",
+        "business": "Independent",
+        "score": null,
+        "accreditors": true,
+        "coordinates": [-1.555377, 53.797533],
+        "products": [
+          {
+            "name": "Graphic Tee",
+            "price": "£20.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.5,
+            "accredited": true,
+            "keywords": ["tshirt", "graphic"],
+            "coordinates": [-1.555377, 53.797533]
+          },
+          {
+            "name": "Plain White Tee",
+            "price": "£12.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.8,
+            "accredited": true,
+            "keywords": ["tshirt", "white"],
+            "coordinates": [-1.555377, 53.797533]
+          },
+          {
+            "name": "Eco-Friendly Tee Pack",
+            "price": "£35.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.9,
+            "accredited": true,
+            "keywords": ["tshirt", "eco-friendly", "pack"],
+            "coordinates": [-1.555377, 53.797533]
+          }
+        ]
+      }
+    }
+  ]
+}
