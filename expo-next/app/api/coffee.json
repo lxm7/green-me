@@ -1,0 +1,173 @@
+{
+  "found": 3,
+  "hits": [
+    {
+      "id": "1",
+      "document": {
+        "name": "The Coffee House",
+        "business": "Independent",
+        "score": null,
+        "accreditors": false,
+        "coordinates": [-2.5919, 51.4553],
+        "products": [
+          {
+            "name": "Cappuccino",
+            "price": "£3.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.03,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Americano",
+            "price": "£2.80",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.21,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Mocha",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.1,
+            "price": "£2.80",
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "document": {
+        "name": "Café Nero",
+        "business": "Franchise",
+        "score": 3.2,
+        "accreditors": false,
+        "coordinates": [-2.5932, 51.4534],
+        "products": [
+          {
+            "name": "Cappuccino",
+            "price": "£3.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 3.23,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Americano",
+            "price": "£2.80",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 3.71,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Mocha",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 3.17,
+            "price": "£2.80",
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "document": {
+        "name": "Bristol Coffee Co.",
+        "business": "Independent",
+        "score": 4.7,
+        "accreditors": true,
+        "coordinates": [-2.5971, 51.4548],
+        "products": [
+          {
+            "name": "Flat White",
+            "price": "£3.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.17,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Cortado",
+            "price": "£2.90",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.27,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          },
+          {
+            "name": "Beans 500g",
+            "price": "£12.50",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.97,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5971, 51.4548]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "document": {
+        "name": "Esta Coffee",
+        "business": "Independent",
+        "score": null,
+        "accreditors": true,
+        "coordinates": [-2.5625, 51.4641],
+        "products": [
+          {
+            "name": "Flat White",
+            "price": "£3.00",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.17,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5625, 51.4641]
+          },
+          {
+            "name": "Cortado",
+            "price": "£2.90",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.27,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5625, 51.4641]
+          },
+          {
+            "name": "Beans 500g",
+            "price": "£12.50",
+            "available": true,
+            "business": "Independent",
+            "greenScore": 4.97,
+            "accredited": true,
+            "keywords": ["coffee"],
+            "coordinates": [-2.5625, 51.4641]
+          }
+        ]
+      }
+    }
+  ]
+}
