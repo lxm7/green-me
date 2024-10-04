@@ -49,12 +49,16 @@
       [
         "expo-asset",
         {
-          "assets": [
-            "./assets/videos/people.mp4"
-          ]
+          "assets": ["./assets/videos/people.mp4"]
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "@maplibre/maplibre-react-native",
+        {
+          "platforms": ["ios", "android"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
