@@ -14,7 +14,11 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.exponext"
+      "bundleIdentifier": "com.anonymous.exponext",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses your location to show nearby businesses.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location to function properly."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +28,9 @@
       "package": "com.anonymous.exponext",
       "permissions": [
         "android.permission.RECORD_AUDIO",
-        "android.permission.MODIFY_AUDIO_SETTINGS"
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
       ]
     },
     "web": {
@@ -52,7 +58,13 @@
           "assets": ["./assets/videos/people.mp4"]
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
