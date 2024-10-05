@@ -52,13 +52,7 @@
           "assets": ["./assets/videos/people.mp4"]
         }
       ],
-      "expo-secure-store",
-      [
-        "@maplibre/maplibre-react-native",
-        {
-          "platforms": ["ios", "android"]
-        }
-      ]
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true

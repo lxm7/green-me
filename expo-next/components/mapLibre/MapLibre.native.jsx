@@ -1,147 +1,176 @@
-import MapLibreGL, { Logger } from "@maplibre/maplibre-react-native";
-import React, { useState, useRef } from "react";
-import { TextInput, View, Text, FlatList } from "react-native";
-import axios from "axios";
-import data from "../../app/api/coffee.json";
-const API_URL = "https://nominatim.openstreetmap.org/search";
+import React, { useState, useEffect, useRef } from "react";
+import MapView, { Marker, Callout } from "react-native-maps";
+import {
+  View,
+  Text,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 
-MapLibreGL.setAccessToken(null); // MapLibre GL does not require an access token
+// Hardcoded business data
+const businesses = [
+  {
+    id: 1,
+    name: "Bristol Coffee",
+    coordinates: { latitude: 51.4545, longitude: -2.5879 },
+    score: 4.5,
+    business: "Independent",
+    products: [
+      { name: "Eco Coffee Beans", greenScore: 85 },
+      { name: "Organic Brew", greenScore: 90 },
+    ],
+  },
+  {
+    id: 2,
+    name: "Eco T-Shirt Shop",
+    coordinates: { latitude: 51.4575, longitude: -2.5909 },
+    score: 4.0,
+    business: "Chain",
+    products: [
+      { name: "Recycled Cotton T-Shirt", greenScore: 95 },
+      { name: "Eco-Friendly Hoodie", greenScore: 80 },
+    ],
+  },
+  // Add more businesses here if needed
+];
 
-// hides known issue: MapLibre [info] Request failed due to a permanent error: Canceled
-// {"level": "warning", "message": "Request failed due to a permanent error: Canceled ", "tag": "Mbgl-HttpRequest"}
-// expected warnings - see https://github.com/mapbox/mapbox-gl-native/issues/15341#issuecomment-522889062
-Logger.setLogCallback((log) => {
-  const { message } = log;
+// Helper function to normalize the term (lowercase and remove hyphens/spaces)
+const normalizeTerm = (term) => term.toLowerCase().replace(/[-\s]/g, "");
 
-  if (
-    message.match("Request failed due to a permanent error: Canceled") ||
-    message.match("Request failed due to a permanent error: Socket Closed")
-  ) {
-    return true;
-  }
-  return false;
-});
+// Function to check if a term matches a business or product
+const matchesTerm = (string, term) => {
+  const normalizedString = normalizeTerm(string);
+  const normalizedTerm = normalizeTerm(term);
+  return normalizedString.includes(normalizedTerm);
+};
 
 const MapUI = () => {
-  const [region, setRegion] = useState({
-    latitude: 51.4545, // Default to Bristol, UK
-    longitude: -2.5879,
-    zoomLevel: 14,
-  });
   const [searchTerm, setSearchTerm] = useState("");
-  const [matchedBusinesses, setMatchedBusinesses] = useState([]); // To hold the fetched businesses
-  const mapRef = useRef(null); // Reference to the MapView
+  const [matchedBusinesses, setMatchedBusinesses] = useState(businesses); // Initial state with all businesses
 
-  // Function to fetch businesses from a local endpoint
-  const fetchBusinesses = async () => {
-    try {
-      const response = await axios.get("/app/api/coffee.json"); // Fetch data from local JSON file
-      const businesses = response.data.hits;
-      setMatchedBusinesses(businesses); // Set fetched businesses in state
-      return businesses;
-    } catch (error) {
-      console.error("Error fetching business data:", error); // Handle error
-    }
-  };
-
-  // Function to search businesses and products by search term
-  const handleSearch = async (term) => {
+  const handleSearch = (term) => {
     setSearchTerm(term); // Update the search term
     if (term.length < 3) {
       setMatchedBusinesses([]); // Clear results if less than 3 characters
       return;
     }
 
-    const businesses = await fetchBusinesses();
     // Filter businesses based on search term
     const matched = businesses.filter((business) => {
-      const businessNameMatch = business.document.name
-        .toLowerCase()
-        .includes(term.toLowerCase());
-      const productMatch = business.document.products.some(
-        (product) =>
-          product.name.toLowerCase().includes(term.toLowerCase()) ||
-          product.keywords.some((keyword) =>
-            keyword.toLowerCase().includes(term.toLowerCase())
-          )
+      const businessNameMatch = matchesTerm(business.name, term);
+      const productMatch = business.products.some((product) =>
+        matchesTerm(product.name, term)
       );
       return businessNameMatch || productMatch;
     });
 
     setMatchedBusinesses(matched); // Set the matched businesses
-    showMarkersOnMap(matched); // Show markers on the map
-  };
-
-  // Function to show markers on the map
-  const showMarkersOnMap = (businesses) => {
-    if (mapRef.current) {
-      // Optionally zoom and center the map based on business locations
-      // Adjust region to the first business in the results, if any
-      if (businesses.length > 0) {
-        const firstBusiness = businesses[0].document.coordinates;
-        mapRef.current.setCamera({
-          centerCoordinate: [firstBusiness[0], firstBusiness[1]],
-          zoomLevel: 14,
-        });
-      }
-    }
   };
 
   return (
-    <View className="flex-1 bg-gray-100">
+    <View style={styles.container}>
       {/* Search Input */}
       <TextInput
-        className="p-3 bg-white border rounded m-2"
+        style={styles.searchInput}
+        placeholder="Search for coffee or t-shirts..."
         value={searchTerm}
-        onChangeText={(text) => handleSearch(text)} // Handle search input
-        placeholder="Search for coffee, products..."
+        onChangeText={handleSearch}
       />
 
       {/* Business List */}
-      {searchTerm.length >= 3 && (
-        <FlatList
-          data={matchedBusinesses}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <View className="p-3 border-b border-gray-300">
-              <Text className="font-bold">{item.document.name}</Text>
-              {item.document.products.map((product, idx) => (
-                <Text key={idx} className="ml-2">
-                  {product.name} - {product.greenScore}
+      <ScrollView style={styles.scrollContainer}>
+        {searchTerm.length >= 3 && matchedBusinesses.length > 0 ? (
+          matchedBusinesses.map((business) => (
+            <View key={business.id} style={styles.businessItem}>
+              <Text style={styles.businessName}>
+                {business.name} - Score: {business.score || "n/a"}
+              </Text>
+              {business.products.map((product, idx) => (
+                <Text key={idx} style={styles.productItem}>
+                  {product.name} - GreenScore: {product.greenScore}
                 </Text>
               ))}
             </View>
-          )}
-        />
-      )}
+          ))
+        ) : (
+          <Text>No matching businesses found</Text>
+        )}
+      </ScrollView>
 
       {/* Map Section */}
-      <MapLibreGL.MapView
-        ref={mapRef}
-        style={{ flex: 1 }}
-        styleURL="https://demotiles.maplibre.org/style.json"
-        zoomLevel={region.zoomLevel}
-        centerCoordinate={[region.longitude, region.latitude]}
+      <MapView
+        style={styles.map}
+        provider={null}
+        cacheEnabled={true}
+        initialRegion={{
+          latitude: 51.4545,
+          longitude: -2.5879,
+          latitudeDelta: 0.02,
+          longitudeDelta: 0.02,
+        }}
+        tileOverlay={{
+          urlTemplate: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", // Use OSM tiles
+          tileSize: 256,
+        }}
       >
-        {matchedBusinesses.map((business, index) => {
-          const { coordinates, name, products } = business.document;
-          return (
-            <MapLibreGL.MarkerView
-              key={index}
-              coordinate={[coordinates[0], coordinates[1]]}
-            >
-              <View className="bg-white p-2 rounded">
-                <Text className="font-bold">{name}</Text>
-                <Text>
-                  Products: {products.map((product) => product.name).join(", ")}
-                </Text>
+        {matchedBusinesses.map((business) => (
+          <Marker
+            key={business.id}
+            coordinate={business.coordinates}
+            title={business.name}
+            description={`Score: ${business.score}`}
+          >
+            <Callout>
+              <View style={styles.callout}>
+                <Text>{business.name}</Text>
+                {business.products.map((product, idx) => (
+                  <Text key={idx}>
+                    {product.name} - GreenScore: {product.greenScore}
+                  </Text>
+                ))}
               </View>
-            </MapLibreGL.MarkerView>
-          );
-        })}
-      </MapLibreGL.MapView>
+            </Callout>
+          </Marker>
+        ))}
+      </MapView>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  searchInput: {
+    height: 50,
+    borderColor: "#ccc",
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    margin: 10,
+    borderRadius: 5,
+  },
+  scrollContainer: {
+    flex: 1,
+    padding: 10,
+  },
+  businessItem: {
+    marginBottom: 10,
+  },
+  businessName: {
+    fontWeight: "bold",
+  },
+  productItem: {
+    marginLeft: 10,
+  },
+  map: {
+    width: "100%",
+    height: "50%",
+  },
+  callout: {
+    width: 150,
+  },
+});
 
 export default MapUI;
