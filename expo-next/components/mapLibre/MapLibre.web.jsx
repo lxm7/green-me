@@ -1,14 +1,15 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import maplibregl from "maplibre-gl";
-import axios from "axios";
+import { useStore } from "../../state/store/useStore";
+import {
+  useBusinessesQuery,
+  fetchBusinesses,
+  cache,
+} from "../../state/queries/useBusinessQueries";
+
 import "maplibre-gl/dist/maplibre-gl.css";
 
-import { checkForMatch, matchesTerm } from "./utils";
-
-const cache = {
-  coffee: null,
-  tshirt: null,
-};
+import { matchesTerm, calculateDistance } from "../../utils/maps";
 
 const API_URL = "https://nominatim.openstreetmap.org/search";
 
@@ -18,11 +19,15 @@ const MapUI = () => {
   const searchInputRef = useRef(null); // Create a ref for the search input
 
   const [mapCenter, setMapCenter] = useState([-2.5879, 51.4545]); // Default to Bristol, UK
-  const [searchTerm, setSearchTerm] = useState("");
   const [geolocationResults, setGeolocationResults] = useState([]);
-  const [matchedBusinesses, setMatchedBusinesses] = useState([]); // To hold the fetched businesses
   const [travelMode, setTravelMode] = useState("walk"); // Default is Walk
   const [selectedDistance, setSelectedDistance] = useState(250); // Default distance is 1 mile
+
+  const { searchTerm, matchedBusinesses, setSearchTerm, setMatchedBusinesses } =
+    useStore();
+
+  // Fetch businesses based on the search term
+  const { isLoading, isError, data } = useBusinessesQuery(searchTerm);
 
   useEffect(() => {
     if (map.current) return; // Initialize map only once
@@ -89,52 +94,6 @@ const MapUI = () => {
     // } else {
     //   console.error("Geolocation is not supported by this browser.");
     // }
-  };
-
-  // Helper function to calculate distance between two points (Haversine formula)
-  const calculateDistance = (lat1, lon1, lat2, lon2, unit = "miles") => {
-    const toRadians = (degrees) => (degrees * Math.PI) / 180;
-    const R = unit === "miles" ? 3958.8 : 6371 * 1000; // Radius of Earth: 3958.8 miles or 6371 km (converted to meters)
-
-    const dLat = toRadians(lat2 - lat1);
-    const dLon = toRadians(lon2 - lon1);
-    const lat1Rad = toRadians(lat1);
-    const lat2Rad = toRadians(lat2);
-
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.sin(dLon / 2) *
-        Math.sin(dLon / 2) *
-        Math.cos(lat1Rad) *
-        Math.cos(lat2Rad);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-    const distance = R * c;
-
-    return distance; // Distance in the selected unit (either miles or meters)
-  };
-
-  // Function to fetch businesses from local endpoint
-  const fetchBusinesses = async (term) => {
-    const matchedTerm = checkForMatch(term);
-    if (!matchedTerm) return;
-
-    // Check if the data is already cached
-    if (cache[matchedTerm]) {
-      console.info(`Serving ${matchedTerm} from cache.`);
-      return cache[matchedTerm]; // Return cached data
-    }
-
-    try {
-      const response = await axios.get(`/app/api/${matchedTerm}.json`);
-      const businesses = response.data.hits;
-      cache[matchedTerm] = businesses; // Cache fetched data
-      setMatchedBusinesses(businesses); // Set fetched businesses in state
-      return businesses;
-    } catch (error) {
-      console.error("Error fetching business data:", error);
-      return null; // Return null on error
-    }
   };
 
   // Function to fetch geolocation data from OpenStreetMap
@@ -205,6 +164,7 @@ const MapUI = () => {
         setMatchedBusinesses([]); // Clear if less than 3 characters
         return;
       }
+      console.log({ data, cache });
 
       // Ensure caches are populated
       if (!cache.coffee) {
