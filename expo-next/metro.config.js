@@ -3,10 +3,11 @@ const { withNativeWind } = require("nativewind/metro");
 
 const config = getDefaultConfig(__dirname);
 
-// Add 'mp4' to assetExts and remove it from sourceExts
-// const { assetExts, sourceExts } = config.resolver;
-// config.resolver.assetExts = [...assetExts, "jpg", "png", "mp4"];
-// config.resolver.sourceExts = sourceExts.filter((ext) => ext !== "mp4");
+const { assetExts, sourceExts } = config.resolver;
+config.resolver.assetExts = [...assetExts, "mp4", "json"];
+config.resolver.sourceExts = sourceExts.filter(
+  (ext) => ext !== "mp4" && ext !== "json"
+);
 
 // const theConfig = {
 //   ...config,

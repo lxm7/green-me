@@ -7,25 +7,7 @@ import MapView, {
   PROVIDER_DEFAULT,
 } from "react-native-maps";
 import { StyleSheet, Text } from "react-native";
-import { matchesTerm, calculateDistance } from "../../../utils/maps";
-
-// Define the types for your data structures
-interface Product {
-  name: string;
-  greenScore: number;
-  keywords: string[];
-}
-
-interface BusinessDocument {
-  coordinates: [number, number]; // [longitude, latitude]
-  name: string;
-  products: Product[];
-}
-
-interface Business {
-  id: string;
-  document: BusinessDocument;
-}
+import { Product, BusinessDocument, Business } from "../types";
 
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]

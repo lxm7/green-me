@@ -10,12 +10,11 @@ import {
 import MapView, { Marker, Callout, UrlTile } from "react-native-maps";
 import Slider from "@react-native-community/slider";
 import * as Location from "expo-location";
-import axios from "axios";
 
 // Import your data files or fetch from an API
 // For this example, we'll assume you have JSON data files
-import coffeeData from "../../app/api/coffee.json";
-import tshirtData from "../../app/api/tshirt.json";
+const coffeeData = require("../../app/api/coffee.json");
+const tshirtData = require("../../app/api/tshirt.json");
 
 // Helper functions
 const normalizeTerm = (term) => term.toLowerCase().replace(/[-\s]/g, "");
@@ -136,6 +135,7 @@ const MapUI = () => {
       } else if (matchedTerm === "tshirt") {
         data = tshirtData;
       }
+
       const businesses = data.hits;
       cache[matchedTerm] = businesses; // Cache fetched data
       setMatchedBusinesses(businesses); // Set fetched businesses in state
@@ -275,9 +275,9 @@ const MapUI = () => {
           </Text>
           <Slider
             style={{ width: "100%", height: 40 }}
-            minimumValue={travelMode === "walk" ? 250 : 1}
+            minimumValue={travelMode === "walk" ? 500 : 1}
             maximumValue={travelMode === "walk" ? 2000 : 10}
-            step={travelMode === "walk" ? 250 : 1}
+            step={travelMode === "walk" ? 500 : 1}
             value={selectedDistance}
             onValueChange={handleDistanceChange}
           />

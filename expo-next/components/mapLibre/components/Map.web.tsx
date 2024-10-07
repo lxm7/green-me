@@ -7,37 +7,16 @@ import maplibregl, {
   NavigationControl,
   LngLatBounds,
 } from "maplibre-gl";
-
-// Define the types for your data structures
-interface Product {
-  name: string;
-  greenScore: number;
-  keywords: string[];
-}
-
-interface BusinessDocument {
-  coordinates: [number, number]; // [longitude, latitude]
-  name: string;
-  products: Product[];
-}
-
-interface Business {
-  id: string;
-  document: BusinessDocument;
-}
-
+import { Business, Product } from "../types";
+import style from "../mapStyle.json";
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]
   matchedBusinesses: Business[];
-  selectedDistance: number;
-  travelMode: "walk" | "drive";
 }
 
 const MapComponent: React.FC<MapComponentProps> = ({
   mapCenter,
   matchedBusinesses,
-  selectedDistance,
-  travelMode,
 }) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const map = useRef<Map | null>(null);

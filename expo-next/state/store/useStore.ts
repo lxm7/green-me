@@ -1,17 +1,26 @@
 import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
-// Define the type for the Zustand store
+import { Business } from "../../components/mapLibre/types";
+
 interface StoreState {
   searchTerm: string;
-  matchedBusinesses: any[]; // Adjust this type according to your business data structure
-  setMatchedBusinesses: (businesses: any[]) => void;
+  matchedBusinesses: Business[];
   setSearchTerm: (term: string) => void;
+  setMatchedBusinesses: (businesses: Business[]) => void;
 }
 
-export const useStore = create<StoreState>((set) => ({
-  searchTerm: "",
-  matchedBusinesses: [],
-  setSearchTerm: (term: string) => set({ searchTerm: term }),
-  setMatchedBusinesses: (businesses: any[]) =>
-    set({ matchedBusinesses: businesses }),
-}));
+export const useStore = create<StoreState>()(
+  devtools((set) => ({
+    searchTerm: "",
+    matchedBusinesses: [],
+    setSearchTerm: (term: string) =>
+      set(() => ({ searchTerm: term }), false, "setSearchTerm"),
+    setMatchedBusinesses: (businesses: Business[]) =>
+      set(
+        () => ({ matchedBusinesses: businesses }),
+        false,
+        "setMatchedBusinesses"
+      ),
+  }))
+);
