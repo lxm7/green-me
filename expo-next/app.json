@@ -64,7 +64,9 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
         }
-      ]
+      ],
+      "expo-file-system",
+      "./utils/withGoogleMapsApiKey"
     ],
     "experiments": {
       "typedRoutes": true
