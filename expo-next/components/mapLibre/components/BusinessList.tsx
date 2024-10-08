@@ -1,7 +1,6 @@
-// components/BusinessList.tsx
 import React from "react";
 import { View, Text } from "react-native";
-import { Business, Product } from "../types";
+import { Product, Business } from "@components/mapLibre/types";
 
 interface BusinessListProps {
   businesses: Business[];

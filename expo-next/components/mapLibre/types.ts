@@ -14,3 +14,5 @@ export interface Business {
   id: string;
   document: BusinessDocument;
 }
+
+export type TavelMode = "walk" | "drive";

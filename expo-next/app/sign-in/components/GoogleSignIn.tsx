@@ -8,7 +8,7 @@ import { jwtDecode } from "jwt-decode";
 import { router } from "expo-router";
 // import Icon from 'react-native-vector-icons/FontAwesome'; // Import FontAwesome icons
 
-import { useSession } from "../../../hooks/useSession";
+import { useSession } from "@hooks/useSession";
 
 type Response = {
   clientId: string;

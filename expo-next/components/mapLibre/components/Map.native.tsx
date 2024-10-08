@@ -1,4 +1,3 @@
-// components/MapComponent.native.tsx
 import React, { useRef, useEffect } from "react";
 import MapView, {
   Marker,
@@ -6,21 +5,17 @@ import MapView, {
   UrlTile,
   PROVIDER_DEFAULT,
 } from "react-native-maps";
-import { StyleSheet, Text } from "react-native";
-import { Product, BusinessDocument, Business } from "../types";
+import { Text } from "react-native";
+import { Product, Business } from "@components/mapLibre/types";
 
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]
   matchedBusinesses: Business[];
-  selectedDistance: number;
-  travelMode: "walk" | "drive";
 }
 
 const MapComponent: React.FC<MapComponentProps> = ({
   mapCenter,
   matchedBusinesses,
-  selectedDistance,
-  travelMode,
 }) => {
   const mapRef = useRef<MapView | null>(null);
 
@@ -39,7 +34,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
   return (
     <MapView
       ref={mapRef}
-      style={styles.map}
+      className="flex-1"
       initialRegion={{
         latitude: mapCenter[1],
         longitude: mapCenter[0],
@@ -93,9 +88,3 @@ const MapComponent: React.FC<MapComponentProps> = ({
 };
 
 export default MapComponent;
-
-const styles = StyleSheet.create({
-  map: {
-    flex: 1,
-  },
-});

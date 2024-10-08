@@ -1,10 +1,10 @@
-// components/TravelModeSelector.tsx
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
+import { TavelMode } from "@components/mapLibre/types";
 
 interface TravelModeSelectorProps {
-  travelMode: "walk" | "drive";
-  onModeChange: (mode: "walk" | "drive") => void;
+  travelMode: TavelMode;
+  onModeChange: (mode: TavelMode) => void;
 }
 
 const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({

@@ -1,8 +1,8 @@
 // @ts-nocheck - TODO cache type index
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useStore } from "../store/useStore";
-import { checkForMatch } from "../../utils/maps";
+import { useStore } from "@state/store/useStore";
+import { checkForMatch } from "@utils/maps";
 
 export const cache = {
   coffee: null,

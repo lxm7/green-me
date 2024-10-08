@@ -11,7 +11,13 @@
     "baseUrl": "./",
     "paths": {
       "assets/*": ["assets/*"],
-      "@/*": ["/"]
+      "@/*": ["/"],
+      "@components/*": ["components/*"],
+      "@app/*": ["app/*"],
+      "@constants/*": ["constants/*"],
+      "@state/*": ["state/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": [

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { TextInput, TouchableOpacity, Text, View } from "react-native";
 
-import { useStore } from "../../state/store/useStore";
+import { useStore } from "@state/store/useStore";
 
 interface SearchInputComponentProps {
   onSearch: (term: string) => void;

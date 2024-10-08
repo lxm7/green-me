@@ -61,7 +61,7 @@ module.exports = function withGoogleMapsApiKey(config) {
         application["meta-data"].push({
           $: {
             "android:name": "com.google.android.geo.API_KEY",
-            "android:value": apiKey,
+            "android:value": "hide-for-now-on-prebuild", //<API_KEY>
           },
         });
       }
