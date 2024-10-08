@@ -1,6 +1,6 @@
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
-import { useSession } from "../hooks/useSession";
+import { useSession } from "@hooks/useSession";
 
 export default function Home() {
   const { signOut } = useSession();

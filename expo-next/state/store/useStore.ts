@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-import { Business } from "../../components/mapLibre/types";
+import { Business } from "@components/mapLibre/types";
 
 interface StoreState {
   searchTerm: string;

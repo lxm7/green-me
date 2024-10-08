@@ -1,9 +1,9 @@
-// components/DistanceSelector.tsx
 import React, { useCallback } from "react";
 import { View, Text, TextInput } from "react-native";
+import { TavelMode } from "@components/mapLibre/types";
 
 interface DistanceSelectorProps {
-  travelMode: "walk" | "drive";
+  travelMode: TavelMode;
   selectedDistance: number;
   onDistanceChange: (value: number) => void;
 }

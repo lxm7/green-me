@@ -1,23 +1,21 @@
-// components/MapUI.tsx
 import React, { useState, useCallback } from "react";
 import { View, ScrollView } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
-import { useStore } from "../../state/store/useStore";
-import { fetchBusinesses, cache } from "../../state/queries/useBusinessQueries";
+import { useStore } from "@state/store/useStore";
+import { fetchBusinesses, cache } from "@state/queries/useBusinessQueries";
+import { matchesTerm, calculateDistance } from "@utils/maps";
+import SearchInputComponent from "@components/SearchInput";
+
 import MapComponent from "./components/Map";
-import SearchInputComponent from "../../components/SearchInput";
 import TravelModeSelector from "./components/TravelMode";
 import DistanceSelector from "./components/DistanceSelector";
 import BusinessList from "./components/BusinessList";
-import { matchesTerm, calculateDistance } from "../../utils/maps";
-import { Business, Product } from "./types";
+import { Business, Product, TavelMode } from "@components/mapLibre/types";
 
 const MapUI: React.FC = () => {
-  const [mapCenter, setMapCenter] = useState<[number, number]>([
-    -2.5879, 51.4545,
-  ]);
-  const [travelMode, setTravelMode] = useState<"walk" | "drive">("walk");
+  const [mapCenter] = useState<[number, number]>([-2.5879, 51.4545]);
+  const [travelMode, setTravelMode] = useState<TavelMode>("walk");
   const [selectedDistance, setSelectedDistance] = useState<number>(500);
   const [displayedBusinesses, setDisplayedBusinesses] = useState<Business[]>(
     []
@@ -37,7 +35,7 @@ const MapUI: React.FC = () => {
     }))
   );
 
-  const handleModeChange = useCallback((mode: "walk" | "drive") => {
+  const handleModeChange = useCallback((mode: TavelMode) => {
     setTravelMode(mode);
 
     if (mode === "walk") {
@@ -145,8 +143,6 @@ const MapUI: React.FC = () => {
         <MapComponent
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
-          selectedDistance={selectedDistance}
-          travelMode={travelMode}
         />
       </View>
     </View>

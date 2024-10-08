@@ -122,8 +122,8 @@ export function ExampleStack({ app, stack }: StackContext) {
   // Create a static site
   const site = new StaticSite(stack, "site", {
     path: "expo-next",
-    // dont build until expo sort there web shit out with generating hash for mp4 in the build
-    // buildCommand: "npm run build",
+    // no generated hash for mp4 asset in the build even tho metro is flagged to use mp4??
+    buildCommand: "npm run build",
     buildOutput: "dist",
     // bind mainDb incase we should call direct to db from getServerSideProps or getStaticProps
     // bind: [

@@ -1,4 +1,3 @@
-// components/MapComponent.web.tsx
 import React, { useRef, useEffect } from "react";
 import maplibregl, {
   Map,
@@ -7,8 +6,7 @@ import maplibregl, {
   NavigationControl,
   LngLatBounds,
 } from "maplibre-gl";
-import { Business, Product } from "../types";
-import style from "../mapStyle.json";
+import { Product, Business } from "@components/mapLibre/types";
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]
   matchedBusinesses: Business[];
