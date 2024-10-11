@@ -5,13 +5,13 @@ import { useShallow } from "zustand/react/shallow";
 import { useStore } from "@state/store/useStore";
 import { fetchBusinesses, cache } from "@state/queries/useBusinessQueries";
 import { matchesTerm, calculateDistance } from "@utils/maps";
-import SearchInputComponent from "@components/SearchInput";
+import SearchInputComponent from "@components/Input/Search";
 
-import MapComponent from "./components/Map";
-import TravelModeSelector from "./components/TravelMode";
-import DistanceSelector from "./components/DistanceSelector";
-import BusinessList from "./components/BusinessList";
-import { Business, Product, TavelMode } from "@components/mapLibre/types";
+import MapComponent from "@components/Map";
+import TravelModeSelector from "@components/Input/TravelMode";
+import DistanceSelector from "@components/Input/DistanceSelector";
+import BusinessList from "@components/BusinessList";
+import { Business, Product, TavelMode } from "@components/MapContainer/types";
 
 const MapUI: React.FC = () => {
   const [mapCenter] = useState<[number, number]>([-2.5879, 51.4545]);
@@ -141,6 +141,8 @@ const MapUI: React.FC = () => {
       {/* Right Map Section */}
       <View className="w-2/3 h-full">
         <MapComponent
+          // @ts-expect-error stubbed out index.ts causing this.
+          // Expo doesnt need but eslint does
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
         />

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useStore } from "@state/store/useStore";
 
 import { checkForMatch } from "@utils/maps";
-import { Business } from "@components/mapLibre/types";
+import { Business } from "@components/MapContainer/types";
 
 // export const fetchBusinesses = async (term: string) => {
 //   const matchedTerm = checkForMatch(term);

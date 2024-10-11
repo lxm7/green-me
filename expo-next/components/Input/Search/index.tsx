@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { TextInput, Pressable, Text, View } from "react-native";
+import { TextInput, TouchableOpacity, Text, View } from "react-native";
 
 import { useStore } from "@state/store/useStore";
 
@@ -31,12 +31,12 @@ const SearchInputComponent: React.FC<SearchInputComponentProps> = ({
         onChangeText={onSearch}
         blurOnSubmit={false}
       />
-      <Pressable
+      <TouchableOpacity
         className="mt-2 bg-blue-500 py-2 px-4 rounded"
         onPress={onSubmit}
       >
-        <Text className="text-white text-center">Search</Text>
-      </Pressable>
+        <Text className="text-white text-center">Show markers</Text>
+      </TouchableOpacity>
     </View>
   );
 };
