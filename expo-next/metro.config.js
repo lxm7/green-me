@@ -1,3 +1,4 @@
+/* eslint-env node */
 const { getDefaultConfig } = require("expo/metro-config");
 const { withNativeWind } = require("nativewind/metro");
 
@@ -6,7 +7,7 @@ const config = getDefaultConfig(__dirname);
 const { assetExts, sourceExts } = config.resolver;
 config.resolver.assetExts = [...assetExts, "mp4", "json"];
 config.resolver.sourceExts = sourceExts.filter(
-  (ext) => ext !== "mp4" && ext !== "json"
+  (ext) => ext !== "mp4" && ext !== "json",
 );
 
 // const theConfig = {

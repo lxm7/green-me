@@ -5,7 +5,7 @@ import {
   TextInput,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import MapView, { Marker, Callout, UrlTile } from "react-native-maps";
 import Slider from "@react-native-community/slider";
@@ -174,7 +174,7 @@ const MapUI = () => {
         const productMatch = business.document.products.some(
           (product) =>
             matchesTerm(product.name, term) ||
-            product.keywords.some((keyword) => matchesTerm(keyword, term))
+            product.keywords.some((keyword) => matchesTerm(keyword, term)),
         );
 
         // Calculate the distance between user and business
@@ -183,7 +183,7 @@ const MapUI = () => {
           mapCenter.longitude, // User's longitude
           business.document.coordinates[1], // Business latitude
           business.document.coordinates[0], // Business longitude
-          unit
+          unit,
         );
 
         // Filter based on distance and search term
@@ -195,7 +195,7 @@ const MapUI = () => {
 
       setMatchedBusinesses(matched);
     },
-    [mapCenter, selectedDistance, travelMode]
+    [mapCenter, selectedDistance, travelMode],
   );
 
   // Function to populate map when submit is clicked
@@ -234,7 +234,7 @@ const MapUI = () => {
       <View style={styles.sidebar}>
         {/* Travel Mode Selection */}
         <View style={styles.travelModeContainer}>
-          <TouchableOpacity
+          <Pressable
             style={[
               styles.modeButton,
               travelMode === "walk" && styles.selectedModeButton,
@@ -249,8 +249,8 @@ const MapUI = () => {
             >
               🚶 Walk
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={[
               styles.modeButton,
               travelMode === "drive" && styles.selectedModeButton,
@@ -265,7 +265,7 @@ const MapUI = () => {
             >
               🚗 Drive
             </Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
 
         {/* Distance Slider */}
@@ -291,9 +291,9 @@ const MapUI = () => {
             placeholder="Type coffee or t-shirt..."
             onChangeText={handleSearch}
           />
-          <TouchableOpacity onPress={handleSubmit} style={styles.searchButton}>
+          <Pressable onPress={handleSubmit} style={styles.searchButton}>
             <Text style={styles.searchButtonText}>🔍</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
 
         {/* Autocomplete business list */}

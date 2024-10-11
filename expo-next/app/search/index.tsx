@@ -1,5 +1,3 @@
-// src/App.js
-// @ts-nocheck
 import { View } from "react-native";
 import React from "react";
 import MapLibreMap from "@components/mapLibre";

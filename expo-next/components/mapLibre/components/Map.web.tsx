@@ -53,6 +53,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
 
     getUserLocation();
     map.current.addControl(new NavigationControl(), "top-right");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Update map center when mapCenter prop changes
@@ -91,7 +92,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
       const highestGreenScoreProduct = products.reduce(
         (max: Product | null, product) =>
           product.greenScore > (max?.greenScore || 0) ? product : max,
-        null
+        null,
       );
 
       const popupContent = highestGreenScoreProduct
@@ -118,7 +119,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
     } else if (coordinatesArray.length > 1) {
       const bounds = coordinatesArray.reduce(
         (bounds: LngLatBounds, coord) => bounds.extend(coord),
-        new LngLatBounds(coordinatesArray[0], coordinatesArray[0])
+        new LngLatBounds(coordinatesArray[0], coordinatesArray[0]),
       );
 
       map.current.fitBounds(bounds, {

@@ -22,7 +22,7 @@ export const checkForMatch = compose(
   (normalizedTerm: string) =>
     containsThreeChars("coffee", normalizedTerm) ||
     containsThreeChars("tshirt", normalizedTerm),
-  normalizeTerm
+  normalizeTerm,
 );
 
 export const matchesTerm = (string: string, term: string) =>
@@ -34,7 +34,7 @@ export const calculateDistance = (
   lon1: number,
   lat2: number,
   lon2: number,
-  unit = "miles"
+  unit = "miles",
 ) => {
   const toRadians = (degrees: number) => (degrees * Math.PI) / 180;
   const R = unit === "miles" ? 3958.8 : 6371 * 1000; // Radius of Earth: 3958.8 miles or 6371 km (converted to meters)
