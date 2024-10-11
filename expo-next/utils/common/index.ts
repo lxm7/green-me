@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Simple compose function (right-to-left function composition)
 export const compose =
-  <T>(...fns: Array<(arg: T) => T>) =>
+  <T>(...fns: ((arg: T) => T)[]) =>
   (x: T): T =>
     fns.reduceRight((acc, fn) => fn(acc), x);
 

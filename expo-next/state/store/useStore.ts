@@ -20,7 +20,7 @@ export const useStore = create<StoreState>()(
       set(
         () => ({ matchedBusinesses: businesses }),
         false,
-        "setMatchedBusinesses"
+        "setMatchedBusinesses",
       ),
-  }))
+  })),
 );

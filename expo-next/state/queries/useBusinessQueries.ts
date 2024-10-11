@@ -39,7 +39,7 @@ export const cache: CacheType = {
 
 // Fetch businesses based on the search term
 export const fetchBusinesses = async (
-  term: string
+  term: string,
 ): Promise<Business[] | null> => {
   const matchedTerm = checkForMatch(term);
   if (!matchedTerm) return null;
@@ -79,7 +79,7 @@ export const useBusinessesQuery = (term: string) => {
     queryKey: ["businesses", term],
     queryFn: () => fetchBusinesses(term),
     enabled: !!term && term.length >= 3,
-    // @ts-ignore - TODO:
+    // @ts-expect-error - TODO:
     onSuccess: (data: Business[]) => {
       if (data) {
         setMatchedBusinesses(data);

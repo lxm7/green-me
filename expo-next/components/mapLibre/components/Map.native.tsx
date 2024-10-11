@@ -62,7 +62,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
         const highestGreenScoreProduct = products.reduce(
           (max: Product | null, product) =>
             product.greenScore > (max?.greenScore || 0) ? product : max,
-          null
+          null,
         );
 
         const popupContent = highestGreenScoreProduct

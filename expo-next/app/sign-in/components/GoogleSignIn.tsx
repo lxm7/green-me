@@ -24,6 +24,10 @@ type User = {
   photo?: string;
 };
 
+type GoogleSignInError = {
+  code: string;
+};
+
 const GoogleSignIn = () => {
   const buttonDivRef = useRef<HTMLDivElement | null>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
@@ -40,14 +44,14 @@ const GoogleSignIn = () => {
       document.body.appendChild(scriptRef.current);
 
       scriptRef.current.onload = () => {
-        // @ts-ignore
+        // @ts-expect-error window.google is not typed
         if (window.google && buttonDivRef.current) {
-          // @ts-ignore
+          // @ts-expect-error window.google is not typed
           window.google.accounts.id.initialize({
             client_id: process.env.EXPO_PUBLIC_GOOGLE_AUTH_WEB_APP_ID, // Replace with your Google Web client ID
             callback: handleWebCredentialResponse,
           });
-          // @ts-ignore
+          // @ts-expect-error window.google is not typed
           window.google.accounts.id.renderButton(buttonDivRef.current, {
             theme: "outline",
           });
@@ -65,6 +69,7 @@ const GoogleSignIn = () => {
         offlineAccess: true,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleWebCredentialResponse = async (response: Response) => {
@@ -86,7 +91,7 @@ const GoogleSignIn = () => {
   const handleMobileSignIn = async () => {
     try {
       GoogleSignin.configure({
-        // @ts-ignore TODO
+        // @ts-expect-error TODO
         androidClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_ANDROID_APP_ID,
         iosClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_IOS_APP_ID,
         // to retrieve id_token as we do in the web auth
@@ -105,12 +110,14 @@ const GoogleSignIn = () => {
 
       signIn(idToken);
       router.replace("/profiles");
-    } catch (error: any) {
-      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+    } catch (error: unknown) {
+      const googleError = error as GoogleSignInError;
+
+      if (googleError.code === statusCodes.SIGN_IN_CANCELLED) {
         console.error("user cancelled the sign-in flow");
-      } else if (error.code === statusCodes.IN_PROGRESS) {
+      } else if (googleError.code === statusCodes.IN_PROGRESS) {
         console.error("operation (e.g. sign-in) is in progress already");
-      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+      } else if (googleError.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
         console.error("play services not available or outdated");
       } else {
         console.error({ error });

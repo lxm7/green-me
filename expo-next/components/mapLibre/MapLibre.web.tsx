@@ -18,21 +18,21 @@ const MapUI: React.FC = () => {
   const [travelMode, setTravelMode] = useState<TavelMode>("walk");
   const [selectedDistance, setSelectedDistance] = useState<number>(500);
   const [displayedBusinesses, setDisplayedBusinesses] = useState<Business[]>(
-    []
+    [],
   );
 
   const { searchTerm, setSearchTerm } = useStore(
     useShallow((state) => ({
       searchTerm: state.searchTerm,
       setSearchTerm: state.setSearchTerm,
-    }))
+    })),
   );
 
   const { matchedBusinesses, setMatchedBusinesses } = useStore(
     useShallow((state) => ({
       matchedBusinesses: state.matchedBusinesses,
       setMatchedBusinesses: state.setMatchedBusinesses,
-    }))
+    })),
   );
 
   const handleModeChange = useCallback((mode: TavelMode) => {
@@ -73,8 +73,8 @@ const MapUI: React.FC = () => {
           (product: Product) =>
             matchesTerm(product.name, term) ||
             product.keywords.some((keyword: string) =>
-              matchesTerm(keyword, term)
-            )
+              matchesTerm(keyword, term),
+            ),
         );
 
         const businessDistance = calculateDistance(
@@ -82,7 +82,7 @@ const MapUI: React.FC = () => {
           mapCenter[0],
           business.document.coordinates[1],
           business.document.coordinates[0],
-          unit
+          unit,
         );
 
         return (
@@ -99,7 +99,7 @@ const MapUI: React.FC = () => {
       travelMode,
       setSearchTerm,
       setMatchedBusinesses,
-    ]
+    ],
   );
 
   const handleDistanceChange = useCallback((value: number) => {

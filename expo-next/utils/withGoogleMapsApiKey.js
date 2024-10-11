@@ -11,7 +11,7 @@ function getGoogleMapsApiKey(projectRoot) {
     "main",
     "res",
     "values",
-    "api-keys.xml"
+    "api-keys.xml",
   );
 
   if (fs.existsSync(apiKeysFile)) {
@@ -23,7 +23,7 @@ function getGoogleMapsApiKey(projectRoot) {
   }
 
   console.warn(
-    "Google Maps API key not found in api-keys.xml. Please ensure it exists and is not committed to version control."
+    "Google Maps API key not found in api-keys.xml. Please ensure it exists and is not committed to version control.",
   );
   return null;
 }
@@ -34,7 +34,7 @@ module.exports = function withGoogleMapsApiKey(config) {
     const apiKey = getGoogleMapsApiKey(projectRoot);
     if (!apiKey) {
       throw new Error(
-        "Google Maps API key is missing. Please add it to android/app/src/main/res/values/api-keys.xml."
+        "Google Maps API key is missing. Please add it to android/app/src/main/res/values/api-keys.xml.",
       );
     }
 
@@ -44,7 +44,7 @@ module.exports = function withGoogleMapsApiKey(config) {
       Array.isArray(config.modResults.manifest.application)
     ) {
       const application = config.modResults.manifest.application.find(
-        () => true
+        () => true,
       );
 
       if (!application["meta-data"]) {
@@ -52,7 +52,8 @@ module.exports = function withGoogleMapsApiKey(config) {
       }
 
       const existingMetaData = application["meta-data"].find(
-        (meta) => meta["$"]["android:name"] === "com.google.android.geo.API_KEY"
+        (meta) =>
+          meta["$"]["android:name"] === "com.google.android.geo.API_KEY",
       );
 
       if (existingMetaData) {
