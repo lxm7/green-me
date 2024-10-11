@@ -7,7 +7,8 @@ import { fetchBusinesses, cache } from "@state/queries/useBusinessQueries";
 import { matchesTerm, calculateDistance } from "@utils/maps";
 import SearchInputComponent from "@components/Input/Search";
 
-import MapComponent from "@components/Map";
+// @ts-expect-error - https://docs.expo.dev/guides/typescript/#typescript-for-projects-config-files really??
+import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
 import TravelModeSelector from "@components/Input/TravelMode";
 import DistanceSelector from "@components/Input/DistanceSelector";
 import BusinessList from "@components/BusinessList";
@@ -141,8 +142,6 @@ const MapUI: React.FC = () => {
       {/* Right Map Section */}
       <View className="w-2/3 h-full">
         <MapComponent
-          // @ts-expect-error stubbed out index.ts causing this.
-          // Expo doesnt need but eslint does
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
         />
