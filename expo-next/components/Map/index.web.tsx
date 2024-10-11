@@ -6,7 +6,8 @@ import maplibregl, {
   NavigationControl,
   LngLatBounds,
 } from "maplibre-gl";
-import { Product, Business } from "@components/mapLibre/types";
+import { Product, Business } from "@components/MapContainer/types";
+
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]
   matchedBusinesses: Business[];
@@ -90,7 +91,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
     businesses.forEach((business) => {
       const { coordinates, name, products } = business.document;
       const highestGreenScoreProduct = products.reduce(
-        (max: Product | null, product) =>
+        (max: Product | null, product: Product) =>
           product.greenScore > (max?.greenScore || 0) ? product : max,
         null,
       );

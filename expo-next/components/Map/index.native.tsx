@@ -6,7 +6,7 @@ import MapView, {
   PROVIDER_DEFAULT,
 } from "react-native-maps";
 import { Text } from "react-native";
-import { Product, Business } from "@components/mapLibre/types";
+import { Product, Business } from "@components/MapContainer/types";
 
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]

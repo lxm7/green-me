@@ -1,11 +1,11 @@
 import { View } from "react-native";
 import React from "react";
-import MapLibreMap from "@components/mapLibre";
+import MapContainer from "@components/MapContainer";
 
 function App() {
   return (
     <View className="flex-1">
-      <MapLibreMap />
+      <MapContainer />
     </View>
   );
 }

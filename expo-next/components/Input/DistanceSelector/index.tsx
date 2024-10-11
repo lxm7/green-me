@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { View, Text } from "react-native";
-import { TavelMode } from "@components/mapLibre/types";
+import { TavelMode } from "@components/MapContainer/types";
 
 interface DistanceSelectorProps {
   travelMode: TavelMode;
@@ -21,19 +21,20 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
   }, [selectedDistance, travelMode]);
 
   return (
-    <View className="mt-4">
+    <View>
       <Text className="text-gray-700">
         Select Distance: {getDisplayedDistance()}
       </Text>
-      <div className="mt-2 mb-4">
+
+      <div className="mt-2 mb-5">
         <input
-          className="w-full"
           type="range"
           min={travelMode === "walk" ? 500 : 1}
           max={travelMode === "walk" ? 2000 : 10}
           step={travelMode === "walk" ? 500 : 1}
           value={selectedDistance.toString()}
           onChange={(e) => onDistanceChange(Number(e.target.value))}
+          className="w-full"
         />
       </div>
     </View>
