@@ -1,5 +1,5 @@
 {
-  "version": "36.0.0",
+  "version": "38.0.1",
   "files": {
     "ce5244ba1e7ed69923685b8e1585597ccbd53bf9de4a32e1f7483f07de071d49": {
       "source": {
@@ -29,7 +29,7 @@
         }
       }
     },
-    "509abc9dcefca1a6b42071d676338fbfcd32caf0e7bc23a3244d21650c5221fa": {
+    "89d50bab59a46835d72d9238d3dd028946e6bca2c1a96c6e3c97ba86aa78b099": {
       "source": {
         "path": "greenmev2-green-one-auth-ExampleStack.template.json",
         "packaging": "file"
@@ -37,7 +37,7 @@
       "destinations": {
         "158871758094-us-east-1": {
           "bucketName": "cdk-hnb659fds-assets-158871758094-us-east-1",
-          "objectKey": "509abc9dcefca1a6b42071d676338fbfcd32caf0e7bc23a3244d21650c5221fa.json",
+          "objectKey": "89d50bab59a46835d72d9238d3dd028946e6bca2c1a96c6e3c97ba86aa78b099.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::158871758094:role/cdk-hnb659fds-file-publishing-role-158871758094-us-east-1"
         }

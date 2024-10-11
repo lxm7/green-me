@@ -1,6 +1,5 @@
 {
-  "prod-green-one-auth-ExampleStack": {
-    "ApiEndpoint": "https://8id1ziyehc.execute-api.us-east-1.amazonaws.com",
-    "SiteURL": "https://d3gkipskq5tpp9.cloudfront.net"
+  "greenmev2-green-one-auth-ExampleStack": {
+    "ApiEndpoint": "https://tmzid4yf4i.execute-api.us-east-1.amazonaws.com"
   }
 }

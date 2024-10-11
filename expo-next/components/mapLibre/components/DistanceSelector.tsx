@@ -25,12 +25,17 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
       <Text className="text-gray-700">
         Select Distance: {getDisplayedDistance()}
       </Text>
-      <TextInput
-        className="mt-2 p-2 border border-gray-300 rounded"
-        keyboardType="numeric"
-        value={selectedDistance.toString()}
-        onChangeText={(text) => onDistanceChange(Number(text))}
-      />
+      <div className="mt-2 mb-4">
+        <input
+          className="w-full"
+          type="range"
+          min={travelMode === "walk" ? 500 : 1}
+          max={travelMode === "walk" ? 2000 : 10}
+          step={travelMode === "walk" ? 500 : 1}
+          value={selectedDistance.toString()}
+          onChange={(e) => onDistanceChange(Number(e.target.value))}
+        />
+      </div>
     </View>
   );
 };

@@ -3590,7 +3590,7 @@
     "Fn::Join": [
      "",
      [
-      "{\"app\":\"green-one-auth\",\"stage\":\"greenmev2\",\"version\":\"2.43.7\",\"metadata\":[{\"id\":\"users\",\"addr\":\"c810d528762c79729d55ecf9315af7de16bb0af386\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
+      "{\"app\":\"green-one-auth\",\"stage\":\"greenmev2\",\"version\":\"2.44.0\",\"metadata\":[{\"id\":\"users\",\"addr\":\"c810d528762c79729d55ecf9315af7de16bb0af386\",\"stack\":\"greenmev2-green-one-auth-ExampleStack\",\"type\":\"Table\",\"data\":{\"tableName\":\"",
       {
        "Ref": "usersTableA9DCAD73"
       },
