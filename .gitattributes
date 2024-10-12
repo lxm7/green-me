@@ -1,2 +1,12 @@
-expo-next/** linguist-vendored
-packages/** linguist-vendored
+node_modules/* linguist-vendored
+.sst/* linguist-generated
+
+expo-next/node_modules/* linguist-vendored
+expo-next/dist/* linguist-generated
+
+# Apply Linguist language setting for TypeScript files in /expo-next and /packages directories
+expo-next/**/*.ts linguist-language=TypeScript
+expo-next/**/*.tsx linguist-language=TypeScript
+
+packages/**/*.ts linguist-language=TypeScript
+packages/**/*.tsx linguist-language=TypeScript

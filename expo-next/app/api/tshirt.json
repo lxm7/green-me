@@ -16,6 +16,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.5,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "graphic"],
             "coordinates": [-2.5919, 51.4555]
@@ -26,6 +28,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.8,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "white"],
             "coordinates": [-2.5919, 51.4555]
@@ -35,6 +39,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.3,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "price": "£25.00",
             "accredited": true,
             "keywords": ["tshirt", "band"],
@@ -58,6 +64,8 @@
             "available": true,
             "business": "Chain",
             "greenScore": 3.2,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "logo"],
             "coordinates": [-2.5935, 51.4543]
@@ -68,6 +76,8 @@
             "available": true,
             "business": "Chain",
             "greenScore": 3.7,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "crew neck"],
             "coordinates": [-2.5935, 51.4543]
@@ -77,6 +87,8 @@
             "available": true,
             "business": "Chain",
             "greenScore": 3.4,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "price": "£18.00",
             "accredited": true,
             "keywords": ["tshirt", "striped"],
@@ -100,6 +112,8 @@
             "available": true,
             "business": "Online",
             "greenScore": 4.9,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "custom"],
             "coordinates": [-2.5955, 51.4546]
@@ -110,6 +124,8 @@
             "available": true,
             "business": "Online",
             "greenScore": 5.0,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "organic", "cotton"],
             "coordinates": [-2.5955, 51.4546]
@@ -120,6 +136,8 @@
             "available": true,
             "business": "Online",
             "greenScore": 4.95,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "sustainable", "pack"],
             "coordinates": [-2.5955, 51.4546]
@@ -142,6 +160,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.5,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "graphic"],
             "coordinates": [-2.5975, 51.455]
@@ -152,6 +172,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.8,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "white"],
             "coordinates": [-2.5975, 51.455]
@@ -162,6 +184,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.9,
+            "environmentScore": 811.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["tshirt", "eco-friendly", "pack"],
             "coordinates": [-2.5975, 51.455]
