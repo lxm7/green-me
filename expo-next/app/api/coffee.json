@@ -16,6 +16,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.03,
+            "environmentScore": 43.5,
+            "co2e": 0.01755,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -26,6 +28,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.21,
+            "environmentScore": 43.5,
+            "co2e": 0.01701,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -35,6 +39,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.1,
+            "environmentScore": 43.5,
+            "co2e": 0.01792,
             "price": "£2.80",
             "accredited": true,
             "keywords": ["coffee"],
@@ -58,6 +64,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 3.23,
+            "environmentScore": 43.5,
+            "co2e": 0.02355,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -68,6 +76,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 3.71,
+            "environmentScore": 43.5,
+            "co2e": 0.02155,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -77,6 +87,8 @@
             "available": true,
             "business": "Independent",
             "greenScore": 3.17,
+            "environmentScore": 43.5,
+            "co2e": 0.02244,
             "price": "£2.80",
             "accredited": true,
             "keywords": ["coffee"],
@@ -100,6 +112,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.17,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -110,6 +123,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.27,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -120,6 +134,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.97,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5971, 51.4548]
@@ -142,6 +157,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.17,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5625, 51.4641]
@@ -152,6 +168,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.27,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5625, 51.4641]
@@ -162,6 +179,7 @@
             "available": true,
             "business": "Independent",
             "greenScore": 4.97,
+            "environmentScore": 43.5,
             "accredited": true,
             "keywords": ["coffee"],
             "coordinates": [-2.5625, 51.4641]
