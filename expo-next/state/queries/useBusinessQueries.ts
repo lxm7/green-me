@@ -1,92 +1,84 @@
 import { useQuery } from "@tanstack/react-query";
-import { useStore } from "@state/store/useStore";
 
-import { checkForMatch } from "@utils/maps";
 import { Business } from "@components/MapContainer/types";
+import { supabase } from "@utils/supabase";
+import { BristolCentre } from "@constants/Place";
 
-// export const fetchBusinesses = async (term: string) => {
-//   const matchedTerm = checkForMatch(term);
-//   if (!matchedTerm) return null;
-
-//   // Check if the data is already cached
-//   if (cache[matchedTerm]) {
-//     console.info(`Serving ${matchedTerm} from cache.`);
-//     return cache[matchedTerm]; // Return cached data
-//   }
-
-//   try {
-//     const response = await axios.get(`/app/api/${matchedTerm}.json`);
-//     const businesses = response.data.hits;
-//     cache[matchedTerm] = businesses; // Cache fetched data
-//     return businesses;
-//   } catch (error) {
-//     console.error("Error fetching business data:", error);
-//     throw new Error("Error fetching business data");
-//   }
-// };
-
-// Define cache type
-type CacheType = {
-  coffee: Business[] | null;
-  tshirt: Business[] | null;
-};
-
-// Initialize cache with the proper type
-export const cache: CacheType = {
-  coffee: null,
-  tshirt: null,
-};
+async function getCoordsFromGeoPlugin() {
+  try {
+    const geoPluginResponse = await fetch("http://www.geoplugin.net/json.gp");
+    const data = await geoPluginResponse.json();
+    // data.geoplugin_currencyCode // also possible
+    // data.geoplugin_currencyConverter // also possible
+    // data.geoplugin_currencySymbol // also possible
+    return {
+      latitude: data.geoplugin_latitude,
+      longitude: data.geoplugin_longitude,
+    };
+    if (data.geoplugin_status === 200) {
+      return {
+        latitude: data.geoplugin_latitude,
+        longitude: data.geoplugin_longitude,
+      };
+    } else {
+      console.error("Unable to retrieve location from IP.");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching coordinates from IP:", error);
+    return null;
+  }
+}
 
 // Fetch businesses based on the search term
 export const fetchBusinesses = async (
   term: string,
+  searchRadius?: number,
+  userLongitude?: number,
+  userLatitude?: number,
 ): Promise<Business[] | null> => {
-  const matchedTerm = checkForMatch(term);
-  if (!matchedTerm) return null;
-
-  // Check if the data is already cached
-  if (cache[matchedTerm as keyof CacheType]) {
-    console.info(`Serving ${matchedTerm} from cache.`);
-    return cache[matchedTerm as keyof CacheType]; // Return cached data
-  }
-
-  let businesses: Business[] = [];
+  if (!term) return null;
 
   try {
-    switch (matchedTerm) {
-      case "coffee":
-        businesses = require("../../app/api/coffee.json").hits;
-        break;
-      case "tshirt":
-        businesses = require("../../app/api/tshirt.json").hits;
-        break;
+    // const coords = await getCoordsFromGeoPlugin(); // coords!.longitude;
+    const userLongitude = BristolCentre[0];
+    const userLatitude = BristolCentre[1];
+    const searchRadius = 5000; // Example: 5 kilometers
+
+    const { data, error } = await supabase.rpc(
+      "fetch_businesses_with_products",
+      {
+        search_term: term,
+        //        search_term: `%${term}%`,
+        radius: searchRadius,
+        longitude: userLongitude,
+        latitude: userLatitude,
+      },
+    );
+    if (error) {
+      console.error("Error loading JSON data:", error);
+      throw new Error("Error loading JSON data");
+    }
+
+    if (data && Array.isArray(data)) {
+      return data;
+    } else {
+      console.warn("No businesses found.");
+      return null;
     }
   } catch (error) {
     console.error("Error loading JSON data:", error);
     throw new Error("Error loading JSON data");
   }
-
-  // Cache fetched data
-  cache[matchedTerm as keyof CacheType] = businesses;
-  return businesses;
 };
 
 // Custom hook to fetch businesses using react-query
 export const useBusinessesQuery = (term: string) => {
-  const { setMatchedBusinesses } = useStore();
-
   return useQuery({
     queryKey: ["businesses", term],
     queryFn: () => fetchBusinesses(term),
     enabled: !!term && term.length >= 3,
-    // @ts-expect-error - TODO:
-    onSuccess: (data: Business[]) => {
-      if (data) {
-        setMatchedBusinesses(data);
-      }
-    },
-    onError: (error: Error) => {
-      console.error("Error in useBusinessesQuery:", error);
-    },
+    staleTime: 1000 * 60 * 100,
+    gcTime: 1000 * 60 * 100,
   });
 };

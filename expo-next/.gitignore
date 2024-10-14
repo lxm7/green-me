@@ -17,5 +17,8 @@ node_modules
 web-build/
 expo-env.d.ts
 
+# Data work
+zExamples/
+
 # api keys for android
 android/app/src/main/res/values/api-keys.xml
