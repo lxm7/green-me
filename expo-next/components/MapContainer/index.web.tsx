@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, ActivityIndicator, Text } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
 import { useStore } from "@state/store/useStore";
@@ -12,11 +12,12 @@ import TravelModeSelector from "@components/Input/TravelMode";
 import DistanceSelector from "@components/Input/DistanceSelector";
 import BusinessList from "@components/BusinessList";
 import { Business, TavelMode } from "@components/MapContainer/types";
+import { BristolCentre } from "@constants/Place";
 
 const MapUI: React.FC = () => {
-  const [mapCenter] = useState<[number, number]>([-2.5879, 51.4545]);
+  const [mapCenter, setMapCenter] = useState<[number, number]>(BristolCentre);
   const [travelMode, setTravelMode] = useState<TavelMode>("walk");
-  const [selectedDistance, setSelectedDistance] = useState<number>(500);
+  const [selectedDistance, setSelectedDistance] = useState<number>(160.9); // 0.1 miles
   const [displayedBusinesses, setDisplayedBusinesses] = useState<Business[]>(
     [],
   );
@@ -30,13 +31,14 @@ const MapUI: React.FC = () => {
 
   const {
     data: businesses,
-    // isLoading,
-    // isError,
+    isLoading,
+    isError,
+    error,
   } = useBusinessesQuery(searchTerm);
 
   const handleModeChange = useCallback((mode: TavelMode) => {
     setTravelMode(mode);
-    setSelectedDistance(mode === "walk" ? 500 : 1);
+    setSelectedDistance(mode === "walk" ? 160.9 : 1609.34); // Update default distances: 0.1 miles walk, 1 mile drive
   }, []);
 
   const handleSearch = useCallback(
@@ -55,6 +57,10 @@ const MapUI: React.FC = () => {
 
   const handleDistanceChange = useCallback((value: number) => {
     setSelectedDistance(value);
+  }, []);
+
+  const handleMapCenterChange = useCallback((lat: number, lng: number) => {
+    setMapCenter([lat, lng]);
   }, []);
 
   return (
@@ -78,6 +84,16 @@ const MapUI: React.FC = () => {
         <SearchInputComponent onSearch={handleSearch} onSubmit={handleSubmit} />
 
         {/* Business List */}
+        {isError && (
+          <View className="flex-1 justify-center items-center">
+            <Text>Error loading businesses: {error.message}</Text>
+          </View>
+        )}
+        {isLoading && (
+          <View className="flex-1 justify-center items-center">
+            <ActivityIndicator size="small" color="lightblue" />
+          </View>
+        )}
         <ScrollView className="mt-4">
           {searchTerm.length >= 3 && businesses && (
             <BusinessList businesses={businesses} />
@@ -90,6 +106,8 @@ const MapUI: React.FC = () => {
         <MapComponent
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
+          onCenterChange={handleMapCenterChange} // Update map center based on user input
+          radius={selectedDistance}
         />
       </View>
     </View>
