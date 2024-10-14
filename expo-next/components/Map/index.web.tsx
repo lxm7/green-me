@@ -103,13 +103,13 @@ const MapComponent: React.FC<MapComponentProps> = ({
       const popup = new Popup({ closeOnClick: false }).setHTML(popupContent);
 
       const marker = new Marker()
-        .setLngLat(coordinates)
+        .setLngLat(coordinates.coordinates)
         .setPopup(popup)
         .addTo(map.current!);
 
       marker.togglePopup();
       markersRef.current.push(marker);
-      coordinatesArray.push(coordinates);
+      coordinatesArray.push(coordinates.coordinates);
     });
 
     // Adjust map bounds to fit all markers

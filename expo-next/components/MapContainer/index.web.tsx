@@ -3,8 +3,7 @@ import { View, ScrollView } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
 import { useStore } from "@state/store/useStore";
-import { fetchBusinesses, cache } from "@state/queries/useBusinessQueries";
-import { matchesTerm, calculateDistance } from "@utils/maps";
+import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
 
 // @ts-expect-error - https://docs.expo.dev/guides/typescript/#typescript-for-projects-config-files really??
@@ -12,7 +11,7 @@ import MapComponent from "@components/Map"; // eslint-disable-line import/no-unr
 import TravelModeSelector from "@components/Input/TravelMode";
 import DistanceSelector from "@components/Input/DistanceSelector";
 import BusinessList from "@components/BusinessList";
-import { Business, Product, TavelMode } from "@components/MapContainer/types";
+import { Business, TavelMode } from "@components/MapContainer/types";
 
 const MapUI: React.FC = () => {
   const [mapCenter] = useState<[number, number]>([-2.5879, 51.4545]);
@@ -29,87 +28,34 @@ const MapUI: React.FC = () => {
     })),
   );
 
-  const { matchedBusinesses, setMatchedBusinesses } = useStore(
-    useShallow((state) => ({
-      matchedBusinesses: state.matchedBusinesses,
-      setMatchedBusinesses: state.setMatchedBusinesses,
-    })),
-  );
+  const {
+    data: businesses,
+    // isLoading,
+    // isError,
+  } = useBusinessesQuery(searchTerm);
 
   const handleModeChange = useCallback((mode: TavelMode) => {
     setTravelMode(mode);
-
-    if (mode === "walk") {
-      setSelectedDistance(500);
-    } else {
-      setSelectedDistance(1);
-    }
+    setSelectedDistance(mode === "walk" ? 500 : 1);
   }, []);
 
   const handleSearch = useCallback(
-    async (term: string) => {
-      setSearchTerm(term);
-
-      if (term.length < 3) {
-        setMatchedBusinesses([]);
-        return;
-      }
-
-      if (!cache.coffee) {
-        await fetchBusinesses("coffee");
-      }
-      if (!cache.tshirt) {
-        await fetchBusinesses("tshirt");
-      }
-
-      const businesses = [...(cache.coffee || []), ...(cache.tshirt || [])];
-      if (!businesses || businesses.length === 0) return;
-
-      const unit = travelMode === "walk" ? "meters" : "miles";
-
-      const matched = businesses.filter((business: Business) => {
-        const businessNameMatch = matchesTerm(business.document.name, term);
-
-        const productMatch = business.document.products.some(
-          (product: Product) =>
-            matchesTerm(product.name, term) ||
-            product.keywords.some((keyword: string) =>
-              matchesTerm(keyword, term),
-            ),
-        );
-
-        const businessDistance = calculateDistance(
-          mapCenter[1],
-          mapCenter[0],
-          business.document.coordinates[1],
-          business.document.coordinates[0],
-          unit,
-        );
-
-        return (
-          (businessNameMatch || productMatch) &&
-          businessDistance <= selectedDistance
-        );
-      });
-
-      setMatchedBusinesses(matched);
+    (term: string) => {
+      setSearchTerm(term); // This will trigger the query and fetch the results from Supabase
     },
-    [
-      mapCenter,
-      selectedDistance,
-      travelMode,
-      setSearchTerm,
-      setMatchedBusinesses,
-    ],
+    [setSearchTerm],
   );
+
+  const handleSubmit = useCallback(() => {
+    // Set displayed businesses directly from the fetched query result
+    if (businesses) {
+      setDisplayedBusinesses(businesses);
+    }
+  }, [businesses]);
 
   const handleDistanceChange = useCallback((value: number) => {
     setSelectedDistance(value);
   }, []);
-
-  const handleSubmit = useCallback(() => {
-    setDisplayedBusinesses(matchedBusinesses);
-  }, [matchedBusinesses]);
 
   return (
     <View className="flex-1 flex-row bg-gray-100">
@@ -133,8 +79,8 @@ const MapUI: React.FC = () => {
 
         {/* Business List */}
         <ScrollView className="mt-4">
-          {searchTerm.length >= 3 && (
-            <BusinessList businesses={matchedBusinesses} />
+          {searchTerm.length >= 3 && businesses && (
+            <BusinessList businesses={businesses} />
           )}
         </ScrollView>
       </View>

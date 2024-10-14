@@ -1,4 +1,4 @@
-import { curry, compose } from "@utils/common";
+import { curry, compose } from "@utils/common/fps";
 
 // Helper function to normalize the term (lowercase and remove hyphens/spaces)
 const normalizeTerm = (term: string) =>

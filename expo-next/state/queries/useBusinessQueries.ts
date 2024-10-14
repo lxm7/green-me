@@ -1,74 +1,38 @@
 import { useQuery } from "@tanstack/react-query";
 import { useStore } from "@state/store/useStore";
 
-import { checkForMatch } from "@utils/maps";
 import { Business } from "@components/MapContainer/types";
-
-// export const fetchBusinesses = async (term: string) => {
-//   const matchedTerm = checkForMatch(term);
-//   if (!matchedTerm) return null;
-
-//   // Check if the data is already cached
-//   if (cache[matchedTerm]) {
-//     console.info(`Serving ${matchedTerm} from cache.`);
-//     return cache[matchedTerm]; // Return cached data
-//   }
-
-//   try {
-//     const response = await axios.get(`/app/api/${matchedTerm}.json`);
-//     const businesses = response.data.hits;
-//     cache[matchedTerm] = businesses; // Cache fetched data
-//     return businesses;
-//   } catch (error) {
-//     console.error("Error fetching business data:", error);
-//     throw new Error("Error fetching business data");
-//   }
-// };
-
-// Define cache type
-type CacheType = {
-  coffee: Business[] | null;
-  tshirt: Business[] | null;
-};
-
-// Initialize cache with the proper type
-export const cache: CacheType = {
-  coffee: null,
-  tshirt: null,
-};
+import { supabase } from "@utils/supabase";
 
 // Fetch businesses based on the search term
 export const fetchBusinesses = async (
   term: string,
 ): Promise<Business[] | null> => {
-  const matchedTerm = checkForMatch(term);
-  if (!matchedTerm) return null;
-
-  // Check if the data is already cached
-  if (cache[matchedTerm as keyof CacheType]) {
-    console.info(`Serving ${matchedTerm} from cache.`);
-    return cache[matchedTerm as keyof CacheType]; // Return cached data
-  }
-
-  let businesses: Business[] = [];
+  if (!term) return null;
 
   try {
-    switch (matchedTerm) {
-      case "coffee":
-        businesses = require("../../app/api/coffee.json").hits;
-        break;
-      case "tshirt":
-        businesses = require("../../app/api/tshirt.json").hits;
-        break;
+    const { data, error } = await supabase.rpc(
+      "fetch_businesses_with_products",
+      {
+        search_term: `%${term}%`,
+      },
+    );
+    if (error) {
+      console.error("Error loading JSON data:", error);
+      throw new Error("Error loading JSON data");
+    }
+    console.log("fetchBusinesses", { data });
+    // Ensure the fetched data is valid before caching
+    if (data && Array.isArray(data)) {
+      return data;
+    } else {
+      console.warn("No businesses found.");
+      return null;
     }
   } catch (error) {
     console.error("Error loading JSON data:", error);
     throw new Error("Error loading JSON data");
   }
-
-  // Cache fetched data
-  cache[matchedTerm as keyof CacheType] = businesses;
-  return businesses;
 };
 
 // Custom hook to fetch businesses using react-query

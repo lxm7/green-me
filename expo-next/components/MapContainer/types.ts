@@ -1,18 +1,26 @@
 export interface BusinessDocument {
-  coordinates: [number, number]; // [longitude, latitude]
+  coordinates: {
+    type: "Point";
+    coordinates: [number, number]; // [longitude, latitude]
+  };
   name: string;
   products: Product[];
 }
 
 export interface Product {
+  co2e: number;
   name: string;
-  price: string;
+  price: number;
   available: boolean;
   business: string;
   greenScore: number;
-  accredited: boolean;
   keywords: string[];
-  coordinates: [number, number]; // Ensure it's a tuple of exactly two numbers
+  coordinates: {
+    type: "Point";
+    coordinates: [number, number]; // [longitude, latitude]
+  };
+  publishedLCAs: string[]; // This reflects the array of published LCAs
+  environmentScore: number; // Ensure it's a tuple of exactly two numbers
 }
 
 export interface Document {
@@ -20,7 +28,10 @@ export interface Document {
   business: string;
   score: number | null;
   accreditors: boolean;
-  coordinates: [number, number]; // Ensure it's a tuple of exactly two numbers
+  coordinates: {
+    type: "Point";
+    coordinates: [number, number]; // [longitude, latitude]
+  };
   products: Product[];
 }
 
