@@ -1,6 +1,8 @@
 import React from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View } from "react-native";
 import { TavelMode } from "@components/MapContainer/types";
+import { Button } from "@components/ui/button";
+import { Text } from "@components/ui/text";
 
 interface TravelModeSelectorProps {
   travelMode: TavelMode;
@@ -13,7 +15,7 @@ const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
 }) => {
   return (
     <View className="flex-row mb-4">
-      <TouchableOpacity
+      <Button
         className={`py-2 px-4 rounded-full mr-2 ${
           travelMode === "walk" ? "bg-blue-500" : "bg-gray-300"
         }`}
@@ -24,8 +26,8 @@ const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
         >
           🚶 Walk
         </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
+      </Button>
+      <Button
         className={`py-2 px-4 rounded-full ${
           travelMode === "drive" ? "bg-blue-500" : "bg-gray-300"
         }`}
@@ -36,7 +38,7 @@ const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
         >
           🚗 Drive
         </Text>
-      </TouchableOpacity>
+      </Button>
     </View>
   );
 };

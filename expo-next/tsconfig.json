@@ -17,7 +17,8 @@
       "@constants/*": ["constants/*"],
       "@state/*": ["state/*"],
       "@utils/*": ["utils/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@lib/*": ["lib/*"]
     }
   },
   "include": [
