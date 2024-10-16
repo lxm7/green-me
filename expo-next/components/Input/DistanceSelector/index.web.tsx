@@ -1,9 +1,10 @@
 import React, { useCallback } from "react";
-import { View, Text } from "react-native";
-import { TavelMode } from "@components/MapContainer/types";
+import { View } from "react-native";
+import { TravelMode } from "@components/MapContainer/types";
+import { Text } from "components/ui/text";
 
 interface DistanceSelectorProps {
-  travelMode: TavelMode;
+  travelMode: TravelMode;
   selectedDistance: number; // always in metres
   onDistanceChange: (value: number) => void; // value in metres
 }
@@ -49,7 +50,7 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
         Select Distance: {getDisplayedDistance()}
       </Text>
 
-      <div className="mt-2 mb-5">
+      <View className="mt-2 mb-5">
         <input
           type="range"
           min={travelMode === "walk" ? 0.1 : 1} // 0.1 miles for walking, 1 mile for driving
@@ -63,7 +64,7 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
           onChange={(e) => handleDistanceChange(Number(e.target.value))}
           className="w-full"
         />
-      </div>
+      </View>
     </View>
   );
 };
