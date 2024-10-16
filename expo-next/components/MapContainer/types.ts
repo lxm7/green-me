@@ -40,4 +40,4 @@ export interface Business {
   document: Document;
 }
 
-export type TavelMode = "walk" | "drive";
+export type TravelMode = "walk" | "drive";

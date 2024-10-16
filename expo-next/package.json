@@ -11,7 +11,8 @@
     "build:web": "expo export -p web && npx workbox-cli generateSW workbox-config.js",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "clean:android": "cd android && ./gradlew clean && cd ../"
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "prebuild": "expo prebuild"
   },
   "jest": {
     "preset": "jest-expo"

@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import { View } from "react-native";
-import { TavelMode } from "@components/MapContainer/types";
+import { TravelMode } from "@components/MapContainer/types";
 import { Text } from "components/ui/text";
 
 interface DistanceSelectorProps {
-  travelMode: TavelMode;
+  travelMode: TravelMode;
   selectedDistance: number; // always in metres
   onDistanceChange: (value: number) => void; // value in metres
 }

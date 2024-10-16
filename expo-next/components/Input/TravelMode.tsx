@@ -1,12 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import { TavelMode } from "@components/MapContainer/types";
+import { TravelMode } from "@components/MapContainer/types";
 import { Button } from "@components/ui/button";
 import { Text } from "@components/ui/text";
 
 interface TravelModeSelectorProps {
-  travelMode: TavelMode;
-  onModeChange: (mode: TavelMode) => void;
+  travelMode: TravelMode;
+  onModeChange: (mode: TravelMode) => void;
 }
 
 const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({

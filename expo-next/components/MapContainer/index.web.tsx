@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { View, ScrollView, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
 import { useStore } from "@state/store/useStore";
@@ -12,7 +12,7 @@ import MapComponent from "@components/Map"; // eslint-disable-line import/no-unr
 import TravelModeSelector from "@components/Input/TravelMode";
 import DistanceSelector from "@components/Input/DistanceSelector";
 import BusinessList from "@components/BusinessList";
-import { Business, TavelMode } from "@components/MapContainer/types";
+import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
 const businesses = [
@@ -175,7 +175,7 @@ const error = new Error("Error loading businesses");
 
 const MapUI: React.FC = () => {
   const [mapCenter, setMapCenter] = useState<[number, number]>(BristolCentre);
-  const [travelMode, setTravelMode] = useState<TavelMode>("walk");
+  const [travelMode, setTravelMode] = useState<TravelMode>("walk");
   const [selectedDistance, setSelectedDistance] = useState<number>(160.9); // 0.1 miles
   const [displayedBusinesses, setDisplayedBusinesses] = useState<Business[]>(
     [],
@@ -195,7 +195,7 @@ const MapUI: React.FC = () => {
   //   error,
   // } = useBusinessesQuery(searchTerm);
 
-  const handleModeChange = useCallback((mode: TavelMode) => {
+  const handleModeChange = useCallback((mode: TravelMode) => {
     setTravelMode(mode);
     setSelectedDistance(mode === "walk" ? 160.9 : 1609.34); // Update default distances: 0.1 miles walk, 1 mile drive
   }, []);
@@ -253,11 +253,11 @@ const MapUI: React.FC = () => {
             <ActivityIndicator size="small" color="lightblue" />
           </View>
         )}
-        <ScrollView className="mt-4">
+        <View className="mt-4">
           {searchTerm.length >= 3 && businesses && (
             <BusinessList businesses={businesses} />
           )}
-        </ScrollView>
+        </View>
       </View>
 
       {/* Right Map Section */}

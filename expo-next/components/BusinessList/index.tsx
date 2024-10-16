@@ -1,13 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { View, FlatList } from "react-native";
 import { Product, Business } from "@components/MapContainer/types";
 import { Text } from "@components/ui/text";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
-  CardTitle,
+  // CardFooter,
+  // CardTitle,
 } from "@components/ui/card";
 interface BusinessListProps {
   businesses: Business[];
@@ -16,22 +16,34 @@ interface BusinessListProps {
 const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
   return (
     <View className="mt-4">
-      {businesses.map((business: Business) => (
-        <Card key={business.id} className="mt-4">
-          <CardHeader>
-            <Text className="font-bold text-lg">{business.document.name}</Text>
-          </CardHeader>
-          <CardContent>
-            {business.document.products.map((product: Product, idx: number) => (
-              <View key={idx} className="mt-2">
-                <Text>
-                  {product.name} - Green Score: {product.greenScore}
-                </Text>
-              </View>
-            ))}
-          </CardContent>
-        </Card>
-      ))}
+      <FlatList
+        data={businesses}
+        keyExtractor={(business: Business) => business.id}
+        renderItem={({ item: business }: { item: Business }) => (
+          <Card key={business.id} className="mt-4">
+            <CardHeader>
+              <Text className="font-bold text-lg">
+                {business.document.name}
+              </Text>
+            </CardHeader>
+            <CardContent>
+              <FlatList
+                data={business.document.products}
+                keyExtractor={(product: Product, index: number) =>
+                  index.toString()
+                }
+                renderItem={({ item: product }: { item: Product }) => (
+                  <View className="mt-2">
+                    <Text>
+                      {product.name} - Green Score: {product.greenScore}
+                    </Text>
+                  </View>
+                )}
+              />
+            </CardContent>
+          </Card>
+        )}
+      />
     </View>
   );
 };
