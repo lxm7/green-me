@@ -15,7 +15,7 @@ interface BusinessListProps {
 
 const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
   return (
-    <View className="mt-4">
+    <View>
       <FlatList
         data={businesses}
         keyExtractor={(business: Business) => business.id}

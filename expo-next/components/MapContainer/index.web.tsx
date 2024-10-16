@@ -3,19 +3,19 @@ import { View, ActivityIndicator } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
 import { useStore } from "@state/store/useStore";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
 import { Text } from "@components/ui/text";
 
-// @ts-expect-error - https://docs.expo.dev/guides/typescript/#typescript-for-projects-config-files really??
 import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
+import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
 import TravelModeSelector from "@components/Input/TravelMode";
-import DistanceSelector from "@components/Input/DistanceSelector";
 import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
-const businesses = [
+const businesses: Business[] = [
   {
     id: "53b9bae2-b61d-48df-9464-90b037b1b927",
     document: {
@@ -35,7 +35,7 @@ const businesses = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: null,
+          publishedLCAs: [],
           environmentScore: 41,
         },
       ],
@@ -126,7 +126,7 @@ const businesses = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: null,
+          publishedLCAs: [],
           environmentScore: 44,
         },
         {
@@ -141,7 +141,7 @@ const businesses = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: null,
+          publishedLCAs: [],
           environmentScore: 41,
         },
         {
@@ -156,7 +156,7 @@ const businesses = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: null,
+          publishedLCAs: [],
           environmentScore: 47,
         },
       ],
@@ -174,7 +174,10 @@ const isError = false;
 const error = new Error("Error loading businesses");
 
 const MapUI: React.FC = () => {
-  const [mapCenter, setMapCenter] = useState<[number, number]>(BristolCentre);
+  const [mapCenter, setMapCenter] = useState({
+    latitude: BristolCentre[0],
+    longitude: BristolCentre[1],
+  });
   const [travelMode, setTravelMode] = useState<TravelMode>("walk");
   const [selectedDistance, setSelectedDistance] = useState<number>(160.9); // 0.1 miles
   const [displayedBusinesses, setDisplayedBusinesses] = useState<Business[]>(
@@ -212,14 +215,14 @@ const MapUI: React.FC = () => {
     if (businesses) {
       setDisplayedBusinesses(businesses);
     }
-  }, [businesses]);
+  }, []);
 
   const handleDistanceChange = useCallback((value: number) => {
     setSelectedDistance(value);
   }, []);
 
   const handleMapCenterChange = useCallback((lat: number, lng: number) => {
-    setMapCenter([lat, lng]);
+    setMapCenter({ latitude: lat, longitude: lng });
   }, []);
 
   return (
@@ -253,7 +256,7 @@ const MapUI: React.FC = () => {
             <ActivityIndicator size="small" color="lightblue" />
           </View>
         )}
-        <View className="mt-4">
+        <View className="mt-4 flex flex-1 overflow-y-auto">
           {searchTerm.length >= 3 && businesses && (
             <BusinessList businesses={businesses} />
           )}
@@ -263,7 +266,8 @@ const MapUI: React.FC = () => {
       {/* Right Map Section */}
       <View className="w-2/3 h-full">
         <MapComponent
-          mapCenter={mapCenter}
+          // @ts-expect-error - web expects [number, number], native expects {latitude: number, longitude: number}
+          mapCenter={[mapCenter.latitude, mapCenter.longitude]}
           matchedBusinesses={displayedBusinesses}
           onCenterChange={handleMapCenterChange} // Update map center based on user input
           radius={selectedDistance}

@@ -4,6 +4,7 @@
     "target": "esnext",
     "module": "esnext",
     "lib": ["dom", "esnext"],
+    "moduleSuffixes": [".native", ".web", ""],
     "moduleResolution": "node",
     "jsx": "react-native",
     "resolveJsonModule": true,
@@ -11,7 +12,6 @@
     "baseUrl": "./",
     "paths": {
       "assets/*": ["assets/*"],
-      "@/*": ["/"],
       "@components/*": ["components/*"],
       "@app/*": ["app/*"],
       "@constants/*": ["constants/*"],

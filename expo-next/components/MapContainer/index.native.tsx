@@ -8,9 +8,7 @@ import { useStore } from "@state/store/useStore";
 import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
 import { Text } from "@components/ui/text";
-// @ts-expect-error - https://docs.expo.dev/guides/typescript/#typescript-for-projects-config-files really??
 import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
-// @ts-expect-error - https://docs.expo.dev/guides/typescript/#typescript-for-projects-config-files really??
 import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
 import BusinessList from "@components/BusinessList";
 import TravelModeSelector from "@components/Input/TravelMode";
