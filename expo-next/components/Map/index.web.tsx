@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import maplibregl, {
   Map,
   Marker,
-  Popup,
   NavigationControl,
   LngLatBounds,
 } from "maplibre-gl";
 import { Product, Business } from "@components/MapContainer/types";
+import UserMarker from "@components/UserMarker";
 
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]
@@ -18,6 +18,9 @@ const MapComponent: React.FC<MapComponentProps> = ({
   matchedBusinesses,
 }) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
+  const [markerContainer, setMarkerContainer] = useState<HTMLDivElement | null>(
+    null,
+  );
   const map = useRef<Map | null>(null);
   const markersRef = useRef<Marker[]>([]);
 
@@ -27,27 +30,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: {
-        version: 8,
-        sources: {
-          "raster-tiles": {
-            type: "raster",
-            tiles: [
-              "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", // OSM Raster Tiles
-            ],
-            tileSize: 256,
-          },
-        },
-        layers: [
-          {
-            id: "osm-tiles",
-            type: "raster",
-            source: "raster-tiles",
-            minzoom: 0,
-            maxzoom: 19,
-          },
-        ],
-      },
+      style: `https://api.maptiler.com/maps/streets-v2-light/style.json?key=${process.env.EXPO_PUBLIC_MAPTILERS_API_KEY}`,
       center: mapCenter,
       zoom: 14,
     });
@@ -73,8 +56,13 @@ const MapComponent: React.FC<MapComponentProps> = ({
   const getUserLocation = () => {
     if (!map.current) return;
 
+    const el = document.createElement("div");
+    setMarkerContainer(el);
+
     // Add marker to map for user location
-    new Marker({ color: "red" }).setLngLat(mapCenter).addTo(map.current);
+    new maplibregl.Marker({ element: el })
+      .setLngLat(mapCenter)
+      .addTo(map.current);
     map.current.setZoom(15);
   };
 
@@ -90,24 +78,33 @@ const MapComponent: React.FC<MapComponentProps> = ({
 
     businesses.forEach((business) => {
       const { coordinates, name, products } = business.document;
-      const highestGreenScoreProduct = products.reduce(
+      const highestGreenScoreProductAtBusiness = products.reduce(
         (max: Product | null, product: Product) =>
           product.greenScore > (max?.greenScore || 0) ? product : max,
         null,
       );
 
-      const popupContent = highestGreenScoreProduct
-        ? `<strong>${name}</strong><br> ${highestGreenScoreProduct.name} - ${highestGreenScoreProduct.greenScore}`
-        : `<strong>${name}</strong>`;
+      const markerContent = highestGreenScoreProductAtBusiness
+        ? `<div class="relative bg-purple-500 text-white text-center px-4 py-1 rounded-md">
+        ${highestGreenScoreProductAtBusiness.name} - ${highestGreenScoreProductAtBusiness.greenScore}<br>
+        Co2e est: ${highestGreenScoreProductAtBusiness.co2e}
+        <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
+      </div>`
+        : `<div class="relative bg-purple-500 text-white text-center px-4 py-1 rounded-md">
+        ${name}
+        <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
+      </div>`;
 
-      const popup = new Popup({ closeOnClick: false }).setHTML(popupContent);
-
-      const marker = new Marker()
+      // Create a DOM element for the marker
+      const el = document.createElement("div");
+      el.innerHTML = markerContent;
+      const marker = new maplibregl.Marker({
+        element: el,
+        draggable: false,
+      })
         .setLngLat(coordinates.coordinates)
-        .setPopup(popup)
         .addTo(map.current!);
 
-      marker.togglePopup();
       markersRef.current.push(marker);
       coordinatesArray.push(coordinates.coordinates);
     });
@@ -130,7 +127,11 @@ const MapComponent: React.FC<MapComponentProps> = ({
     }
   };
 
-  return <div ref={mapContainer} style={{ height: "100%", width: "100%" }} />;
+  return (
+    <div ref={mapContainer} id="map" style={{ height: "100%", width: "100%" }}>
+      <UserMarker container={markerContainer} />
+    </div>
+  );
 };
 
 export default MapComponent;

@@ -10,6 +10,10 @@ module.exports = {
   },
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-radial":
+          "radial-gradient(farthest-side, purple 60%, lightpurple 61%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
