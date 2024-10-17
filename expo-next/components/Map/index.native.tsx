@@ -1,15 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import MapView, {
-  Marker,
-  Callout,
-  UrlTile,
-  PROVIDER_DEFAULT,
-  Circle,
-  Region,
-} from "react-native-maps";
-import { Text } from "react-native";
+import React, { useRef } from "react";
+import MapboxGL from "@rnmapbox/maps";
+import { View } from "react-native";
 import { Product, Business } from "@components/MapContainer/types";
-
+import CustomMarker from "@components/UserMarker"; // eslint-disable-line import/no-unresolved
 interface MapComponentProps {
   mapCenter: { latitude: number; longitude: number };
   matchedBusinesses: Business[];
@@ -17,120 +10,112 @@ interface MapComponentProps {
   radius?: number; // in meters
 }
 
+const getCircleRadius = (
+  radiusInMeters: number,
+  latitude: number,
+  zoomLevel: number,
+) => {
+  const earthCircumference = 40075016.686; // Earth's circumference in meters
+  const latitudeRadians = (latitude * Math.PI) / 180;
+  const metersPerPixel =
+    (earthCircumference * Math.cos(latitudeRadians)) /
+    Math.pow(2, zoomLevel + 8);
+  return radiusInMeters / metersPerPixel;
+};
+
+MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPTILERS_API_KEY as string);
+
 const MapComponent: React.FC<MapComponentProps> = ({
   mapCenter,
   matchedBusinesses,
   onCenterChange,
   radius,
 }) => {
-  const mapRef = useRef<MapView | null>(null);
+  const mapRef = useRef<MapboxGL.MapView>(null);
 
-  // Adjust map center when mapCenter prop changes
-  useEffect(() => {
-    if (mapRef.current) {
-      mapRef.current.animateToRegion(
-        {
-          latitude: mapCenter.latitude,
-          longitude: mapCenter.longitude,
-          latitudeDelta: 0.05,
-          longitudeDelta: 0.05,
-        },
-        1000, // Duration in milliseconds
-      );
-    }
-  }, [mapCenter]);
-
-  const handleRegionChangeComplete = (region: Region) => {
-    if (onCenterChange) {
-      onCenterChange(region?.latitude, region?.longitude);
+  const handleRegionDidChange = async () => {
+    if (onCenterChange && mapRef.current) {
+      const center = await mapRef.current.getCenter();
+      if (center && center.length === 2) {
+        const [longitude, latitude] = center;
+        onCenterChange(latitude, longitude); // Pass (lat, lng)
+      }
     }
   };
 
   return (
-    <MapView
-      ref={mapRef}
-      className="flex-1"
-      initialRegion={{
-        latitude: mapCenter.latitude,
-        longitude: mapCenter.longitude,
-        latitudeDelta: 0.05,
-        longitudeDelta: 0.05,
-      }}
-      provider={PROVIDER_DEFAULT}
-      onRegionChangeComplete={handleRegionChangeComplete}
-    >
-      {/* Use OpenStreetMap tiles */}
-      <UrlTile
-        urlTemplate="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        maximumZ={19}
-        flipY={false}
-      />
-
-      {/* User location marker */}
-      <Marker
-        coordinate={{
-          latitude: mapCenter.latitude,
-          longitude: mapCenter.longitude,
-        }}
-        pinColor="red"
-      />
-
-      {/* Search radius circle */}
-      {radius && (
-        <Circle
-          center={{
-            latitude: mapCenter.latitude,
-            longitude: mapCenter.longitude,
-          }}
-          radius={radius}
-          strokeColor="#ff0000"
-          fillColor="rgba(255, 0, 0, 0.1)"
+    <View style={{ flex: 1 }}>
+      <MapboxGL.MapView
+        ref={mapRef}
+        style={{ flex: 1 }}
+        styleURL={`https://api.maptiler.com/maps/streets-v2-light/style.json?key=${process.env.EXPO_PUBLIC_MAPTILERS_API_KEY}`}
+        onMapIdle={handleRegionDidChange}
+      >
+        <MapboxGL.Camera
+          centerCoordinate={[mapCenter.longitude, mapCenter.latitude]}
+          zoomLevel={12}
         />
-      )}
+        {/* User location marker */}
+        <MapboxGL.PointAnnotation
+          id="user-location"
+          coordinate={[mapCenter.longitude, mapCenter.latitude]}
+        >
+          <CustomMarker />
+        </MapboxGL.PointAnnotation>
 
-      {/* Business markers */}
-      {matchedBusinesses.map((business: Business) => {
-        const { coordinates, name, products } = business.document;
-
-        // Ensure coordinates are [longitude, latitude]
-        // If not, adjust the indices accordingly
-        const businessLatitude = coordinates.coordinates[1];
-        const businessLongitude = coordinates.coordinates[0];
-
-        // Verify that businessLatitude and businessLongitude are valid numbers
-        if (
-          typeof businessLatitude !== "number" ||
-          typeof businessLongitude !== "number"
-        ) {
-          console.warn(`Invalid coordinates for business ${name}`);
-          return null;
-        }
-
-        const highestGreenScoreProduct = products.reduce(
-          (max: Product | null, product) =>
-            product.greenScore > (max?.greenScore || 0) ? product : max,
-          null,
-        );
-
-        const popupContent = highestGreenScoreProduct
-          ? `${name}\n${highestGreenScoreProduct.name} - ${highestGreenScoreProduct.greenScore}`
-          : name;
-
-        return (
-          <Marker
-            key={business.id}
-            coordinate={{
-              latitude: coordinates.coordinates[1],
-              longitude: coordinates.coordinates[0],
+        {/* Search radius circle */}
+        {radius && (
+          <MapboxGL.ShapeSource
+            id="circle-source"
+            shape={{
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [mapCenter.longitude, mapCenter.latitude],
+              },
+              properties: {},
             }}
           >
-            <Callout>
-              <Text>{popupContent}</Text>
-            </Callout>
-          </Marker>
-        );
-      })}
-    </MapView>
+            <MapboxGL.CircleLayer
+              id="circle-layer"
+              style={{
+                circleRadius: getCircleRadius(radius, mapCenter.latitude, 12),
+                circleColor: "rgba(255, 0, 0, 0.1)",
+                circleStrokeColor: "#ff0000",
+                circleStrokeWidth: 2,
+              }}
+            />
+          </MapboxGL.ShapeSource>
+        )}
+
+        {/* Business markers */}
+        {matchedBusinesses.map((business: Business) => {
+          const { coordinates, name, products } = business.document;
+          const highestGreenScoreProduct = products.reduce(
+            (max: Product | null, product) =>
+              product.greenScore > (max?.greenScore || 0) ? product : max,
+            null,
+          );
+
+          const popupContent = highestGreenScoreProduct
+            ? `${name}\n${highestGreenScoreProduct.name} - ${highestGreenScoreProduct.greenScore}`
+            : name;
+
+          return (
+            <MapboxGL.PointAnnotation
+              key={business.id}
+              id={business.id}
+              coordinate={[
+                coordinates.coordinates[0],
+                coordinates.coordinates[1],
+              ]}
+            >
+              <MapboxGL.Callout title={popupContent} />
+            </MapboxGL.PointAnnotation>
+          );
+        })}
+      </MapboxGL.MapView>
+    </View>
   );
 };
 

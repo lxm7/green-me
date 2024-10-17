@@ -1,5 +1,3 @@
-// index.native.tsx
-
 import React, { useState, useCallback } from "react";
 import { View, ActivityIndicator } from "react-native";
 import { useShallow } from "zustand/react/shallow";
@@ -7,18 +5,23 @@ import { useShallow } from "zustand/react/shallow";
 import { useStore } from "@state/store/useStore";
 import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
-import { Text } from "@components/ui/text";
-import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
-import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
-import BusinessList from "@components/BusinessList";
+import { Text } from "react-native"; // Use React Native's Text
+
 import TravelModeSelector from "@components/Input/TravelMode";
+import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
+import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
+import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
+
 const MapUI: React.FC = () => {
-  const [mapCenter, setMapCenter] = useState({
-    latitude: BristolCentre[0],
-    longitude: BristolCentre[1],
+  const [mapCenter, setMapCenter] = useState<{
+    latitude: number;
+    longitude: number;
+  }>({
+    latitude: BristolCentre[1], // Assuming BristolCentre is [longitude, latitude]
+    longitude: BristolCentre[0],
   });
   const [travelMode, setTravelMode] = useState<TravelMode>("walk");
   const [selectedDistance, setSelectedDistance] = useState<number>(160.9); // in meters
@@ -67,9 +70,9 @@ const MapUI: React.FC = () => {
   }, []);
 
   return (
-    <View className="flex-1 flex-row bg-gray-100">
+    <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#f3f4f6" }}>
       {/* Left Sidebar */}
-      <View className="w-1/3 p-4 bg-white">
+      <View style={{ width: "33%", padding: 16, backgroundColor: "#fff" }}>
         {/* Travel Mode Selector */}
         <TravelModeSelector
           travelMode={travelMode}
@@ -88,16 +91,20 @@ const MapUI: React.FC = () => {
 
         {/* Business List */}
         {isError && (
-          <View className="flex-1 justify-center items-center">
+          <View
+            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          >
             <Text>Error loading businesses: {error.message}</Text>
           </View>
         )}
         {isLoading && (
-          <View className="flex-1 justify-center items-center">
+          <View
+            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          >
             <ActivityIndicator size="small" color="lightblue" />
           </View>
         )}
-        <View className="mt-4">
+        <View style={{ marginTop: 16, flex: 1 }}>
           {searchTerm.length >= 3 && businesses && (
             <BusinessList businesses={businesses} />
           )}
@@ -105,11 +112,11 @@ const MapUI: React.FC = () => {
       </View>
 
       {/* Right Map Section */}
-      <View className="w-2/3 h-full">
+      <View style={{ width: "67%", height: "100%" }}>
         <MapComponent
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
-          onCenterChange={handleMapCenterChange} // Update map center based on user input
+          onCenterChange={handleMapCenterChange}
           radius={selectedDistance}
         />
       </View>

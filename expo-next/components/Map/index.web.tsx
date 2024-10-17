@@ -6,7 +6,7 @@ import maplibregl, {
   LngLatBounds,
 } from "maplibre-gl";
 import { Product, Business } from "@components/MapContainer/types";
-import UserMarker from "@components/UserMarker";
+import UserMarker from "@components/UserMarker"; // eslint-disable-line import/no-unresolved
 
 interface MapComponentProps {
   mapCenter: [number, number]; // [longitude, latitude]

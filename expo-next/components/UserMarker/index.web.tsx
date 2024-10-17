@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 type UserMarkerProps = {
-  container: HTMLElement | null;
+  container?: HTMLElement | null;
 };
 
 const UserMarker = ({ container }: UserMarkerProps) => {
