@@ -57,3 +57,4 @@ dist/
 web-build/
 # Local Netlify folder
 .netlify
+node_modules

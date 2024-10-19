@@ -4,18 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "sst dev",
-    "build": "sst build",
-    "deploy": "sst deploy",
-    "remove": "sst remove",
     "console": "sst console",
+    "deploy": "sst deploy",
+    "dev": "sst dev",
+    "diff": "sst diff",
+    "remove": "sst remove",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
+    "@types/aws-lambda": "8.10.145",
     "aws-cdk-lib": "2.142.1",
     "constructs": "10.3.0",
-    "sst": "^2.43.4",
     "typescript": "^5.5.4"
   },
   "workspaces": [
@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.624.0",
-    "@aws-sdk/util-dynamodb": "^3.624.0"
+    "@aws-sdk/util-dynamodb": "^3.624.0",
+    "sst": "3.2.34"
   }
 }
