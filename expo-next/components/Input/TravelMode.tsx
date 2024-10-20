@@ -1,12 +1,12 @@
-import React from "react";
+import * as React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@components/ui/tabs";
+import { Text } from "@components/ui/text";
 import { View } from "react-native";
 import { TravelMode } from "@components/MapContainer/types";
-import { Button } from "@components/ui/button";
-import { Text } from "@components/ui/text";
 
 interface TravelModeSelectorProps {
   travelMode: TravelMode;
-  onModeChange: (mode: TravelMode) => void;
+  onModeChange: (value: string) => void;
 }
 
 const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
@@ -15,30 +15,25 @@ const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
 }) => {
   return (
     <View className="flex-row mb-4">
-      <Button
-        className={`py-2 px-4 rounded-full mr-2 ${
-          travelMode === "walk" ? "bg-blue-500" : "bg-gray-300"
-        }`}
-        onPress={() => onModeChange("walk")}
-      >
-        <Text
-          className={`${travelMode === "walk" ? "text-white" : "text-black"}`}
+      <View className="flex-1">
+        <Tabs
+          value={travelMode}
+          onValueChange={onModeChange}
+          className="w-full max-w-[400px] mx-auto flex-col gap-1.5"
         >
-          🚶 Walk
-        </Text>
-      </Button>
-      <Button
-        className={`py-2 px-4 rounded-full ${
-          travelMode === "drive" ? "bg-blue-500" : "bg-gray-300"
-        }`}
-        onPress={() => onModeChange("drive")}
-      >
-        <Text
-          className={`${travelMode === "drive" ? "text-white" : "text-black"}`}
-        >
-          🚗 Drive
-        </Text>
-      </Button>
+          <TabsList className="flex-row w-full">
+            <TabsTrigger value="walk" className="flex-1">
+              <Text>walk</Text>
+            </TabsTrigger>
+            <TabsTrigger value="drive" className="flex-1">
+              <Text>drive</Text>
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="walk" />
+
+          <TabsContent value="drive" />
+        </Tabs>
+      </View>
     </View>
   );
 };

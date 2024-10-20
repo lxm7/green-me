@@ -85,12 +85,22 @@ const MapComponent: React.FC<MapComponentProps> = ({
       );
 
       const markerContent = highestGreenScoreProductAtBusiness
-        ? `<div class="relative bg-purple-500 text-white text-center px-4 py-1 rounded-md">
-        ${highestGreenScoreProductAtBusiness.name} - ${highestGreenScoreProductAtBusiness.greenScore}<br>
-        Co2e est: ${highestGreenScoreProductAtBusiness.co2e}
-        <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
-      </div>`
-        : `<div class="relative bg-purple-500 text-white text-center px-4 py-1 rounded-md">
+        ? `<div class="relative text-white text-center">
+        ${
+          // TODO: Make this more dynamic
+          highestGreenScoreProductAtBusiness.greenScore >= 4.8
+            ? `<div class="relative bottom-[-8px] left-[20px] bg-pink-500 w-fit px-1 rounded-md text-xs font-bold">
+                Most Green
+              </div>`
+            : ""
+        }
+          <div class=" bg-purple-500 px-4 py-2 rounded-md mt-1 text-xs">
+              ${highestGreenScoreProductAtBusiness.name} - ${highestGreenScoreProductAtBusiness.greenScore}<br>
+              Co2e est: ${highestGreenScoreProductAtBusiness.co2e}
+            <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
+          </div>
+        </div>`
+        : `<div class="relative bg-purple-500 text-white text-center px-4 py-2 rounded-md">
         ${name}
         <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
       </div>`;
@@ -121,8 +131,8 @@ const MapComponent: React.FC<MapComponentProps> = ({
       );
 
       map.current.fitBounds(bounds, {
-        padding: 50,
-        maxZoom: 17,
+        padding: 120,
+        maxZoom: 16,
       });
     }
   };

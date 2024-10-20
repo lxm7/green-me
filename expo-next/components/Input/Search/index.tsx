@@ -28,13 +28,16 @@ const SearchInputComponent: React.FC<SearchInputComponentProps> = ({
     <View>
       <Input
         ref={searchInputRef}
-        className="p-2 border border-gray-300 rounded"
+        className="p-2 border border-gray-300 rounded mb-3"
         value={searchTerm}
         placeholder="Type coffee or t-shirt..."
         onChangeText={onSearch}
         blurOnSubmit={false}
       />
-      <Button className="mt-2 bg-blue-500 py-2 px-4 rounded" onPress={onSubmit}>
+      <Button
+        className="mt-2 bg-purple-500 py-2 px-4 rounded"
+        onPress={onSubmit}
+      >
         <Text className="text-white text-center">Show markers</Text>
       </Button>
     </View>

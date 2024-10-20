@@ -64,6 +64,7 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
           }
           onValueChange={handleDistanceChange}
           className="w-full"
+          thumbTintColor="#9f7aea"
         />
       </View>
     </View>
