@@ -26,8 +26,10 @@ export interface Product {
 export interface Document {
   name: string;
   business: string;
-  score: number | null;
-  accreditors: boolean;
+  greenScore: number | null;
+  image: string | null;
+  co2e: number;
+  publishedLCAs: string[];
   coordinates: {
     type: "Point";
     coordinates: [number, number]; // [longitude, latitude]

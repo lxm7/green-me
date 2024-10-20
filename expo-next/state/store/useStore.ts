@@ -18,7 +18,12 @@ export const useStore = create<StoreState>()(
       set(() => ({ searchTerm: term }), false, "setSearchTerm"),
     setMatchedBusinesses: (businesses: Business[]) =>
       set(
-        () => ({ matchedBusinesses: businesses }),
+        () => ({
+          matchedBusinesses: businesses.sort(
+            (a, b) =>
+              (b.document.greenScore || 0) - (a.document.greenScore || 0),
+          ),
+        }),
         false,
         "setMatchedBusinesses",
       ),

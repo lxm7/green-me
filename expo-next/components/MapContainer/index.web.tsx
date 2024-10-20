@@ -20,7 +20,10 @@ const businesses: Business[] = [
     id: "53b9bae2-b61d-48df-9464-90b037b1b927",
     document: {
       name: "City Bakery",
-      score: null,
+      greenScore: 4.3,
+      co2e: 0.0175,
+      image: null,
+      publishedLCAs: ["Fair Trade"],
       business: "Chain",
       products: [
         {
@@ -39,7 +42,6 @@ const businesses: Business[] = [
           environmentScore: 41,
         },
       ],
-      accreditors: false,
       coordinates: {
         type: "Point",
         coordinates: [-2.582561236, 51.446505827],
@@ -50,7 +52,10 @@ const businesses: Business[] = [
     id: "6ee75a0a-2c34-455c-956b-9563922bc4cd",
     document: {
       name: "The Coffee House",
-      score: null,
+      greenScore: 4.03,
+      co2e: 0.0175,
+      image: null,
+      publishedLCAs: [],
       business: "Independent",
       products: [
         {
@@ -65,15 +70,7 @@ const businesses: Business[] = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [
-            "Carbon Trust",
-            "Rainforest Alliance",
-            "GOTS",
-            "OEKO-TEX",
-            "Fair Trade",
-            "CarbonNeutral",
-            "Cradle to Cradle Certified",
-          ],
+          publishedLCAs: [],
           environmentScore: 43.5,
         },
         {
@@ -88,19 +85,10 @@ const businesses: Business[] = [
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [
-            "Carbon Trust",
-            "Rainforest Alliance",
-            "GOTS",
-            "OEKO-TEX",
-            "Fair Trade",
-            "CarbonNeutral",
-            "Cradle to Cradle Certified",
-          ],
+          publishedLCAs: [],
           environmentScore: 43.5,
         },
       ],
-      accreditors: false,
       coordinates: {
         type: "Point",
         coordinates: [-2.5919, 51.4553],
@@ -111,7 +99,15 @@ const businesses: Business[] = [
     id: "71a4c5cc-25a9-4b55-b319-1253d4c4b1ad",
     document: {
       name: "Bristol Brews",
-      score: null,
+      greenScore: 4.5,
+      co2e: 0.0175,
+      publishedLCAs: [
+        "Carbon Trust",
+        "Rainforest Alliance",
+        "GOTS",
+        "OEKO-TEX",
+      ],
+      image: null,
       business: "Chain",
       products: [
         {
@@ -160,7 +156,6 @@ const businesses: Business[] = [
           environmentScore: 47,
         },
       ],
-      accreditors: false,
       coordinates: {
         type: "Point",
         coordinates: [-2.595720981, 51.447861722],
@@ -198,9 +193,9 @@ const MapUI: React.FC = () => {
   //   error,
   // } = useBusinessesQuery(searchTerm);
 
-  const handleModeChange = useCallback((mode: TravelMode) => {
-    setTravelMode(mode);
-    setSelectedDistance(mode === "walk" ? 160.9 : 1609.34); // Update default distances: 0.1 miles walk, 1 mile drive
+  const handleModeChange = useCallback((value: string) => {
+    setTravelMode(value as TravelMode);
+    setSelectedDistance(value === "walk" ? 160.9 : 1609.34); // Update default distances: 0.1 miles walk, 1 mile drive
   }, []);
 
   const handleSearch = useCallback(
@@ -228,7 +223,7 @@ const MapUI: React.FC = () => {
   return (
     <View className="flex-1 flex-row bg-gray-100">
       {/* Left Sidebar */}
-      <View className="w-1/3 p-4 bg-white">
+      <View className="w-2/5 p-4 bg-white">
         {/* Travel Mode Selector */}
         <TravelModeSelector
           travelMode={travelMode}
