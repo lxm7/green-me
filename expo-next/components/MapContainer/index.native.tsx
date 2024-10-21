@@ -12,8 +12,8 @@ import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
-import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
-import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
+import DistanceSelector from "@components/Input/DistanceSelector";
+import MapComponent from "@components/Map";
 
 const MapUI: React.FC = () => {
   const [mapCenter, setMapCenter] = useState<{

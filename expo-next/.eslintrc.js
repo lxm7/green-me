@@ -10,7 +10,16 @@ module.exports = {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-var-requires": 0,
+    "import/no-unresolved": "error",
   },
+  overrides: [
+    {
+      files: ["*.native.tsx", "*.web.tsx", "*.ios.tsx", "*.android.tsx"],
+      rules: {
+        "import/no-unresolved": "off",
+      },
+    },
+  ],
   env: {
     browser: true,
     amd: true,

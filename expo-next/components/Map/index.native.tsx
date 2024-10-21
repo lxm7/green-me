@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import MapboxGL from "@rnmapbox/maps";
 import { View } from "react-native";
 import { Product, Business } from "@components/MapContainer/types";
-import CustomMarker from "@components/UserMarker"; // eslint-disable-line import/no-unresolved
+import CustomMarker from "@components/UserMarker";
 interface MapComponentProps {
   mapCenter: { latitude: number; longitude: number };
   matchedBusinesses: Business[];

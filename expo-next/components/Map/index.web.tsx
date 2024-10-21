@@ -1,6 +1,6 @@
 import React from "react";
 import { useMap } from "@hooks/useMap";
-import UserMarker from "@components/UserMarker"; // eslint-disable-line import/no-unresolved
+import UserMarker from "@components/UserMarker";
 import { Business } from "@components/MapContainer/types";
 
 interface MapComponentProps {
