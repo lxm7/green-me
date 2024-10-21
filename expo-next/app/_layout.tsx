@@ -1,17 +1,15 @@
 import "./global.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Theme, ThemeProvider } from "@react-navigation/native";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import * as React from "react";
-import { Platform } from "react-native";
 
 import { NAV_THEME } from "@lib/constants";
-import { useColorScheme } from "@lib/useColourScheme";
+import { useInitializeColorScheme } from "@hooks/useInitializeColorScheme";
 
 const LIGHT_THEME: Theme = {
   dark: false,
@@ -33,33 +31,7 @@ SplashScreen.preventAutoHideAsync();
 const queryClient = new QueryClient();
 
 export default function RootLayout() {
-  const { colorScheme, setColorScheme, isDarkColorScheme } = useColorScheme();
-  const [isColorSchemeLoaded, setIsColorSchemeLoaded] = React.useState(false);
-
-  React.useEffect(() => {
-    (async () => {
-      const theme = await AsyncStorage.getItem("theme");
-      if (Platform.OS === "web") {
-        // Adds the background color to the html element to prevent white background on overscroll.
-        document.documentElement.classList.add("bg-background");
-      }
-      if (!theme) {
-        AsyncStorage.setItem("theme", colorScheme);
-        setIsColorSchemeLoaded(true);
-        return;
-      }
-      const colorTheme = theme === "dark" ? "dark" : "light";
-      if (colorTheme !== colorScheme) {
-        setColorScheme(colorTheme);
-
-        setIsColorSchemeLoaded(true);
-        return;
-      }
-      setIsColorSchemeLoaded(true);
-    })().finally(() => {
-      SplashScreen.hideAsync();
-    });
-  }, []);
+  const { isColorSchemeLoaded, isDarkColorScheme } = useInitializeColorScheme();
 
   if (!isColorSchemeLoaded) {
     return null;
@@ -69,7 +41,8 @@ export default function RootLayout() {
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={{ flex: 1 }}>
         <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-          <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+          {/* <StatusBar style={isDarkColorScheme ? "light" : "dark"}  */}
+          <StatusBar />
           <Stack />
         </ThemeProvider>
       </SafeAreaView>

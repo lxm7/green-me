@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { View, TextInput } from "react-native";
+import React from "react";
+import { View } from "react-native";
 
 import { Text } from "@components/ui/text";
 import { Button } from "@components/ui/button";
@@ -15,19 +15,11 @@ const SearchInputComponent: React.FC<SearchInputComponentProps> = ({
   onSearch,
   onSubmit,
 }) => {
-  const searchInputRef = useRef<TextInput | null>(null);
   const searchTerm = useStore((state) => state.searchTerm);
-
-  useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [searchTerm]);
 
   return (
     <View>
       <Input
-        ref={searchInputRef}
         className="p-2 border border-gray-300 rounded mb-3"
         value={searchTerm}
         placeholder="Type coffee or t-shirt..."

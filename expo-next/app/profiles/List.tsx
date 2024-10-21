@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Text,
   View,
@@ -15,32 +15,26 @@ type Profile = {
 };
 
 type Props = {
-  list: Promise<Profile[]>;
+  list: Profile[];
 };
 
+const renderItem: ListRenderItem<Profile> = ({ item }) => (
+  <View className="flex-row mb-2">
+    <Text className="text-lg text-black italic pr-2">{item.user_id} |</Text>
+    <Text className="text-lg text-black italic pr-2">{item.name} |</Text>
+    <Text className="text-lg text-black italic">{item.bio}</Text>
+  </View>
+);
+
 const ProfilesList: React.FC<Props> = ({ list }) => {
-  const [profileList, setProfileList] = useState<Profile[] | null>(null);
-
-  useEffect(() => {
-    list.then(setProfileList);
-  }, [list]);
-
-  const renderItem: ListRenderItem<Profile> = ({ item }) => (
-    <View className="flex-row mb-2">
-      <Text className="text-lg text-black italic pr-2">{item.user_id} |</Text>
-      <Text className="text-lg text-black italic pr-2">{item.name} |</Text>
-      <Text className="text-lg text-black italic">{item.bio}</Text>
-    </View>
-  );
-
-  if (!profileList) {
+  if (!list) {
     return <ActivityIndicator />;
   }
 
   return (
     <FlatList
-      data={profileList}
       keyExtractor={(item) => item.user_id}
+      data={list}
       renderItem={renderItem}
     />
   );

@@ -1,34 +1,35 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { Text, View, ActivityIndicator } from "react-native";
 
-const ProfilesList = lazy(() => import("./List"));
-
-export async function listProfiles() {
-  try {
-    const res = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/profiles`);
-    const profiles = await res.json();
-    return profiles;
-  } catch (error) {
-    console.error("Error listing users:", error);
-    throw error; // Re-throw the error to handle it further up the call chain if needed
-  }
-}
+import { useProfiles } from "@state/queries/useGetProfiles";
+import ProfilesList from "./List";
 
 type Props = {};
 
 const ProfilesScreen: React.FC<Props> = () => {
+  const { data, isLoading, error } = useProfiles();
+
+  if (isLoading) {
+    return (
+      <View className="flex-1 justify-center items-center bg-white">
+        <ActivityIndicator size="large" color="#0000ff" />
+        <Text>Loading profiles...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View className="flex-1 justify-center items-center bg-white">
+        <Text className="text-red-500">Error loading profiles</Text>
+      </View>
+    );
+  }
+
   return (
     <View className="flex-1 bg-white items-center">
       <Text className="text-2xl mb-4">Profiles</Text>
-      <Suspense
-        fallback={
-          <View>
-            <ActivityIndicator />
-          </View>
-        }
-      >
-        <ProfilesList list={listProfiles()} />
-      </Suspense>
+      <ProfilesList list={data} />
     </View>
   );
 };
