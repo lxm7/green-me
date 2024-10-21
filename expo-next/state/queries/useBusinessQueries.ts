@@ -4,32 +4,6 @@ import { Business } from "@components/MapContainer/types";
 import { supabase } from "@utils/supabase";
 import { BristolCentre } from "@constants/Place";
 
-async function getCoordsFromGeoPlugin() {
-  try {
-    const geoPluginResponse = await fetch("http://www.geoplugin.net/json.gp");
-    const data = await geoPluginResponse.json();
-    // data.geoplugin_currencyCode // also possible
-    // data.geoplugin_currencyConverter // also possible
-    // data.geoplugin_currencySymbol // also possible
-    return {
-      latitude: data.geoplugin_latitude,
-      longitude: data.geoplugin_longitude,
-    };
-    if (data.geoplugin_status === 200) {
-      return {
-        latitude: data.geoplugin_latitude,
-        longitude: data.geoplugin_longitude,
-      };
-    } else {
-      console.error("Unable to retrieve location from IP.");
-      return null;
-    }
-  } catch (error) {
-    console.error("Error fetching coordinates from IP:", error);
-    return null;
-  }
-}
-
 // Fetch businesses based on the search term
 export const fetchBusinesses = async (
   term: string,
