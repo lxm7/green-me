@@ -8,8 +8,8 @@ import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
 import { Text } from "@components/ui/text";
 
-import MapComponent from "@components/Map"; // eslint-disable-line import/no-unresolved
-import DistanceSelector from "@components/Input/DistanceSelector"; // eslint-disable-line import/no-unresolved
+import MapComponent from "@components/Map";
+import DistanceSelector from "@components/Input/DistanceSelector";
 import TravelModeSelector from "@components/Input/TravelMode";
 import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
