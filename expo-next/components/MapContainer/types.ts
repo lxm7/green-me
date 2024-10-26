@@ -13,26 +13,25 @@ export interface Product {
   price: number;
   available: boolean;
   business: string;
-  greenScore: number;
   keywords: string[];
   coordinates: {
     type: "Point";
     coordinates: [number, number]; // [longitude, latitude]
   };
-  publishedLCAs: string[]; // This reflects the array of published LCAs
   environmentScore: number; // Ensure it's a tuple of exactly two numbers
 }
 
 export interface Document {
   name: string;
   business: string;
-  greenScore: number | null;
-  image: string | null;
+  score: number;
+  greenScore: number;
   co2e: number;
+  image: string;
   publishedLCAs: string[];
   coordinates: {
-    type: "Point";
-    coordinates: [number, number]; // [longitude, latitude]
+    type: string;
+    coordinates: [number, number];
   };
   products: Product[];
 }
