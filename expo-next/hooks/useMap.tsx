@@ -45,6 +45,7 @@ export const useMap = (
         matchedBusinesses,
         markersRef,
         mapCenter,
+        mapCenter,
       );
     }
   }, [matchedBusinesses, mapCenter]);

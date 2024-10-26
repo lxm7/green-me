@@ -37,10 +37,9 @@ const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
             <View className="flex-row pt-4 pb-4 gap-4 bg-white ">
               <Image
                 source={{
-                  uri:
-                    business.document.image || "https://placehold.co/600x400",
+                  uri: "https://placehold.co/600x400", // business.document.image
                 }}
-                className="w-16 h-24 rounded-lg"
+                className="w-20 h-24 rounded-lg"
                 resizeMode="cover"
               />
 
@@ -70,7 +69,7 @@ const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
 
                 <View className="flex-1 justify-end mt-1">
                   <View className="flex-row flex-wrap gap-1 mt-auto">
-                    {business.document.publishedLCAs.map((lca, index) => {
+                    {business.document.publishedLCAs?.map((lca, index) => {
                       const colour = LCAColorMap[lca] || defaultLCA.color;
                       return (
                         <Text

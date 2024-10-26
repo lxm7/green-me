@@ -3,7 +3,6 @@ import { View, ActivityIndicator } from "react-native";
 import { useShallow } from "zustand/react/shallow";
 
 import { useStore } from "@state/store/useStore";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 import SearchInputComponent from "@components/Input/Search";
 import { Text } from "@components/ui/text";
@@ -15,158 +14,131 @@ import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
-const businesses: Business[] = [
+const businesses = [
   {
-    id: "53b9bae2-b61d-48df-9464-90b037b1b927",
+    id: "eb7efa2d-ab1b-4a31-b3e2-599c12472eff",
     document: {
-      name: "City Bakery",
-      greenScore: 4.3,
-      co2e: 0.0175,
-      image: null,
-      publishedLCAs: ["Fair Trade"],
-      business: "Chain",
+      co2e: 0.01,
+      name: "The Vegan Deli",
+      image: "vegan_deli.jpg",
+      score: 4.8,
+      business: "deli",
       products: [
         {
-          co2e: 0.0175,
-          name: "Latte",
-          price: 3.5,
-          business: "Chain",
+          name: "Coffee",
+          price: 2.5,
+          business: "deli",
+          category: "coffee",
           keywords: ["coffee"],
           available: true,
-          greenScore: 4.3,
           coordinates: {
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [],
-          environmentScore: 41,
+          environmentScore: 45,
         },
       ],
+      greenScore: 4.8,
       coordinates: {
         type: "Point",
-        coordinates: [-2.582561236, 51.446505827],
+        coordinates: [-2.598, 51.452],
       },
+      publishedLCAs: null,
     },
   },
   {
-    id: "6ee75a0a-2c34-455c-956b-9563922bc4cd",
+    id: "ca91d66e-fa58-43cd-a6df-39b9eb1cf50d",
     document: {
-      name: "The Coffee House",
-      greenScore: 4.03,
-      co2e: 0.0175,
-      image: null,
-      publishedLCAs: [],
-      business: "Independent",
-      products: [
-        {
-          co2e: 0.01755,
-          name: "Cappuccino",
-          price: 3,
-          business: "Independent",
-          keywords: ["coffee"],
-          available: true,
-          greenScore: 4.03,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          publishedLCAs: [],
-          environmentScore: 43.5,
-        },
-        {
-          co2e: 0.01755,
-          name: "Cappuccino",
-          price: 3,
-          business: "Independent",
-          keywords: ["coffee"],
-          available: true,
-          greenScore: 4.03,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          publishedLCAs: [],
-          environmentScore: 43.5,
-        },
-      ],
-      coordinates: {
-        type: "Point",
-        coordinates: [-2.5919, 51.4553],
-      },
-    },
-  },
-  {
-    id: "71a4c5cc-25a9-4b55-b319-1253d4c4b1ad",
-    document: {
+      co2e: 0.01583,
       name: "Bristol Brews",
-      greenScore: 4.5,
-      co2e: 0.0175,
-      publishedLCAs: [
-        "Carbon Trust",
-        "Rainforest Alliance",
-        "GOTS",
-        "OEKO-TEX",
-      ],
-      image: null,
-      business: "Chain",
+      image: "bristol_brews.jpg",
+      score: 4.5,
+      business: "cafe",
       products: [
         {
-          co2e: 0.017,
           name: "Flat White",
           price: 3.2,
-          business: "Chain",
+          business: "cafe",
+          category: "coffee",
           keywords: ["coffee"],
           available: true,
-          greenScore: 4.5,
           coordinates: {
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [],
           environmentScore: 44,
         },
         {
-          co2e: 0.0155,
           name: "Americano",
           price: 2.8,
-          business: "Chain",
+          business: "cafe",
+          category: "coffee",
           keywords: ["coffee"],
           available: true,
-          greenScore: 4.2,
           coordinates: {
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [],
           environmentScore: 41,
         },
         {
-          co2e: 0.015,
           name: "Espresso",
           price: 2.5,
-          business: "Chain",
+          business: "cafe",
+          category: "coffee",
           keywords: ["coffee"],
           available: true,
-          greenScore: 4.9,
           coordinates: {
             type: "Point",
             coordinates: [-2.5971, 51.4548],
           },
-          publishedLCAs: [],
           environmentScore: 47,
         },
       ],
+      greenScore: 4.5,
       coordinates: {
         type: "Point",
-        coordinates: [-2.595720981, 51.447861722],
+        coordinates: [-2.595, 51.458],
       },
+      publishedLCAs: null,
+    },
+  },
+  {
+    id: "1cfb001d-74ea-44de-a781-77cce4686909",
+    document: {
+      co2e: 0.01617,
+      name: "City Bakery",
+      image: "city_bakery.jpg",
+      score: 4.5,
+      business: "bakery",
+      products: [
+        {
+          name: "Latte",
+          price: 3.5,
+          business: "bakery",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 41,
+        },
+      ],
+      greenScore: 4.5,
+      coordinates: {
+        type: "Point",
+        coordinates: [-2.5935, 51.4565],
+      },
+      publishedLCAs: null,
     },
   },
 ];
 
 const isLoading = false;
 const isError = false;
-const error = new Error("Error loading businesses");
+const error = null;
 
 const MapUI: React.FC = () => {
   const [mapCenter, setMapCenter] = useState({
@@ -206,11 +178,10 @@ const MapUI: React.FC = () => {
   );
 
   const handleSubmit = useCallback(() => {
-    // Set displayed businesses directly from the fetched query result
     if (businesses) {
       setDisplayedBusinesses(businesses);
     }
-  }, []);
+  }, [businesses]);
 
   const handleDistanceChange = useCallback((value: number) => {
     setSelectedDistance(value);

@@ -87,7 +87,6 @@ const MapComponent: React.FC<MapComponentProps> = ({
             />
           </MapboxGL.ShapeSource>
         )}
-
         {/* Business markers */}
         {matchedBusinesses.map((business: Business) => {
           const { coordinates, name, products } = business.document;
