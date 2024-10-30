@@ -6,6 +6,8 @@ export default function Home() {
   const { signOut } = useSession();
   return (
     <View>
+      <Link href="/intro">Go to Intro</Link>
+      <Link href="/sign-up">Go to Signup</Link>
       <Link href="/sign-in">Go to Signin</Link>
       <Link href="/search">Map</Link>
       <Text>Welcome to the Home Page</Text>
