@@ -7,7 +7,6 @@ import {
   TextInput,
   Button,
 } from "react-native";
-import { Link } from "expo-router";
 import { MultiSelect, Dropdown } from "react-native-element-dropdown";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
@@ -76,13 +75,11 @@ const MyForm = () => {
 
   return (
     <ScrollContainer
-      className="p-4"
+      className="p-8"
       nestedScrollEnabled={true}
       extraScrollHeight={20}
     >
       {/* Business Location */}
-      <Link href="/search">Skip to main map</Link>
-
       <View className="mb-6">
         <Text className="text-xl font-bold mb-2">Business Location</Text>
         <Text className="mb-1">Select Your Country:</Text>
@@ -113,7 +110,7 @@ const MyForm = () => {
 
         <Text className="mt-4 mb-1">City (optional):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           value={city}
           onChangeText={setCity}
           placeholder="Enter your city"
@@ -127,7 +124,7 @@ const MyForm = () => {
           Electricity Emission Factor (kg CO₂e per kWh):
         </Text>
         <TextInput
-          className="border p-2 bg-gray-200"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           value={emissionFactor.toString()}
           editable={false}
         />
@@ -141,7 +138,7 @@ const MyForm = () => {
         <Text className="text-xl font-bold mb-2">Energy Consumption</Text>
         <Text className="mb-1">Electricity Consumption per Annum (kWh):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={electricityConsumption}
           onChangeText={setElectricityConsumption}
@@ -149,7 +146,7 @@ const MyForm = () => {
 
         <Text className="mt-4 mb-1">Gas Consumption per Annum (kWh):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={gasConsumption}
           onChangeText={setGasConsumption}
@@ -164,10 +161,11 @@ const MyForm = () => {
         <Text className="mb-1">Select LCAs you have conducted:</Text>
         <MultiSelect
           style={{
-            padding: 12,
-            borderWidth: 1,
+            height: 50,
             borderColor: "#ccc",
+            borderWidth: 1,
             borderRadius: 8,
+            paddingHorizontal: 10,
           }}
           data={lcaItems}
           labelField="label"
@@ -190,10 +188,12 @@ const MyForm = () => {
         <Text className="mb-1">Select LCAs you plan to conduct:</Text>
         <MultiSelect
           style={{
-            padding: 12,
+            height: 50,
+            borderColor: "#cccccc",
+            backgroundColor: "#f1f5f9",
             borderWidth: 1,
-            borderColor: "#ccc",
             borderRadius: 8,
+            paddingHorizontal: 10,
           }}
           data={lcaItems}
           labelField="label"
@@ -203,7 +203,6 @@ const MyForm = () => {
           onChange={(item) => {
             setPlannedLCAs(item);
           }}
-          // maxSelect={1}
           selectedStyle={{ borderRadius: 12 }}
         />
       </View>
@@ -215,7 +214,7 @@ const MyForm = () => {
         </Text>
         <Text className="mb-1">Coffee Purchased (kg per year):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={coffeeQuantity}
           onChangeText={setCoffeeQuantity}
@@ -249,7 +248,7 @@ const MyForm = () => {
           <>
             <Text className="mt-4 mb-1">If Imported, Country of Origin:</Text>
             <TextInput
-              className="border p-2"
+              className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
               value={coffeeCountry}
               onChangeText={setCoffeeCountry}
             />
@@ -264,7 +263,7 @@ const MyForm = () => {
         </Text>
         <Text className="mb-1">Deliveries per Month:</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={deliveryFrequency}
           onChangeText={setDeliveryFrequency}
@@ -272,7 +271,7 @@ const MyForm = () => {
 
         <Text className="mt-4 mb-1">Average Distance per Delivery (km):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={deliveryDistance}
           onChangeText={setDeliveryDistance}
@@ -310,7 +309,7 @@ const MyForm = () => {
         <Text className="text-xl font-bold mb-2">Employee Commuting</Text>
         <Text className="mb-1">Number of Employees:</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={employeeCount}
           onChangeText={setEmployeeCount}
@@ -320,7 +319,7 @@ const MyForm = () => {
           Average One-Way Commute Distance (km):
         </Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={averageCommute}
           onChangeText={setAverageCommute}
@@ -357,7 +356,7 @@ const MyForm = () => {
         <Text className="text-xl font-bold mb-2">Waste Generation</Text>
         <Text className="mb-1">General Waste (kg per month):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={generalWaste}
           onChangeText={setGeneralWaste}
@@ -365,7 +364,7 @@ const MyForm = () => {
 
         <Text className="mt-4 mb-1">Recyclable Waste (kg per month):</Text>
         <TextInput
-          className="border p-2"
+          className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
           value={recyclableWaste}
           onChangeText={setRecyclableWaste}
