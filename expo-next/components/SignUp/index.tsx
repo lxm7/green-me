@@ -8,8 +8,7 @@ import {
   Button,
 } from "react-native";
 import { Link } from "expo-router";
-import MultiSelect from "react-native-multiple-select";
-import RNPickerSelect from "react-native-picker-select";
+import { MultiSelect, Dropdown } from "react-native-element-dropdown";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const MyForm = () => {
@@ -33,12 +32,12 @@ const MyForm = () => {
   const [recyclableWaste, setRecyclableWaste] = useState("");
 
   const lcaItems = [
-    { id: "product_lca", name: "Product LCA" },
-    { id: "service_lca", name: "Service LCA" },
-    { id: "organizational_lca", name: "Organizational LCA" },
-    { id: "carbon_footprint", name: "Carbon Footprint Analysis" },
-    { id: "water_footprint", name: "Water Footprint Analysis" },
-    { id: "energy_audit", name: "Energy Audit" },
+    { value: "product_lca", label: "Product LCA" },
+    { value: "service_lca", label: "Service LCA" },
+    { value: "organizational_lca", label: "Organizational LCA" },
+    { value: "carbon_footprint", label: "Carbon Footprint Analysis" },
+    { value: "water_footprint", label: "Water Footprint Analysis" },
+    { value: "energy_audit", label: "Energy Audit" },
   ];
 
   const getEmissionFactor = () => {
@@ -87,20 +86,29 @@ const MyForm = () => {
       <View className="mb-6">
         <Text className="text-xl font-bold mb-2">Business Location</Text>
         <Text className="mb-1">Select Your Country:</Text>
-        <RNPickerSelect
-          onValueChange={(value) => setCountry(value)}
-          items={[
+        <Dropdown
+          style={{
+            height: 50,
+            borderColor: "#ccc",
+            borderWidth: 1,
+            borderRadius: 8,
+            paddingHorizontal: 10,
+          }}
+          data={[
             { label: "United Kingdom", value: "UK" },
             { label: "United States", value: "USA" },
             { label: "Germany", value: "Germany" },
             { label: "France", value: "France" },
             { label: "Other", value: "Other" },
           ]}
+          labelField="label"
+          valueField="value"
+          placeholder="Select LCAs"
           value={country}
-          style={{
-            inputAndroid: { color: "black" },
-            inputIOS: { color: "black" },
+          onChange={(item) => {
+            setCountry(item.value);
           }}
+          renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
 
         <Text className="mt-4 mb-1">City (optional):</Text>
@@ -155,23 +163,22 @@ const MyForm = () => {
         </Text>
         <Text className="mb-1">Select LCAs you have conducted:</Text>
         <MultiSelect
-          items={lcaItems.slice(0, 5)}
-          // nestedScrollEnabled={true}
-          uniqueKey="id"
-          onSelectedItemsChange={setExistingLCAs}
-          selectedItems={existingLCAs}
-          selectText="Select LCAs"
-          searchInputPlaceholderText="Search LCAs..."
-          tagRemoveIconColor="#CCC"
-          tagBorderColor="#CCC"
-          tagTextColor="#000"
-          selectedItemTextColor="#000"
-          selectedItemIconColor="#000"
-          itemTextColor="#000"
-          displayKey="name"
-          searchInputStyle={{ color: "#000" }}
-          submitButtonColor="#48BB78"
-          submitButtonText="Submit"
+          style={{
+            padding: 12,
+            borderWidth: 1,
+            borderColor: "#ccc",
+            borderRadius: 8,
+          }}
+          data={lcaItems}
+          labelField="label"
+          valueField="value"
+          placeholder="Select LCAs"
+          value={existingLCAs}
+          onChange={(item) => {
+            setExistingLCAs(item);
+          }}
+          selectedStyle={{ borderRadius: 12 }}
+          renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
       </View>
 
@@ -182,22 +189,22 @@ const MyForm = () => {
         </Text>
         <Text className="mb-1">Select LCAs you plan to conduct:</Text>
         <MultiSelect
-          items={lcaItems}
-          uniqueKey="id"
-          onSelectedItemsChange={setPlannedLCAs}
-          selectedItems={plannedLCAs}
-          selectText="Select LCAs"
-          searchInputPlaceholderText="Search LCAs..."
-          tagRemoveIconColor="#CCC"
-          tagBorderColor="#CCC"
-          tagTextColor="#000"
-          selectedItemTextColor="#000"
-          selectedItemIconColor="#000"
-          itemTextColor="#000"
-          displayKey="name"
-          searchInputStyle={{ color: "#000" }}
-          submitButtonColor="#48BB78"
-          submitButtonText="Submit"
+          style={{
+            padding: 12,
+            borderWidth: 1,
+            borderColor: "#ccc",
+            borderRadius: 8,
+          }}
+          data={lcaItems}
+          labelField="label"
+          valueField="value"
+          placeholder="Pledged LCAs"
+          value={plannedLCAs}
+          onChange={(item) => {
+            setPlannedLCAs(item);
+          }}
+          // maxSelect={1}
+          selectedStyle={{ borderRadius: 12 }}
         />
       </View>
 
@@ -215,18 +222,27 @@ const MyForm = () => {
         />
 
         <Text className="mt-4 mb-1">Origin of Coffee:</Text>
-        <RNPickerSelect
-          onValueChange={(value) => setCoffeeOrigin(value)}
-          items={[
+        <Dropdown
+          style={{
+            height: 50,
+            borderColor: "#ccc",
+            borderWidth: 1,
+            borderRadius: 8,
+            paddingHorizontal: 10,
+          }}
+          data={[
             { label: "Local", value: "local" },
             { label: "Domestic", value: "domestic" },
             { label: "Imported", value: "imported" },
           ]}
+          labelField="label"
+          valueField="value"
+          placeholder="Select LCAs"
           value={coffeeOrigin}
-          style={{
-            inputAndroid: { color: "black" },
-            inputIOS: { color: "black" },
+          onChange={(item) => {
+            setCoffeeOrigin(item.value);
           }}
+          renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
 
         {coffeeOrigin === "imported" && (
@@ -264,19 +280,28 @@ const MyForm = () => {
 
         <Text className="mt-4 mb-1">Mode of Transport:</Text>
 
-        <RNPickerSelect
-          onValueChange={(value) => setTransportMode(value)}
-          items={[
+        <Dropdown
+          style={{
+            height: 50,
+            borderColor: "#ccc",
+            borderWidth: 1,
+            borderRadius: 8,
+            paddingHorizontal: 10,
+          }}
+          data={[
             { label: "road", value: "road" },
             { label: "sea", value: "sea" },
             { label: "air", value: "air" },
             { label: "rail", value: "rail" },
           ]}
+          labelField="label"
+          valueField="value"
+          placeholder="Select LCAs"
           value={transportMode}
-          style={{
-            inputAndroid: { color: "black" },
-            inputIOS: { color: "black" },
+          onChange={(item) => {
+            setTransportMode(item.value);
           }}
+          renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
       </View>
 
@@ -302,19 +327,28 @@ const MyForm = () => {
         />
 
         <Text className="mt-4 mb-1">Primary Mode of Commute:</Text>
-        <RNPickerSelect
-          onValueChange={(value) => setCommuteMode(value)}
-          items={[
+        <Dropdown
+          style={{
+            height: 50,
+            borderColor: "#ccc",
+            borderWidth: 1,
+            borderRadius: 8,
+            paddingHorizontal: 10,
+          }}
+          data={[
             { label: "car", value: "car" },
             { label: "public_transit", value: "public_transit" },
             { label: "bicycle", value: "bicycle" },
             { label: "walking", value: "walking" },
           ]}
+          labelField="label"
+          valueField="value"
+          placeholder="Select LCAs"
           value={commuteMode}
-          style={{
-            inputAndroid: { color: "black" },
-            inputIOS: { color: "black" },
+          onChange={(item) => {
+            setCommuteMode(item.value);
           }}
+          renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
       </View>
 
