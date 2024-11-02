@@ -41,13 +41,13 @@ export default function RootLayout() {
   return (
     <SessionProvider>
       <QueryClientProvider client={queryClient}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+        <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+          <SafeAreaView style={{ flex: 1 }}>
             {/* <StatusBar style={isDarkColorScheme ? "light" : "dark"}  */}
             <StatusBar />
             <Stack />
-          </ThemeProvider>
-        </SafeAreaView>
+          </SafeAreaView>
+        </ThemeProvider>
       </QueryClientProvider>
     </SessionProvider>
   );

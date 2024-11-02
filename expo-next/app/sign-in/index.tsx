@@ -2,7 +2,7 @@ import { View } from "react-native";
 import VideoBackground from "@app/sign-up/components/VideoBackground";
 import GoogleSignIn from "@app/sign-up/components/GoogleSignIn";
 
-/* Deprecated */
+/* Deprecated - keep for full screen video reference */
 export default function App() {
   return (
     <View
