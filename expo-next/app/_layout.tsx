@@ -8,6 +8,7 @@ import { Theme, ThemeProvider } from "@react-navigation/native";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
+import { SessionProvider } from "@hooks/useSession";
 import { NAV_THEME } from "@lib/constants";
 import { useInitializeColorScheme } from "@hooks/useInitializeColorScheme";
 
@@ -38,14 +39,16 @@ export default function RootLayout() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <SafeAreaView style={{ flex: 1 }}>
+    <SessionProvider>
+      <QueryClientProvider client={queryClient}>
         <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-          {/* <StatusBar style={isDarkColorScheme ? "light" : "dark"}  */}
-          <StatusBar />
-          <Stack />
+          <SafeAreaView style={{ flex: 1 }}>
+            {/* <StatusBar style={isDarkColorScheme ? "light" : "dark"}  */}
+            <StatusBar />
+            <Stack />
+          </SafeAreaView>
         </ThemeProvider>
-      </SafeAreaView>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </SessionProvider>
   );
 }

@@ -37,7 +37,7 @@ const GoogleSignIn = () => {
 
     // Perform custom sign-in logic here (SST login, etc.)
     signIn(response.credential);
-    router.replace("/profiles");
+    router.replace("/search");
   };
 
   const { buttonDivRef } = useGoogleSignIn(handleWebCredentialResponse);
@@ -55,7 +55,7 @@ const GoogleSignIn = () => {
       });
 
       signIn(idToken);
-      router.replace("/profiles");
+      router.replace("/search");
     } catch (error) {
       console.error("Google Sign-In Error: ", error);
     }
@@ -75,7 +75,7 @@ const GoogleSignIn = () => {
           <div
             role="button"
             ref={buttonDivRef}
-            className="bg-[#4285F4] rounded-lg py-3 px-6 flex-row items-center justify-center shadow-md shadow-black"
+            //className="bg-[#4285F4] rounded-lg py-3 px-6 flex-row items-center justify-center shadow-md shadow-black"
           >
             <span className="text-white text-base font-semibold">
               Sign in with Google

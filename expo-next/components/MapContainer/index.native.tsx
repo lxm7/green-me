@@ -76,7 +76,9 @@ const MapUI: React.FC = () => {
         {/* Travel Mode Selector */}
         <TravelModeSelector
           travelMode={travelMode}
-          onModeChange={handleModeChange}
+          onModeChange={(value: string) =>
+            handleModeChange(value as TravelMode)
+          }
         />
 
         {/* Distance Selector */}
