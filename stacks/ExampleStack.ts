@@ -41,6 +41,34 @@ export function ExampleStack({ app, stack }: StackContext) {
   new Config.Parameter(stack, "MESSAGES_TABLE", {
     value: `${stage}-green-one-auth-MessagesTable`,
   });
+  new Config.Parameter(stack, "BUSINESS_TABLE", {
+    value: `${stage}-green-one-auth-BusinessTable`,
+  });
+
+  const businessTable = new Table(stack, "BusinessTable", {
+    fields: {
+      id: "string", // Unique ID for each record
+      country: "string",
+      city: "string",
+      emissionFactor: "number",
+      electricityConsumption: "string",
+      gasConsumption: "string",
+      existingLCAs: "string", // List of LCAs JSON string
+      plannedLCAs: "string", // List of LCAs JSON string
+      coffeeQuantity: "string",
+      coffeeOrigin: "string",
+      coffeeCountry: "string",
+      deliveryFrequency: "string",
+      deliveryDistance: "string",
+      transportMode: "string",
+      employeeCount: "string",
+      averageCommute: "string",
+      commuteMode: "string",
+      generalWaste: "string",
+      recyclableWaste: "string",
+    },
+    primaryIndex: { partitionKey: "id" },
+  });
 
   const profilesTable = new Table(stack, "ProfilesTable", {
     fields: {
@@ -104,6 +132,7 @@ export function ExampleStack({ app, stack }: StackContext) {
           venuesTable,
           chatsTable,
           messagesTable,
+          businessTable,
         ],
       },
     },
@@ -113,6 +142,7 @@ export function ExampleStack({ app, stack }: StackContext) {
       "POST /profiles": "packages/functions/src/profiles/create.handler",
       "GET /venues": "packages/functions/src/venues/list.handler",
       "POST /venues": "packages/functions/src/venues/create.handler",
+      "POST /business": "packages/functions/src/business/create.handler",
       // "POST /chat/message": "packages/functions/src/chat/sendMessage.handler",
       // "GET /chat/{chatId}/messages":
       //   "packages/functions/src/chat/getMessages.handler",

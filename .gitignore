@@ -48,6 +48,7 @@ yarn-error.log*
 # sst
 .sst
 .sst/debug.log
+packages/functions/node_modules/
 
 # open-next
 .open-next

@@ -408,6 +408,146 @@
               "version": "10.3.0"
             }
           },
+          "BUSINESS_TABLE": {
+            "id": "BUSINESS_TABLE",
+            "path": "greenmev2-green-one-auth-ExampleStack/BUSINESS_TABLE",
+            "children": {
+              "Parameter_value": {
+                "id": "Parameter_value",
+                "path": "greenmev2-green-one-auth-ExampleStack/BUSINESS_TABLE/Parameter_value",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greenmev2-green-one-auth-ExampleStack/BUSINESS_TABLE/Parameter_value/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "/sst/green-one-auth/greenmev2/Parameter/BUSINESS_TABLE/value",
+                        "tags": {
+                          "sst:app": "green-one-auth",
+                          "sst:stage": "greenmev2"
+                        },
+                        "type": "String",
+                        "value": "greenmev2-green-one-auth-BusinessTable"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ssm.CfnParameter",
+                      "version": "2.161.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ssm.StringParameter",
+                  "version": "2.161.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
+          "BusinessTable": {
+            "id": "BusinessTable",
+            "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable",
+            "children": {
+              "Table": {
+                "id": "Table",
+                "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable/Table",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable/Table/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                      "aws:cdk:cloudformation:props": {
+                        "attributeDefinitions": [
+                          {
+                            "attributeName": "id",
+                            "attributeType": "S"
+                          }
+                        ],
+                        "billingMode": "PAY_PER_REQUEST",
+                        "keySchema": [
+                          {
+                            "attributeName": "id",
+                            "keyType": "HASH"
+                          }
+                        ],
+                        "pointInTimeRecoverySpecification": {
+                          "pointInTimeRecoveryEnabled": true
+                        },
+                        "tableName": "greenmev2-green-one-auth-BusinessTable",
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "green-one-auth"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "greenmev2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_dynamodb.CfnTable",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable/Table/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.161.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_dynamodb.Table",
+                  "version": "2.161.1"
+                }
+              },
+              "Parameter_tableName": {
+                "id": "Parameter_tableName",
+                "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable/Parameter_tableName",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greenmev2-green-one-auth-ExampleStack/BusinessTable/Parameter_tableName/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "/sst/green-one-auth/greenmev2/Table/BusinessTable/tableName",
+                        "tags": {
+                          "sst:app": "green-one-auth",
+                          "sst:stage": "greenmev2"
+                        },
+                        "type": "String",
+                        "value": {
+                          "Ref": "BusinessTableCAE73E9F"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ssm.CfnParameter",
+                      "version": "2.161.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ssm.StringParameter",
+                  "version": "2.161.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
           "ProfilesTable": {
             "id": "ProfilesTable",
             "path": "greenmev2-green-one-auth-ExampleStack/ProfilesTable",
@@ -1205,6 +1345,32 @@
                                       ]
                                     },
                                     {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "Action": "ssm:GetParameters",
                                       "Effect": "Allow",
                                       "Resource": {
@@ -1344,6 +1510,9 @@
                             },
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
                             },
                             "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
@@ -1742,6 +1911,32 @@
                                       ]
                                     },
                                     {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "Action": "ssm:GetParameters",
                                       "Effect": "Allow",
                                       "Resource": {
@@ -1881,6 +2076,9 @@
                             },
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
                             },
                             "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
@@ -2279,6 +2477,32 @@
                                       ]
                                     },
                                     {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "Action": "ssm:GetParameters",
                                       "Effect": "Allow",
                                       "Resource": {
@@ -2418,6 +2642,9 @@
                             },
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
                             },
                             "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
@@ -2816,6 +3043,32 @@
                                       ]
                                     },
                                     {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "Action": "ssm:GetParameters",
                                       "Effect": "Allow",
                                       "Resource": {
@@ -2955,6 +3208,9 @@
                             },
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
                             },
                             "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
@@ -3353,6 +3609,32 @@
                                       ]
                                     },
                                     {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "Action": "ssm:GetParameters",
                                       "Effect": "Allow",
                                       "Resource": {
@@ -3492,6 +3774,9 @@
                             },
                             "SST_Table_tableName_MessagesTable": {
                               "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
                             },
                             "SST_DEBUG_IS_API_ROUTE": "1",
                             "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
@@ -3657,6 +3942,572 @@
                               "integrations/",
                               {
                                 "Ref": "apiRoutePOSTvenuesIntegrationPOSTvenues09049042"
+                              }
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnRoute",
+                      "version": "2.161.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigatewayv2.HttpRoute",
+                  "version": "2.161.1"
+                }
+              },
+              "Lambda_POST_--business": {
+                "id": "Lambda_POST_--business",
+                "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole",
+                    "children": {
+                      "ImportServiceRole": {
+                        "id": "ImportServiceRole",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/ImportServiceRole",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.Resource",
+                          "version": "2.161.1"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "sst:app",
+                                "value": "green-one-auth"
+                              },
+                              {
+                                "key": "sst:stage",
+                                "value": "greenmev2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                          "version": "2.161.1"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "xray:PutTraceSegments",
+                                        "xray:PutTelemetryRecords"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "usersTableA9DCAD73",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "usersTableA9DCAD73",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "ProfilesTableC07982B3",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "ProfilesTableC07982B3",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "VenuesTable5F1C410C",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "VenuesTable5F1C410C",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "ChatsTable647A21B9",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "ChatsTable647A21B9",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "MessagesTableA255D91E",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "MessagesTableA255D91E",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "BusinessTableCAE73E9F",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "BusinessTableCAE73E9F",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": "ssm:GetParameters",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":ssm:us-east-1:158871758094:parameter/sst/green-one-auth/greenmev2/Auth/auth/publicKey"
+                                          ]
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "iot:*",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "s3:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              "arn:",
+                                              {
+                                                "Ref": "AWS::Partition"
+                                              },
+                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p"
+                                            ]
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              "arn:",
+                                              {
+                                                "Ref": "AWS::Partition"
+                                              },
+                                              ":s3:::sstbootstrap-useast124d14e4b-nw20ydvsy21p/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "apiLambdaPOSTbusinessServiceRoleDefaultPolicyC568EE91",
+                                "roles": [
+                                  {
+                                    "Ref": "apiLambdaPOSTbusinessServiceRole6EB64075"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                              "version": "2.161.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Policy",
+                          "version": "2.161.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Role",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.161.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.161.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "architectures": [
+                          "x86_64"
+                        ],
+                        "code": {
+                          "s3Bucket": "cdk-hnb659fds-assets-158871758094-us-east-1",
+                          "s3Key": "1ea9054797b04ad65b10d37afb9a323bf9821944d73e872c96547f8f6696122d.zip"
+                        },
+                        "description": "live",
+                        "environment": {
+                          "variables": {
+                            "SST_FUNCTION_ID": "c83e64941cedf5e2bb3f6f1833d4a9388734ddf14e",
+                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+                            "SST_APP": "green-one-auth",
+                            "SST_STAGE": "greenmev2",
+                            "SST_SSM_PREFIX": "/sst/green-one-auth/greenmev2/",
+                            "SST_Table_tableName_users": {
+                              "Ref": "usersTableA9DCAD73"
+                            },
+                            "SST_Table_tableName_ProfilesTable": {
+                              "Ref": "ProfilesTableC07982B3"
+                            },
+                            "SST_Table_tableName_VenuesTable": {
+                              "Ref": "VenuesTable5F1C410C"
+                            },
+                            "SST_Table_tableName_ChatsTable": {
+                              "Ref": "ChatsTable647A21B9"
+                            },
+                            "SST_Table_tableName_MessagesTable": {
+                              "Ref": "MessagesTableA255D91E"
+                            },
+                            "SST_Table_tableName_BusinessTable": {
+                              "Ref": "BusinessTableCAE73E9F"
+                            },
+                            "SST_DEBUG_IS_API_ROUTE": "1",
+                            "SST_Auth_publicKey_auth": "__FETCH_FROM_SSM__"
+                          }
+                        },
+                        "ephemeralStorage": {
+                          "size": 512
+                        },
+                        "handler": "live-lambda.handler",
+                        "memorySize": 1024,
+                        "role": {
+                          "Fn::GetAtt": [
+                            "apiLambdaPOSTbusinessServiceRole6EB64075",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs18.x",
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "green-one-auth"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "greenmev2"
+                          }
+                        ],
+                        "timeout": 10,
+                        "tracingConfig": {
+                          "mode": "Active"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "EventInvokeConfig": {
+                    "id": "EventInvokeConfig",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/EventInvokeConfig/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "apiLambdaPOSTbusiness4053AF2C"
+                            },
+                            "maximumRetryAttempts": 0,
+                            "qualifier": "$LATEST"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "version": "2.161.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "version": "2.161.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.Function",
+                  "version": "2.161.1"
+                }
+              },
+              "Route_POST_--business": {
+                "id": "Route_POST_--business",
+                "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business",
+                "children": {
+                  "Integration_POST_--business": {
+                    "id": "Integration_POST_--business",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Integration_POST_--business",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Integration_POST_--business/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Ref": "apiApiC3C473D0"
+                            },
+                            "integrationType": "AWS_PROXY",
+                            "integrationUri": {
+                              "Fn::GetAtt": [
+                                "apiLambdaPOSTbusiness4053AF2C",
+                                "Arn"
+                              ]
+                            },
+                            "payloadFormatVersion": "2.0"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnIntegration",
+                          "version": "2.161.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigatewayv2.HttpIntegration",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "Integration_POST_--business-Permission": {
+                    "id": "Integration_POST_--business-Permission",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Integration_POST_--business-Permission",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                      "aws:cdk:cloudformation:props": {
+                        "action": "lambda:InvokeFunction",
+                        "functionName": {
+                          "Fn::GetAtt": [
+                            "apiLambdaPOSTbusiness4053AF2C",
+                            "Arn"
+                          ]
+                        },
+                        "principal": "apigateway.amazonaws.com",
+                        "sourceArn": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "arn:",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              ":execute-api:us-east-1:158871758094:",
+                              {
+                                "Ref": "apiApiC3C473D0"
+                              },
+                              "/*/*/business"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                      "version": "2.161.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "apiApiC3C473D0"
+                        },
+                        "authorizationType": "NONE",
+                        "routeKey": "POST /business",
+                        "target": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "integrations/",
+                              {
+                                "Ref": "apiRoutePOSTbusinessIntegrationPOSTbusinessEC7A5229"
                               }
                             ]
                           ]
@@ -4108,6 +4959,32 @@
                                   ]
                                 },
                                 {
+                                  "Action": "dynamodb:*",
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "BusinessTableCAE73E9F",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "BusinessTableCAE73E9F",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
                                   "Action": "ssm:GetParameters",
                                   "Effect": "Allow",
                                   "Resource": {
@@ -4369,6 +5246,9 @@
                         },
                         "SST_Table_tableName_MessagesTable": {
                           "Ref": "MessagesTableA255D91E"
+                        },
+                        "SST_Table_tableName_BusinessTable": {
+                          "Ref": "BusinessTableCAE73E9F"
                         },
                         "SST_StaticSite_url_site": "localhost",
                         "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
@@ -4773,6 +5653,32 @@
                                   ]
                                 },
                                 {
+                                  "Action": "dynamodb:*",
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "BusinessTableCAE73E9F",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "BusinessTableCAE73E9F",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
                                   "Action": "ssm:GetParameters",
                                   "Effect": "Allow",
                                   "Resource": {
@@ -5034,6 +5940,9 @@
                         },
                         "SST_Table_tableName_MessagesTable": {
                           "Ref": "MessagesTableA255D91E"
+                        },
+                        "SST_Table_tableName_BusinessTable": {
+                          "Ref": "BusinessTableCAE73E9F"
                         },
                         "SST_StaticSite_url_site": "localhost",
                         "SST_Secret_value_FACEBOOK_APP_ID": "__FETCH_FROM_SSM__",
