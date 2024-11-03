@@ -177,11 +177,11 @@ const MapUI: React.FC = () => {
     [setSearchTerm],
   );
 
-  const handleSubmit = useCallback(() => {
+  const handleShowMapMarkers = useCallback(() => {
     if (businesses) {
       setDisplayedBusinesses(businesses);
     }
-  }, [businesses]);
+  }, []);
 
   const handleDistanceChange = useCallback((value: number) => {
     setSelectedDistance(value);
@@ -209,12 +209,15 @@ const MapUI: React.FC = () => {
         />
 
         {/* Search Input */}
-        <SearchInputComponent onSearch={handleSearch} onSubmit={handleSubmit} />
+        <SearchInputComponent
+          onSearch={handleSearch}
+          onSubmit={handleShowMapMarkers}
+        />
 
         {/* Business List */}
         {isError && (
           <View className="flex-1 justify-center items-center">
-            <Text>Error loading businesses: {error.message}</Text>
+            <Text>Error loading businesses: {error!.message}</Text>
           </View>
         )}
         {isLoading && (

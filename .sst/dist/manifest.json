@@ -23,7 +23,7 @@
         "notificationArns": [],
         "assumeRoleArn": "arn:${AWS::Partition}:iam::158871758094:role/cdk-hnb659fds-deploy-role-158871758094-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::158871758094:role/cdk-hnb659fds-cfn-exec-role-158871758094-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-158871758094-us-east-1/89d50bab59a46835d72d9238d3dd028946e6bca2c1a96c6e3c97ba86aa78b099.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-158871758094-us-east-1/1cbcb4e2f4298f0b6c6d424c39fa1037f2728a23dc8abfd846ff3a9790734b98.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -108,6 +108,32 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "MESSAGESTABLEParametervalue21059089"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/BUSINESS_TABLE/Parameter_value/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BUSINESSTABLEParametervalueB995BE94"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/BusinessTable/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "BusinessTableCAE73E9F"
+            }
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/BusinessTable/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BusinessTableCAE73E9F"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/BusinessTable/Parameter_tableName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BusinessTableParametertableName1CD2E1B1"
           }
         ],
         "/greenmev2-green-one-auth-ExampleStack/ProfilesTable/Table": [
@@ -416,6 +442,48 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "apiRoutePOSTvenuesBD831F5E"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaPOSTbusinessServiceRole6EB64075"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaPOSTbusinessServiceRoleDefaultPolicyC568EE91"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaPOSTbusiness4053AF2C"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Lambda_POST_--business/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaPOSTbusinessEventInvokeConfigD60A4DC7"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Integration_POST_--business/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRoutePOSTbusinessIntegrationPOSTbusinessEC7A5229"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Integration_POST_--business-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRoutePOSTbusinessIntegrationPOSTbusinessPermission3DD450A6"
+          }
+        ],
+        "/greenmev2-green-one-auth-ExampleStack/api/Route_POST_--business/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRoutePOSTbusinessA1F8DEC3"
           }
         ],
         "/greenmev2-green-one-auth-ExampleStack/api/Parameter_url/Resource": [

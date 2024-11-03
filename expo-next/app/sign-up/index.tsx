@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <View className="flex-1">
+    <View className="flex-1 overflow-y-scroll">
       <View className="flex-row mb-4">
         <View className="flex-1">
           <Link

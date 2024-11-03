@@ -51,6 +51,24 @@ declare module "sst/node/config" {
   }
 }
 
+import "sst/node/config";
+declare module "sst/node/config" {
+  export interface ParameterResources {
+    "BUSINESS_TABLE": {
+      value: string;
+    }
+  }
+}
+
+import "sst/node/table";
+declare module "sst/node/table" {
+  export interface TableResources {
+    "BusinessTable": {
+      tableName: string;
+    }
+  }
+}
+
 import "sst/node/table";
 declare module "sst/node/table" {
   export interface TableResources {

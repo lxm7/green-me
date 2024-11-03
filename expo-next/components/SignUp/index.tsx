@@ -6,29 +6,34 @@ import {
   Text,
   TextInput,
   Button,
+  GestureResponderEvent,
 } from "react-native";
 import { MultiSelect, Dropdown } from "react-native-element-dropdown";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
+import { usePostBusiness } from "@state/queries/usePostBusiness";
+
 const MyForm = () => {
-  const [country, setCountry] = useState("UK");
-  const [city, setCity] = useState("");
-  const [emissionFactor, setEmissionFactor] = useState(0);
-  const [electricityConsumption, setElectricityConsumption] = useState("");
-  const [gasConsumption, setGasConsumption] = useState("");
-  const [existingLCAs, setExistingLCAs] = useState<string[]>([]);
-  const [plannedLCAs, setPlannedLCAs] = useState<string[]>([]);
-  const [coffeeQuantity, setCoffeeQuantity] = useState("");
-  const [coffeeOrigin, setCoffeeOrigin] = useState("local");
-  const [coffeeCountry, setCoffeeCountry] = useState("");
-  const [deliveryFrequency, setDeliveryFrequency] = useState("");
-  const [deliveryDistance, setDeliveryDistance] = useState("");
-  const [transportMode, setTransportMode] = useState("road");
-  const [employeeCount, setEmployeeCount] = useState("");
-  const [averageCommute, setAverageCommute] = useState("");
-  const [commuteMode, setCommuteMode] = useState("car");
-  const [generalWaste, setGeneralWaste] = useState("");
-  const [recyclableWaste, setRecyclableWaste] = useState("");
+  const [formData, setFormData] = useState({
+    country: "UK",
+    city: "",
+    emissionFactor: 0,
+    electricityConsumption: "",
+    gasConsumption: "",
+    existingLCAs: [],
+    plannedLCAs: [],
+    coffeeQuantity: "",
+    coffeeOrigin: "local",
+    coffeeCountry: "",
+    deliveryFrequency: "",
+    deliveryDistance: "",
+    transportMode: "road",
+    employeeCount: "",
+    averageCommute: "",
+    commuteMode: "car",
+    generalWaste: "",
+    recyclableWaste: "",
+  });
 
   const lcaItems = [
     { value: "product_lca", label: "Product LCA" },
@@ -42,7 +47,7 @@ const MyForm = () => {
   const getEmissionFactor = () => {
     // Replace with your logic to fetch emission factor based on the country
     let factor = 0;
-    switch (country) {
+    switch (formData.country) {
       case "UK":
         factor = 0.233;
         break;
@@ -58,16 +63,27 @@ const MyForm = () => {
       default:
         factor = 0.5;
     }
-    setEmissionFactor(factor);
+    setFormData((prevData) => ({ ...prevData, emissionFactor: factor }));
+  };
+
+  const { mutate, isPending, isError, isSuccess } = usePostBusiness();
+
+  const handleSubmit = (event: GestureResponderEvent) => {
+    event.preventDefault();
+    // @ts-expect-error - todo type defs
+    mutate(formData);
   };
 
   useEffect(() => {
     getEmissionFactor();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [country]);
+  }, [formData.country]);
 
-  const handleSubmit = () => {
-    // Handle form submission logic
+  const handleInputChange = (name: string, value: string | string[]) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const ScrollContainer =
@@ -77,6 +93,8 @@ const MyForm = () => {
     <ScrollContainer
       className="p-8"
       nestedScrollEnabled={true}
+      // TODO
+      contentContainerStyle={{ paddingBottom: Platform.OS === "web" ? 0 : 320 }}
       extraScrollHeight={20}
     >
       {/* Business Location */}
@@ -101,18 +119,16 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Select LCAs"
-          value={country}
-          onChange={(item) => {
-            setCountry(item.value);
-          }}
+          value={formData.country}
+          onChange={(item) => handleInputChange("country", item.value)}
           renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
 
         <Text className="mt-4 mb-1">City (optional):</Text>
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
-          value={city}
-          onChangeText={setCity}
+          value={formData.city}
+          onChangeText={(value) => handleInputChange("city", value)}
           placeholder="Enter your city"
         />
       </View>
@@ -125,7 +141,7 @@ const MyForm = () => {
         </Text>
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
-          value={emissionFactor.toString()}
+          value={formData.emissionFactor.toString()}
           editable={false}
         />
         <Text className="text-sm mt-1">
@@ -140,16 +156,18 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={electricityConsumption}
-          onChangeText={setElectricityConsumption}
+          value={formData.electricityConsumption}
+          onChangeText={(value) =>
+            handleInputChange("electricityConsumption", value)
+          }
         />
 
         <Text className="mt-4 mb-1">Gas Consumption per Annum (kWh):</Text>
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={gasConsumption}
-          onChangeText={setGasConsumption}
+          value={formData.gasConsumption}
+          onChangeText={(value) => handleInputChange("gasConsumption", value)}
         />
       </View>
 
@@ -171,10 +189,8 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Select LCAs"
-          value={existingLCAs}
-          onChange={(item) => {
-            setExistingLCAs(item);
-          }}
+          value={formData.existingLCAs}
+          onChange={(value) => handleInputChange("existingLCAs", value)}
           selectedStyle={{ borderRadius: 12 }}
           renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
@@ -199,10 +215,8 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Pledged LCAs"
-          value={plannedLCAs}
-          onChange={(item) => {
-            setPlannedLCAs(item);
-          }}
+          value={formData.plannedLCAs}
+          onChange={(value) => handleInputChange("plannedLCAs", value)}
           selectedStyle={{ borderRadius: 12 }}
         />
       </View>
@@ -216,8 +230,8 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={coffeeQuantity}
-          onChangeText={setCoffeeQuantity}
+          value={formData.coffeeQuantity}
+          onChangeText={(value) => handleInputChange("coffeeQuantity", value)}
         />
 
         <Text className="mt-4 mb-1">Origin of Coffee:</Text>
@@ -237,20 +251,20 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Select LCAs"
-          value={coffeeOrigin}
-          onChange={(item) => {
-            setCoffeeOrigin(item.value);
-          }}
+          value={formData.coffeeOrigin}
+          onChange={(value) => handleInputChange("coffeeOrigin", value.value)}
           renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
 
-        {coffeeOrigin === "imported" && (
+        {formData.coffeeOrigin === "imported" && (
           <>
             <Text className="mt-4 mb-1">If Imported, Country of Origin:</Text>
             <TextInput
               className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
-              value={coffeeCountry}
-              onChangeText={setCoffeeCountry}
+              value={formData.coffeeCountry}
+              onChangeText={(value) =>
+                handleInputChange("coffeeCountry", value)
+              }
             />
           </>
         )}
@@ -265,16 +279,18 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={deliveryFrequency}
-          onChangeText={setDeliveryFrequency}
+          value={formData.deliveryFrequency}
+          onChangeText={(value) =>
+            handleInputChange("deliveryFrequency", value)
+          }
         />
 
         <Text className="mt-4 mb-1">Average Distance per Delivery (km):</Text>
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={deliveryDistance}
-          onChangeText={setDeliveryDistance}
+          value={formData.deliveryDistance}
+          onChangeText={(value) => handleInputChange("deliveryDistance", value)}
         />
 
         <Text className="mt-4 mb-1">Mode of Transport:</Text>
@@ -296,10 +312,8 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Select LCAs"
-          value={transportMode}
-          onChange={(item) => {
-            setTransportMode(item.value);
-          }}
+          value={formData.transportMode}
+          onChange={(value) => handleInputChange("transportMode", value.value)}
           renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
       </View>
@@ -311,8 +325,8 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={employeeCount}
-          onChangeText={setEmployeeCount}
+          value={formData.employeeCount}
+          onChangeText={(value) => handleInputChange("employeeCount", value)}
         />
 
         <Text className="mt-4 mb-1">
@@ -321,8 +335,8 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={averageCommute}
-          onChangeText={setAverageCommute}
+          value={formData.averageCommute}
+          onChangeText={(value) => handleInputChange("averageCommute", value)}
         />
 
         <Text className="mt-4 mb-1">Primary Mode of Commute:</Text>
@@ -343,10 +357,8 @@ const MyForm = () => {
           labelField="label"
           valueField="value"
           placeholder="Select LCAs"
-          value={commuteMode}
-          onChange={(item) => {
-            setCommuteMode(item.value);
-          }}
+          value={formData.commuteMode}
+          onChange={(value) => handleInputChange("commuteMode", value.value)}
           renderLeftIcon={() => <Text style={{ marginRight: 10 }}>🔍</Text>}
         />
       </View>
@@ -358,21 +370,25 @@ const MyForm = () => {
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={generalWaste}
-          onChangeText={setGeneralWaste}
+          value={formData.generalWaste}
+          onChangeText={(value) => handleInputChange("generalWaste", value)}
         />
 
         <Text className="mt-4 mb-1">Recyclable Waste (kg per month):</Text>
         <TextInput
           className="h-[50px] border border-gray-300 rounded-lg px-[10px] flex-row items-center"
           keyboardType="numeric"
-          value={recyclableWaste}
-          onChangeText={setRecyclableWaste}
+          value={formData.recyclableWaste}
+          onChangeText={(value) => handleInputChange("recyclableWaste", value)}
         />
       </View>
 
-      {/* Submit Button */}
-      <Button title="Calculate Emissions" onPress={handleSubmit} />
+      <Button
+        title={`${isPending ? "Submitting..." : "Calculate Emissions"}`}
+        onPress={handleSubmit}
+      />
+      {isSuccess && <Text>Form submitted successfully!</Text>}
+      {isError && <Text>There was an error submitting the form.</Text>}
     </ScrollContainer>
   );
 };
