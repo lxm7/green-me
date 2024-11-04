@@ -8,6 +8,8 @@ import {
 } from "sst/constructs";
 
 export function ExampleStack({ app, stack }: StackContext) {
+  app.setDefaultRemovalPolicy("retain");
+
   // Simple details from 3rd party Auth providers
   const userDetailsFromAuthProvider = new Table(stack, "users", {
     fields: {

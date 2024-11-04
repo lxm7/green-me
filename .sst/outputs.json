@@ -1,5 +1,1 @@
-{
-  "greenmev2-green-one-auth-ExampleStack": {
-    "ApiEndpoint": "https://tmzid4yf4i.execute-api.us-east-1.amazonaws.com"
-  }
-}
+{"Region":"us-east-1"}

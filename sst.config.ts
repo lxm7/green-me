@@ -1,14 +1,21 @@
-import { SSTConfig } from "sst";
-import { ExampleStack } from "./stacks/ExampleStack";
+/// <reference path="./.sst/platform/config.d.ts" />
 
-export default {
-  config(_input) {
+export default $config({
+  app(input) {
     return {
-      name: "green-one-auth",
-      region: "us-east-1",
+      name: "green-me",
+      removal: input?.stage === "production" ? "retain" : "remove",
+      home: "aws",
     };
   },
-  stacks(app) {
-    app.stack(ExampleStack);
-  }
-} satisfies SSTConfig;
+  async run() {
+    await import("./infra/api");
+    await import("./infra/storage");
+    await import("./infra/frontend");
+    // const auth = await import("./infra/auth");
+
+    return {
+      Region: aws.getRegionOutput().name,
+    };
+  },
+});
