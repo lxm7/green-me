@@ -5,6 +5,11 @@ import {
   chatsTable,
   messagesTable,
   businessTable,
+  PROFILES_TABLE,
+  VENUES_TABLE,
+  CHATS_TABLE,
+  MESSAGES_TABLE,
+  BUSINESS_TABLE,
 } from "./storage";
 
 export const api = new sst.aws.ApiGatewayV2("Api", {
@@ -18,13 +23,28 @@ export const api = new sst.aws.ApiGatewayV2("Api", {
           chatsTable,
           messagesTable,
           businessTable,
-          // secret,
+          PROFILES_TABLE,
+          VENUES_TABLE,
+          CHATS_TABLE,
+          MESSAGES_TABLE,
+          BUSINESS_TABLE,
         ],
+        // permissions: [
+        //   profilesTable, // SST will grant common permissions for this table
+        //   businessTable,
+        //   // For custom permissions, you can specify actions and resources
+        //   // {
+        //   //   Effect: "Allow",
+        //   //   Action: ["dynamodb:Scan"],
+        //   //   Resource: [profilesTable.tableArn],
+        //   // },
+        // ],
       },
+
       // args: {
-      //   auth: {
-      //     iam: true,
-      //   },
+      //   auth: { iam: true },
+      // },
+
       //   authorizer: {
       //     type: "lambda",
       //     function: authFunction,

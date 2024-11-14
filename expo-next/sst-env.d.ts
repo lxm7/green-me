@@ -6,13 +6,25 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "Api": {
+      "type": "sst.aws.ApiGatewayV2"
+      "url": string
+    }
     "BUSINESS_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
     }
+    "BusinessTable": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
+    }
     "CHATS_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
+    }
+    "ChatsTable": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
     }
     "FACEBOOK_APP_ID": {
       "type": "sst.sst.Secret"
@@ -30,17 +42,33 @@ declare module "sst" {
       "name": string
       "type": "sst.sst.Linkable"
     }
+    "MessagesTable": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
+    }
     "PROFILES_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
+    }
+    "ProfilesTable": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
     }
     "VENUES_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
     }
+    "VenuesTable": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
+    }
     "Web": {
       "type": "sst.aws.StaticSite"
       "url": string
+    }
+    "users": {
+      "tableName": string
+      "type": "aws.dynamodb/table.Table"
     }
   }
 }
