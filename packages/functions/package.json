@@ -10,7 +10,6 @@
     "@types/aws-lambda": "^8.10.143",
     "@types/node": "^22.2.0",
     "@types/pg": "^8.11.6",
-    "sst": "^2.43.4",
     "vitest": "^2.0.5"
   },
   "dependencies": {

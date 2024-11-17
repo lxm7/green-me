@@ -2,6 +2,7 @@ import { APIGatewayProxyHandler } from "aws-lambda";
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { marshall } from "@aws-sdk/util-dynamodb";
 import { v4 as uuidv4 } from "uuid";
+import { Resource } from "sst";
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   try {
@@ -30,10 +31,10 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     };
 
     const ddb = new DynamoDBClient({});
-    // process.env.SST_Table_tableName_BusinessTable,
+
     await ddb.send(
       new PutItemCommand({
-        TableName: "greenmev2-green-one-auth-BusinessTable",
+        TableName: Resource.BUSINESS_TABLE.name,
         Item: marshall({ ...item }),
       })
     );

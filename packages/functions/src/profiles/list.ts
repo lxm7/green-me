@@ -1,30 +1,63 @@
-import { APIGatewayProxyHandler } from "aws-lambda";
-import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
-import { unmarshall } from "@aws-sdk/util-dynamodb";
-import { Config } from "sst/constructs";
+// import { APIGatewayProxyHandler } from "aws-lambda";
+// import { unmarshall } from "@aws-sdk/util-dynamodb";
+// import { QueryCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+// import { Resource } from "sst";
 
-export const handler: APIGatewayProxyHandler = async () => {
-  // Initialize DynamoDB client
-  const client = new DynamoDBClient({});
-  try {
-    // Scan the entire VenuesTable to retrieve all items (Note: use with caution on large tables)
-    const command = new ScanCommand({
-      TableName: process.env.SST_Table_tableName_ProfilesTable, // Config.PROFILES_TABLE,
-    });
+import { Context, APIGatewayProxyEvent } from "aws-lambda";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import {
+  DynamoDBDocumentClient,
+  ScanCommand,
+  QueryCommand,
+} from "@aws-sdk/lib-dynamodb";
+import { Resource } from "sst";
 
-    const result = await client.send(command);
-    // Unmarshall DynamoDB items to JavaScript objects
-    const items = result.Items?.map((item) => unmarshall(item)) || [];
+const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify(items),
-    };
-  } catch (error) {
-    console.error("Error fetching data from DynamoDB:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Failed to fetch data" }),
-    };
-  }
+export const handler = async () => {
+  const params = {
+    TableName: Resource.PROFILES_TABLE.name,
+    // No KeyConditionExpression or ExpressionAttributeValues needed
+  };
+
+  const result = await dynamoDb.send(new ScanCommand(params));
+
+  // Return the list of items in the response body
+  return {
+    statusCode: 200,
+    body: JSON.stringify(result.Items),
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": true,
+    },
+  };
 };
+
+// export function handlerInner(
+//   lambda: (evt: APIGatewayProxyEvent, context: Context) => Promise<string>
+// ) {
+//   return async function (event: APIGatewayProxyEvent, context: Context) {
+//     let body: string, statusCode: number;
+//     console.log({ event, context });
+//     try {
+//       // Run the Lambda
+//       body = await lambda(event, context);
+//       statusCode = 200;
+//     } catch (error) {
+//       statusCode = 500;
+//       body = JSON.stringify({
+//         error: error instanceof Error ? error.message : String(error),
+//       });
+//     }
+
+//     // Return HTTP response
+//     return {
+//       body,
+//       statusCode,
+//       headers: {
+//         "Access-Control-Allow-Origin": "*",
+//         "Access-Control-Allow-Credentials": true,
+//       },
+//     };
+//   };
+// }

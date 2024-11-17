@@ -1,0 +1,38 @@
+import {
+  profilesTable,
+  businessTable,
+  PROFILES_TABLE,
+  VENUES_TABLE,
+  CHATS_TABLE,
+  MESSAGES_TABLE,
+  BUSINESS_TABLE,
+} from "./storage";
+
+export const api = new sst.aws.ApiGatewayV2("Api", {
+  transform: {
+    route: {
+      handler: {
+        link: [
+          profilesTable,
+          PROFILES_TABLE,
+          // businessTable,
+          // VENUES_TABLE,
+          // CHATS_TABLE,
+          // MESSAGES_TABLE,
+          // BUSINESS_TABLE,
+        ],
+      },
+
+      // args: {
+      //   auth: { iam: true },
+      // },
+    },
+  },
+});
+
+api.route("GET /session", "packages/functions/src/session.handler");
+api.route("GET /profiles", "packages/functions/src/profiles/list.handler");
+api.route("POST /profiles", "packages/functions/src/profiles/create.handler");
+api.route("GET /venues", "packages/functions/src/venues/list.handler");
+api.route("POST /venues", "packages/functions/src/venues/create.handler");
+api.route("POST /business", "packages/functions/src/business/create.handler");

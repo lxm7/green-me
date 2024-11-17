@@ -1,5 +1,6 @@
 import { APIGatewayProxyHandler } from "aws-lambda";
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { Resource } from "sst";
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   const { user_id, id, name, bio, created_at, updated_at } = JSON.parse(
@@ -21,7 +22,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
   // Put the item into DynamoDB
   const command = new PutItemCommand({
-    TableName: process.env.SST_Table_tableName_ProfilesTable, // Config.PROFILES_TABLE?,
+    TableName: Resource.PROFILES_TABLE.name,
     Item: item,
   });
 
