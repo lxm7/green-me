@@ -9,12 +9,13 @@ export default $config({
     };
   },
   async run() {
-    await import("./infra/api");
+    const api = await import("./infra/api");
     await import("./infra/storage");
     await import("./infra/frontend");
     // const auth = await import("./infra/auth");
 
     return {
+      api: api.api.url,
       Region: aws.getRegionOutput().name,
     };
   },

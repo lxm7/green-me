@@ -15,16 +15,12 @@ declare module "sst" {
       "type": "sst.sst.Linkable"
     }
     "BusinessTable": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
+      "name": string
+      "type": "sst.aws.Dynamo"
     }
     "CHATS_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
-    }
-    "ChatsTable": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
     }
     "FACEBOOK_APP_ID": {
       "type": "sst.sst.Secret"
@@ -42,33 +38,21 @@ declare module "sst" {
       "name": string
       "type": "sst.sst.Linkable"
     }
-    "MessagesTable": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
-    }
     "PROFILES_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
     }
     "ProfilesTable": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
+      "name": string
+      "type": "sst.aws.Dynamo"
     }
     "VENUES_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
     }
-    "VenuesTable": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
-    }
     "Web": {
       "type": "sst.aws.StaticSite"
       "url": string
-    }
-    "users": {
-      "tableName": string
-      "type": "aws.dynamodb/table.Table"
     }
   }
 }

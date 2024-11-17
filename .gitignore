@@ -46,7 +46,7 @@ yarn-error.log*
 # @end @expo/next-adapter
 
 # sst
-.sst
+.sst/
 .sst/debug.log
 packages/functions/node_modules/
 
