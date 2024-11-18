@@ -18,10 +18,6 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Dynamo"
     }
-    "CHATS_TABLE": {
-      "name": string
-      "type": "sst.sst.Linkable"
-    }
     "FACEBOOK_APP_ID": {
       "type": "sst.sst.Secret"
       "value": string
@@ -34,10 +30,6 @@ declare module "sst" {
       "type": "sst.sst.Secret"
       "value": string
     }
-    "MESSAGES_TABLE": {
-      "name": string
-      "type": "sst.sst.Linkable"
-    }
     "PROFILES_TABLE": {
       "name": string
       "type": "sst.sst.Linkable"
@@ -45,10 +37,6 @@ declare module "sst" {
     "ProfilesTable": {
       "name": string
       "type": "sst.aws.Dynamo"
-    }
-    "VENUES_TABLE": {
-      "name": string
-      "type": "sst.sst.Linkable"
     }
     "Web": {
       "type": "sst.aws.StaticSite"

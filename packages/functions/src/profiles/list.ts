@@ -1,23 +1,14 @@
-// import { APIGatewayProxyHandler } from "aws-lambda";
-// import { unmarshall } from "@aws-sdk/util-dynamodb";
-// import { QueryCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-// import { Resource } from "sst";
-
-import { Context, APIGatewayProxyEvent } from "aws-lambda";
+import { APIGatewayProxyHandler } from "aws-lambda";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import {
-  DynamoDBDocumentClient,
-  ScanCommand,
-  QueryCommand,
-} from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
 import { Resource } from "sst";
 
 const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
-export const handler = async () => {
+export const handler: APIGatewayProxyHandler = async () => {
   const params = {
     TableName: Resource.PROFILES_TABLE.name,
-    // No KeyConditionExpression or ExpressionAttributeValues needed
+    // No KeyConditionExpression or ExpressionAttributeValues needed for ScanCommand()
   };
 
   const result = await dynamoDb.send(new ScanCommand(params));

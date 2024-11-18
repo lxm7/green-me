@@ -1,12 +1,13 @@
+// @ts-nocheck
 import { APIGatewayProxyHandler } from "aws-lambda";
 import { Client } from "pg";
-import { Config } from "sst/node/config";
+import { Resource } from "sst";
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   const chatId = event.pathParameters?.chatId;
 
   const client = new Client({
-    connectionString: Config.DATABASE_URL,
+    connectionString: Resource.DATABASE_URL,
   });
   await client.connect();
   const result = await client.query(
