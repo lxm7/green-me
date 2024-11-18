@@ -1,8 +1,10 @@
 import { APIGatewayProxyHandler } from "aws-lambda";
-import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
-import { marshall } from "@aws-sdk/util-dynamodb";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import { v4 as uuidv4 } from "uuid";
 import { Resource } from "sst";
+
+const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   try {
@@ -30,12 +32,10 @@ export const handler: APIGatewayProxyHandler = async (event) => {
       recyclableWaste: body.recyclableWaste || "",
     };
 
-    const ddb = new DynamoDBClient({});
-
-    await ddb.send(
-      new PutItemCommand({
+    await dynamoDb.send(
+      new PutCommand({
         TableName: Resource.BUSINESS_TABLE.name,
-        Item: marshall({ ...item }),
+        Item: item,
       })
     );
 

@@ -29,7 +29,7 @@ export function usePostBusiness() {
       }, 1000);
     },
     onSettled: async () => {
-      console.log("I'm second!");
+      console.info("Settled!");
     },
   });
 }

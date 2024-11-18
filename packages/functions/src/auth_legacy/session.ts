@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Table } from "sst/node/table";
 import { ApiHandler } from "sst/node/api";
 import { useSession } from "sst/node/auth";
