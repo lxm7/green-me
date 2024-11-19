@@ -15,11 +15,9 @@ web-report/
 yarn-debug.log*
 yarn-error.log*
 
-# macOS
-.DS_Store
-
 # misc
 .DS_Store
+**/.DS_Store
 .env*
 
 .next
