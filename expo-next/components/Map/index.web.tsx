@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useMap } from "@hooks/useMap";
 import UserMarker from "@components/UserMarker";
 import { Business } from "@components/MapContainer/types";
@@ -12,7 +13,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
   mapCenter,
   matchedBusinesses,
 }) => {
-  const apiKey = process.env.EXPO_PUBLIC_MAPTILERS_API_KEY as string;
+  const apiKey = process.env.MAPTILERS_API_KEY as string;
   const { mapContainerRef, userMarkerRef } = useMap(
     mapCenter,
     matchedBusinesses,

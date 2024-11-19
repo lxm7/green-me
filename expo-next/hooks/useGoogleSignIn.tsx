@@ -29,7 +29,7 @@ export const useGoogleSignIn = (
         if (window.google && buttonDivRef.current) {
           // @ts-expect-error window.google is not typed
           window.google.accounts.id.initialize({
-            client_id: process.env.EXPO_PUBLIC_GOOGLE_AUTH_WEB_APP_ID, // Replace with your Google Web client ID
+            client_id: process.env.GOOGLE_AUTH_WEB_APP_ID, // Replace with your Google Web client ID
             callback: handleWebCredentialResponse,
           });
           // @ts-expect-error window.google is not typed
@@ -46,7 +46,7 @@ export const useGoogleSignIn = (
     } else {
       // Configure Google Sign-In for mobile
       GoogleSignin.configure({
-        webClientId: process.env.EXPO_PUBLIC_GOOGLE_AUTH_ANDROID_APP_ID, // Replace with your Google Web client ID
+        webClientId: process.env.GOOGLE_AUTH_ANDROID_APP_ID, // Replace with your Google Web client ID
         offlineAccess: true,
       });
     }

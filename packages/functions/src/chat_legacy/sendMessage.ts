@@ -9,7 +9,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
   );
 
   const client = new Client({
-    connectionString: Resource.DATABASE_URL,
+    connectionString: Resource.DATABASE_URL.value,
   });
   await client.connect();
   await client.query(

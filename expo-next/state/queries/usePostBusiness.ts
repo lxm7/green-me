@@ -5,7 +5,7 @@ import { router } from "expo-router";
 export async function submitForm(formData: Record<string, string>) {
   try {
     const response = await axios.post(
-      `${process.env.EXPO_PUBLIC_API_URL}/business`,
+      `${process.env.API_URL}/business`,
       formData,
       {
         headers: {

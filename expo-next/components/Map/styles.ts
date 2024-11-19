@@ -4,7 +4,7 @@ const customStyles = {
     sources: {
       openmaptiles: {
         type: "vector",
-        url: "https://api.maptiler.com/tiles/v3/tiles.json?key=${process.env.EXPO_PUBLIC_MAPTILERS_API_KEY}",
+        url: "https://api.maptiler.com/tiles/v3/tiles.json?key=${process.env.MAPTILERS_API_KEY}",
       },
     },
     layers: [

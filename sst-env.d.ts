@@ -6,6 +6,10 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "API_URL": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "Api": {
       "type": "sst.aws.ApiGatewayV2"
       "url": string
@@ -18,6 +22,10 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Dynamo"
     }
+    "CLIMATIQ_API_KEY": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "FACEBOOK_APP_ID": {
       "type": "sst.sst.Secret"
       "value": string
@@ -26,7 +34,27 @@ declare module "sst" {
       "type": "sst.sst.Secret"
       "value": string
     }
+    "GOOGLE_AUTH_ANDROID_APP_ID": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "GOOGLE_AUTH_IOS_APP_ID": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "GOOGLE_AUTH_WEB_APP_ID": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "GOOGLE_CLIENT_ID": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "GOOGLE_MAPS_API_KEY_ANDROID": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "MAPTILERS_API_KEY": {
       "type": "sst.sst.Secret"
       "value": string
     }
@@ -37,6 +65,14 @@ declare module "sst" {
     "ProfilesTable": {
       "name": string
       "type": "sst.aws.Dynamo"
+    }
+    "SUPABASE_API_KEY": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "SUPABASE_PROJECT_ID": {
+      "type": "sst.sst.Secret"
+      "value": string
     }
     "Web": {
       "type": "sst.aws.StaticSite"

@@ -3,7 +3,7 @@ import axios from "axios";
 
 export async function fetchProfiles() {
   try {
-    const res = await axios.get(`${process.env.EXPO_PUBLIC_API_URL}/profiles`);
+    const res = await axios.get(`${process.env.API_URL}/profiles`);
     return res.data;
   } catch (error) {
     console.error(error);

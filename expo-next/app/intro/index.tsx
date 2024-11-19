@@ -11,6 +11,8 @@ import { Svg, Path } from "react-native-svg";
 import { Button } from "@components/ui/button";
 
 const IntroScreen = () => {
+  console.log("+++++++++++", process.env);
+
   return (
     <ScrollView>
       <View className="relative flex flex-1 size-full min-h-screen flex-col bg-white justify-between group/design-root overflow-x-hidden">

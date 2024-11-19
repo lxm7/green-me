@@ -23,7 +23,7 @@ const getCircleRadius = (
   return radiusInMeters / metersPerPixel;
 };
 
-MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPTILERS_API_KEY as string);
+MapboxGL.setAccessToken(process.env.MAPTILERS_API_KEY as string);
 
 const MapComponent: React.FC<MapComponentProps> = ({
   mapCenter,
@@ -48,7 +48,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
       <MapboxGL.MapView
         ref={mapRef}
         style={{ flex: 1 }}
-        styleURL={`https://api.maptiler.com/maps/streets-v2-light/style.json?key=${process.env.EXPO_PUBLIC_MAPTILERS_API_KEY}`}
+        styleURL={`https://api.maptiler.com/maps/streets-v2-light/style.json?key=${process.env.MAPTILERS_API_KEY}`}
         onMapIdle={handleRegionDidChange}
       >
         <MapboxGL.Camera
