@@ -55,7 +55,9 @@
       [
         "expo-asset",
         {
-          "assets": ["./assets/videos/people.mp4"]
+          "assets": [
+            "./assets/videos/people.mp4"
+          ]
         }
       ],
       "expo-secure-store",
@@ -65,7 +67,8 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
         }
       ],
-      "expo-file-system"
+      "expo-file-system",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
