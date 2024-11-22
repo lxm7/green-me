@@ -37,12 +37,9 @@ export const GOOGLE_CLIENT_ID = new sst.Secret("GOOGLE_CLIENT_ID");
 export const FACEBOOK_APP_SECRET = new sst.Secret("FACEBOOK_APP_SECRET");
 export const FACEBOOK_APP_ID = new sst.Secret("FACEBOOK_APP_ID");
 
-// const stage = $app.local ? "qeik" : "prod";
-const stage = "qeik";
-
 export const PROFILES_TABLE = new sst.Linkable("PROFILES_TABLE", {
-  properties: { name: `green-me-${stage}-ProfilesTableTable` },
+  properties: { name: `green-me-${$app.stage}-ProfilesTableTable` },
 });
 export const BUSINESS_TABLE = new sst.Linkable("BUSINESS_TABLE", {
-  properties: { name: `green-me-${stage}-BusinessTableTable` },
+  properties: { name: `green-me-${$app.stage}-BusinessTableTable` },
 });

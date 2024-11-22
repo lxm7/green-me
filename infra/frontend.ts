@@ -4,7 +4,7 @@ export const web = new sst.aws.StaticSite("Web", {
   path: "expo-next",
   // no generated hash for mp4 asset in the build even tho metro is flagged to use mp4??
   build: {
-    command: "npm run build",
+    command: "npm run clean && npm run build",
     output: "dist",
   },
   // environment - doesnt require permissions, more static value
