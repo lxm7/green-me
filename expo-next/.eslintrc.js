@@ -19,6 +19,11 @@ module.exports = {
         "import/no-unresolved": "off",
       },
     },
+    {
+      // Test files only
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"],
+    },
   ],
   env: {
     browser: true,
