@@ -1,24 +1,48 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react-native";
+import {
+  fireEvent,
+  render,
+  screen,
+  userEvent,
+} from "@testing-library/react-native";
 import { useRouter } from "expo-router";
 import IntroScreen from "@app/intro";
 
+const mockPush = jest.fn();
+
 jest.mock("expo-router", () => {
   const React = require("react");
-  const { Text } = require("react-native");
+  const { TouchableOpacity } = require("react-native");
 
   return {
-    Link: ({ children, href, asChild, ...props }) => {
-      return <Text {...props}>{children}</Text>;
-    },
     useRouter: () => ({
-      push: jest.fn(),
+      push: mockPush,
       replace: jest.fn(),
       back: jest.fn(),
     }),
-    Stack: ({ children }) => {
-      return <>{children}</>;
+    Link: ({ children, href, asChild, ...props }) => {
+      if (asChild) {
+        return React.cloneElement(children, {
+          ...props,
+          onPress: () => {
+            mockPush(href);
+            if (children.props.onPress) children.props.onPress();
+          },
+        });
+      } else {
+        return (
+          <TouchableOpacity
+            {...props}
+            onPress={() => {
+              mockPush(href);
+            }}
+          >
+            {children}
+          </TouchableOpacity>
+        );
+      }
     },
+    Stack: ({ children }) => <>{children}</>,
   };
 });
 
@@ -45,14 +69,10 @@ test("displays key text elements", () => {
   expect(screen.getByText("How it works")).toBeTruthy();
 });
 
-test("navigates to '/sign-up' when 'Let's do this' button is pressed", () => {
+test("navigates to '/sign-up' when 'Let's do this' button is pressed", async () => {
   render(<IntroScreen />);
   const button = screen.getByText("Lets do this");
-
-  // Simulate button press
-  fireEvent.press(button);
-
-  const router = useRouter();
-  console.log({ router });
-  expect(router.push).toHaveBeenCalledWith("/sign-up");
+  const user = userEvent.setup();
+  await user.press(button);
+  expect(mockPush).toHaveBeenCalledWith("/sign-up");
 });
