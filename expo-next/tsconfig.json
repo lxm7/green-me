@@ -10,11 +10,6 @@
     "resolveJsonModule": true,
     "strict": true,
     "allowJs": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "types": ["jest"],
     "baseUrl": "./",
     "paths": {
       "assets/*": ["assets/*"],

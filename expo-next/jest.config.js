@@ -1,34 +1,9 @@
-const { defaults: tsjPreset } = require("ts-jest/presets");
-
-// module.exports = {
-//   ...tsjPreset,
-//   preset: "react-native",
-//   transform: {
-//     "^.+\\.jsx$": "babel-jest",
-//     "^.+\\.tsx?$": [
-//       "ts-jest",
-//       {
-//         tsconfig: "tsconfig.jest.json",
-//       },
-//     ],
-//   },
-//   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-//   testEnvironment: "node",
-//   setupFilesAfterEnv: ["./jest-setup.ts"],
-//   moduleNameMapper: {
-//     "^@app/(.*)": "<rootDir>/app/$1",
-//     "^@components/(.*)": "<rootDir>/components/$1",
-//   },
-//   transformIgnorePatterns: [
-//     "/node_modules/(?!(?:@react-native|@react-native-community|@expo|expo|@rn-primitives|@react-native/js-polyfills)/)",
-//   ],
-// };
-
 module.exports = {
   preset: "jest-expo",
   transform: {
     "^.+\\.[jt]sx?$": "babel-jest",
   },
+  // setupFilesAfterEnv: ["./jest-setup.ts"], // adds alot of time to test suite, save until its needed
   transformIgnorePatterns: [
     "/node_modules/(?!(react-native" +
       "|@react-native" +

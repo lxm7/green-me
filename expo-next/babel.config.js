@@ -5,7 +5,6 @@ module.exports = function (api) {
       ["babel-preset-expo", { jsxImportSource: "nativewind" }],
       "nativewind/babel",
       "@babel/preset-typescript",
-      //"module:metro-react-native-babel-preset",
     ],
   };
 };
