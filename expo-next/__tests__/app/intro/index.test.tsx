@@ -1,18 +1,12 @@
-import React from "react";
-import {
-  fireEvent,
-  render,
-  screen,
-  userEvent,
-} from "@testing-library/react-native";
-import { useRouter } from "expo-router";
+import React, { ReactElement, ReactNode } from "react";
+import { render, screen, userEvent } from "@testing-library/react-native";
 import IntroScreen from "@app/intro";
 
 const mockPush = jest.fn();
 
 jest.mock("expo-router", () => {
   const React = require("react");
-  const { TouchableOpacity } = require("react-native");
+  const { Pressable } = require("react-native");
 
   return {
     useRouter: () => ({
@@ -20,7 +14,16 @@ jest.mock("expo-router", () => {
       replace: jest.fn(),
       back: jest.fn(),
     }),
-    Link: ({ children, href, asChild, ...props }) => {
+    Link: ({
+      children,
+      href,
+      asChild,
+      ...props
+    }: {
+      children: ReactElement;
+      href: string;
+      asChild: boolean;
+    }) => {
       if (asChild) {
         return React.cloneElement(children, {
           ...props,
@@ -31,19 +34,23 @@ jest.mock("expo-router", () => {
         });
       } else {
         return (
-          <TouchableOpacity
+          <Pressable
             {...props}
             onPress={() => {
               mockPush(href);
             }}
           >
             {children}
-          </TouchableOpacity>
+          </Pressable>
         );
       }
     },
-    Stack: ({ children }) => <>{children}</>,
+    Stack: ({ children }: { children: ReactNode }) => <>{children}</>,
   };
+});
+
+beforeEach(() => {
+  mockPush.mockClear();
 });
 
 test("displays key text elements", () => {
