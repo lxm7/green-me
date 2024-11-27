@@ -6,5 +6,6 @@ module.exports = function (api) {
       "nativewind/babel",
       "@babel/preset-typescript",
     ],
+    plugins: [["@babel/plugin-proposal-decorators", { legacy: true }]],
   };
 };
