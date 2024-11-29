@@ -11,6 +11,7 @@
     "strict": true,
     "allowJs": true,
     "baseUrl": "./",
+    "experimentalDecorators": true,
     "paths": {
       "assets/*": ["assets/*"],
       "@components/*": ["components/*"],

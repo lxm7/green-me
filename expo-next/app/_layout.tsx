@@ -1,7 +1,7 @@
 import "./global.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme, ThemeProvider } from "@react-navigation/native";
@@ -11,6 +11,8 @@ import { StatusBar } from "expo-status-bar";
 import { SessionProvider } from "@hooks/useSession";
 import { NAV_THEME } from "@lib/constants";
 import { useInitializeColorScheme } from "@hooks/useInitializeColorScheme";
+
+import { syncData } from "../localDb/syncData";
 
 const LIGHT_THEME: Theme = {
   dark: false,
@@ -33,6 +35,10 @@ const queryClient = new QueryClient();
 
 export default function RootLayout() {
   const { isColorSchemeLoaded, isDarkColorScheme } = useInitializeColorScheme();
+
+  useEffect(() => {
+    syncData();
+  }, []);
 
   if (!isColorSchemeLoaded) {
     return null;
