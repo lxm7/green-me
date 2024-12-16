@@ -14,124 +14,192 @@ import BusinessList from "@components/BusinessList";
 import { Business, TravelMode } from "@components/MapContainer/types";
 import { BristolCentre } from "@constants/Place";
 
+// popup party / incentive meetups
 const businesses = [
   {
     id: "eb7efa2d-ab1b-4a31-b3e2-599c12472eff",
     document: {
-      co2e: 0.01,
-      name: "The Vegan Deli",
-      image: "vegan_deli.jpg",
-      score: 4.8,
-      business: "deli",
-      products: [
+      title: "Spring Cleaning Campaign",
+      description:
+        "Join our eco-friendly cleaning initiative this spring and make a difference.",
+      image: "https://example.com/images/campaign-banner.jpg",
+      progress: {
+        current: 75,
+        goal: 100,
+        unit: "cleaned locations",
+      },
+      stats: {
+        participants: 150,
+        impact: "25 tons of waste removed",
+        daysRemaining: 10,
+      },
+      actions: [
         {
-          name: "Coffee",
-          price: 2.5,
-          business: "deli",
-          category: "coffee",
-          keywords: ["coffee"],
-          available: true,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          environmentScore: 45,
+          type: "donate",
+          label: "Donate Now",
+          url: "https://example.com/donate",
+        },
+        {
+          type: "volunteer",
+          label: "Sign Up to Volunteer",
+          url: "https://example.com/volunteer",
         },
       ],
-      greenScore: 4.8,
-      coordinates: {
-        type: "Point",
-        coordinates: [-2.598, 51.452],
+      details: {
+        location: "Bristol, UK",
+        dateRange: "March 15 - March 25, 2024",
+        organizers: ["Eco Clean UK", "Green Volunteers Network"],
+        contact: {
+          email: "contact@ecocleanuk.org",
+          phone: "+44 1234 567890",
+        },
       },
-      publishedLCAs: null,
+      relatedCampaigns: [
+        {
+          id: 119,
+          title: "Beach Cleanup Drive",
+          url: "https://example.com/campaigns/119",
+        },
+        {
+          id: 120,
+          title: "Urban Greening Initiative",
+          url: "https://example.com/campaigns/120",
+        },
+      ],
+      gallery: [
+        {
+          image: "https://example.com/images/gallery1.jpg",
+          caption: "Volunteers in action",
+        },
+        {
+          image: "https://example.com/images/gallery2.jpg",
+          caption: "Cleaned park area",
+        },
+      ],
     },
   },
   {
     id: "ca91d66e-fa58-43cd-a6df-39b9eb1cf50d",
     document: {
-      co2e: 0.01583,
-      name: "Bristol Brews",
-      image: "bristol_brews.jpg",
-      score: 4.5,
-      business: "cafe",
-      products: [
+      title: "Spring Cleaning Campaign",
+      description:
+        "Join our eco-friendly cleaning initiative this spring and make a difference.",
+      image: "https://example.com/images/campaign-banner.jpg",
+      progress: {
+        current: 75,
+        goal: 100,
+        unit: "cleaned locations",
+      },
+      stats: {
+        participants: 150,
+        impact: "25 tons of waste removed",
+        daysRemaining: 10,
+      },
+      actions: [
         {
-          name: "Flat White",
-          price: 3.2,
-          business: "cafe",
-          category: "coffee",
-          keywords: ["coffee"],
-          available: true,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          environmentScore: 44,
+          type: "donate",
+          label: "Donate Now",
+          url: "https://example.com/donate",
         },
         {
-          name: "Americano",
-          price: 2.8,
-          business: "cafe",
-          category: "coffee",
-          keywords: ["coffee"],
-          available: true,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          environmentScore: 41,
-        },
-        {
-          name: "Espresso",
-          price: 2.5,
-          business: "cafe",
-          category: "coffee",
-          keywords: ["coffee"],
-          available: true,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          environmentScore: 47,
+          type: "volunteer",
+          label: "Sign Up to Volunteer",
+          url: "https://example.com/volunteer",
         },
       ],
-      greenScore: 4.5,
-      coordinates: {
-        type: "Point",
-        coordinates: [-2.595, 51.458],
+      details: {
+        location: "Bristol, UK",
+        dateRange: "March 15 - March 25, 2024",
+        organizers: ["Eco Clean UK", "Green Volunteers Network"],
+        contact: {
+          email: "contact@ecocleanuk.org",
+          phone: "+44 1234 567890",
+        },
       },
-      publishedLCAs: null,
+      relatedCampaigns: [
+        {
+          id: 119,
+          title: "Beach Cleanup Drive",
+          url: "https://example.com/campaigns/119",
+        },
+        {
+          id: 120,
+          title: "Urban Greening Initiative",
+          url: "https://example.com/campaigns/120",
+        },
+      ],
+      gallery: [
+        {
+          image: "https://example.com/images/gallery1.jpg",
+          caption: "Volunteers in action",
+        },
+        {
+          image: "https://example.com/images/gallery2.jpg",
+          caption: "Cleaned park area",
+        },
+      ],
     },
   },
   {
     id: "1cfb001d-74ea-44de-a781-77cce4686909",
     document: {
-      co2e: 0.01617,
-      name: "City Bakery",
-      image: "city_bakery.jpg",
-      score: 4.5,
-      business: "bakery",
-      products: [
+      title: "Spring Cleaning Campaign",
+      description:
+        "Join our eco-friendly cleaning initiative this spring and make a difference.",
+      image: "https://example.com/images/campaign-banner.jpg",
+      progress: {
+        current: 75,
+        goal: 100,
+        unit: "cleaned locations",
+      },
+      stats: {
+        participants: 150,
+        impact: "25 tons of waste removed",
+        daysRemaining: 10,
+      },
+      actions: [
         {
-          name: "Latte",
-          price: 3.5,
-          business: "bakery",
-          category: "coffee",
-          keywords: ["coffee"],
-          available: true,
-          coordinates: {
-            type: "Point",
-            coordinates: [-2.5971, 51.4548],
-          },
-          environmentScore: 41,
+          type: "donate",
+          label: "Donate Now",
+          url: "https://example.com/donate",
+        },
+        {
+          type: "volunteer",
+          label: "Sign Up to Volunteer",
+          url: "https://example.com/volunteer",
         },
       ],
-      greenScore: 4.5,
-      coordinates: {
-        type: "Point",
-        coordinates: [-2.5935, 51.4565],
+      details: {
+        location: "Bristol, UK",
+        dateRange: "March 15 - March 25, 2024",
+        organizers: ["Eco Clean UK", "Green Volunteers Network"],
+        contact: {
+          email: "contact@ecocleanuk.org",
+          phone: "+44 1234 567890",
+        },
       },
-      publishedLCAs: null,
+      relatedCampaigns: [
+        {
+          id: 119,
+          title: "Beach Cleanup Drive",
+          url: "https://example.com/campaigns/119",
+        },
+        {
+          id: 120,
+          title: "Urban Greening Initiative",
+          url: "https://example.com/campaigns/120",
+        },
+      ],
+      gallery: [
+        {
+          image: "https://example.com/images/gallery1.jpg",
+          caption: "Volunteers in action",
+        },
+        {
+          image: "https://example.com/images/gallery2.jpg",
+          caption: "Cleaned park area",
+        },
+      ],
     },
   },
 ];
