@@ -275,6 +275,13 @@
   * {
     @apply border-border;
   }
+  @font-face {
+    font-family: "SpaceMono-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/SpaceMono-Regular.ttf) format("ttf");
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings:

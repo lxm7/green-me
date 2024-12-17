@@ -65,7 +65,13 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
         }
       ],
-      "expo-file-system"
+      "expo-file-system",
+      [
+        "expo-font",
+        {
+          "fonts": ["/.assets/fonts/SpaceMono-Regular.ttf"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

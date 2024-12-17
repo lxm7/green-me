@@ -192,7 +192,7 @@ const MapUI: React.FC = () => {
   }, []);
 
   return (
-    <View className="flex-1 flex-row bg-gray-100">
+    <View className="h-full flex-1 flex-row bg-gray-100">
       {/* Left Sidebar */}
       <View className="w-2/5 p-4 bg-white">
         {/* Travel Mode Selector */}
