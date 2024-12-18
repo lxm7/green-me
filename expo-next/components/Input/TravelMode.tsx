@@ -9,6 +9,12 @@ interface TravelModeSelectorProps {
   onModeChange: (value: string) => void;
 }
 
+// pass this down from parent if it gets re-used
+// const handleModeChange = useCallback((value: string) => {
+//   setTravelMode(value as TravelMode);
+//   setSelectedDistance(value === "walk" ? 160.9 : 1609.34); // Update default distances: 0.1 miles walk, 1 mile drive
+// }, []);
+
 const TravelModeSelector: React.FC<TravelModeSelectorProps> = ({
   travelMode,
   onModeChange,

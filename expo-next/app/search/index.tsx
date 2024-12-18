@@ -1,18 +1,38 @@
-import { View, Text } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import React from "react";
 import { router } from "expo-router";
+import { useShallow } from "zustand/react/shallow";
+
 // eslint-disable-next-line import/no-unresolved
 import MapContainer from "@components/MapContainer";
 import { useSession } from "@hooks/useSession";
+import { useStore } from "@state/store/useStore";
+import { Text } from "@components/ui/text";
+import BusinessList from "@components/BusinessList";
+import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 
 function App() {
   const { signOut } = useSession();
+
+  const { searchTerm } = useStore(
+    useShallow((state) => ({
+      searchTerm: state.searchTerm,
+      setSearchTerm: state.setSearchTerm,
+    })),
+  );
+
+  const {
+    data: businesses,
+    isLoading,
+    isError,
+    error,
+  } = useBusinessesQuery(searchTerm);
 
   return (
     <View className="flex-1">
       <div className="flex min-h-screen">
         {/* Left Sidebar */}
-        <div className="w-64 p-6 border-r border-gray-200">
+        <div className="w-80 p-6 border-r border-gray-200">
           <div className="flex items-center mb-8">
             <img
               src="https://placehold.co/40x40"
@@ -21,64 +41,43 @@ function App() {
             />
             <div className="ml-3">
               <h2 className="font-semibold text-gray-800">Alex Moreton</h2>
-              <p className="text-sm text-gray-500">Full stack developer</p>
+              <div className="flex items-center">
+                <span className="text-purple-600">2377</span>
+                <span className="mx-1">-</span>
+                <span className="text-gray-600">TOKEN</span>
+              </div>
+              <p className="text-sm text-gray-500">Bio / Summary</p>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <p className="text-gray-500 font-medium">Menu</p>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="far fa-search mr-3"></i>
-              <span>Search Events</span>
-            </div>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="far fa-inbox mr-3"></i>
-              <span>Inbox</span>
-            </div>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="far fa-envelope mr-3"></i>
-              <span>Invites</span>
-            </div>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="far fa-user mr-3"></i>
-              <span>Standups</span>
-            </div>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="far fa-calendar mr-3"></i>
-              <span>My Calendar</span>
-              <span className="ml-2 bg-orange-500 text-white text-xs px-1.5 rounded">
-                5
-              </span>
-            </div>
-            <div className="flex items-center text-gray-600 hover:text-orange-500 cursor-pointer">
-              <i className="fas fa-cog mr-3"></i>
-              <span>Settings</span>
-            </div>
-          </div>
-
-          <div className="mt-12">
-            <p className="text-gray-500 font-medium mb-4">
-              Favorites Locations
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <div className="w-3 h-3 rounded-full bg-green-400 mr-3"></div>
-                <span className="text-gray-600">XD Club, Torronto</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 rounded-full bg-purple-400 mr-3"></div>
-                <span className="text-gray-600">Avengars Club, LA</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 rounded-full bg-pink-400 mr-3"></div>
-                <span className="text-gray-600">Super Stay, Lahore</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute bottom-6 text-sm text-gray-400">
-            Copyrights text
-          </div>
+          <View className="m-auto">
+            {/* Business List */}
+            <View className="flex flex-1 overflow-y-auto">
+              {searchTerm.length === 0 && (
+                <View className="content-">
+                  <Text>
+                    Start searching for social popup events and green gatherings
+                    and earn to tokens for your efforts
+                  </Text>
+                </View>
+              )}
+            </View>
+            {isError && (
+              <View className="flex-1 justify-center items-center">
+                <Text>Error loading businesses: {error!.message}</Text>
+              </View>
+            )}
+            {isLoading && (
+              <View className="flex-1 justify-center items-center">
+                <ActivityIndicator size="small" color="lightblue" />
+              </View>
+            )}
+            <View className="flex flex-1 overflow-y-auto">
+              {searchTerm.length >= 3 && businesses && (
+                <BusinessList businesses={businesses} />
+              )}
+            </View>
+          </View>
         </div>
 
         {/* Main Content */}
@@ -92,11 +91,7 @@ function App() {
                 className="h-4"
               />
               <i className="far fa-bell text-gray-600"></i>
-              <div className="flex items-center">
-                <span className="text-purple-600">123</span>
-                <span className="mx-1">-</span>
-                <span className="text-gray-600">'23</span>
-              </div>
+
               <div className="flex items-center">
                 <span className="font-semibold">MyWeb3Wallet.eth</span>
                 <i className="fas fa-chevron-down ml-2 text-gray-400"></i>
@@ -108,7 +103,7 @@ function App() {
         </div>
 
         {/* Right Sidebar */}
-        <div className="w-96 p-6 border-l border-gray-200 absolute bottom-0 bg-white top-20 right-[-360px]">
+        <div className="w-96 p-6 border-l border-gray-200 absolute bottom-0 bg-white top-20 right-[-450px]">
           <div className="flex justify-between items-center mb-6">
             <button className="text-gray-600">
               <i className="fas fa-arrow-left"></i>

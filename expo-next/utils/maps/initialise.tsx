@@ -49,8 +49,8 @@ export const showMarkersOnMap = (
       ? `<div class="relative text-white text-center">
             ${
               highestGreenScore === greenScore
-                ? `<div class="relative bottom-[-8px] left-[20px] bg-pink-500 w-fit px-1 rounded-md text-xs font-bold">
-                  Most Green
+                ? `<div class="w-full relative bottom-[-8px] bg-pink-500 px-1 rounded-sm text-xs font-bold">
+                  Most Rewards*
                 </div>`
                 : ""
             }

@@ -48,9 +48,7 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
 
   return (
     <View>
-      <Text className="text-gray-700">
-        Select Distance: {getDisplayedDistance()}
-      </Text>
+      <Text className="text-gray-700">{getDisplayedDistance()}</Text>
 
       <View className="mt-2 mb-5">
         <Slider

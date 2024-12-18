@@ -46,11 +46,9 @@ const DistanceSelector: React.FC<DistanceSelectorProps> = ({
 
   return (
     <View>
-      <Text className="text-gray-700">
-        Select Distance: {getDisplayedDistance()}
-      </Text>
+      <Text className="text-gray-700">{getDisplayedDistance()}</Text>
 
-      <View className="mb-4">
+      <View>
         <input
           type="range"
           min={travelMode === "walk" ? 0.1 : 1} // 0.1 miles for walking, 1 mile for driving

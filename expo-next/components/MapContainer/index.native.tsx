@@ -70,16 +70,19 @@ const MapUI: React.FC = () => {
   }, []);
 
   return (
-    <View style={{ flex: 1, flexDirection: "row", backgroundColor: "#f3f4f6" }}>
+    <View>
       {/* Left Sidebar */}
       <View style={{ width: "33%", padding: 16, backgroundColor: "#fff" }}>
         {/* Travel Mode Selector */}
-        <TravelModeSelector
+        {/* <TravelModeSelector
           travelMode={travelMode}
           onModeChange={(value: string) =>
             handleModeChange(value as TravelMode)
           }
-        />
+        /> */}
+
+        {/* Search Input */}
+        <SearchInputComponent onSearch={handleSearch} onSubmit={handleSubmit} />
 
         {/* Distance Selector */}
         <DistanceSelector
@@ -87,9 +90,6 @@ const MapUI: React.FC = () => {
           selectedDistance={selectedDistance}
           onDistanceChange={handleDistanceChange}
         />
-
-        {/* Search Input */}
-        <SearchInputComponent onSearch={handleSearch} onSubmit={handleSubmit} />
 
         {/* Business List */}
         {isError && (
@@ -114,7 +114,7 @@ const MapUI: React.FC = () => {
       </View>
 
       {/* Right Map Section */}
-      <View style={{ width: "67%", height: "100%" }}>
+      <View style={{ width: "100%", height: "100%" }}>
         <MapComponent
           mapCenter={mapCenter}
           matchedBusinesses={displayedBusinesses}
