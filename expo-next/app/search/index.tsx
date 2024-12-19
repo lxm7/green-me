@@ -14,6 +14,132 @@ import { H2, H3, H4, P, Small } from "@components/ui/typography";
 import BusinessList from "@components/BusinessList";
 import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
 
+const businesses = [
+  {
+    id: "eb7efa2d-ab1b-4a31-b3e2-599c12472eff",
+    document: {
+      co2e: 0.01,
+      name: "(Mugshot) The Vegan Deli",
+      image: "vegan_deli.jpg",
+      score: 4.8,
+      business: "deli",
+      products: [
+        {
+          name: "Coffee",
+          price: 2.5,
+          business: "deli",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 45.0,
+        },
+      ],
+      greenScore: 4.8,
+      coordinates: {
+        type: "Point",
+        coordinates: [-2.598, 51.452],
+      },
+      publishedLCAs: null,
+    },
+  },
+  {
+    id: "ca91d66e-fa58-43cd-a6df-39b9eb1cf50d",
+    document: {
+      co2e: 0.01583,
+      name: "(Mugshot) Bristol Brews",
+      image: "bristol_brews.jpg",
+      score: 4.5,
+      business: "cafe",
+      products: [
+        {
+          name: "Flat White",
+          price: 3.2,
+          business: "cafe",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 44.0,
+        },
+        {
+          name: "Americano",
+          price: 2.8,
+          business: "cafe",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 41.0,
+        },
+        {
+          name: "Espresso",
+          price: 2.5,
+          business: "cafe",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 47.0,
+        },
+      ],
+      greenScore: 4.5,
+      coordinates: {
+        type: "Point",
+        coordinates: [-2.595, 51.458],
+      },
+      publishedLCAs: null,
+    },
+  },
+  {
+    id: "1cfb001d-74ea-44de-a781-77cce4686909",
+    document: {
+      co2e: 0.01617,
+      name: "(GreenCart) City Bakery",
+      image: "city_bakery.jpg",
+      score: 4.5,
+      business: "bakery",
+      products: [
+        {
+          name: "Latte",
+          price: 3.5,
+          business: "bakery",
+          category: "coffee",
+          keywords: ["coffee"],
+          available: true,
+          coordinates: {
+            type: "Point",
+            coordinates: [-2.5971, 51.4548],
+          },
+          environmentScore: 41.0,
+        },
+      ],
+      greenScore: 4.5,
+      coordinates: {
+        type: "Point",
+        coordinates: [-2.5935, 51.4565],
+      },
+      publishedLCAs: null,
+    },
+  },
+];
+
+const isLoading = false;
+const isError = false;
+const error = false;
+
 function App() {
   const { signOut } = useSession();
 
@@ -24,12 +150,12 @@ function App() {
     })),
   );
 
-  const {
-    data: businesses,
-    isLoading,
-    isError,
-    error,
-  } = useBusinessesQuery(searchTerm);
+  // const {
+  //   data: businesses,
+  //   isLoading,
+  //   isError,
+  //   error,
+  // } = useBusinessesQuery(searchTerm);
 
   return (
     <View>
@@ -48,9 +174,9 @@ function App() {
             <View className="ml-3">
               <H4 className="font-semibold text-gray-800">Alex Moreton</H4>
               <View className="flex-row flex items-center">
-                <Small className="text-purple-600">2377</Small>
-                <Small className="mx-1">-</Small>
-                <Small className="text-gray-600">TOKEN</Small>
+                <Small className="text-gray-600">Rewards: </Small>
+                <Small className="text-purple-600">2377 (TOKEN)</Small>
+                <Small className="text-gray-400">($69)</Small>
               </View>
               <P className="text-sm text-gray-500">Bio / Summary</P>
             </View>
@@ -116,17 +242,17 @@ function App() {
       </View>
 
       {/* Right Sidebar */}
-      <View className="w-96 p-6 border-l border-gray-200 absolute bottom-0 bg-white top-20 right-[-450px]">
+      <View className="w-96 p-6 border-l border-gray-200 absolute bottom-0 bg-white top-[93px] right-[-450px]">
         <View className="flex-row flex justify-between items-center mb-6">
           <Button className="text-gray-600">
-            <FontAwesome name="arrow-left" />
+            <FontAwesome name="arrow-left" className="text-white" />
           </Button>
           <View className="flex-row flex space-x-4">
             <Button className="text-gray-600">
-              <FontAwesome name="share" />
+              <FontAwesome name="share" className="text-white" />
             </Button>
             <Button className="text-gray-600">
-              <FontAwesome name="heart" />
+              <FontAwesome name="heart" className="text-white" />
             </Button>
           </View>
         </View>
@@ -138,38 +264,39 @@ function App() {
           />
         </View>
         <H2 className="text-2xl font-semibold mb-4">
-          Electronic Sound with DJ ARMY ft Miss Lexa
+          (Mugshot) The Vegan Deli
         </H2>
         <View className="flex-row flex items-center justify-between mb-6">
           <View>
-            <View className="text-3xl font-semibold">29</View>
-            <View className="text-gray-500">Mar</View>
+            <Text className="text-3xl font-semibold">29</Text>
+            <Text className="text-gray-500">Mar</Text>
           </View>
           <View>
-            <View className="font-medium">Tuesday</View>
-            <View className="text-gray-500">10:00 PM - End</View>
+            <Text className="font-medium">Tuesday</Text>
+            <Text className="text-gray-500">10:00 AM - 14:00 PM</Text>
           </View>
           <Button className="text-orange-500">
-            <FontAwesome name="calendar" />
+            <FontAwesome name="calendar" className="text-white" />
           </Button>
         </View>
         <View className="mb-6">
           <H3 className="font-semibold mb-2">About this events</H3>
           <P className="text-gray-600">
-            We're celebrating our 30th edition of the California Art Festival in
-            CA this Spring so join us at the Building Park in California State
-            University from March 29 - 30, 2022 with our Private View opening on
-            Saturday, March 26!
+            We're celebrating our 30th event of drinking coffee and benig eco
+            conscious and earn rewards in the process. Starts on March 29 - 30,
+            2025 with our Private View opening on Saturday, March 26!
           </P>
-          <Button className="text-orange-500 mt-2">Show more</Button>
+          <Button className="text-orange-500 mt-2">
+            <Text>Show more</Text>
+          </Button>
         </View>
         <View className="flex-row flex justify-between items-center">
           <View>
-            <View className="font-semibold">$25.98 - $35.00</View>
-            <View className="text-gray-500">100 Spot left</View>
+            <Text className="font-semibold">$2.98 - $4.50</Text>
+            <Text className="text-gray-500">100 Spots left</Text>
           </View>
-          <Button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
-            Get a Ticket
+          <Button className="bg-yellow-400 text-white px-6 py-3 rounded-lg">
+            <Text>Join event</Text>
           </Button>
         </View>
       </View>
