@@ -50,5 +50,5 @@ export const useMap = (
     }
   }, [matchedBusinesses, mapCenter]);
 
-  return { mapContainerRef, userMarkerRef };
+  return { mapContainerRef, userMarkerRef, markersRef };
 };

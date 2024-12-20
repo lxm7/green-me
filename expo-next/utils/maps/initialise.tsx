@@ -3,7 +3,11 @@ import maplibregl, {
   NavigationControl,
   LngLatBounds,
 } from "maplibre-gl";
+import { createRoot } from "react-dom/client";
+
 import { Business } from "@components/MapContainer/types";
+import MarkerInfo from "@components/MarkerInfo";
+import { useBusinessStore } from "@state/store/useBusinessStore";
 
 // Utility to initialize and update the map
 export const initializeMap = (
@@ -42,34 +46,57 @@ export const showMarkersOnMap = (
 
   // Find the highest greenScore using Math.max
   const highestGreenScore = Math.max(...greenScores);
-  businesses.forEach((business) => {
-    const { coordinates, name, co2e, greenScore } = business.document;
+  const { setSelectedBusiness } = useBusinessStore.getState();
 
-    const markerContent = greenScore
-      ? `<div class="relative text-white text-center">
-            ${
-              highestGreenScore === greenScore
-                ? `<div class="w-full relative bottom-[-8px] bg-pink-500 px-1 rounded-sm text-xs font-bold">
-                  Most Rewards*
-                </div>`
-                : ""
-            }
-            <div class="bg-purple-500 px-4 py-2 rounded-md mt-1 text-xs">
-              ${name} - ${greenScore}<br>
-              Co2e est: ${co2e}
-              <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
-            </div>
-          </div>`
-      : `<div class="relative bg-purple-500 text-white text-center px-4 py-2 rounded-md">
-          ${name}
-          <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
-        </div>`;
+  businesses.forEach((business) => {
+    const { coordinates, greenScore } = business.document;
 
     const el = document.createElement("div");
-    el.innerHTML = markerContent;
+    // Render the MarkerInfo component into the element
+    const root = createRoot(el);
+    root.render(
+      <MarkerInfo
+        business={business}
+        isHighest={greenScore === highestGreenScore}
+      />,
+    );
+
+    // const markerContent = greenScore
+    //   ? `
+    //     <div class="relative">
+    //       ${
+    //         highestGreenScore === greenScore
+    //           ? `<div class="w-full relative bottom-[-8px] text-white text-center bg-pink-500 px-1 rounded-sm text-xs font-bold">
+    //             Most Rewards*
+    //           </div>`
+    //           : ""
+    //       }
+    //       <div class="bg-white px-4 py-2 rounded-md mt-1 text-xs">
+    //         <div class="relative flex items-center">
+    //           <img src="https://placehold.co/40x40" alt="${name}" class="w-12 h-12 pr-2" />
+    //           <div>
+    //             <div class="font-semibold">${name} - ${greenScore}</div>
+    //             Co2e est: ${co2e}<br>
+    //             March 29th: 10AM - 2PM
+    //           </div>
+    //           <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   `
+    //   : `<div class="relative bg-white px-4 py-2 rounded-md">
+    //       ${name}
+    //       <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-purple-500"></div>
+    //     </div>`;
+
+    // el.innerHTML = markerContent;
     const marker = new maplibregl.Marker({ element: el, draggable: false })
       .setLngLat(coordinates.coordinates)
       .addTo(map);
+
+    marker.getElement().addEventListener("click", () => {
+      setSelectedBusiness(business);
+    });
 
     markersRef.current.push(marker);
     coordinatesArray.push(coordinates.coordinates);
@@ -86,6 +113,6 @@ export const showMarkersOnMap = (
       (bounds: LngLatBounds, coord) => bounds.extend(coord),
       new LngLatBounds(coordinatesArray[0], coordinatesArray[0]),
     );
-    map.fitBounds(bounds, { padding: 120, maxZoom: 16 });
+    map.fitBounds(bounds, { padding: 160, maxZoom: 16 });
   }
 };

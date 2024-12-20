@@ -48,21 +48,21 @@ const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
                   <P className="text-lg font-bold leading-none">
                     {business.document.name}
                   </P>
-                  <P className="text-lg font-bold leading-none">
-                    {business.document.greenScore}
-                  </P>
                 </View>
                 <P className="text-xs native:text-base text-muted-foreground mb-1">
                   1 centre street, Bristol, BS1 5PU
                 </P>
+                <Small className="font-bold text-sm leading-none">
+                  Reward score: {business.document.greenScore}
+                </Small>
                 <View className="flex flex-row h-5 items-center gap-4 ">
-                  <Small className="font-normal">
+                  <Small className="font-normal text-sm ">
                     {business.document.business}
                   </Small>
                   <Separator orientation="vertical" />
-                  <Small className="font-normal">Co2e:</Small>
+                  <Small className="font-normal text-sm ">Co2e:</Small>
                   <Separator orientation="vertical" />
-                  <Small className="font-normal">
+                  <Small className="font-normal text-sm leading-none">
                     {business.document.co2e}
                   </Small>
                 </View>
