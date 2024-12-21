@@ -3,7 +3,7 @@ module.exports = {
   transform: {
     "^.+\\.[jt]sx?$": "babel-jest",
   },
-  // setupFilesAfterEnv: ["./jest-setup.ts"], // adds alot of time to test suite, save until its needed
+  setupFilesAfterEnv: ["@testing-library/react-native/extend-expect"], // adds alot of time to test suite, save until its needed
   transformIgnorePatterns: [
     "/node_modules/(?!(react-native" +
       "|@react-native" +

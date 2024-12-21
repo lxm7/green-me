@@ -1,24 +1,27 @@
-// BusinessResultsPanel.tsx
 import React from "react";
 import { View, Text, ActivityIndicator } from "react-native";
-import { Business } from "@components/MapContainer/types";
+
 import BusinessList from "@components/BusinessList";
+import { useStore } from "@state/store/useStore";
+import { useShallow } from "zustand/react/shallow";
+import { useBusinessesQuery } from "@state/queries/useBusinessQueries";
+// import { Business } from "@components/MapContainer/types";
 
-interface BusinessResultsPanelProps {
-  searchTerm: string;
-  isLoading: boolean;
-  isError: boolean;
-  error?: Error;
-  businesses?: Business[];
-}
+const BusinessListPanel: React.FC = () => {
+  const { searchTerm } = useStore(
+    useShallow((state) => ({
+      searchTerm: state.searchTerm,
+      setSearchTerm: state.setSearchTerm,
+    })),
+  );
 
-const BusinessResultsPanel: React.FC<BusinessResultsPanelProps> = ({
-  searchTerm,
-  isLoading,
-  isError,
-  error,
-  businesses,
-}) => {
+  const {
+    data: businesses,
+    isLoading,
+    isError,
+    error,
+  } = useBusinessesQuery(searchTerm);
+
   return (
     <View>
       {/* Message when no search term */}
@@ -55,4 +58,4 @@ const BusinessResultsPanel: React.FC<BusinessResultsPanelProps> = ({
   );
 };
 
-export default BusinessResultsPanel;
+export default BusinessListPanel;

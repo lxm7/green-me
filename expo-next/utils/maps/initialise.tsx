@@ -12,7 +12,7 @@ import { useBusinessStore } from "@state/store/useBusinessStore";
 // Utility to initialize and update the map
 export const initializeMap = (
   mapContainer: HTMLDivElement,
-  mapCenter: [number, number],
+  mapCenter: number[],
   apiKey: string,
 ) => {
   const map = new maplibregl.Map({
@@ -31,14 +31,14 @@ export const showMarkersOnMap = (
   map: maplibregl.Map,
   businesses: Business[],
   markersRef: React.MutableRefObject<Marker[]>,
-  mapCenter: [number, number],
-  userCoordinates: [number, number],
+  mapCenter: number[],
+  userCoordinates: number[],
 ) => {
   // Clear existing markers
   markersRef.current.forEach((marker) => marker.remove());
   markersRef.current = [];
 
-  const coordinatesArray: [number, number][] = [];
+  const coordinatesArray: number[][] = [];
 
   const greenScores = businesses.map(
     (business) => business.document.greenScore,

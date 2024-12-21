@@ -1,7 +1,7 @@
 export interface BusinessDocument {
   coordinates: {
     type: "Point";
-    coordinates: [number, number]; // [longitude, latitude]
+    coordinates: number[]; // [longitude, latitude]
   };
   name: string;
   products: Product[];
@@ -16,7 +16,7 @@ export interface Product {
   keywords: string[];
   coordinates: {
     type: "Point";
-    coordinates: [number, number]; // [longitude, latitude]
+    coordinates: number[]; // [longitude, latitude]
   };
   environmentScore: number; // Ensure it's a tuple of exactly two numbers
 }
@@ -28,12 +28,12 @@ export interface Document {
   greenScore: number;
   co2e: number;
   image: string;
-  publishedLCAs: string[];
+  publishedLCAs: string[] | null;
   coordinates: {
     type: string;
-    coordinates: [number, number];
+    coordinates: number[];
   };
-  products: Product[];
+  // products: Product[];
 }
 
 export interface Business {

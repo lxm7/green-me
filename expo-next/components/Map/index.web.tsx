@@ -5,7 +5,7 @@ import { Business } from "@components/MapContainer/types";
 import EventDetailPanel from "@components/EventDetailPanel";
 
 interface MapComponentProps {
-  mapCenter: [number, number]; // [longitude, latitude]
+  mapCenter: number[]; // [longitude, latitude]
   matchedBusinesses: Business[];
 }
 

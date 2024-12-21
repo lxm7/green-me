@@ -70,7 +70,8 @@ const BusinessList: React.FC<BusinessListProps> = ({ businesses }) => {
                 <View className="flex-1 justify-end mt-1">
                   <View className="flex-row flex-wrap gap-1 mt-auto">
                     {business.document.publishedLCAs?.map((lca, index) => {
-                      const colour = LCAColorMap[lca] || defaultLCA.color;
+                      const colour =
+                        (lca && LCAColorMap[lca]) || defaultLCA.color;
                       return (
                         <Text
                           key={index}
