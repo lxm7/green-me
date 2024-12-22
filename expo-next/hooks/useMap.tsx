@@ -5,7 +5,7 @@ import { initializeMap, showMarkersOnMap } from "@utils/maps/initialise";
 import { Business } from "@components/MapContainer/types";
 
 export const useMap = (
-  mapCenter: [number, number],
+  mapCenter: number[],
   matchedBusinesses: Business[],
   apiKey: string,
 ) => {
@@ -50,5 +50,5 @@ export const useMap = (
     }
   }, [matchedBusinesses, mapCenter]);
 
-  return { mapContainerRef, userMarkerRef };
+  return { mapContainerRef, userMarkerRef, markersRef };
 };

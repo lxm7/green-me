@@ -2,6 +2,7 @@ import "./global.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 import React from "react";
+import { Platform } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme, ThemeProvider } from "@react-navigation/native";
@@ -45,7 +46,12 @@ export default function RootLayout() {
           <SafeAreaView style={{ flex: 1 }}>
             {/* <StatusBar style={isDarkColorScheme ? "light" : "dark"}  */}
             <StatusBar />
-            <Stack />
+            <Stack
+              screenOptions={{
+                // Show the header on mobile platforms (iOS/Android), hide on web
+                headerShown: Platform.OS !== "web",
+              }}
+            />
           </SafeAreaView>
         </ThemeProvider>
       </QueryClientProvider>

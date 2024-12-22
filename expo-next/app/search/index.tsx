@@ -1,28 +1,28 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { router } from "expo-router";
+import { View } from "react-native";
+
 // eslint-disable-next-line import/no-unresolved
 import MapContainer from "@components/MapContainer";
-import { useSession } from "@hooks/useSession";
+import Header from "@components/Header";
+import UserSummary from "@components/UserSummary";
+import BusinessListPanel from "@components/BusinessListPanel";
 
-function App() {
-  const { signOut } = useSession();
-
+function Search() {
   return (
-    <View className="flex-1">
-      <MapContainer />
-      <View className="p-4 relative z-10">
-        <Text
-          onPress={() => {
-            signOut();
-            router.replace("/intro");
-          }}
-        >
-          Sign Out
-        </Text>
+    <View className="flex-row flex min-h-screen">
+      {/* Left Sidebar */}
+      <View className="w-96 p-4 border-r border-gray-200">
+        <UserSummary />
+        <BusinessListPanel />
+      </View>
+
+      {/* Main Content */}
+      <View className="flex-1">
+        <Header />
+        <MapContainer />
       </View>
     </View>
   );
 }
 
-export default App;
+export default Search;

@@ -2,9 +2,10 @@ import React from "react";
 import { useMap } from "@hooks/useMap";
 import UserMarker from "@components/UserMarker";
 import { Business } from "@components/MapContainer/types";
+import EventDetailPanel from "@components/EventDetailPanel";
 
 interface MapComponentProps {
-  mapCenter: [number, number]; // [longitude, latitude]
+  mapCenter: number[]; // [longitude, latitude]
   matchedBusinesses: Business[];
 }
 
@@ -20,12 +21,9 @@ const MapComponent: React.FC<MapComponentProps> = ({
   );
 
   return (
-    <div
-      ref={mapContainerRef}
-      id="map"
-      style={{ height: "100%", width: "100%" }}
-    >
+    <div ref={mapContainerRef} id="map" className="w-full h-full">
       <UserMarker container={userMarkerRef.current} />
+      <EventDetailPanel />
     </div>
   );
 };
